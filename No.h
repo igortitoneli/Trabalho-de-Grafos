@@ -14,14 +14,32 @@ public:
     No(int idNo, int weight);
     virtual ~No();
 
-    int getIdNo () {return idNo;}
+    int getIdNo();
+    Aresta* getPrimeiraAresta();
+    void setIdNo(int valor);
+    void setPeso(int valor);
+    int getPeso();
+    int getGrau();
+    void incGrau();
+    void decGrau();
+    int getGrauEntrada();
+    void incrementaGrauEntrada();
+    void decrementaGrauEntrada();
+    int getGrauSaida();
+    void incrementaGrauSaida();
+    void decrementaGrauSaida();
+    void setProxNo(No *novoNo);
+    No* getProxNo();
+    void setPrimeiraAresta(Aresta *novaAresta);
+    void setOrdemMaisUm();
 
 private:
+
     int idNo;
     int pesoNo;
     int grauEntrada;
     int grauSaida;
-    No *proxNo;
+    No *proxNo;    
     Aresta *primeiraAresta;
     Aresta *ultimaAresta;
 };

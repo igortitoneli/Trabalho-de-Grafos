@@ -3,11 +3,6 @@
 using namespace std;
 
 No::No(int name) {
-    int idNo;
-    int pesoNo;
-    int grauEntrada;
-    int grauSaida;
-
     this->idNo = name;
     this->pesoNo = 0;
     this->grauEntrada = 0;
@@ -32,20 +27,12 @@ No::~No() {
         delete( auxEdge );
         auxEdge = auxNextEdge;       
     }
-    delete( searchInfo );
+    // delete( searchInfo );
 }
 
 void No::setIdNo(int valor) {
     this->idNo = valor;
 }
-int No::getIdNo() {
-    return this->idNo;
-}
-
-
-}
-
-
 
 void No::setPeso(int valor) {
     this->pesoNo = valor;
@@ -79,6 +66,7 @@ void No::decrementaGrauEntrada() {
 int No::getGrauSaida() {
     return this->grauSaida;
 }
+
 void No::incrementaGrauSaida() {
     this->grauSaida++;
 }
@@ -89,8 +77,13 @@ void No::decrementaGrauSaida() {
 void No::setProxNo(No *novoNo) {
     this->proxNo = novoNo;
 }
+
 No* No::getProxNo(){
     return this->proxNo;
+}
+
+int No::getIdNo(){
+    return this->idNo;
 }
 
 void No::setPrimeiraAresta(Aresta *novaAresta) {
@@ -98,5 +91,9 @@ void No::setPrimeiraAresta(Aresta *novaAresta) {
 }
 Aresta* No::getPrimeiraAresta(){
     return this->primeiraAresta;
+}
+
+void No::setOrdemMaisUm(){
+    this->pesoNo++;
 }
 

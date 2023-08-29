@@ -13,6 +13,7 @@ using namespace std;
  * @param *noDestino (new valor)
  * @param *proxAresta (new valor)
  */
+
 Aresta::Aresta(No *noDestino, Aresta *proxAresta) {
     this->peso = 1;
     this->noDestino = noDestino;
