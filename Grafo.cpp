@@ -50,7 +50,7 @@ void Grafo::incOrdem() {
 /**
 * Funcao decrementa Ordem do grafo em um.
 */
-void Grafo::sdecOrdem() {
+void Grafo::decOrdem() {
    this->ordem--;
 }
 
@@ -120,9 +120,69 @@ bool Grafo::removeNo(int idNo, bool isDigrafo) {
    // Remove todas as arestas/arcos onde este nó ocorre
    // Remove o no
 
-//    this->decOrdem();
+    No *no = this->procurarNoPeloId(idNo);
+
+    if(no){
+        No *noAux = this->getNoRaiz();
+        No *anterior = NULL;
+        int contador = 0;
+        bool achou = false;
+
+        if(this->getNoRaiz() == no){
+            this->noRaiz = this->noRaiz->getProxNo();
+        }
+
+        if(this->isDigraph()){
+            while(noAux && (contador < no->getGrau() || !achou)){
+
+                contador += noAux->verificaRemoveAresta(no);
+                
+                if(noAux == no){
+                    achou == true;
+                    anterior->setProxNo(noAux->getProxNo());
+                }                
+                anterior = noAux;
+                noAux = noAux->getProxNo();
+            }
+        }
+        else{
+            while(noAux && (contador < no->getGrau() || !achou)){
+                contador += noAux->verificaRemoveAresta(no);
+                contador += no->verificaRemoveAresta(noAux);
+                cout << "foi?" << endl;           
+                if(noAux == no){
+                    achou == true;
+                    anterior->setProxNo(noAux->getProxNo());
+                }     
+                anterior = noAux;
+                noAux = noAux->getProxNo();
+            }
+        }
+        // Caso queira implementar o int grau no private do Grafo.h
+        // if(no->getGrau() == this->getOrdem()){
+        //     this->verificaOrdem();
+        // }
+        this->decOrdem();
+        return true;
+    }
+   
    return false;
 }
+
+/*
+Caso queira implementar o int grau no private do Grafo.h
+void Grafo::verificaGrau(){
+    
+    this->grau = this->getNoRaiz()->getGrau();
+
+    No *aux = this->getNoRaiz()->getProxNo();
+
+    while(aux){
+        if(this->grau < aux->getGrau()) this->grau = aux->getGrau();
+        aux = aux->getProxNo();
+    }
+}
+*/
 
 /**
 * Insere a aresta de A para B se não adjacencia nao existir,
@@ -143,11 +203,15 @@ bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool w
     noFonte = procurarNoPeloId(idNoOrigem);    
     noDestino = procurarNoPeloId(idNoDestino);
 
-    if(noFonte == NULL) 
+    if(noFonte == NULL) {
         noFonte = this->insereNo(idNoOrigem,0);
+        this->incOrdem();
+    }
     
-    if(noDestino == NULL) 
+    if(noDestino == NULL){
         noDestino = this->insereNo(idNoDestino,0);
+        this->incOrdem();
+    } 
 
     if(isDirected)
     {
@@ -162,6 +226,7 @@ bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool w
         if(this->criaAresta(noFonte, noDestino, pesoAresta) && this->criaAresta(noDestino, noFonte, pesoAresta))
         {
             this->numAresta ++;
+            cout << "noFonte->getGrau() : " << noFonte->getGrau() << endl;
             return true;
         }
     }   
@@ -211,12 +276,48 @@ bool Grafo::criaAresta(No *noFonte, No *Destino, int pesoAresta)
 *
 * @return int (numero arestas excluidas)
 */
-int Grafo::removeArestas(int idNoOrigem, int idNoDestino, bool isDirected) {
+bool Grafo::removeAresta(int idNoOrigem, int idNoDestino, bool isDirected) {
 // Procura o nó origem e busca na sua lista de arestas o idNoDestino
 // Se encontrar, remove. Se não, retorna zero
+
+    No *origem = this->procurarNoPeloId(idNoOrigem);
+    No *destino = this->procurarNoPeloId(idNoDestino);
+
+    if(origem && destino)
+    {            
+        if(isDirected)
+        {
+            if(origem->verificaRemoveAresta(destino)){
+                this->decrementaNumAresta();
+                return true;
+            }
+        }
+        else
+        {
+            if(origem->verificaRemoveAresta(destino) && destino->verificaRemoveAresta(origem)){
+                this->decrementaNumAresta();
+                return true;
+            }
+        }
+    }
+
     return false;
 }
 
+
+bool Grafo::decrementaNumAresta(){
+    if(this->isDigraph()){
+        if(this->numAresta > 0)
+        this->numAresta--;
+        return true;
+    }
+    else{
+        if(this->numAresta >= 2)
+        this->numAresta-=2;
+        return true;
+    }
+    return false;
+}
 
 
 //--- Caracteristica do Grafo ---
@@ -345,7 +446,7 @@ Aresta* Grafo::fechoTransitivo(int idNo)
             cout << "Fecho Transitivo do vertice " << idNo << " : ";
             
             if(pAresta){
-                
+
                 while(pAresta){
                     cout << " [ " << pAresta->getNoDestino()->getIdNo() << " , " << pAresta->getNoDestino()->getPeso() << " ] ";
                     

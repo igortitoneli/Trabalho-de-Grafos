@@ -31,19 +31,19 @@ int main()
 
         grafo.insertAresta(i,j,0,0,direcionado);
     }
+    
+    // grafo.fechoTransitivoIndireto(1);
 
-    // cout << "Numero de arestas : " << grafo.getNumAresta() << endl;
-    // cout << "Numero de arestas : " << grafo.getNumAresta2() << endl;
+    // grafo.removeAresta(i, j, direcionado);
+    cout << "ordem do grafo antes : " << grafo.getOrdem() << endl;
 
     cout << endl << "num arestas : " << grafo.getNumAresta2() << endl;
-    grafo.fechoTransitivoIndireto(1);
 
-    // No *vetnos = grafo.fechoTransitivo(1);
-    // while(vetnos){
-    //     cout << vetnos->getIdNo() << " - ";
-    //     vetnos = vetnos->getProxNo();
-    // }
-    // cout << endl;
+    grafo.removeNo(i, direcionado);
 
+    cout << "ordem do grafo depois : " << grafo.getOrdem() << endl;
+
+    cout << endl << "num arestas  : " << grafo.getNumAresta2() << endl;
+    
     return 1;
 }

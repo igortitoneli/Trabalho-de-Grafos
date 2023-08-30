@@ -42,16 +42,18 @@ public:
     int getOrdem();
     int getGrauEntrada();
     int getGrauSaida();
+    bool decrementaNumAresta();
+    void verificaGrau();
     
     void sdecOrdem();
-    int removeArestas(int idNoOrigem, int idNoDestino, bool isDirected);
     // Aresta* getArestaAux();
     string getGrau();
     bool isDigraph();  
 
 private:
+    // int grau; // vertice com maior grau do grafo
 
-    int ordem;
+    int ordem; // numero de vertices do grafo
     int numAresta;
     bool digrafo;
     bool weigthNo;

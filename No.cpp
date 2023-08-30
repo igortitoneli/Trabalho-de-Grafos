@@ -124,3 +124,37 @@ bool No::procuraAresta(Aresta *aresta, No *noDestino)
     return false;
 }
 
+Aresta* No::procuraAresta(No* noProcurado)
+{
+    Aresta *aresta = this->getPrimeiraAresta();
+    Aresta *arestaAnterior = NULL;
+
+    while(aresta)
+    {
+        if(aresta->getNoDestino() == noProcurado) break;
+        arestaAnterior = aresta;
+        aresta = aresta->getProxAresta();
+    }
+
+    return arestaAnterior;
+}
+
+bool No::verificaRemoveAresta(No *destino)
+{
+    Aresta *aresta = this->procuraAresta(destino);
+    if(aresta == NULL){
+        this->setPrimeiraAresta(this->getPrimeiraAresta()->getProxAresta());
+    }
+    else if(aresta == this->getUltimaAresta()){
+        cout << "Os vertices nao estao conectados." << endl;
+        return false;
+    }
+    else
+    {
+        aresta->setProxAresta(aresta->getProxAresta()->getProxAresta());
+    }
+    this->decrementaGrauSaida();
+    destino->decrementaGrauEntrada();
+    return true;
+
+}

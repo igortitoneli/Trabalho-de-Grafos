@@ -36,6 +36,9 @@ public:
     void setUltimaAresta(Aresta *novaAresta);
     void setOrdemMaisUm();
     bool procuraAresta(Aresta *aresta, No *noDestino);
+    Aresta* procuraAresta(No* noProcurado);
+    bool verificaRemoveAresta(No *destino);
+    
     
 private:
 
