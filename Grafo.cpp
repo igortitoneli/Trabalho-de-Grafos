@@ -65,20 +65,21 @@ void Grafo::sdecOrdem() {
 *         false - se Nao achar.
 */
 No *Grafo::procurarNoPeloId(int idFindNo) {
-   No *noAux = noRaiz;
-   No *noAuxAnterior = NULL;
+    No *noAux = noRaiz;
+    No *noAuxAnterior = NULL;
 
-   while ( noAux != NULL ) {
-       if ( noAux->getIdNo() == idFindNo ) {
-           return noAux;
-       }
-       if ( noAux->getProxNo() == NULL ) {
-           return NULL;
-       }
-       noAuxAnterior = noAux;
-       noAux = noAux->getProxNo();
-   }
-   return NULL;
+    while ( noAux != NULL ) {
+
+        if ( noAux->getIdNo() == idFindNo ) {
+            return noAux;
+        }
+        if ( noAux->getProxNo() == NULL ) {
+            return NULL;
+        }
+        noAuxAnterior = noAux;
+        noAux = noAux->getProxNo();
+    }
+    return NULL;
 }
 
 /**
@@ -151,14 +152,18 @@ bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool w
     if(isDirected)
     {
         if(this->criaAresta(noFonte, noDestino, pesoAresta))
+        { 
             this->numAresta ++;
             return true;
+        }
     }
     else
     {
         if(this->criaAresta(noFonte, noDestino, pesoAresta) && this->criaAresta(noDestino, noFonte, pesoAresta))
+        {
             this->numAresta ++;
             return true;
+        }
     }   
 
     return false;
@@ -223,12 +228,12 @@ int Grafo::removeArestas(int idNoOrigem, int idNoDestino, bool isDirected) {
 // IRRELEVANTE
 
 int Grafo::getNumAresta() {
-    No *noAux = noRaiz;
+    No *noAuxiliar = noRaiz;
     int numAresta = 0;
 
-    while ( noAux != NULL ) {
-        numAresta += noAux->getGrau();
-        noAux = noAux->getProxNo();
+    while ( noAuxiliar != NULL ) {
+        numAresta += noAuxiliar->getGrau();
+        noAuxiliar = noAuxiliar->getProxNo();
     }
 
     // this->numAresta = numeroArestas / 2;
@@ -323,8 +328,12 @@ string Grafo::getGrau() {
 bool Grafo::isDigraph() {
    return this->digrafo;
 }
+/**
+* @param idNo (id do nó)
+* @return No* - uma "lista" de nós que pertencem ao fecho transitivo do nó de id == idNo. Nessa lista o ponteiro proxNo de cada Nó aponta para o proximo Nó
+*/
 
-void Grafo::fechoTransitivo(int idNo)
+Aresta* Grafo::fechoTransitivo(int idNo)
 {
     if(this->digrafo)
     {
@@ -333,19 +342,47 @@ void Grafo::fechoTransitivo(int idNo)
         if(noProcurado){
             Aresta *pAresta = noProcurado->getPrimeiraAresta();
 
-            cout << "Fecho Transitivo do nó " << idNo << " : ";
+            cout << "Fecho Transitivo do vertice " << idNo << " : ";
             
             if(pAresta){
-                do{
+                
+                while(pAresta){
                     cout << " [ " << pAresta->getNoDestino()->getIdNo() << " , " << pAresta->getNoDestino()->getPeso() << " ] ";
+                    
+                    pAresta = pAresta->getProxAresta();   
                 }
-                while(pAresta = pAresta->getProxAresta());
+                cout << endl;
+                return noProcurado->getPrimeiraAresta();
             }
-            else cout << "O " << idNo << " eh um vertice isolado.";
+            else cout << "O vertice " << idNo << " eh isolado.";
         }
-        else cout << "O " << idNo << " nao esta no grafo.";
+        else cout << "O vertice " << idNo << " nao esta no grafo.";
     }
     else cout << "O grafo nao é direcionado.";
     cout << endl;
+    return NULL;
 }
 
+void Grafo::fechoTransitivoIndireto(int idNo)
+{
+    if(this->digrafo)
+    {
+        if(this->procurarNoPeloId(idNo))
+        {
+            Aresta* vetArestas = this->fechoTransitivo(idNo);
+
+            cout << "Fecho Transitivo indireto do vertice " << idNo << " --> \t";
+            while(vetArestas)
+            {
+                this->fechoTransitivo(vetArestas->getNoDestino()->getIdNo());
+                vetArestas = vetArestas->getProxAresta();
+                cout << "\t\t\t\t\t\t";
+            }
+            cout << endl;
+        }
+        else cout << "O vertice " << idNo << " nao esta no grafo." << endl;
+    }
+    else cout << "O grafo nao é direcionado." << endl;
+
+
+}

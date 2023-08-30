@@ -10,6 +10,7 @@ class Aresta;
 
 class No {
 public:
+    No();
     No(int idNo);
     No(int idNo, int weight);
     virtual ~No();

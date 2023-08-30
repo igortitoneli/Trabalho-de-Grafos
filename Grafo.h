@@ -26,7 +26,8 @@ public:
     No *procurarNoPeloId(int idFindNo);
     No *insereNo(int idNostrings, int pesoNo);
     bool removeNo(int idNo, bool isDigrafo);
-    void fechoTransitivo(int idNo);
+    Aresta* fechoTransitivo(int idNo);
+    void fechoTransitivoIndireto(int idNo);
 
     //--- Funcoes de Aresta ---
     bool insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool weigthArc, bool isDirected);
@@ -44,11 +45,9 @@ public:
     
     void sdecOrdem();
     int removeArestas(int idNoOrigem, int idNoDestino, bool isDirected);
-    Aresta* getArestaAux();
+    // Aresta* getArestaAux();
     string getGrau();
-    bool isDigraph();
-
-    
+    bool isDigraph();  
 
 private:
 

@@ -2,6 +2,15 @@
 
 using namespace std;
 
+No::No() {
+    // this->idNo = -1; 
+    this->pesoNo = 0;
+    this->grauEntrada = 0;
+    this->grauSaida = 0;
+    this->proxNo = NULL;
+    this->primeiraAresta = NULL;
+}
+
 No::No(int name) {
     this->idNo = name;
     this->pesoNo = 0;
