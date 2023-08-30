@@ -114,12 +114,3 @@ bool No::procuraAresta(Aresta *aresta, No *noDestino)
     }   
     return false;
 }
-
-bool No::procuraAresta(Aresta *aresta, No *noDestino)
-{
-    if(aresta != NULL){
-        if(aresta->getNoDestino() == noDestino) return true;
-        cout << No  q
-    }   
-    return false;
-}
