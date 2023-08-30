@@ -32,9 +32,10 @@ int main()
         grafo.insertAresta(i,j,0,0,direcionado);
     }
 
-    cout << "Numero de arestas : " << grafo.getNumAresta() << endl;
-    cout << "Numero de arestas : " << grafo.getNumAresta2() << endl;
+    // cout << "Numero de arestas : " << grafo.getNumAresta() << endl;
+    // cout << "Numero de arestas : " << grafo.getNumAresta2() << endl;
 
+    grafo.fechoTransitivo(1);
 
     return 1;
 }

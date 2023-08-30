@@ -324,3 +324,28 @@ bool Grafo::isDigraph() {
    return this->digrafo;
 }
 
+void Grafo::fechoTransitivo(int idNo)
+{
+    if(this->digrafo)
+    {
+        No *noProcurado = this->procurarNoPeloId(idNo);
+        
+        if(noProcurado){
+            Aresta *pAresta = noProcurado->getPrimeiraAresta();
+
+            cout << "Fecho Transitivo do nó " << idNo << " : ";
+            
+            if(pAresta){
+                do{
+                    cout << " [ " << pAresta->getNoDestino()->getIdNo() << " , " << pAresta->getNoDestino()->getPeso() << " ] ";
+                }
+                while(pAresta = pAresta->getProxAresta());
+            }
+            else cout << "O " << idNo << " eh um vertice isolado.";
+        }
+        else cout << "O " << idNo << " nao esta no grafo.";
+    }
+    else cout << "O grafo nao é direcionado.";
+    cout << endl;
+}
+

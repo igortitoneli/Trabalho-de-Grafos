@@ -114,3 +114,4 @@ bool No::procuraAresta(Aresta *aresta, No *noDestino)
     }   
     return false;
 }
+
