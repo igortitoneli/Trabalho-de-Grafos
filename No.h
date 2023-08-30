@@ -16,6 +16,7 @@ public:
 
     int getIdNo();
     Aresta* getPrimeiraAresta();
+    Aresta* getUltimaAresta();
     void setIdNo(int valor);
     void setPeso(int valor);
     int getPeso();
@@ -31,8 +32,10 @@ public:
     void setProxNo(No *novoNo);
     No* getProxNo();
     void setPrimeiraAresta(Aresta *novaAresta);
+    void setUltimaAresta(Aresta *novaAresta);
     void setOrdemMaisUm();
-
+    bool procuraAresta(Aresta *aresta, No *noDestino);
+    
 private:
 
     int idNo;

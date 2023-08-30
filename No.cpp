@@ -89,11 +89,28 @@ int No::getIdNo(){
 void No::setPrimeiraAresta(Aresta *novaAresta) {
     this->primeiraAresta = novaAresta;
 }
+
+void No::setUltimaAresta(Aresta *novaAresta) {
+    this->ultimaAresta = novaAresta;
+}
+
 Aresta* No::getPrimeiraAresta(){
     return this->primeiraAresta;
+}
+
+Aresta* No::getUltimaAresta(){
+    return this->ultimaAresta;
 }
 
 void No::setOrdemMaisUm(){
     this->pesoNo++;
 }
 
+bool No::procuraAresta(Aresta *aresta, No *noDestino)
+{
+    if(aresta != NULL){
+        if(aresta->getNoDestino() == noDestino) return true;
+        return this->procuraAresta(aresta->getProxAresta(), noDestino);
+    }   
+    return false;
+}

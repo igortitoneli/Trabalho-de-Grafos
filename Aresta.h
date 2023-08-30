@@ -24,8 +24,8 @@ public:
     No* getNoDestino();
     void setProxAresta(Aresta *valor);
     Aresta* getProxAresta();
+
     
-    //Aresta *getProxAresta();
     //void setProxAresta(Aresta *valor);
     
 private:

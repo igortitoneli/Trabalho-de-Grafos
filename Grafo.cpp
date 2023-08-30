@@ -4,9 +4,6 @@
 #include <sstream>
 #include <vector>
 #include "Grafo.h"
-#include "No.cpp"
-#include "Aresta.cpp"
-
 
 using namespace std;
 typedef vector<No*> NodeVector;
@@ -136,15 +133,60 @@ bool Grafo::removeNo(int idNo, bool isDigrafo) {
 */
 bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool weigthArc, bool isDirected) {
 
-   No *noFonte, *noDestino;
-   //Verifica se já existem os dois nós com esses ids no grafo
-   // Se ja existem, eé so inserir a aresta em cada um se o grafo for nao direcionado ou apenas de
+   //Verifica se já existem os dois nós com esses ids no grafo CHECK
+   //Se ja existem, eé so inserir a aresta em cada um se o grafo for nao direcionado ou apenas de
    //   origem pra destino, caso o grafo seja orientado.
    //Se para algum ou ambos os ids não existe o no no grafo, e preciso inserir nos com esses ids antes de incluir a aresta
+    No *noFonte, *noDestino;
 
-   //if ( procurarNoPeloId(noFonteNome) ) {
+    noFonte = procurarNoPeloId(idNoOrigem);    
+    noDestino = procurarNoPeloId(idNoDestino);
+
+    if(noFonte == NULL) 
+        noFonte = this->insereNo(idNoOrigem,0);
+    
+    if(noDestino == NULL) 
+        noDestino = this->insereNo(idNoDestino,0);
+
+    if(isDirected)
+    {
+        this->criaAresta(noFonte, noDestino, pesoAresta);
+    }
+    else
+    {
+        this->criaAresta(noFonte, noDestino, pesoAresta);
+        this->criaAresta(noDestino, noFonte, pesoAresta);
+    }   
 
     return false;
+}
+
+void Grafo::criaAresta(No *noFonte, No *Destino, int pesoAresta)
+{   
+    if(noFonte->getPrimeiraAresta() == NULL) // ARESTA NAO EXISTE
+    {  
+        Aresta *aresta = new Aresta(Destino, NULL, pesoAresta);
+        noFonte->setPrimeiraAresta(aresta);
+        noFonte->setUltimaAresta(aresta);
+        noFonte->incrementaGrauSaida();
+        Destino->incrementaGrauEntrada();
+        if(this->isDigraph()) this->numAresta ++;
+        else this->numAresta += 0.5;
+    }
+    else
+    {
+        if(!noFonte->procuraAresta(noFonte->getPrimeiraAresta(), Destino))
+        {
+            Aresta *aresta = new Aresta(Destino, NULL, pesoAresta);
+            Aresta *ultimaAresta = noFonte->getUltimaAresta();
+            ultimaAresta->setProxAresta(aresta);
+            noFonte->setUltimaAresta(aresta);
+            noFonte->incrementaGrauSaida();
+            Destino->incrementaGrauEntrada();
+            if(this->isDigraph) this->numAresta ++;
+            else this->numAresta += 0.5;
+        }
+    }
 }
 
 
@@ -175,15 +217,25 @@ int Grafo::removeArestas(int idNoOrigem, int idNoDestino, bool isDirected) {
 /**
 * Retorna o numero de aresta do grafo.
 */
-int Grafo::getNumAresta() {
-   No *noAux = noRaiz;
-   int numArestas = 0;
 
-   while ( noAux != NULL ) {
-       numAresta = noAux->getGrau();
-       noAux = noAux->getProxNo();
-   }
-   return numAresta / 2;
+// IRRELEVANTE
+
+// int Grafo::getNumAresta() {
+//     No *noAux = noRaiz;
+//     int numeroArestas = 0;
+
+//     while ( noAux != NULL ) {
+//         numeroArestas += noAux->getGrau();
+//         noAux = noAux->getProxNo();
+//     }
+
+//     this->numAresta = numeroArestas;
+
+//     return numAresta / 2; // PERGUNTAR PQ DIVIDE POR 2
+// }
+
+int Grafo::getNumAresta2() {
+    return this->numAresta;
 }
 
 /**
@@ -269,30 +321,3 @@ bool Grafo::isDigraph() {
    return this->digrafo;
 }
 
-
-int main()
-{
-    int n, i, j;
-    bool direcionado;
-
-    do{
-        cout << "Direcionado ou nao direcionado? 0/1   :   ";
-        cin >> direcionado;
-    }while(direcionado!=0 && direcionado!=1);
-
-    cout << "Digite o numero de nos : ";
-    cin >> n;
-    
-    Grafo grafo(direcionado, 0 , 0);
-    
-    cout << "Nó (i j)" << endl;
-    for(int k=0; k<n; k++)
-    {
-        cin >> i >> j;
-        No* noi = grafo.insereNo(i,0);
-        No* noj = grafo.insereNo(j,0);
-        
-        grafo.insertAresta(i,j,0,0,direcionado);
-    }
-    return 1;
-}

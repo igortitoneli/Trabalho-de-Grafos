@@ -85,3 +85,4 @@ void Aresta::setProxAresta(Aresta *valor) {
 Aresta* Aresta::getProxAresta() {
     return this->proxAresta;
 }
+
