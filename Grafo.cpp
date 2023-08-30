@@ -17,12 +17,12 @@ typedef vector<No*> NodeVector;
 * @param isDigrafo (new valor)
 */
 Grafo::Grafo(bool isDigrafo, bool weightArc, bool weightNo) {
+   this->numAresta = 0;
    this->ordem = 0;
    this->noRaiz = NULL;
    this->digrafo = isDigrafo;
    this->weigthNo = weightNo;
    this->weightArc = weightArc;
-
 }
 
 /**
@@ -150,18 +150,21 @@ bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool w
 
     if(isDirected)
     {
-        this->criaAresta(noFonte, noDestino, pesoAresta);
+        if(this->criaAresta(noFonte, noDestino, pesoAresta))
+            this->numAresta ++;
+            return true;
     }
     else
     {
-        this->criaAresta(noFonte, noDestino, pesoAresta);
-        this->criaAresta(noDestino, noFonte, pesoAresta);
+        if(this->criaAresta(noFonte, noDestino, pesoAresta) && this->criaAresta(noDestino, noFonte, pesoAresta))
+            this->numAresta ++;
+            return true;
     }   
 
     return false;
 }
 
-void Grafo::criaAresta(No *noFonte, No *Destino, int pesoAresta)
+bool Grafo::criaAresta(No *noFonte, No *Destino, int pesoAresta)
 {   
     if(noFonte->getPrimeiraAresta() == NULL) // ARESTA NAO EXISTE
     {  
@@ -170,8 +173,7 @@ void Grafo::criaAresta(No *noFonte, No *Destino, int pesoAresta)
         noFonte->setUltimaAresta(aresta);
         noFonte->incrementaGrauSaida();
         Destino->incrementaGrauEntrada();
-        if(this->isDigraph()) this->numAresta ++;
-        else this->numAresta += 0.5;
+        return true;
     }
     else
     {
@@ -183,10 +185,10 @@ void Grafo::criaAresta(No *noFonte, No *Destino, int pesoAresta)
             noFonte->setUltimaAresta(aresta);
             noFonte->incrementaGrauSaida();
             Destino->incrementaGrauEntrada();
-            if(this->isDigraph) this->numAresta ++;
-            else this->numAresta += 0.5;
+            return true;
         }
     }
+    return false;
 }
 
 
@@ -220,19 +222,20 @@ int Grafo::removeArestas(int idNoOrigem, int idNoDestino, bool isDirected) {
 
 // IRRELEVANTE
 
-// int Grafo::getNumAresta() {
-//     No *noAux = noRaiz;
-//     int numeroArestas = 0;
+int Grafo::getNumAresta() {
+    No *noAux = noRaiz;
+    int numAresta = 0;
 
-//     while ( noAux != NULL ) {
-//         numeroArestas += noAux->getGrau();
-//         noAux = noAux->getProxNo();
-//     }
+    while ( noAux != NULL ) {
+        numAresta += noAux->getGrau();
+        noAux = noAux->getProxNo();
+    }
 
-//     this->numAresta = numeroArestas;
+    // this->numAresta = numeroArestas / 2;
 
-//     return numAresta / 2; // PERGUNTAR PQ DIVIDE POR 2
-// }
+    if(this->digrafo) return numAresta;
+    return numAresta / 2; // PERGUNTAR PQ DIVIDE POR 2
+}
 
 int Grafo::getNumAresta2() {
     return this->numAresta;

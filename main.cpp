@@ -33,7 +33,7 @@ int main()
     }
 
     cout << "Numero de arestas : " << grafo.getNumAresta() << endl;
-    cout << "Numero de arestas : " << grafo.getNumAresta() << endl;
+    cout << "Numero de arestas : " << grafo.getNumAresta2() << endl;
 
 
     return 1;
