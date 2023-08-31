@@ -121,52 +121,94 @@ bool Grafo::removeNo(int idNo, bool isDigrafo) {
    // Remove o no
 
     No *no = this->procurarNoPeloId(idNo);
+    int grau = no->getGrau(); 
 
     if(no){
-        No *noAux = this->getNoRaiz();
+        No *removido = this->getNoRaiz();
         No *anterior = NULL;
         int contador = 0;
         bool achou = false;
 
         if(this->getNoRaiz() == no){
+            // implementar aqui
             this->noRaiz = this->noRaiz->getProxNo();
         }
 
         if(this->isDigraph()){
-            while(noAux && (contador < no->getGrau() || !achou)){
+            while(removido && (contador < no->getGrau() || !achou)){
 
-                contador += noAux->verificaRemoveAresta(no);
+                if(removido->verificaRemoveAresta(no)) contador++;
                 
-                if(noAux == no){
+                if(removido == no){
                     achou == true;
-                    anterior->setProxNo(noAux->getProxNo());
+                    anterior->setProxNo(removido->getProxNo());
                 }                
-                anterior = noAux;
-                noAux = noAux->getProxNo();
+                anterior = removido;
+                removido = removido->getProxNo();
             }
         }
         else{
-            while(noAux && (contador < no->getGrau() || !achou)){
-                contador += noAux->verificaRemoveAresta(no);
-                contador += no->verificaRemoveAresta(noAux);
-                cout << "foi?" << endl;           
-                if(noAux == no){
-                    achou == true;
-                    anterior->setProxNo(noAux->getProxNo());
-                }     
+            while(removido != no){
+                anterior = removido;
+                removido = removido->getProxNo();
+            }
+            Aresta *vetAresta = this->fechoTransitivo(removido->getIdNo());
+
+            No *noAux = this->getNoRaiz();
+            while(noAux)
+            {
+                //verificar se ta no vetAresta
+                if(this->verificaNoAresta(noAux, vetAresta)){
+                    noAux
+                }
+
                 anterior = noAux;
                 noAux = noAux->getProxNo();
             }
+
+
+
+
+
+
+
+
+            // while(noAux && (contador < no->getGrau() || !achou)){
+                
+            //     if(noAux->verificaRemoveAresta(no)) contador++;           
+            //     if(noAux != no){
+            //         if(no->verificaRemoveAresta(noAux)) contador++;         
+            //     }
+            //     if(noAux == no){
+            //         achou == true;
+            //         cout << "a" << endl;
+            //         anterior->setProxNo(noAux->getProxNo());
+            //         cout << "b" << endl;
+            //     }
+
+            //     anterior = noAux;
+            //     noAux = noAux->getProxNo();
+            // }
         }
         // Caso queira implementar o int grau no private do Grafo.h
         // if(no->getGrau() == this->getOrdem()){
         //     this->verificaOrdem();
         // }
         this->decOrdem();
+        this->numAresta -= grau;
         return true;
     }
    
    return false;
+}
+
+bool Grafo::verificaNoAresta(No *no, Aresta *aresta)
+{
+    while(aresta){
+        if(aresta->getNoDestino == no) return true;
+        aresta = aresta->getProxAresta();
+    }
+    return false;
 }
 
 /*
@@ -226,7 +268,6 @@ bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool w
         if(this->criaAresta(noFonte, noDestino, pesoAresta) && this->criaAresta(noDestino, noFonte, pesoAresta))
         {
             this->numAresta ++;
-            cout << "noFonte->getGrau() : " << noFonte->getGrau() << endl;
             return true;
         }
     }   
@@ -328,19 +369,17 @@ bool Grafo::decrementaNumAresta(){
 
 // IRRELEVANTE
 
-int Grafo::getNumAresta() {
+int Grafo::AtualizaNumAresta() {
     No *noAuxiliar = noRaiz;
-    int numAresta = 0;
+    this->numAresta = 0;
 
     while ( noAuxiliar != NULL ) {
-        numAresta += noAuxiliar->getGrau();
+        this->numAresta += noAuxiliar->getGrau();
         noAuxiliar = noAuxiliar->getProxNo();
     }
 
-    // this->numAresta = numeroArestas / 2;
-
-    if(this->digrafo) return numAresta;
-    return numAresta / 2; // PERGUNTAR PQ DIVIDE POR 2
+    if(this->digrafo) return this->numAresta;
+    return this->numAresta / 2; // PERGUNTAR PQ DIVIDE POR 2
 }
 
 int Grafo::getNumAresta2() {

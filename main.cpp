@@ -41,9 +41,9 @@ int main()
 
     grafo.removeNo(i, direcionado);
 
-    cout << "ordem do grafo depois : " << grafo.getOrdem() << endl;
+    // cout << "ordem do grafo depois : " << grafo.getOrdem() << endl;
 
-    cout << endl << "num arestas  : " << grafo.getNumAresta2() << endl;
+    // cout << endl << "num arestas  : " << grafo.getNumAresta2() << endl;
     
     return 1;
 }

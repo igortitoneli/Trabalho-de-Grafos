@@ -28,15 +28,15 @@ public:
     bool removeNo(int idNo, bool isDigrafo);
     Aresta* fechoTransitivo(int idNo);
     void fechoTransitivoIndireto(int idNo);
+    bool verificaNoAresta(No *no, Aresta *aresta);
 
     //--- Funcoes de Aresta ---
     bool insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool weigthArc, bool isDirected);
     bool removeAresta(int idNoOrigem, int idNoDestino, bool isDirected);
     bool criaAresta(No *noFonte, No *Destino, int pesoAresta);
-    
 
     //--- Caracteristica do Grafo ---
-    int getNumAresta();
+    int AtualizaNumAresta();
     int getNumAresta2();
     No *getNoRaiz();
     int getOrdem();

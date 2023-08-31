@@ -142,17 +142,38 @@ Aresta* No::procuraAresta(No* noProcurado)
 bool No::verificaRemoveAresta(No *destino)
 {
     Aresta *aresta = this->procuraAresta(destino);
+
     if(aresta == NULL){
-        this->setPrimeiraAresta(this->getPrimeiraAresta()->getProxAresta());
+        // Como implementar um try catch aqui stenio? ta dando segmentation fault
+        Aresta *proxima = this->getPrimeiraAresta();
+        if(proxima){
+            if(proxima->getProxAresta()){
+                this->setPrimeiraAresta(proxima->getProxAresta());
+            }
+            else{
+                this->setPrimeiraAresta(NULL);
+                this->setUltimaAresta(NULL);
+            }
+        }
     }
     else if(aresta == this->getUltimaAresta()){
         cout << "Os vertices nao estao conectados." << endl;
         return false;
     }
     else
-    {
-        aresta->setProxAresta(aresta->getProxAresta()->getProxAresta());
+    {  
+        // Como implementar um try catch aqui stenio? ta dando segmentation fault
+
+        Aresta *proximaAresta = aresta->getProxAresta();
+        if(proximaAresta != this->getUltimaAresta()){
+            aresta->setProxAresta(proximaAresta->getProxAresta());
+        }
+        else{
+            this->setUltimaAresta(aresta);
+            aresta->setProxAresta(NULL);
+        }
     }
+    delete [] aresta;
     this->decrementaGrauSaida();
     destino->decrementaGrauEntrada();
     return true;
