@@ -35,7 +35,7 @@ Aresta::Aresta(No *noDestino, Aresta *proxAresta, int peso) {
 
 /** Destructor */
 Aresta::~Aresta() {
-    //dtor
+    
 }
 
 /**

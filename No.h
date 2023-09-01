@@ -38,9 +38,16 @@ public:
     bool procuraAresta(Aresta *aresta, No *noDestino);
     Aresta* procuraAresta(No* noProcurado);
     bool verificaRemoveAresta(No *destino);
+    void removeAresta(No *noRemovido);
+    Aresta *verificaNoAresta(No *procurado);
+
+    Aresta* getArestaAnterior(No *noDestino);
     
     
 private:
+
+    Aresta* auxGetArestaAnterior(Aresta *aresta, No *noDestino);
+
 
     int idNo;
     int pesoNo;

@@ -124,6 +124,24 @@ bool No::procuraAresta(Aresta *aresta, No *noDestino)
     return false;
 }
 
+Aresta* No::getArestaAnterior(No *noDestino)
+{   
+    // se existe a primeira aresta
+    if(this->getPrimeiraAresta()){
+        // retorna a aresta anterior à aresta onde o noDestino == noDestino(parametro)
+        return this->auxGetArestaAnterior(this->getPrimeiraAresta(), noDestino);
+    }
+    else return NULL;
+}
+
+Aresta* No::auxGetArestaAnterior(Aresta *aresta, No *noDestino)
+{
+    if(aresta->getProxAresta() != NULL){
+        if(aresta->getProxAresta()->getNoDestino() == noDestino) return aresta;
+    }
+    return aresta;
+}
+
 Aresta* No::procuraAresta(No* noProcurado)
 {
     Aresta *aresta = this->getPrimeiraAresta();
@@ -173,9 +191,59 @@ bool No::verificaRemoveAresta(No *destino)
             aresta->setProxAresta(NULL);
         }
     }
-    delete [] aresta;
+    aresta->~Aresta();
     this->decrementaGrauSaida();
     destino->decrementaGrauEntrada();
     return true;
 
+}
+
+void No::removeAresta(No *noRemovido)
+{
+    Aresta *aresta = this->getPrimeiraAresta();
+
+    // caso a aresta a ser removida seja a primeira
+    if(aresta->getNoDestino() == noRemovido)
+    {
+        this->setPrimeiraAresta(aresta->getProxAresta());
+        aresta->~Aresta();
+    }
+    else{
+        // passa pra proxima aresta
+        Aresta *anterior = aresta;
+        aresta = aresta->getProxAresta();
+        while(aresta)
+        {
+            if(aresta->getNoDestino() == noRemovido)
+            {
+                anterior->setProxAresta(aresta->getProxAresta());
+                aresta->~Aresta();
+            }
+            anterior = aresta;
+            aresta = aresta->getProxAresta();
+        }    
+    }
+    
+}
+
+Aresta* No::verificaNoAresta(No *no)
+{
+    Aresta *aresta = this->getPrimeiraAresta();
+    if(aresta){
+
+        // aresta == primeira aresta
+        if(aresta->getNoDestino() == no){
+            return NULL;
+        }
+
+    }
+    return NULL;
+    
+    // Aresta anterior = NULL;
+
+    // while(aresta){
+    //     if(aresta->getNoDestino() == no) return true;
+    //     aresta = aresta->getProxAresta();
+    // }
+    // return false;
 }
