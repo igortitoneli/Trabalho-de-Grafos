@@ -248,18 +248,19 @@ bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool w
     No *noFonte, *noDestino;
 
     noFonte = procurarNoPeloId(idNoOrigem);    
-    noDestino = procurarNoPeloId(idNoDestino);
-
+    
     if(noFonte == NULL) {
         noFonte = this->insereNo(idNoOrigem,0);
         this->incOrdem();
     }
     
-    if(noDestino == NULL){
+    noDestino = procurarNoPeloId(idNoDestino);
+    
+    // ou seja, ele será diferente de nulo e diferente de noFonte
+    if(noDestino != noFonte){  
         noDestino = this->insereNo(idNoDestino,0);
-        if(noDestino != noFonte){
-            this->incOrdem();
-        }
+        this->incOrdem();
+        
     } 
 
     if(isDirected)
@@ -274,7 +275,11 @@ bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool w
     {
         if(this->criaAresta(noFonte, noDestino, pesoAresta) && this->criaAresta(noDestino, noFonte, pesoAresta))
         {
+            //selfloop
+            if(noFonte == noDestino) this->numAresta++;
+            
             this->numAresta ++;
+
             return true;
         }
     }   
@@ -309,15 +314,11 @@ bool Grafo::criaAresta(No *noFonte, No *Destino, int pesoAresta)
         }
 
         // selfloop 
-        // else{
-        //     Aresta *aresta = new Aresta(Destino, NULL, pesoAresta);
-        //     Aresta *ultimaAresta = noFonte->getUltimaAresta();
-        //     ultimaAresta->setProxAresta(aresta);
-        //     noFonte->setUltimaAresta(aresta);
-        //     noFonte->incrementaGrauSaida();
-        //     Destino->incrementaGrauEntrada();
-        //     return true;
-        // }
+        else{
+            noFonte->incrementaGrauSaida();
+            Destino->incrementaGrauEntrada();
+            return true;
+        }
     }
     return false;
 }
