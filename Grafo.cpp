@@ -494,6 +494,8 @@ bool Grafo::isDigraph() {
 * @return No* - uma "lista" de nós que pertencem ao fecho transitivo do nó de id == idNo. Nessa lista o ponteiro proxNo de cada Nó aponta para o proximo Nó
 */
 
+
+
 Aresta* Grafo::fechoTransitivo(int idNo)
 {
     if(this->digrafo)
@@ -528,9 +530,9 @@ void Grafo::fechoTransitivoIndireto(int idNo)
 {
     if(this->digrafo)
     {
-        if(this->procurarNoPeloId(idNo))
+        if(No* no = this->procurarNoPeloId(idNo))
         {
-            Aresta* vetArestas = this->fechoTransitivo(idNo);
+            Aresta* vetArestas = no->getPrimeiraAresta();
 
             cout << "Fecho Transitivo indireto do vertice " << idNo << " --> \t";
             while(vetArestas)

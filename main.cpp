@@ -35,17 +35,19 @@ int main()
     // grafo.fechoTransitivoIndireto(1);
 
     // grafo.removeAresta(i, j, direcionado);
-    cout << "ordem do grafo antes : " << grafo.getOrdem() << endl;
+    // cout << "ordem do grafo antes : " << grafo.getOrdem() << endl;
 
-    cout << endl << "num arestas : " << grafo.getNumAresta() << endl;
+    // cout << endl << "num arestas : " << grafo.getNumAresta() << endl;
 
-    grafo.removeNo(i, direcionado);
+    // grafo.removeNo(i, direcionado);
 
-    cout << "ordem do grafo depois : " << grafo.getOrdem() << endl;
+    // cout << "ordem do grafo depois : " << grafo.getOrdem() << endl;
 
     // cout << endl << "num arestas  : " << grafo.AtualizaNumAresta() << endl;
     
-    cout << endl << "num arestas  : " << grafo.getNumAresta() << endl;
+    // cout << endl << "num arestas  : " << grafo.getNumAresta() << endl;
     
+    grafo.fechoTransitivoIndireto(i);
+
     return 1;
 }
