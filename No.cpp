@@ -39,12 +39,12 @@ No::~No() {
     // delete( searchInfo );
 }
 
-void No::setIdNo(int valor) {
-    this->idNo = valor;
+void No::setIdNo(int id) {
+    this->idNo = id;
 }
 
-void No::setPeso(int valor) {
-    this->pesoNo = valor;
+void No::setPeso(int peso) {
+    this->pesoNo = peso;
 }
 int No::getPeso() {
     return this->pesoNo;
@@ -246,4 +246,14 @@ Aresta* No::verificaNoAresta(No *no)
     //     aresta = aresta->getProxAresta();
     // }
     // return false;
+}
+
+void No::imprimeArestas(){
+    Aresta *aux = this->primeiraAresta;
+
+    while(aux){
+        cout << " ➡️ " <<  " [ " << aux->getNoDestino()->getIdNo() << " | " << aux->getNoDestino()->getPeso() << " ]";
+        aux = aux->getProxAresta();
+    }
+    cout << endl;
 }

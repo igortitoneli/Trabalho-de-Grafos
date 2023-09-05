@@ -43,8 +43,8 @@ Aresta::~Aresta() {
  * 
  * @param valor (new valor)
  */
-void Aresta::setPeso(int valor) {
-    this->peso = valor;
+void Aresta::setPeso(int peso) {
+    this->peso = peso;
 }
 
 /**
@@ -59,8 +59,8 @@ int Aresta::getPeso() {
  * 
  * @param valor (new valor)
  */
-void Aresta::setNoDestino(No *valor) {
-    this->noDestino = valor;
+void Aresta::setNoDestino(No *destino) {
+    this->noDestino = destino;
 }
 
 /**
@@ -75,8 +75,8 @@ No* Aresta::getNoDestino() {
  * 
  * @param valor (new valor)
  */
-void Aresta::setProxAresta(Aresta *valor) {
-    this->proxAresta = valor;
+void Aresta::setProxAresta(Aresta *prox) {
+    this->proxAresta = prox;
 }
 
 /**
@@ -85,4 +85,3 @@ void Aresta::setProxAresta(Aresta *valor) {
 Aresta* Aresta::getProxAresta() {
     return this->proxAresta;
 }
-

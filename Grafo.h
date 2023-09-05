@@ -44,6 +44,7 @@ public:
     int getGrauSaida();
     bool decrementaNumAresta();
     void verificaGrau();
+    void imprime();
     
     void sdecOrdem();
     // Aresta* getArestaAux();

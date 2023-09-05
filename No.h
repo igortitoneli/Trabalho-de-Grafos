@@ -18,8 +18,8 @@ public:
     int getIdNo();
     Aresta* getPrimeiraAresta();
     Aresta* getUltimaAresta();
-    void setIdNo(int valor);
-    void setPeso(int valor);
+    void setIdNo(int id);
+    void setPeso(int peso);
     int getPeso();
     int getGrau();
     void incGrau();
@@ -42,6 +42,7 @@ public:
     Aresta *verificaNoAresta(No *procurado);
 
     Aresta* getArestaAnterior(No *noDestino);
+    void imprimeArestas();
     
     
 private:

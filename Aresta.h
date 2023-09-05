@@ -19,10 +19,10 @@ public:
     ~Aresta();
 
     int getPeso();
-    void setPeso(int valor);
-    void setNoDestino(No *valor);
+    void setPeso(int peso);
+    void setNoDestino(No *destino);
     No* getNoDestino();
-    void setProxAresta(Aresta *valor);
+    void setProxAresta(Aresta *prox);
     Aresta* getProxAresta();
 
     

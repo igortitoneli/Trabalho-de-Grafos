@@ -110,6 +110,19 @@ No *Grafo::insereNo(int idNo, int peso) {
     }
 }
 
+void Grafo::imprime(){
+
+    No *aux = this->noRaiz;
+    while(aux)
+    {
+        cout << "⬇️" << endl;
+        cout << " " << aux->getIdNo();
+        aux->imprimeArestas();
+        aux = aux->getProxNo();
+    }
+    cout << "🟰" << endl;
+}
+
 /**
 * Remove No de um grafo
 *
@@ -259,9 +272,8 @@ bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool w
     // ou seja, ele será diferente de nulo e diferente de noFonte
     if(noDestino != noFonte){  
         noDestino = this->insereNo(idNoDestino,0);
-        this->incOrdem();
-        
-    } 
+        this->incOrdem();   
+    }
 
     if(isDirected)
     {
