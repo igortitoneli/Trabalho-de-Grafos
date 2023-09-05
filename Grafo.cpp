@@ -64,22 +64,23 @@ void Grafo::decOrdem() {
 * @return true - se achar no.
 *         false - se Nao achar.
 */
-No *Grafo::procurarNoPeloId(int idFindNo) {
+No *Grafo::procurarNoPeloId(int idFindNo, bool anteiror) {
+
+    // bool anterior serve para caso necessario, retorne o anterior ao nó que contem id = id;
+
     No *noAux = noRaiz;
     No *noAuxAnterior = NULL;
 
     while ( noAux != NULL ) {
 
         if ( noAux->getIdNo() == idFindNo ) {
-            return noAux;
-        }
-        if ( noAux->getProxNo() == NULL ) {
-            return NULL;
+            break;
         }
         noAuxAnterior = noAux;
         noAux = noAux->getProxNo();
     }
-    return NULL;
+    if(anteiror) return noAuxAnterior;
+    else return noAux;
 }
 
 /**
@@ -90,7 +91,7 @@ No *Grafo::procurarNoPeloId(int idFindNo) {
 */
 No *Grafo::insereNo(int idNo, int peso) {
 
-    No* procurado = procurarNoPeloId(idNo);
+    No* procurado = procurarNoPeloId(idNo,0);
 
     if (procurado == NULL ) {
         No *novoNo = new No(idNo, peso);
@@ -123,109 +124,190 @@ void Grafo::imprime(){
     cout << "🟰" << endl;
 }
 
+
+// o que fazer?
+// criar uma função que retona o no anterior ao nó a ser removido
+// a fim de que, ao final da função, quando fazer o ponteiro do anterior
+// apontar para o proximo, n precise percorrer tudo dnv
+// 
+// desalocar todos as arestas que pertencem a esse no
+// criar uma função que faça isso para todas as arestas
+bool Grafo::removeNo(int idNo, bool isDigrafo) {
+    
+    No *anterior = this->procurarNoPeloId(idNo,1);
+    No *removido;
+    // caso onde o nó é a raiz;
+    if(anterior == NULL && this->getNoRaiz()->getIdNo() == idNo) {
+        removido = this->getNoRaiz();
+        this->noRaiz = removido->getProxNo();
+    }
+    // caso onde o no está no meio da lista
+    else if(anterior->getProxNo() != NULL) {
+        removido = anterior->getProxNo();
+        anterior->setProxNo(removido->getProxNo());
+    }
+    // nao encontrou nó a ser removido.
+    else{
+        cout << "Nó de id " << idNo << " não esta no grafo." << endl << endl;
+        return false;
+    }
+
+    if(removido) {
+        Aresta *aux = removido->getPrimeiraAresta();
+
+        // remove a aresta do removido com cada no vizinho dele
+        while(aux) {
+            aux->getNoDestino()->removeAresta(removido);
+            aux = aux->getProxAresta();
+        }
+
+        delete removido;       
+        cout << "Nó de id " << idNo << " removido com sucesso!" << endl << endl;
+        return true;
+    }
+    return false;
+}
+
 /**
 * Remove No de um grafo
 *
 * @param nome (no nome)
 */
-bool Grafo::removeNo(int idNo, bool isDigrafo) {
-   // Pesquisa o No a ser excluido
-   // Remove todas as arestas/arcos onde este nó ocorre
-   // Remove o no
+// bool Grafo::removeNo(int idNo, bool isDigrafo) {
+//    // Pesquisa o No a ser excluido
+//    // Remove todas as arestas/arcos onde este nó ocorre
+//    // Remove o no
 
-    No *removido = this->procurarNoPeloId(idNo);
-    int grau = removido->getGrau(); 
+//     No *removido = this->procurarNoPeloId(idNo);
+//     int grau = removido->getGrau(); 
 
-    if(removido){
-        int contador = 0;
-        bool achou = false;
+//     if(removido){
+//         int contador = 0;
+//         bool achou = false;
 
-        No *noAux = this->getNoRaiz();
-        No *anterior = NULL;
+//         No *noAux = this->getNoRaiz();
+//         No *anterior = NULL;
         
-        //percorre todos os vertices do grafo
-        while(noAux && (contador < grau || !achou))
-        {
-            if(noAux == removido){
-                this->removeAresta(anterior,noAux);
-                achou = true;
-            }
-            //verificar se noAux é um no destino das arestas de removido 
-            else if(Aresta *aresta = noAux->getArestaAnterior(removido)){
-                // se a aresta existe
-                if(aresta){
-                    if(aresta->getProxAresta()){
-                        // se o proximo dessa aresta existe e ele nao é o ultimo, remove a aresta entre o noAux e o destino desalocando memoria
-                        if(aresta->getProxAresta() != noAux->getUltimaAresta()){
-                            aresta->setProxAresta(aresta->getProxAresta()->getProxAresta());
-                            // aresta->getProxAresta()->~Aresta();
-                        }
-                        // se o proximo é o ultimo, altera o ponteiro pro ultimo e desaloca a memoria
-                        else{
-                            // Aresta *proxima = aresta->getProxAresta();
-                            // proxima->~Aresta();
+//         //percorre todos os vertices do grafo
+//         while(noAux && (contador < grau || !achou))
+//         {
+//             if(noAux == removido){
+//                 this->removeAresta(anterior,noAux);
+//                 achou = true;
+//             }
+//             //verificar se noAux é um no destino das arestas de removido 
+//             else if(Aresta *aresta = noAux->getArestaAnterior(removido)){
+//                 // se a aresta existe
+//                 if(aresta){
+//                     if(aresta->getProxAresta()){
+//                         // se o proximo dessa aresta existe e ele nao é o ultimo, remove a aresta entre o noAux e o destino desalocando memoria
+//                         if(aresta->getProxAresta() != noAux->getUltimaAresta()){
+//                             aresta->setProxAresta(aresta->getProxAresta()->getProxAresta());
+//                             // aresta->getProxAresta()->~Aresta();
+//                         }
+//                         // se o proximo é o ultimo, altera o ponteiro pro ultimo e desaloca a memoria
+//                         else{
+//                             // Aresta *proxima = aresta->getProxAresta();
+//                             // proxima->~Aresta();
                             
-                            noAux->setUltimaAresta(aresta);
-                            aresta->setProxAresta(NULL);
-                        }
-                        contador++;
-                    }
-                }
-                else{
-                    noAux->setPrimeiraAresta(NULL);
-                    noAux->setUltimaAresta(NULL);
-                }
-            }
-            // passa pro proximo vertice
-            anterior = noAux;
-            noAux = noAux->getProxNo();
+//                             noAux->setUltimaAresta(aresta);
+//                             aresta->setProxAresta(NULL);
+//                         }
+//                         contador++;
+//                     }
+//                 }
+//                 else{
+//                     noAux->setPrimeiraAresta(NULL);
+//                     noAux->setUltimaAresta(NULL);
+//                 }
+//             }
+//             // passa pro proximo vertice
+//             anterior = noAux;
+//             noAux = noAux->getProxNo();
         
 
-            // while(noAux && (contador < no->getGrau() || !achou)){
+//             // while(noAux && (contador < no->getGrau() || !achou)){
                 
-            //     if(noAux->verificaRemoveAresta(no)) contador++;           
-            //     if(noAux != no){
-            //         if(no->verificaRemoveAresta(noAux)) contador++;         
-            //     }
-            //     if(noAux == no){
-            //         achou == true;
-            //         cout << "a" << endl;
-            //         anterior->setProxNo(noAux->getProxNo());
-            //         cout << "b" << endl;
-            //     }
+//             //     if(noAux->verificaRemoveAresta(no)) contador++;           
+//             //     if(noAux != no){
+//             //         if(no->verificaRemoveAresta(noAux)) contador++;         
+//             //     }
+//             //     if(noAux == no){
+//             //         achou == true;
+//             //         cout << "a" << endl;
+//             //         anterior->setProxNo(noAux->getProxNo());
+//             //         cout << "b" << endl;
+//             //     }
 
-            //     anterior = noAux;
-            //     noAux = noAux->getProxNo();
-            // }
+//             //     anterior = noAux;
+//             //     noAux = noAux->getProxNo();
+//             // }
+//         }
+
+//         // Caso queira implementar o int grau no private do Grafo.h
+//         // if(no->getGrau() == this->getOrdem()){
+//         //     this->verificaOrdem();
+//         // }
+
+//         this->decOrdem();
+//         this->numAresta -= grau;
+//         return true;
+//     }
+   
+//    return false;
+// }
+
+void Grafo::removeAresta(No *origem, No *destino)
+{
+    Aresta *delAresta = origem->getPrimeiraAresta();
+    Aresta *anterior = NULL;
+
+    if(delAresta) {
+
+        // percorre as arestas de origem até encontrar a aresta com destino
+        while(delAresta->getProxAresta() && delAresta->getNoDestino() != destino) {
+            anterior = delAresta;
+            delAresta = delAresta->getProxAresta();
         }
 
-        // Caso queira implementar o int grau no private do Grafo.h
-        // if(no->getGrau() == this->getOrdem()){
-        //     this->verificaOrdem();
-        // }
+        // nao encontrou a aresta com no destino
+        if(delAresta->getProxAresta() == NULL && delAresta->getNoDestino() != destino) {
+            exit(1);
+        }
+        else {
+            // A aresta do destino é a primeira, troca-se o ponteiro ultima aresta
+            if(delAresta == origem->getPrimeiraAresta()) {
+                origem->setPrimeiraAresta(delAresta->getProxAresta());
+            }
 
-        this->decOrdem();
-        this->numAresta -= grau;
-        return true;
-    }
-   
-   return false;
-}
+            // A aresta do destino é a ultima, troca-se o ponteiro ultima aresta
+            if(delAresta == origem->getUltimaAresta()){
+                origem->setUltimaAresta(anterior);
+            }
 
-void Grafo::removeAresta(No *anterior, No *noAux)
-{
-    // se noAux for a raiz, a raiz passa a apontar para o proximo;
-    if(noAux == this->getNoRaiz()){
-        this->noRaiz = noAux->getProxNo();
-        noAux->~No();
-        noAux = this->getNoRaiz();
+            anterior->setProxAresta(delAresta->getProxAresta());
+
+            delete delAresta;  
+        }
     }
-    // se nao, anterior aponta pro proximo de noAux, desaloca noAux;
-    else{
-        anterior->setProxNo(noAux->getProxNo());
-        noAux->~No();
-        noAux = anterior->getProxNo();
-    }
+
+
+
+
+
+
+    // // se noAux for a raiz, a raiz passa a apontar para o proximo;
+    // if(noAux == this->getNoRaiz()){
+    //     this->noRaiz = noAux->getProxNo();
+    //     noAux->~No();
+    //     noAux = this->getNoRaiz();
+    // }
+    // // se nao, anterior aponta pro proximo de noAux, desaloca noAux;
+    // else{
+    //     anterior->setProxNo(noAux->getProxNo());
+    //     noAux->~No();
+    //     noAux = anterior->getProxNo();
+    // }
 }
 
 
@@ -260,14 +342,14 @@ bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool w
    //Se para algum ou ambos os ids não existe o no no grafo, e preciso inserir nos com esses ids antes de incluir a aresta
     No *noFonte, *noDestino;
 
-    noFonte = procurarNoPeloId(idNoOrigem);    
+    noFonte = procurarNoPeloId(idNoOrigem,0);    
     
     if(noFonte == NULL) {
         noFonte = this->insereNo(idNoOrigem,0);
         this->incOrdem();
     }
     
-    noDestino = procurarNoPeloId(idNoDestino);
+    noDestino = procurarNoPeloId(idNoDestino,0);
     
     // ou seja, ele será diferente de nulo e diferente de noFonte
     if(noDestino != noFonte){  
@@ -354,8 +436,8 @@ bool Grafo::removeAresta(int idNoOrigem, int idNoDestino, bool isDirected) {
 // Procura o nó origem e busca na sua lista de arestas o idNoDestino
 // Se encontrar, remove. Se não, retorna zero
 
-    No *origem = this->procurarNoPeloId(idNoOrigem);
-    No *destino = this->procurarNoPeloId(idNoDestino);
+    No *origem = this->procurarNoPeloId(idNoOrigem,0);
+    No *destino = this->procurarNoPeloId(idNoDestino,0);
 
     if(origem && destino)
     {            
@@ -512,7 +594,7 @@ Aresta* Grafo::fechoTransitivo(int idNo)
 {
     if(this->digrafo)
     {
-        No *noProcurado = this->procurarNoPeloId(idNo);
+        No *noProcurado = this->procurarNoPeloId(idNo,0);
         
         if(noProcurado){
             Aresta *pAresta = noProcurado->getPrimeiraAresta();
@@ -542,7 +624,7 @@ void Grafo::fechoTransitivoIndireto(int idNo)
 {
     if(this->digrafo)
     {
-        if(No* no = this->procurarNoPeloId(idNo))
+        if(No* no = this->procurarNoPeloId(idNo,0))
         {
             Aresta* vetArestas = no->getPrimeiraAresta();
 

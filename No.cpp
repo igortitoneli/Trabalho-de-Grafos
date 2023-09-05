@@ -217,7 +217,7 @@ void No::removeAresta(No *noRemovido)
             if(aresta->getNoDestino() == noRemovido)
             {
                 anterior->setProxAresta(aresta->getProxAresta());
-                aresta->~Aresta();
+                delete aresta;
             }
             anterior = aresta;
             aresta = aresta->getProxAresta();

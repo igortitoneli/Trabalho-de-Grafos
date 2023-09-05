@@ -23,7 +23,7 @@ public:
     void decOrdem();
 
     //--- Funcoes do No ---
-    No *procurarNoPeloId(int idFindNo);
+    No *procurarNoPeloId(int idFindNo, bool anterior);
     No *insereNo(int idNostrings, int pesoNo);
     bool removeNo(int idNo, bool isDigrafo);
     Aresta* fechoTransitivo(int idNo);
