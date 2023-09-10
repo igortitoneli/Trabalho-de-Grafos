@@ -198,6 +198,33 @@ bool No::verificaRemoveAresta(No *destino)
 
 }
 
+bool No::insereArestaNo(No *noDestino, int pesoAresta)
+{
+    if(this->getPrimeiraAresta() == NULL) // NÃO EXISTE NENHUMA ARESTA NESSE NO 
+    {  
+        Aresta *aresta = new Aresta(noDestino, NULL, pesoAresta);
+        this->setPrimeiraAresta(aresta);
+        this->setUltimaAresta(aresta);
+        this->incrementaGrauSaida();
+        noDestino->incrementaGrauEntrada();
+        return true;
+    }
+    else
+    {
+        if(!this->procuraAresta(this->getPrimeiraAresta(), noDestino))
+        {   
+            Aresta *aresta = new Aresta(noDestino, NULL, pesoAresta);
+            Aresta *ultimaAresta = this->getUltimaAresta();
+            ultimaAresta->setProxAresta(aresta);
+            this->setUltimaAresta(aresta);
+            this->incrementaGrauSaida();
+            noDestino->incrementaGrauEntrada();
+            return true;
+        }
+    }
+    return false;
+}
+
 void No::removeAresta(No *noRemovido)
 {
     Aresta *aresta = this->getPrimeiraAresta();

@@ -19,12 +19,12 @@ int main()
 
     bool direcionado = val;
     
-    cout << "Digite o numero de arestas : ";
+    //cout << "Digite o numero de arestas : ";
     // cin >> n;
     
     Grafo grafo(direcionado, 0 , 0);
     
-    cout << "Nó (i j)" << endl;
+    //cout << "Nó (i j)" << endl;
     // for(int k=0; k<n; k++)
     // {
     //     cin >> i >> j;
@@ -40,8 +40,8 @@ int main()
     grafo.insertAresta(1,3,0,0,direcionado);
     grafo.insertAresta(1,4,0,0,direcionado);
     grafo.insertAresta(1,5,0,0,direcionado);
-    // grafo.imprime();
-    // grafo.fechoTransitivoIndireto(1);
+    grafo.imprime();
+    grafo.fechoTransitivoIndireto(1);
 
     // grafo.removeAresta(1, 5, direcionado);
     // cout << "ordem do grafo antes : " << grafo.getOrdem() << endl;
