@@ -284,3 +284,17 @@ void No::imprimeArestas(){
     }
     cout << endl;
 }
+
+bool No::in_percorridos(No percorridos [], int tam){
+    // cout << endl << this->getIdNo() << " - > in_percorridos : "; 
+    for(int i=0; i<tam; i++){
+        // cout << percorridos[i].getIdNo() << " ";
+        if(this->getIdNo() == percorridos[i].getIdNo()){
+            // cout << endl;
+            return true;
+        }
+    }
+    // cout << endl;
+    return false;
+
+}

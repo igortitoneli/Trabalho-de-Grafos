@@ -40,7 +40,7 @@ int main()
     grafo.insertAresta(1,3,0,0,direcionado);
     grafo.insertAresta(4,1,0,0,direcionado);
     grafo.insertAresta(5,1,0,0,direcionado);
-    grafo.fechoTransitivoDireto(2);
+    grafo.fechoTransitivoDireto(4);
     // grafo.imprime();
     // grafo.fechoTransitivoIndireto(1);
 

@@ -28,7 +28,7 @@ public:
     bool removeNo(int idNo, bool isDigrafo);
     // Aresta* fechoTransitivo(int idNo);
     // void fechoTransitivoIndireto(int idNo);
-    Aresta* fechoTransitivoDireto(int idNo);
+    void fechoTransitivoDireto(int idNo);
 
     //--- Funcoes de Aresta ---
     bool insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool weigthArc, bool isDirected);

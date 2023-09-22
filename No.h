@@ -44,6 +44,7 @@ public:
     Aresta* getArestaAnterior(No *noDestino);
     void imprimeArestas();
     bool insereArestaNo(No *Destino, int pesoAresta);
+    bool in_percorridos(No percorridos [], int tam);
     
     
 private:
