@@ -334,7 +334,56 @@ void Grafo::verificaGrau(){
 * @param noDestinoNome ()
 * @param pesoAresta ()
 */
+
 bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool weigthArc, bool isDirected) {
+
+   //Verifica se já existem os dois nós com esses ids no grafo CHECK
+   //Se ja existem, eé so inserir a aresta em cada um se o grafo for nao direcionado ou apenas de
+   //   origem pra destino, caso o grafo seja orientado.
+   //Se para algum ou ambos os ids não existe o no no grafo, e preciso inserir nos com esses ids antes de incluir a aresta
+    No *noFonte, *noDestino;
+
+    // como não trabalhamos com self-loop, apenas com grafos simples, se os nós forem iguais não irá criar a aresta
+    if(idNoOrigem == idNoDestino){
+        return false;
+    }
+
+    //verificando se os nós existem no grafo e caso não existam eles estão sendo inseridos antes de inserir a aresta
+
+    noFonte = procurarNoPeloId(idNoOrigem,0);    
+    
+    if(noFonte == NULL) {
+        noFonte = this->insereNo(idNoOrigem,0);
+        this->incOrdem();
+    }
+    
+    noDestino = procurarNoPeloId(idNoDestino,0);
+    
+    if(noDestino == NULL){  
+        noDestino = this->insereNo(idNoDestino,0);
+        this->incOrdem();   
+    }
+
+    if(isDirected)
+    {
+        if(noFonte->insereArestaNo(noDestino, pesoAresta))
+        { 
+            this->numAresta++;
+            return true;
+        }
+    }
+    else
+    {
+        if(noFonte->insereArestaNo(noDestino, pesoAresta) && noDestino->insereArestaNo(noFonte, pesoAresta))
+        {
+            this->numAresta ++;
+            return true;
+        }
+    }   
+
+    return false;
+}
+/*bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool weigthArc, bool isDirected) {
 
    //Verifica se já existem os dois nós com esses ids no grafo CHECK
    //Se ja existem, eé so inserir a aresta em cada um se o grafo for nao direcionado ou apenas de
@@ -407,6 +456,7 @@ bool Grafo::criaAresta(No *noFonte, No *Destino, int pesoAresta)
             }
         }
 
+        //NAO TRABALHAMOS COM SELF LOOP SO GRAFOS SIMPLES
         // selfloop 
         else{
             noFonte->incrementaGrauSaida();
@@ -415,7 +465,7 @@ bool Grafo::criaAresta(No *noFonte, No *Destino, int pesoAresta)
         }
     }
     return false;
-}
+}*/
 
 
 

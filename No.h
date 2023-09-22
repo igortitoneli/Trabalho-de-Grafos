@@ -43,6 +43,7 @@ public:
 
     Aresta* getArestaAnterior(No *noDestino);
     void imprimeArestas();
+    bool insereArestaNo(No *Destino, int pesoAresta);
     
     
 private:
