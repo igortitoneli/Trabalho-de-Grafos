@@ -26,8 +26,9 @@ public:
     No *procurarNoPeloId(int idFindNo, bool anterior);
     No *insereNo(int idNostrings, int pesoNo);
     bool removeNo(int idNo, bool isDigrafo);
-    Aresta* fechoTransitivo(int idNo);
-    void fechoTransitivoIndireto(int idNo);
+    // Aresta* fechoTransitivo(int idNo);
+    // void fechoTransitivoIndireto(int idNo);
+    Aresta* fechoTransitivoDireto(int idNo);
 
     //--- Funcoes de Aresta ---
     bool insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool weigthArc, bool isDirected);

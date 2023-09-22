@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Igor/Documents/Trabalho-de-Grafos",
-      "program": "c:/Users/Igor/Documents/Trabalho-de-Grafos/build/Debug/outDebug",
+      "cwd": "c:/Users/Igor/Documents/UFJF/Trabalho-de-Grafos",
+      "program": "c:/Users/Igor/Documents/UFJF/Trabalho-de-Grafos/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

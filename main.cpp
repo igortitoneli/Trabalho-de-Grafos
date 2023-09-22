@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-    int n, i, j, val=0;
+    int n, i, j, val=1;
     
 
     // do{
@@ -19,12 +19,12 @@ int main()
 
     bool direcionado = val;
     
-    cout << "Digite o numero de arestas : ";
+    // cout << "Digite o numero de arestas : ";
     // cin >> n;
     
     Grafo grafo(direcionado, 0 , 0);
     
-    cout << "Nó (i j)" << endl;
+    // cout << "Nó (i j)" << endl;
     // for(int k=0; k<n; k++)
     // {
     //     cin >> i >> j;
@@ -38,8 +38,9 @@ int main()
     grafo.insertAresta(4,5,0,0,direcionado);
     grafo.insertAresta(1,2,0,0,direcionado);
     grafo.insertAresta(1,3,0,0,direcionado);
-    grafo.insertAresta(1,4,0,0,direcionado);
-    grafo.insertAresta(1,5,0,0,direcionado);
+    grafo.insertAresta(4,1,0,0,direcionado);
+    grafo.insertAresta(5,1,0,0,direcionado);
+    grafo.fechoTransitivoDireto(2);
     // grafo.imprime();
     // grafo.fechoTransitivoIndireto(1);
 
@@ -48,10 +49,10 @@ int main()
     // grafo.imprime();
     // cout << endl << "num arestas : " << grafo.getNumAresta() << endl;
 
-    grafo.removeNo(5, direcionado);
-    grafo.imprime();
-    grafo.removeNo(1, direcionado);
-    grafo.imprime();
+    // grafo.removeNo(5, direcionado);
+    // grafo.imprime();
+    // grafo.removeNo(1, direcionado);
+    // grafo.imprime();
 
     // cout << "ordem do grafo depois : " << grafo.getOrdem() << endl;
 
