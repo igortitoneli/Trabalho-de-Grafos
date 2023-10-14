@@ -693,19 +693,19 @@ void Grafo::fechoTransitivoDireto(int idNo)
         if (procurado)
         {
             int cont = 0;
-            if (procurado->getGrauSaida())
+            cout << "Fecho Transitivo do vertice " << idNo << " : ";
+            if (procurado->getGrauSaida() > 0)
             {
+                cout << " [ " << procurado->getIdNo() << " , " << procurado->getPeso() << " ] ";
+                        
                 Aresta *atual = procurado->getPrimeiraAresta();
                 Aresta *iterador = atual->getNoDestino()->getPrimeiraAresta();
-                ;
-                int tam = this->getOrdem();
-                No percorridos[tam];
 
-                cout << "Fecho Transitivo do vertice " << idNo << " : ";
+                int tam = this->getOrdem();
+                No percorridos[tam];     
 
                 for (int i = 0; i < procurado->getGrauSaida(); i++)
                 {
-
                     if (!atual->getNoDestino()->in_percorridos(percorridos, tam))
                     {
                         cout << " [ " << atual->getNoDestino()->getIdNo() << " , " << atual->getNoDestino()->getPeso() << " ] ";
@@ -727,6 +727,7 @@ void Grafo::fechoTransitivoDireto(int idNo)
                     }
                     atual = atual->getProxAresta();
                 }
+                cout << endl << endl;
             }
             else
                 cout << "O vertice " << idNo << " possui grau de saida igual a 0." << endl;
@@ -734,6 +735,9 @@ void Grafo::fechoTransitivoDireto(int idNo)
         else
             cout << "O vertice " << idNo << " nao esta no grafo." << endl;
     }
+    else
+        cout << "O grafo nao é direcionado." << endl;
+
 }
 
 //Código ainda não verificado
@@ -750,9 +754,7 @@ void Grafo::fechoTransitivoIndireto(int idNo)
             No percorridos[tam];
 
             cout << "Fecho Transitivo Indireto do vertice " << idNo << " : ";
-
             fechoTransitivoIndiretoRecursivo(procurado, percorridos, cont, tam);
-
             cout << endl;
         }
         else
@@ -780,25 +782,26 @@ void Grafo::fechoTransitivoIndiretoRecursivo(No *noAtual, No percorridos[], int 
     }
 }
 
-// void Grafo::fechoTransitivoIndireto(int idNo)
-// {
-//     if(this->digrafo)
-//     {
-//         if(No* no = this->procurarNoPeloId(idNo,0))
-//         {
-//             Aresta* vetArestas = no->getPrimeiraAresta();
 
-//             cout << "Fecho Transitivo indireto do vertice " << idNo << " --> \t";
-//             while(vetArestas)
-//             {
-//                 this->fechoTransitivo(vetArestas->getNoDestino()->getIdNo());
-//                 vetArestas = vetArestas->getProxAresta();
-//                 cout << "\t\t\t\t\t\t";
-//             }
-//             cout << endl;
-//         }
-//         else cout << "O vertice " << idNo << " nao esta no grafo." << endl;
-//     }
-//     else cout << "O grafo nao é direcionado." << endl;
+void Grafo::fechoTransitivoIndireto2(int idNo)
+{   
+    No* procurado = this->procurarNoPeloId(idNo, false);
 
-// }
+    if(procurado)
+    {
+        int grauDeIncidencia = procurado->getGrauEntrada();
+        No* percorre = this->getNoRaiz();
+        cout    << "Fecho Transitivo Indireto do vertice " << idNo << " : "\
+                << " [ " << procurado->getIdNo() << " , " << procurado->getPeso() << " ] ";
+
+        while(percorre){
+            if(percorre != procurado && percorre->verificaNoAresta(procurado)){
+                grauDeIncidencia--;
+                cout << " [ " << procurado->getIdNo() << " , " << procurado->getPeso() << " ] ";
+            }
+            percorre = percorre->getProxNo();
+        }
+    }
+    else
+        cout << "o no " << idNo << " nao pertence ao grafo." << endl;
+}

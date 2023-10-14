@@ -27,7 +27,9 @@ public:
     No *insereNo(int idNostrings, int pesoNo);
     bool removeNo(int idNo, bool isDigrafo);
     // Aresta* fechoTransitivo(int idNo);
-    // void fechoTransitivoIndireto(int idNo);
+    void fechoTransitivoIndireto2(int idNo);
+    void fechoTransitivoIndireto(int idNo);
+    void fechoTransitivoIndiretoRecursivo(No *noAtual, No percorridos[], int &cont, int tam);
     void fechoTransitivoDireto(int idNo);
 
     //--- Funcoes de Aresta ---

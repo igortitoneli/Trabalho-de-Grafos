@@ -40,29 +40,9 @@ int main()
     grafo.insertAresta(1,3,0,0,direcionado);
     grafo.insertAresta(4,1,0,0,direcionado);
     grafo.insertAresta(5,1,0,0,direcionado);
+
     grafo.fechoTransitivoDireto(4);
-    grafo.fechoTransitivoIndireto(4);
-    
-    // grafo.imprime();
-    // grafo.fechoTransitivoIndireto(1);
-
-    // grafo.removeAresta(1, 5, direcionado);
-    // cout << "ordem do grafo antes : " << grafo.getOrdem() << endl;
-    // grafo.imprime();
-    // cout << endl << "num arestas : " << grafo.getNumAresta() << endl;
-
-    // grafo.removeNo(5, direcionado);
-    // grafo.imprime();
-    // grafo.removeNo(1, direcionado);
-    // grafo.imprime();
-
-    // cout << "ordem do grafo depois : " << grafo.getOrdem() << endl;
-
-    // cout << endl << "num arestas  : " << grafo.AtualizaNumAresta() << endl;
-    
-    // cout << endl << "num arestas  : " << grafo.getNumAresta() << endl;
-    
-    // grafo.fechoTransitivoIndireto(i);
+    grafo.fechoTransitivoIndireto2(4);
 
     return 1;
 }

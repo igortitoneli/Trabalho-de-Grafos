@@ -15,42 +15,48 @@ public:
     No(int idNo, int weight);
     virtual ~No();
 
-    int getIdNo();
-    Aresta* getPrimeiraAresta();
-    Aresta* getUltimaAresta();
-    void setIdNo(int id);
-    void setPeso(int peso);
-    int getPeso();
-    int getGrau();
-    void incGrau();
-    void decGrau();
-    int getGrauEntrada();
-    void incrementaGrauEntrada();
-    void decrementaGrauEntrada();
-    int getGrauSaida();
-    void incrementaGrauSaida();
-    void decrementaGrauSaida();
-    void setProxNo(No *novoNo);
-    No* getProxNo();
-    void setPrimeiraAresta(Aresta *novaAresta);
-    void setUltimaAresta(Aresta *novaAresta);
-    void setOrdemMaisUm();
+    // get()
+    int getIdNo() { return this->idNo; };
+    Aresta* getPrimeiraAresta() { return this->primeiraAresta; };
+    Aresta* getUltimaAresta() { return this->ultimaAresta; };
+    Aresta* getArestaAnterior(No *noDestino);
+    int getPeso(){ return this->pesoNo; } 
+    int getGrau(){ return this->grauSaida; };
+    int getGrauEntrada() { return this->grauEntrada; };
+    int getGrauSaida() { return this->grauSaida; };
+    No* getProxNo() { return this->proxNo; };
+
+    // set()
+    void setIdNo(int id) { this->idNo = id; };
+    void setPeso(int peso) { this->pesoNo = peso; };
+    void setProxNo(No *novoNo) { this->proxNo = novoNo; };
+    void setPrimeiraAresta(Aresta *novaAresta) { this->primeiraAresta = novaAresta; };
+    void setUltimaAresta(Aresta *novaAresta) { this->ultimaAresta = novaAresta; };
+    void setOrdemMaisUm() { this->pesoNo++; };
+
+    // grau
+    void incGrau() { this->grauEntrada++; this->grauSaida++; };
+    void decGrau() { this->grauEntrada--; this->grauSaida--; };
+    void incrementaGrauEntrada() { this->grauEntrada++; };
+    void decrementaGrauEntrada() { this->grauEntrada--; };
+    void incrementaGrauSaida() { this->grauSaida++; };
+    void decrementaGrauSaida() { this->grauSaida--; };
+
+    // procura()
     bool procuraAresta(Aresta *aresta, No *noDestino);
     Aresta* procuraAresta(No* noProcurado);
+
+    // func()
     bool verificaRemoveAresta(No *destino);
     void removeAresta(No *noRemovido);
     Aresta *verificaNoAresta(No *procurado);
-
-    Aresta* getArestaAnterior(No *noDestino);
     void imprimeArestas();
     bool insereArestaNo(No *Destino, int pesoAresta);
     bool in_percorridos(No percorridos [], int tam);
     
-    
 private:
 
     Aresta* auxGetArestaAnterior(Aresta *aresta, No *noDestino);
-
 
     int idNo;
     int pesoNo;
