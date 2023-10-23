@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-    int n, i, j, val=1;
+   // int n, i, j, val=1;
     
 
     // do{
@@ -17,7 +17,7 @@ int main()
     //     cin >> val;
     // }while(val!=0 && val!=1);
 
-    bool direcionado = val;
+    bool direcionado = 1;
     
     // cout << "Digite o numero de arestas : ";
     // cin >> n;
@@ -42,7 +42,9 @@ int main()
     grafo.insertAresta(5,1,0,0);
 
     grafo.fechoTransitivoDireto(4);
-    grafo.fechoTransitivoIndireto2(4);
+    grafo.fechoTransitivoIndireto3(4);
+
+    
 
     return 1;
 }

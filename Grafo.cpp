@@ -731,15 +731,15 @@ void Grafo::fechoTransitivoDireto(int idNo)
 
 }
 
-bool Grafo::estarNoVetor(No vetor[], int idNo, int tam){
+bool Grafo::estarNoVetor(int vetor[], int idNo, int tam){
     for(int i = 0; i < tam; i++){
-        if(vetor[i].getIdNo() == idNo)
+        if(vetor[i] == idNo)
             return true;
     }
     return false;
 }
 
-bool Grafo:: arestaNoVetor(No vetor[], No* noAtual, int tam){
+bool Grafo:: arestaNoVetor(int vetor[], No* noAtual, int tam){
     Aresta *aresta = noAtual->getPrimeiraAresta();
     while (aresta)
     {
@@ -751,30 +751,56 @@ bool Grafo:: arestaNoVetor(No vetor[], No* noAtual, int tam){
     return false;
     
 }
+void Grafo::imprimeVetor(int vetor[], int tam){
+    for(int i = 0; i < tam; i++){
+        cout << vetor[i] << ", ";
+    }
+    cout << endl;
+}
 
 void Grafo::fechoTransitivoIndireto3(int idNo)
 {
+    
  if(this->digrafo)
  {
+    cout << "Fecho transitivo indireto do vertice " << idNo << " : ";
     No *procurado = this->procurarNoPeloId(idNo);
     if(procurado)
     {
         
         No *percorre = this->getNoRaiz();
         
-        No vetor[this->getOrdem()];
-        vetor[0] = *procurado;
+        int vetor[this->getOrdem()];
+        vetor[0] = procurado->getIdNo();
         int tam = 1;
         
-        while(percorre){
-
+        while(percorre!=NULL){
+            
             if(!estarNoVetor(vetor, percorre->getIdNo(), tam)){
                 if(arestaNoVetor(vetor, percorre, tam)){
-                    vetor[tam++] = *percorre;
+                    vetor[tam] = percorre->getIdNo();
+                    tam++;
+                    percorre = this->getNoRaiz();
                 }
             }
             percorre = percorre->getProxNo();
+            cout<<"Vetor:";
+            imprimeVetor(vetor, tam);
+            cout<<"   " << percorre->getIdNo() << std::endl;
         }
+
+        if(percorre==NULL){
+            cout<<"percorre nulo"<<endl;
+                    
+        cout<<"tam : "<< tam << std::endl;
+        }else{
+            cout<<"Percorre: "<< percorre->getIdNo() << std::endl;
+        }
+
+
+
+                
+        
         /*
         Cria vetor
         Percorre lista de adjacência 
