@@ -69,7 +69,7 @@ void Grafo::decOrdem()
  * @return true - se achar no.
  *         false - se Nao achar.
  */
-No *Grafo::procurarNoPeloId(int idFindNo, bool anteiror)
+No *Grafo::procurarNoPeloId(int idFindNo, bool anteiror = false)
 {
 
     // bool anterior serve para caso necessario, retorne o anterior ao nó que contem id = id;
@@ -731,11 +731,71 @@ void Grafo::fechoTransitivoDireto(int idNo)
 
 }
 
+bool Grafo::estarNoVetor(No vetor[], int idNo, int tam){
+    for(int i = 0; i < tam; i++){
+        if(vetor[i].getIdNo() == idNo)
+            return true;
+    }
+    return false;
+}
+
+bool Grafo:: arestaNoVetor(No vetor[], No* noAtual, int tam){
+    Aresta *aresta = noAtual->getPrimeiraAresta();
+    while (aresta)
+    {
+        if(estarNoVetor(vetor, aresta->getNoDestino()->getIdNo(), tam)){
+            return true;
+        }
+        aresta = aresta->getProxAresta();
+    }
+    return false;
+    
+}
+
+void Grafo::fechoTransitivoIndireto3(int idNo)
+{
+ if(this->digrafo)
+ {
+    No *procurado = this->procurarNoPeloId(idNo);
+    if(procurado)
+    {
+        
+        No *percorre = this->getNoRaiz();
+        
+        No vetor[this->getOrdem()];
+        vetor[0] = *procurado;
+        int tam = 1;
+        
+        while(percorre){
+
+            if(!estarNoVetor(vetor, percorre->getIdNo(), tam)){
+                if(arestaNoVetor(vetor, percorre, tam)){
+                    vetor[tam++] = *percorre;
+                }
+            }
+            percorre = percorre->getProxNo();
+        }
+        /*
+        Cria vetor
+        Percorre lista de adjacência 
+        Para cada nó, verifica se está no vetor
+            Se sim, passa para o próximo 
+            Se não, verifica se o destino das arestas, pertecem ao vetor
+                Se sim, insere o nó no vetor e reenicia a função
+                Se não, passa para o próximo
+        */
+
+    }
+
+ }    
+}
+
+
 void Grafo::fechoTransitivoIndireto(int idNo)
 {
     if (this->digrafo)
     {
-        No *procurado = this->procurarNoPeloId(idNo, false);
+        No *procurado = this->procurarNoPeloId(idNo);
 
         if (procurado)
         {
@@ -744,7 +804,7 @@ void Grafo::fechoTransitivoIndireto(int idNo)
             No percorridos[tam];
 
             cout << "Fecho Transitivo Indireto do vertice " << idNo << " : ";
-            fechoTransitivoIndiretoRecursivo(procurado, percorridos, cont, tam);
+            fechoTransitivoIndiretoRecursivo(procurado, percorridos, &cont, tam);
             cout << endl;
         }
         else
@@ -754,18 +814,18 @@ void Grafo::fechoTransitivoIndireto(int idNo)
     }
 }
 
-void Grafo::fechoTransitivoIndiretoRecursivo(No *noAtual, No percorridos[], int &cont, int tam)
+void Grafo::fechoTransitivoIndiretoRecursivo(No *noAtual, No percorridos[], int *cont, int tam)
 {
     if (!noAtual->in_percorridos(percorridos, tam))
     {
         cout << " [ " << noAtual->getIdNo() << " , " << noAtual->getPeso() << " ] ";
-        percorridos[cont] = *noAtual;
-        cont++;
+        percorridos[*cont] = *noAtual;
+        (*cont)++;
 
         Aresta *atual = noAtual->getPrimeiraAresta();
+
         for (int i = 0; i < noAtual->getGrauSaida(); i++)
         {
-            // Chamada recursiva para cada nó de destino da aresta
             fechoTransitivoIndiretoRecursivo(atual->getNoDestino(), percorridos, cont, tam);
             atual = atual->getProxAresta();
         }

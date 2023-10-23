@@ -29,8 +29,11 @@ public:
     // Aresta* fechoTransitivo(int idNo);
     void fechoTransitivoIndireto2(int idNo);
     void fechoTransitivoIndireto(int idNo);
-    void fechoTransitivoIndiretoRecursivo(No *noAtual, No percorridos[], int &cont, int tam);
+    void fechoTransitivoIndireto3(int idNo);
+    void fechoTransitivoIndiretoRecursivo(No *noAtual, No percorridos[], int *cont, int tam);
     void fechoTransitivoDireto(int idNo);
+    bool estarNoVetor(No vetor[], int idNo, int tam);
+    bool arestaNoVetor(No vetor[], No* noAtual, int tam);
 
     //--- Funcoes de Aresta ---
     bool insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool weigthArc);
