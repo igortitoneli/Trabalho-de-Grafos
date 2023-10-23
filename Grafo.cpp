@@ -359,22 +359,13 @@ void Grafo::verificaGrau(){
  * @param pesoAresta ()
  */
 
-bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool weigthArc, bool isDirected)
+bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool weigthArc)
 {
-
-    // Verifica se já existem os dois nós com esses ids no grafo CHECK
-    // Se ja existem, eé so inserir a aresta em cada um se o grafo for nao direcionado ou apenas de
-    //    origem pra destino, caso o grafo seja orientado.
-    // Se para algum ou ambos os ids não existe o no no grafo, e preciso inserir nos com esses ids antes de incluir a aresta
     No *noFonte, *noDestino;
 
-    // como não trabalhamos com self-loop, apenas com grafos simples, se os nós forem iguais não irá criar a aresta
-    if (idNoOrigem == idNoDestino)
-    {
+    if (idNoOrigem == idNoDestino){
         return false;
     }
-
-    // verificando se os nós existem no grafo e caso não existam eles estão sendo inseridos antes de inserir a aresta
 
     noFonte = procurarNoPeloId(idNoOrigem, 0);
 
@@ -392,7 +383,7 @@ bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool w
         this->incOrdem();
     }
 
-    if (isDirected)
+    if (this->digrafo)
     {
         if (noFonte->insereArestaNo(noDestino, pesoAresta))
         {
@@ -740,7 +731,6 @@ void Grafo::fechoTransitivoDireto(int idNo)
 
 }
 
-//Código ainda não verificado
 void Grafo::fechoTransitivoIndireto(int idNo)
 {
     if (this->digrafo)

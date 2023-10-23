@@ -33,7 +33,7 @@ public:
     void fechoTransitivoDireto(int idNo);
 
     //--- Funcoes de Aresta ---
-    bool insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool weigthArc, bool isDirected);
+    bool insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool weigthArc);
     bool removeAresta(int idNoOrigem, int idNoDestino, bool isDirected);
     bool criaAresta(No *noFonte, No *Destino, int pesoAresta);
     void removeAresta(No *anterior, No *noAux);

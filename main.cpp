@@ -30,16 +30,16 @@ int main()
     //     cin >> i >> j;
     //     grafo.insertAresta(i,j,0,0,direcionado);    
     // }
-    grafo.insertAresta(2,3,0,0,direcionado);
-    grafo.insertAresta(2,4,0,0,direcionado);
-    grafo.insertAresta(2,5,0,0,direcionado);
-    grafo.insertAresta(3,4,0,0,direcionado);
-    grafo.insertAresta(3,5,0,0,direcionado);
-    grafo.insertAresta(4,5,0,0,direcionado);
-    grafo.insertAresta(1,2,0,0,direcionado);
-    grafo.insertAresta(1,3,0,0,direcionado);
-    grafo.insertAresta(4,1,0,0,direcionado);
-    grafo.insertAresta(5,1,0,0,direcionado);
+    grafo.insertAresta(2,3,0,0);
+    grafo.insertAresta(2,4,0,0);
+    grafo.insertAresta(2,5,0,0);
+    grafo.insertAresta(3,4,0,0);
+    grafo.insertAresta(3,5,0,0);
+    grafo.insertAresta(4,5,0,0);
+    grafo.insertAresta(1,2,0,0);
+    grafo.insertAresta(1,3,0,0);
+    grafo.insertAresta(4,1,0,0);
+    grafo.insertAresta(5,1,0,0);
 
     grafo.fechoTransitivoDireto(4);
     grafo.fechoTransitivoIndireto2(4);
