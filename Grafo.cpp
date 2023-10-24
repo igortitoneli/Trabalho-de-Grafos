@@ -797,7 +797,7 @@ void Grafo::fechoTransitivoIndireto(int idNo)
     }
 }
 
-int Grafo::Djkstra(int idNoinicio, int idNofim){
+int Grafo::Djkstra(int idNoinicio, int idNofim) {
 
     auto estaNaHash = [](int idNo, unordered_map<int, int> distance) -> bool {
         return (distance.find(idNo) != distance.end());
@@ -832,11 +832,4 @@ int Grafo::Djkstra(int idNoinicio, int idNofim){
     }
 
     return distance[idNofim];
-    /*
-    criar um vetor de tam = ordem
-    iniciar ele com infinito
-    vet(idNoinicio) = 0
-    para cada no das arestas de inicio, compara com o valor q ta no vetor, se for menor, troca.
-    atualiza a relaxação 
-    */
 }

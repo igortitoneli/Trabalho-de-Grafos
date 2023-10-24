@@ -30,23 +30,25 @@ int main()
     //     cin >> i >> j;
     //     grafo.insertAresta(i,j,0,0,direcionado);    
     // }
-    grafo.insertAresta(2,3,0,0);
-    grafo.insertAresta(2,4,0,0);
-    grafo.insertAresta(2,5,0,0);
-    grafo.insertAresta(3,4,0,0);
-    grafo.insertAresta(3,5,0,0);
-    grafo.insertAresta(4,5,0,0);
-    grafo.insertAresta(1,2,0,0);
-    grafo.insertAresta(1,3,0,0);
-    grafo.insertAresta(4,1,0,0);
-    grafo.insertAresta(5,1,0,0);
-    grafo.insertAresta(10,20,0,0);
+    grafo.insertAresta(0,1,2,0);
+    grafo.insertAresta(0,3,1,0);
+    grafo.insertAresta(0,2,6,0);
+    grafo.insertAresta(2,4,1,0);
+    grafo.insertAresta(1,0,2,0);
+    grafo.insertAresta(1,4,6,0);
+    grafo.insertAresta(1,3,3,0);
+    grafo.insertAresta(3,1,3,0);
+    grafo.insertAresta(3,0,1,0);
+    grafo.insertAresta(3,4,5,0);
+    grafo.insertAresta(4,1,6,0);
+    grafo.insertAresta(4,3,5,0);
 
-    grafo.fechoTransitivoDireto(4);
-    grafo.imprime();
-    grafo.fechoTransitivoIndireto(20);
+    // grafo.fechoTransitivoDireto(4);
+    // grafo.imprime();
+    // grafo.fechoTransitivoIndireto(20);
 
-    
+    cout << "menor caminho: " << grafo.Djkstra(0,4) << endl;
+
 
     return 1;
 }

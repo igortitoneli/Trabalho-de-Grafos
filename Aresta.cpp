@@ -6,28 +6,13 @@
 using namespace std;
 
 /**
- * Construtor. Os valores padrões são:\n
- * 
- * peso = 1;
- * 
- * @param *noDestino (new valor)
- * @param *proxAresta (new valor)
- */
-
-Aresta::Aresta(No *noDestino, Aresta *proxAresta) {
-    this->peso = 1;
-    this->noDestino = noDestino;
-    this->proxAresta = proxAresta;
-}
-
-/**
  * Construtor sobrescrito.
  * 
  * @param *noDestino (new valor)
  * @param *proxAresta (new valor)
  * @param peso (new valor)
  */
-Aresta::Aresta(No *noDestino, Aresta *proxAresta, int peso) {
+Aresta::Aresta(No *noDestino, Aresta *proxAresta, int peso=1) {
     this->peso = peso;
     this->noDestino = noDestino;
     this->proxAresta = proxAresta;

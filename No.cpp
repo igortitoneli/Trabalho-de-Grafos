@@ -175,7 +175,7 @@ void No::imprimeArestas(){
     Aresta *aux = this->primeiraAresta;
 
     while(aux){
-        cout << " -> " <<  "[ " << aux->getNoDestino()->getIdNo() << " | " << aux->getNoDestino()->getPeso() << " ]";
+        cout << " -> " <<  "[ " << aux->getNoDestino()->getIdNo() << " | " << aux->getPeso() << " ]";
         aux = aux->getProxAresta();
     }
     cout << endl;
