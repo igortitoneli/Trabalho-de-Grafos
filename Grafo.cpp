@@ -3,6 +3,7 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <limits>
 #include "Grafo.h"
 
 using namespace std;
@@ -108,9 +109,9 @@ No *Grafo::insereNo(int idNo, int peso)
     {
         No *novoNo = new No(idNo, peso);
 
-        if (noRaiz == NULL)
+        if (this->noRaiz == NULL)
         {
-            noRaiz = novoNo;
+            this->noRaiz = novoNo;
         }
         else
         {
@@ -202,17 +203,17 @@ bool Grafo::removeNo(int idNo, bool isDigrafo)
 //    // Pesquisa o No a ser excluido
 //    // Remove todas as arestas/arcos onde este nó ocorre
 //    // Remove o no
-
+// 
 //     No *removido = this->procurarNoPeloId(idNo);
 //     int grau = removido->getGrau();
-
+// 
 //     if(removido){
 //         int contador = 0;
 //         bool achou = false;
-
+// 
 //         No *noAux = this->getNoRaiz();
 //         No *anterior = NULL;
-
+// 
 //         //percorre todos os vertices do grafo
 //         while(noAux && (contador < grau || !achou))
 //         {
@@ -234,7 +235,7 @@ bool Grafo::removeNo(int idNo, bool isDigrafo)
 //                         else{
 //                             // Aresta *proxima = aresta->getProxAresta();
 //                             // proxima->~Aresta();
-
+// 
 //                             noAux->setUltimaAresta(aresta);
 //                             aresta->setProxAresta(NULL);
 //                         }
@@ -249,9 +250,9 @@ bool Grafo::removeNo(int idNo, bool isDigrafo)
 //             // passa pro proximo vertice
 //             anterior = noAux;
 //             noAux = noAux->getProxNo();
-
+// 
 //             // while(noAux && (contador < no->getGrau() || !achou)){
-
+// 
 //             //     if(noAux->verificaRemoveAresta(no)) contador++;
 //             //     if(noAux != no){
 //             //         if(no->verificaRemoveAresta(noAux)) contador++;
@@ -262,22 +263,22 @@ bool Grafo::removeNo(int idNo, bool isDigrafo)
 //             //         anterior->setProxNo(noAux->getProxNo());
 //             //         cout << "b" << endl;
 //             //     }
-
+// 
 //             //     anterior = noAux;
 //             //     noAux = noAux->getProxNo();
 //             // }
 //         }
-
+// 
 //         // Caso queira implementar o int grau no private do Grafo.h
 //         // if(no->getGrau() == this->getOrdem()){
 //         //     this->verificaOrdem();
 //         // }
-
+// 
 //         this->decOrdem();
 //         this->numAresta -= grau;
 //         return true;
 //     }
-
+// 
 //    return false;
 // }
 
@@ -363,9 +364,7 @@ bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool w
 {
     No *noFonte, *noDestino;
 
-    if (idNoOrigem == idNoDestino){
-        return false;
-    }
+    if (idNoOrigem == idNoDestino) return false;
 
     noFonte = procurarNoPeloId(idNoOrigem, 0);
 
@@ -579,10 +578,7 @@ int Grafo::getNumAresta()
 /**
  * Retorna 'rootNode'.
  */
-No *Grafo::getNoRaiz()
-{
-    return this->noRaiz;
-}
+
 
 /**
  * Retorna ordem do grafo.
@@ -688,19 +684,19 @@ void Grafo::fechoTransitivoDireto(int idNo)
             if (procurado->getGrauSaida() > 0)
             {
                 cout << " [ " << procurado->getIdNo() << " , " << procurado->getPeso() << " ] ";
-                        
+
                 Aresta *atual = procurado->getPrimeiraAresta();
                 Aresta *iterador = atual->getNoDestino()->getPrimeiraAresta();
 
                 int tam = this->getOrdem();
-                No percorridos[tam];     
+                No* percorridos[this->getOrdem()] = {procurado};
 
                 for (int i = 0; i < procurado->getGrauSaida(); i++)
                 {
-                    if (!atual->getNoDestino()->in_percorridos(percorridos, tam))
+                    if (!atual->getNoDestino()->in_percorridos(*percorridos, tam))
                     {
                         cout << " [ " << atual->getNoDestino()->getIdNo() << " , " << atual->getNoDestino()->getPeso() << " ] ";
-                        percorridos[cont] = *atual->getNoDestino();
+                        percorridos[cont] = atual->getNoDestino();
                         cont++;
                     }
 
@@ -708,17 +704,18 @@ void Grafo::fechoTransitivoDireto(int idNo)
 
                     for (int j = 0; j < atual->getNoDestino()->getGrauSaida(); j++)
                     {
-                        if (!iterador->getNoDestino()->in_percorridos(percorridos, tam))
+                        if (!iterador->getNoDestino()->in_percorridos(*percorridos, tam))
                         {
                             cout << " [ " << iterador->getNoDestino()->getIdNo() << " , " << iterador->getNoDestino()->getPeso() << " ] ";
-                            percorridos[cont] = *iterador->getNoDestino();
+                            percorridos[cont] = iterador->getNoDestino();
                             cont++;
                         }
                         iterador = iterador->getProxAresta();
                     }
                     atual = atual->getProxAresta();
                 }
-                cout << endl << endl;
+                cout << endl
+                     << endl;
             }
             else
                 cout << "O vertice " << idNo << " possui grau de saida igual a 0." << endl;
@@ -728,156 +725,73 @@ void Grafo::fechoTransitivoDireto(int idNo)
     }
     else
         cout << "O grafo nao é direcionado." << endl;
-
 }
 
-bool Grafo::estarNoVetor(int vetor[], int idNo, int tam){
-    for(int i = 0; i < tam; i++){
-        if(vetor[i] == idNo)
+bool Grafo::estarNoVetor(int vetor[], int idNo, int tam)
+{
+    for (int i = 0; i < tam; i++)
+        if (vetor[i] == idNo)
             return true;
-    }
+
     return false;
 }
 
-bool Grafo:: arestaNoVetor(int vetor[], No* noAtual, int tam){
+bool Grafo::arestaNoVetor(int vetor[], No *noAtual, int tam)
+{
     Aresta *aresta = noAtual->getPrimeiraAresta();
     while (aresta)
     {
-        if(estarNoVetor(vetor, aresta->getNoDestino()->getIdNo(), tam)){
+        if (estarNoVetor(vetor, aresta->getNoDestino()->getIdNo(), tam))
             return true;
-        }
         aresta = aresta->getProxAresta();
     }
     return false;
-    
 }
-void Grafo::imprimeVetor(int vetor[], int tam){
-    for(int i = 0; i < tam; i++){
+
+void Grafo::imprimeVetor(int vetor[], int tam)
+{
+    for (int i = 0; i < tam; i++)
+    {
         cout << vetor[i] << ", ";
     }
     cout << endl;
 }
-
-void Grafo::fechoTransitivoIndireto3(int idNo)
-{
-    
- if(this->digrafo)
- {
-    cout << "Fecho transitivo indireto do vertice " << idNo << " : ";
-    No *procurado = this->procurarNoPeloId(idNo);
-    if(procurado)
-    {
-        
-        No *percorre = this->getNoRaiz();
-        
-        int vetor[this->getOrdem()];
-        vetor[0] = procurado->getIdNo();
-        int tam = 1;
-        
-        while(percorre!=NULL){
-            
-            if(!estarNoVetor(vetor, percorre->getIdNo(), tam)){
-                if(arestaNoVetor(vetor, percorre, tam)){
-                    vetor[tam] = percorre->getIdNo();
-                    tam++;
-                    percorre = this->getNoRaiz();
-                }
-            }
-            percorre = percorre->getProxNo();
-            cout<<"Vetor:";
-            imprimeVetor(vetor, tam);
-            cout<<"   " << percorre->getIdNo() << std::endl;
-        }
-
-        if(percorre==NULL){
-            cout<<"percorre nulo"<<endl;
-                    
-        cout<<"tam : "<< tam << std::endl;
-        }else{
-            cout<<"Percorre: "<< percorre->getIdNo() << std::endl;
-        }
-
-
-
-                
-        
-        /*
-        Cria vetor
-        Percorre lista de adjacência 
-        Para cada nó, verifica se está no vetor
-            Se sim, passa para o próximo 
-            Se não, verifica se o destino das arestas, pertecem ao vetor
-                Se sim, insere o nó no vetor e reenicia a função
-                Se não, passa para o próximo
-        */
-
-    }
-
- }    
-}
-
 
 void Grafo::fechoTransitivoIndireto(int idNo)
 {
     if (this->digrafo)
     {
         No *procurado = this->procurarNoPeloId(idNo);
-
         if (procurado)
         {
-            int cont = 0;
-            int tam = this->getOrdem();
-            No percorridos[tam];
+            cout << "Fecho transitivo indireto do vertice " << idNo << " : ";
 
-            cout << "Fecho Transitivo Indireto do vertice " << idNo << " : ";
-            fechoTransitivoIndiretoRecursivo(procurado, percorridos, &cont, tam);
-            cout << endl;
-        }
-        else
-        {
-            cout << "O vertice " << idNo << " nao esta no grafo." << endl;
-        }
-    }
-}
+            No *percorre = this->getNoRaiz();
 
-void Grafo::fechoTransitivoIndiretoRecursivo(No *noAtual, No percorridos[], int *cont, int tam)
-{
-    if (!noAtual->in_percorridos(percorridos, tam))
-    {
-        cout << " [ " << noAtual->getIdNo() << " , " << noAtual->getPeso() << " ] ";
-        percorridos[*cont] = *noAtual;
-        (*cont)++;
-
-        Aresta *atual = noAtual->getPrimeiraAresta();
-
-        for (int i = 0; i < noAtual->getGrauSaida(); i++)
-        {
-            fechoTransitivoIndiretoRecursivo(atual->getNoDestino(), percorridos, cont, tam);
-            atual = atual->getProxAresta();
-        }
-    }
-}
-
-
-void Grafo::fechoTransitivoIndireto2(int idNo)
-{   
-    No* procurado = this->procurarNoPeloId(idNo, false);
-
-    if(procurado)
-    {
-        int grauDeIncidencia = procurado->getGrauEntrada();
-        No* percorre = this->getNoRaiz();
-        cout    << "Fecho Transitivo Indireto do vertice " << idNo << " : "\
-                << " [ " << procurado->getIdNo() << " , " << procurado->getPeso() << " ] ";
-
-        while(percorre){
-            if(percorre != procurado && percorre->verificaNoAresta(procurado)){
-                grauDeIncidencia--;
-                cout << " [ " << procurado->getIdNo() << " , " << procurado->getPeso() << " ] ";
+            int vetor[this->getOrdem()] = {0};
+            vetor[0] = procurado->getIdNo();
+            int tam = 1;
+            bool reiniciar = false;
+            
+            while (percorre)
+            {
+                if (!estarNoVetor(vetor, percorre->getIdNo(), tam))
+                {
+                    if (arestaNoVetor(vetor, percorre, tam))
+                    {
+                        vetor[tam] = percorre->getIdNo();
+                        tam = tam + 1;
+                        percorre = this->getNoRaiz();
+                        reiniciar = true;
+                    }
+                }
+                if(reiniciar == false) percorre = percorre->getProxNo();  
+                else reiniciar = false;
             }
-            percorre = percorre->getProxNo();
+            imprimeVetor(vetor,tam);
+        }
+        else{
+            cout << "O no " << idNo << " nao esta no grafo." << endl;
         }
     }
-    else
-        cout << "o no " << idNo << " nao pertence ao grafo." << endl;
 }

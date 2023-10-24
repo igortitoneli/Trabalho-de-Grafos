@@ -2,26 +2,8 @@
 
 using namespace std;
 
-No::No() {
-    // this->idNo = -1; 
-    this->pesoNo = 0;
-    this->grauEntrada = 0;
-    this->grauSaida = 0;
-    this->proxNo = NULL;
-    this->primeiraAresta = NULL;
-}
-
-No::No(int name) {
-    this->idNo = name;
-    this->pesoNo = 0;
-    this->grauEntrada = 0;
-    this->grauSaida = 0;
-    this->proxNo = NULL;
-    this->primeiraAresta = NULL;
-}
-
-No::No(int name, int peso) {
-    this->idNo = name;
+No::No(int idNo = -1, int peso = 0) {
+    this->idNo = idNo;
     this->pesoNo = peso;
     this->grauEntrada = 0;
     this->grauSaida = 0;

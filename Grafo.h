@@ -27,11 +27,8 @@ public:
     No *insereNo(int idNostrings, int pesoNo);
     bool removeNo(int idNo, bool isDigrafo);
     // Aresta* fechoTransitivo(int idNo);
-    void fechoTransitivoIndireto2(int idNo);
-    void fechoTransitivoIndireto(int idNo);
-    void fechoTransitivoIndireto3(int idNo);
-    void fechoTransitivoIndiretoRecursivo(No *noAtual, No percorridos[], int *cont, int tam);
     void fechoTransitivoDireto(int idNo);
+    void fechoTransitivoIndireto(int idNo);
     bool estarNoVetor(int vetor[], int idNo, int tam);
     bool arestaNoVetor(int vetor[], No* noAtual, int tam);
     void imprimeVetor(int vetor[], int tam);
@@ -45,13 +42,15 @@ public:
     //--- Caracteristica do Grafo ---
     int AtualizaNumAresta();
     int getNumAresta();
-    No *getNoRaiz();
+    No *getNoRaiz() { return this->noRaiz; };
     int getOrdem();
     int getGrauEntrada();
     int getGrauSaida();
     bool decrementaNumAresta();
     void verificaGrau();
     void imprime();
+    void Djkstra(int idNoinicio, int idNofim);
+
     
     void sdecOrdem();
     // Aresta* getArestaAux();
