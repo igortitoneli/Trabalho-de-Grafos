@@ -4,6 +4,7 @@
 #include <sstream>
 #include <vector>
 #include <limits>
+#include <unordered_map>
 #include "Grafo.h"
 
 using namespace std;
@@ -794,4 +795,48 @@ void Grafo::fechoTransitivoIndireto(int idNo)
             cout << "O no " << idNo << " nao esta no grafo." << endl;
         }
     }
+}
+
+int Grafo::Djkstra(int idNoinicio, int idNofim){
+
+    auto estaNaHash = [](int idNo, unordered_map<int, int> distance) -> bool {
+        return (distance.find(idNo) != distance.end());
+    };
+
+    No* inicio = procurarNoPeloId(idNoinicio);
+    No* fim = procurarNoPeloId(idNofim);
+    
+    if(!inicio || !fim)
+        cout << "o no " << idNoinicio << " e/ou " << idNofim << " nao estao no grafo.";  
+
+    unordered_map<int, int> distance;
+
+    distance[idNoinicio] = 0;
+
+    Aresta *aresta = inicio->getPrimeiraAresta();
+    No* no = this->getNoRaiz();
+    while(no){
+        while(aresta){
+            int idNo = aresta->getNoDestino()->getIdNo();
+            if(!estaNaHash(idNo, distance)){
+                distance[idNo] = aresta->getPeso();
+            }
+            else{
+                if(distance[idNoinicio] > distance[idNo] + aresta->getPeso()){
+                    distance[idNoinicio] = aresta->getPeso();
+                }
+            }
+            aresta->getProxAresta();
+        }
+        no = no->getProxNo();
+    }
+
+    return distance[idNofim];
+    /*
+    criar um vetor de tam = ordem
+    iniciar ele com infinito
+    vet(idNoinicio) = 0
+    para cada no das arestas de inicio, compara com o valor q ta no vetor, se for menor, troca.
+    atualiza a relaxação 
+    */
 }

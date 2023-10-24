@@ -49,8 +49,7 @@ public:
     bool decrementaNumAresta();
     void verificaGrau();
     void imprime();
-    void Djkstra(int idNoinicio, int idNofim);
-
+    int Djkstra(int idNoinicio, int idNofim);
     
     void sdecOrdem();
     // Aresta* getArestaAux();
