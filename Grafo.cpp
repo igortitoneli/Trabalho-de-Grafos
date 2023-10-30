@@ -799,36 +799,46 @@ void Grafo::fechoTransitivoIndireto(int idNo)
 
 int Grafo::Djkstra(int idNoinicio, int idNofim) {
 
-    auto estaNaHash = [](int idNo, unordered_map<int, int> distance) -> bool {
-        return (distance.find(idNo) != distance.end());
+    auto preencheHash = [](int idNoinicio, unordered_map<int, int> distance, No* no) {
+        auto infitino = numeric_limits<double>::infinity(); 
+        while(no){
+            distance[no->getIdNo()] = infitino;
+            no = no->getProxNo(); 
+        }
+        distance[idNoinicio] = 0;
     };
 
     No* inicio = procurarNoPeloId(idNoinicio);
     No* fim = procurarNoPeloId(idNofim);
     
-    if(!inicio || !fim)
+    if(!inicio || !fim){
         cout << "o no " << idNoinicio << " e/ou " << idNofim << " nao estao no grafo.";  
+        return -1;
+    }
 
     unordered_map<int, int> distance;
-
-    distance[idNoinicio] = 0;
+    unordered_map<int, bool> percorrido;
+    
+    preencheHash(idNoinicio, distance, this->getNoRaiz());
 
     Aresta *aresta = inicio->getPrimeiraAresta();
     No* no = this->getNoRaiz();
+    
     while(no){
         while(aresta){
             int idNo = aresta->getNoDestino()->getIdNo();
-            if(!estaNaHash(idNo, distance)){
-                distance[idNo] = aresta->getPeso();
+            
+            if(distance[idNo] > distance[idNo] + aresta->getPeso()){
+                distance[idNoinicio] = aresta->getPeso();
             }
-            else{
-                if(distance[idNoinicio] > distance[idNo] + aresta->getPeso()){
-                    distance[idNoinicio] = aresta->getPeso();
-                }
-            }
-            aresta->getProxAresta();
+        
+            aresta = aresta->getProxAresta();
         }
         no = no->getProxNo();
+    }
+
+    for (const auto& pair : distance) {
+        std::cout << "Chave: " << pair.first << ", Valor: " << pair.second << std::endl;
     }
 
     return distance[idNofim];

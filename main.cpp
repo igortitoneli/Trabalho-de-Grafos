@@ -43,12 +43,11 @@ int main()
     grafo.insertAresta(4,1,6,0);
     grafo.insertAresta(4,3,5,0);
 
-    // grafo.fechoTransitivoDireto(4);
+    grafo.fechoTransitivoDireto(4);
     // grafo.imprime();
-    // grafo.fechoTransitivoIndireto(20);
+    grafo.fechoTransitivoIndireto(3);
 
-    cout << "menor caminho: " << grafo.Djkstra(0,4) << endl;
-
+    // cout << "menor caminho: " << grafo.Djkstra(0,4) << endl;
 
     return 1;
 }
