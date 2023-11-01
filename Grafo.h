@@ -29,8 +29,6 @@ public:
     // Aresta* fechoTransitivo(int idNo);
     void fechoTransitivoDireto(int idNo);
     void fechoTransitivoIndireto(int idNo);
-    bool estarNoVetor(int vetor[], int idNo, int tam);
-    bool arestaNoVetor(int vetor[], No* noAtual, int tam);
     void imprimeVetor(int vetor[], int tam);
 
     //--- Funcoes de Aresta ---
@@ -58,6 +56,9 @@ public:
 
 private:
     // int grau; // vertice com maior grau do grafo
+    bool estarNoVetor(int vetor[], int idNo, int tam);
+    bool arestaNoVetor(int vetor[], No* noAtual, int tam);
+    void auxFechoTransitivoDireto(No* no, int* percorridos, int tam, int* n);
 
     int ordem; // numero de vertices do grafo
     int numAresta;
