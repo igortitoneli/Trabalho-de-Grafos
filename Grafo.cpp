@@ -204,17 +204,17 @@ bool Grafo::removeNo(int idNo, bool isDigrafo)
 //    // Pesquisa o No a ser excluido
 //    // Remove todas as arestas/arcos onde este nó ocorre
 //    // Remove o no
-// 
+//
 //     No *removido = this->procurarNoPeloId(idNo);
 //     int grau = removido->getGrau();
-// 
+//
 //     if(removido){
 //         int contador = 0;
 //         bool achou = false;
-// 
+//
 //         No *noAux = this->getNoRaiz();
 //         No *anterior = NULL;
-// 
+//
 //         //percorre todos os vertices do grafo
 //         while(noAux && (contador < grau || !achou))
 //         {
@@ -236,7 +236,7 @@ bool Grafo::removeNo(int idNo, bool isDigrafo)
 //                         else{
 //                             // Aresta *proxima = aresta->getProxAresta();
 //                             // proxima->~Aresta();
-// 
+//
 //                             noAux->setUltimaAresta(aresta);
 //                             aresta->setProxAresta(NULL);
 //                         }
@@ -251,9 +251,9 @@ bool Grafo::removeNo(int idNo, bool isDigrafo)
 //             // passa pro proximo vertice
 //             anterior = noAux;
 //             noAux = noAux->getProxNo();
-// 
+//
 //             // while(noAux && (contador < no->getGrau() || !achou)){
-// 
+//
 //             //     if(noAux->verificaRemoveAresta(no)) contador++;
 //             //     if(noAux != no){
 //             //         if(no->verificaRemoveAresta(noAux)) contador++;
@@ -264,22 +264,22 @@ bool Grafo::removeNo(int idNo, bool isDigrafo)
 //             //         anterior->setProxNo(noAux->getProxNo());
 //             //         cout << "b" << endl;
 //             //     }
-// 
+//
 //             //     anterior = noAux;
 //             //     noAux = noAux->getProxNo();
 //             // }
 //         }
-// 
+//
 //         // Caso queira implementar o int grau no private do Grafo.h
 //         // if(no->getGrau() == this->getOrdem()){
 //         //     this->verificaOrdem();
 //         // }
-// 
+//
 //         this->decOrdem();
 //         this->numAresta -= grau;
 //         return true;
 //     }
-// 
+//
 //    return false;
 // }
 
@@ -361,11 +361,12 @@ void Grafo::verificaGrau(){
  * @param pesoAresta ()
  */
 
-bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool weigthArc)
+bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta)
 {
     No *noFonte, *noDestino;
 
-    if (idNoOrigem == idNoDestino) return false;
+    if (idNoOrigem == idNoDestino)
+        return false;
 
     noFonte = procurarNoPeloId(idNoOrigem, 0);
 
@@ -580,7 +581,6 @@ int Grafo::getNumAresta()
  * Retorna 'rootNode'.
  */
 
-
 /**
  * Retorna ordem do grafo.
  */
@@ -690,7 +690,7 @@ void Grafo::fechoTransitivoDireto(int idNo)
                 Aresta *iterador = atual->getNoDestino()->getPrimeiraAresta();
 
                 int tam = this->getOrdem();
-                No* percorridos[this->getOrdem()] = {procurado};
+                No *percorridos[this->getOrdem()] = {procurado};
 
                 for (int i = 0; i < procurado->getGrauSaida(); i++)
                 {
@@ -773,7 +773,7 @@ void Grafo::fechoTransitivoIndireto(int idNo)
             vetor[0] = procurado->getIdNo();
             int tam = 1;
             bool reiniciar = false;
-            
+
             while (percorre)
             {
                 if (!estarNoVetor(vetor, percorre->getIdNo(), tam))
@@ -786,60 +786,164 @@ void Grafo::fechoTransitivoIndireto(int idNo)
                         reiniciar = true;
                     }
                 }
-                if(reiniciar == false) percorre = percorre->getProxNo();  
-                else reiniciar = false;
+                if (reiniciar == false)
+                    percorre = percorre->getProxNo();
+                else
+                    reiniciar = false;
             }
-            imprimeVetor(vetor,tam);
+            imprimeVetor(vetor, tam);
         }
-        else{
+        else
+        {
             cout << "O no " << idNo << " nao esta no grafo." << endl;
         }
     }
 }
 
-int Grafo::Djkstra(int idNoinicio, int idNofim) {
+int Grafo::Djkstra(int idNoinicio, int idNofim)
+{
 
-    auto preencheHash = [](int idNoinicio, unordered_map<int, int> distance, No* no) {
-        auto infitino = numeric_limits<double>::infinity(); 
-        while(no){
-            distance[no->getIdNo()] = infitino;
-            no = no->getProxNo(); 
+    auto preencheHash = [](int idNoinicio, unordered_map<int, int> distance, No *no)
+    {
+        auto infinito = numeric_limits<double>::infinity();
+        while (no)
+        {
+            distance[no->getIdNo()] = infinito;
+            no = no->getProxNo();
         }
         distance[idNoinicio] = 0;
     };
 
-    No* inicio = procurarNoPeloId(idNoinicio);
-    No* fim = procurarNoPeloId(idNofim);
-    
-    if(!inicio || !fim){
-        cout << "o no " << idNoinicio << " e/ou " << idNofim << " nao estao no grafo.";  
+    No *inicio = procurarNoPeloId(idNoinicio);
+    No *fim = procurarNoPeloId(idNofim);
+
+    if (!inicio || !fim)
+    {
+        cout << "o no " << idNoinicio << " e/ou " << idNofim << " nao estao no grafo.";
         return -1;
     }
 
     unordered_map<int, int> distance;
     unordered_map<int, bool> percorrido;
-    
+
     preencheHash(idNoinicio, distance, this->getNoRaiz());
 
     Aresta *aresta = inicio->getPrimeiraAresta();
-    No* no = this->getNoRaiz();
-    
-    while(no){
-        while(aresta){
+    No *no = this->getNoRaiz();
+
+    while (no)
+    {
+        while (aresta)
+        {
             int idNo = aresta->getNoDestino()->getIdNo();
-            
-            if(distance[idNo] > distance[idNo] + aresta->getPeso()){
+
+            if (distance[idNo] > distance[idNo] + aresta->getPeso())
+            {
                 distance[idNoinicio] = aresta->getPeso();
             }
-        
+
             aresta = aresta->getProxAresta();
         }
         no = no->getProxNo();
     }
 
-    for (const auto& pair : distance) {
+    for (const auto &pair : distance)
+    {
         std::cout << "Chave: " << pair.first << ", Valor: " << pair.second << std::endl;
     }
 
     return distance[idNofim];
+}
+
+int Grafo::Floyd(int idNoinicio, int idNofim)
+{
+    auto preencheHashMatrizInfinito = [this](unordered_map<int, unordered_map<int, int>> matriz)
+    {
+        auto infinito = std::numeric_limits<int>::infinity();
+
+        for (No *coluna = this->getNoRaiz(); coluna != NULL; coluna = coluna->getProxNo())
+        {
+            for (No *linha = this->getNoRaiz(); linha != NULL; linha = linha->getProxNo())
+            {
+
+                matriz[linha->getIdNo()][coluna->getIdNo()] = 99999;
+            }
+        }
+        return matriz;
+    };
+
+    auto preencheHash = [this](unordered_map<int, unordered_map<int, int>> matriz)
+    {
+        for (No *no = this->getNoRaiz(); no != NULL; no = no->getProxNo())
+        {
+            matriz[no->getIdNo()][no->getIdNo()] = 0;
+            for (Aresta *aresta = no->getPrimeiraAresta(); aresta != NULL; aresta = aresta->getProxAresta())
+            {
+
+                matriz[no->getIdNo()][aresta->getNoDestino()->getIdNo()] = aresta->getPeso();
+            }
+        }
+        return matriz;
+    };
+
+    auto procuraMenorCaminho = [this](unordered_map<int, unordered_map<int, int>> matriz)
+    {
+for (No *k = this->getNoRaiz(); k != NULL; k = k->getProxNo())
+{
+    for (No *linha = this->getNoRaiz(); linha != NULL; linha = linha->getProxNo())
+    {
+        for (No *coluna = this->getNoRaiz(); coluna != NULL; coluna = coluna->getProxNo())
+        {
+            matriz[linha->getIdNo()][coluna->getIdNo()] = min(matriz[linha->getIdNo()][coluna->getIdNo()], matriz[linha->getIdNo()][k->getIdNo()] + matriz[k->getIdNo()][coluna->getIdNo()]);
+        }
+    }
+}
+        return matriz;
+    };
+
+    No *inicio = procurarNoPeloId(idNoinicio);
+    No *fim = procurarNoPeloId(idNofim);
+
+    if (!inicio || !fim)
+    {
+        cout << "o no " << idNoinicio << " e/ou " << idNofim << " nao estao no grafo.";
+        return -1;
+    }
+
+    unordered_map<int, unordered_map<int, int>> matriz;
+
+    auto imprimeMatriz = [this](unordered_map<int, unordered_map<int, int>> matriz)
+    {
+        cout << "   ";
+        for (No *no = this->getNoRaiz(); no != NULL; no = no->getProxNo())
+        {
+            cout << no->getIdNo() << " ";
+        }
+        cout << endl<<"   ";
+        for (No *no = this->getNoRaiz(); no != NULL; no = no->getProxNo())
+        {
+            cout << "-"
+                 << " ";
+        }
+        cout << endl;
+
+        for (No *coluna = this->getNoRaiz(); coluna != NULL; coluna = coluna->getProxNo())
+        {
+            cout << coluna->getIdNo() << "| ";
+            for (No *linha = this->getNoRaiz(); linha != NULL; linha = linha->getProxNo())
+            {
+
+                cout << matriz[linha->getIdNo()][coluna->getIdNo()] << " ";
+            }
+            cout << endl;
+        }
+    };
+
+    matriz = preencheHashMatrizInfinito(matriz);
+
+    matriz = preencheHash(matriz);
+    matriz = procuraMenorCaminho(matriz);
+    imprimeMatriz(matriz);
+    cout << "O menor caminho: " << matriz[idNoinicio][idNofim] << endl;
+    return matriz[idNoinicio][idNofim];
 }

@@ -34,7 +34,7 @@ public:
     void imprimeVetor(int vetor[], int tam);
 
     //--- Funcoes de Aresta ---
-    bool insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool weigthArc);
+    bool insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta);
     bool removeAresta(int idNoOrigem, int idNoDestino, bool isDirected);
     bool criaAresta(No *noFonte, No *Destino, int pesoAresta);
     void removeAresta(No *anterior, No *noAux);
@@ -55,7 +55,7 @@ public:
     // Aresta* getArestaAux();
     string getGrau();
     bool isDigraph();  
-
+    int Floyd(int idNoinicio, int idNofim);
 private:
     // int grau; // vertice com maior grau do grafo
 
