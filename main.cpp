@@ -38,9 +38,9 @@ int main()
     grafo.insertAresta(3, 4, 1);
     grafo.insertAresta(4, 1, 2);
 
-    // grafo.fechoTransitivoDireto(4);
-    // // grafo.imprime();
-    // grafo.fechoTransitivoIndireto(3);
+    grafo.fechoTransitivoDireto(4);
+    // grafo.imprime();
+    grafo.fechoTransitivoIndireto(3);
 
     // cout << "menor caminho: " << grafo.Djkstra(0,4) << endl;
     grafo.Floyd(2,4);

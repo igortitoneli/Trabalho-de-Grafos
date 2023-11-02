@@ -674,58 +674,77 @@ bool Grafo::isDigraph()
 
 void Grafo::fechoTransitivoDireto(int idNo)
 {
-    if (this->digrafo)
-    {
-        No *procurado = this->procurarNoPeloId(idNo, false);
+    // if (this->digrafo)
+    // {
+    //     No *procurado = this->procurarNoPeloId(idNo, false);
 
-        if (procurado)
-        {
-            int cont = 0;
-            cout << "Fecho Transitivo do vertice " << idNo << " : ";
-            if (procurado->getGrauSaida() > 0)
-            {
-                cout << " [ " << procurado->getIdNo() << " , " << procurado->getPeso() << " ] ";
+    //     if (procurado)
+    //     {
+    //         int cont = 0;
+    //         cout << "Fecho Transitivo Direto do vertice " << idNo << " : ";
+    //         if (procurado->getGrauSaida() > 0)
+    //         {
+    //             int i = 0;
+    //             int percorridos[this->ordem];
+    //             percorridos[i++] = procurado->getIdNo(); 
+                
+    //             cout << " [ " << procurado->getIdNo() << " , " << procurado->getPeso() << " ] ";
 
-                Aresta *atual = procurado->getPrimeiraAresta();
-                Aresta *iterador = atual->getNoDestino()->getPrimeiraAresta();
+    //             Aresta *atual = procurado->getPrimeiraAresta();
+    //             Aresta *iterador = atual->getNoDestino()->getPrimeiraAresta();
 
-                int tam = this->getOrdem();
-                No *percorridos[this->getOrdem()] = {procurado};
+    //             int tam = this->getOrdem();
+    //             No* percorridos[this->getOrdem()] = {procurado};
 
-                for (int i = 0; i < procurado->getGrauSaida(); i++)
-                {
-                    if (!atual->getNoDestino()->in_percorridos(*percorridos, tam))
-                    {
-                        cout << " [ " << atual->getNoDestino()->getIdNo() << " , " << atual->getNoDestino()->getPeso() << " ] ";
-                        percorridos[cont] = atual->getNoDestino();
-                        cont++;
-                    }
+    //             for (int i = 0; i < procurado->getGrauSaida(); i++)
+    //             {
+    //                 if (!atual->getNoDestino()->in_percorridos(*percorridos, tam))
+    //                 {
+    //                     cout << " [ " << atual->getNoDestino()->getIdNo() << " , " << atual->getNoDestino()->getPeso() << " ] ";
+    //                     percorridos[cont] = atual->getNoDestino();
+    //                     cont++;
+    //                 }
 
-                    iterador = atual->getNoDestino()->getPrimeiraAresta();
+    //                 iterador = atual->getNoDestino()->getPrimeiraAresta();
 
-                    for (int j = 0; j < atual->getNoDestino()->getGrauSaida(); j++)
-                    {
-                        if (!iterador->getNoDestino()->in_percorridos(*percorridos, tam))
-                        {
-                            cout << " [ " << iterador->getNoDestino()->getIdNo() << " , " << iterador->getNoDestino()->getPeso() << " ] ";
-                            percorridos[cont] = iterador->getNoDestino();
-                            cont++;
-                        }
-                        iterador = iterador->getProxAresta();
-                    }
-                    atual = atual->getProxAresta();
-                }
-                cout << endl
-                     << endl;
-            }
-            else
-                cout << "O vertice " << idNo << " possui grau de saida igual a 0." << endl;
+    //                 for (int j = 0; j < atual->getNoDestino()->getGrauSaida(); j++)
+    //                 {
+    //                     if (!iterador->getNoDestino()->in_percorridos(*percorridos, tam))
+    //                     {
+    //                         cout << " [ " << iterador->getNoDestino()->getIdNo() << " , " << iterador->getNoDestino()->getPeso() << " ] ";
+    //                         percorridos[cont] = iterador->getNoDestino();
+    //                         cont++;
+    //                     }
+    //                     iterador = iterador->getProxAresta();
+    //                 }
+    //                 atual = atual->getProxAresta();
+    //             }
+    //             cout << endl
+    //                  << endl;
+    //         }
+    //         else
+    //             cout << "O vertice " << idNo << " possui grau de saida igual a 0." << endl;
+    //     }
+    //     else
+    //         cout << "O vertice " << idNo << " nao esta no grafo." << endl;
+    // }
+    // else
+    //     cout << "O grafo nao é direcionado." << endl;
+}
+
+void Grafo::auxFechoTransitivoDireto(No* no, int* percorridos, int tam, int* n){
+    if(!no) exit(1);  // se no nao existe, para a recusividade
+    
+    Aresta* aresta = no->getPrimeiraAresta();
+    while(aresta){
+        if(!estarNoVetor(percorridos,aresta->getNoDestino()->getIdNo(),*n)){
+            percorridos[(*n)++] = aresta->getNoDestino()->getIdNo();
+            cout << " [ " << aresta->getNoDestino()->getIdNo() << " , " << aresta->getNoDestino()->getPeso() << " ] ";
+            if(aresta->getProxAresta()->getNoDestino())
+                auxFechoTransitivoDireto(aresta->getProxAresta()->getNoDestino(),percorridos,tam,n);
         }
-        else
-            cout << "O vertice " << idNo << " nao esta no grafo." << endl;
+        aresta = aresta->getProxAresta();
     }
-    else
-        cout << "O grafo nao é direcionado." << endl;
 }
 
 bool Grafo::estarNoVetor(int vetor[], int idNo, int tam)
