@@ -674,63 +674,141 @@ bool Grafo::isDigraph()
 
 void Grafo::fechoTransitivoDireto(int idNo)
 {
-    // if (this->digrafo)
-    // {
-    //     No *procurado = this->procurarNoPeloId(idNo, false);
 
-    //     if (procurado)
-    //     {
-    //         int cont = 0;
-    //         cout << "Fecho Transitivo Direto do vertice " << idNo << " : ";
-    //         if (procurado->getGrauSaida() > 0)
-    //         {
-    //             int i = 0;
-    //             int percorridos[this->ordem];
-    //             percorridos[i++] = procurado->getIdNo(); 
-                
-    //             cout << " [ " << procurado->getIdNo() << " , " << procurado->getPeso() << " ] ";
+    auto preencheHashMatrizInfinito = [this](unordered_map<int, unordered_map<int, int>> matriz)
+    {
+        auto infinito = std::numeric_limits<int>::infinity();
 
-    //             Aresta *atual = procurado->getPrimeiraAresta();
-    //             Aresta *iterador = atual->getNoDestino()->getPrimeiraAresta();
+        for (No *coluna = this->getNoRaiz(); coluna != NULL; coluna = coluna->getProxNo())
+        {
+            for (No *linha = this->getNoRaiz(); linha != NULL; linha = linha->getProxNo())
+            {
 
-    //             int tam = this->getOrdem();
-    //             No* percorridos[this->getOrdem()] = {procurado};
+                matriz[linha->getIdNo()][coluna->getIdNo()] = 99999;
+            }
+        }
+        return matriz;
+    };
 
-    //             for (int i = 0; i < procurado->getGrauSaida(); i++)
-    //             {
-    //                 if (!atual->getNoDestino()->in_percorridos(*percorridos, tam))
-    //                 {
-    //                     cout << " [ " << atual->getNoDestino()->getIdNo() << " , " << atual->getNoDestino()->getPeso() << " ] ";
-    //                     percorridos[cont] = atual->getNoDestino();
-    //                     cont++;
-    //                 }
+    auto preencheHash = [this](unordered_map<int, unordered_map<int, int>> matriz)
+    {
+        for (No *no = this->getNoRaiz(); no != NULL; no = no->getProxNo())
+        {
+            matriz[no->getIdNo()][no->getIdNo()] = 0;
+            for (Aresta *aresta = no->getPrimeiraAresta(); aresta != NULL; aresta = aresta->getProxAresta())
+            {
 
-    //                 iterador = atual->getNoDestino()->getPrimeiraAresta();
+                matriz[no->getIdNo()][aresta->getNoDestino()->getIdNo()] = aresta->getPeso();
+            }
+        }
+        return matriz;
+    };
 
-    //                 for (int j = 0; j < atual->getNoDestino()->getGrauSaida(); j++)
-    //                 {
-    //                     if (!iterador->getNoDestino()->in_percorridos(*percorridos, tam))
-    //                     {
-    //                         cout << " [ " << iterador->getNoDestino()->getIdNo() << " , " << iterador->getNoDestino()->getPeso() << " ] ";
-    //                         percorridos[cont] = iterador->getNoDestino();
-    //                         cont++;
-    //                     }
-    //                     iterador = iterador->getProxAresta();
-    //                 }
-    //                 atual = atual->getProxAresta();
-    //             }
-    //             cout << endl
-    //                  << endl;
-    //         }
-    //         else
-    //             cout << "O vertice " << idNo << " possui grau de saida igual a 0." << endl;
-    //     }
-    //     else
-    //         cout << "O vertice " << idNo << " nao esta no grafo." << endl;
-    // }
-    // else
-    //     cout << "O grafo nao é direcionado." << endl;
+    auto procuraMenorCaminho = [this](unordered_map<int, unordered_map<int, int>> matriz)
+    {
+for (No *k = this->getNoRaiz(); k != NULL; k = k->getProxNo())
+{
+    for (No *linha = this->getNoRaiz(); linha != NULL; linha = linha->getProxNo())
+    {
+        for (No *coluna = this->getNoRaiz(); coluna != NULL; coluna = coluna->getProxNo())
+        {
+            matriz[linha->getIdNo()][coluna->getIdNo()] = min(matriz[linha->getIdNo()][coluna->getIdNo()], matriz[linha->getIdNo()][k->getIdNo()] + matriz[k->getIdNo()][coluna->getIdNo()]);
+        }
+    }
 }
+        return matriz;
+    };
+    
+    unordered_map<int, unordered_map<int, int>> matriz;
+    matriz = preencheHashMatrizInfinito(matriz);
+    matriz = preencheHash(matriz);
+    matriz = procuraMenorCaminho(matriz);
+
+cout << "Fecho transitivo direto do vertice " << idNo << " : ";
+for (auto linha : matriz)
+{
+    if (linha.first == idNo)
+    {
+
+        for (auto coluna : linha.second)
+        {
+            cout << coluna.second << " ";
+        }
+        cout << endl;
+        break;  // Para sair do loop após imprimir a linha desejada, se for único
+    }
+}
+
+    
+}
+
+void Grafo::fechoTransitivoIndiretoFunc(int idNo)
+{
+
+    auto preencheHashMatrizInfinito = [this](unordered_map<int, unordered_map<int, int>> matriz)
+    {
+        auto infinito = std::numeric_limits<int>::infinity();
+
+        for (No *coluna = this->getNoRaiz(); coluna != NULL; coluna = coluna->getProxNo())
+        {
+            for (No *linha = this->getNoRaiz(); linha != NULL; linha = linha->getProxNo())
+            {
+
+                matriz[linha->getIdNo()][coluna->getIdNo()] = 99999;
+            }
+        }
+        return matriz;
+    };
+
+    auto preencheHash = [this](unordered_map<int, unordered_map<int, int>> matriz)
+    {
+        for (No *no = this->getNoRaiz(); no != NULL; no = no->getProxNo())
+        {
+            matriz[no->getIdNo()][no->getIdNo()] = 0;
+            for (Aresta *aresta = no->getPrimeiraAresta(); aresta != NULL; aresta = aresta->getProxAresta())
+            {
+
+                matriz[no->getIdNo()][aresta->getNoDestino()->getIdNo()] = aresta->getPeso();
+            }
+        }
+        return matriz;
+    };
+
+    auto procuraMenorCaminho = [this](unordered_map<int, unordered_map<int, int>> matriz)
+    {
+for (No *k = this->getNoRaiz(); k != NULL; k = k->getProxNo())
+{
+    for (No *linha = this->getNoRaiz(); linha != NULL; linha = linha->getProxNo())
+    {
+        for (No *coluna = this->getNoRaiz(); coluna != NULL; coluna = coluna->getProxNo())
+        {
+            matriz[linha->getIdNo()][coluna->getIdNo()] = min(matriz[linha->getIdNo()][coluna->getIdNo()], matriz[linha->getIdNo()][k->getIdNo()] + matriz[k->getIdNo()][coluna->getIdNo()]);
+        }
+    }
+}
+        return matriz;
+    };
+    
+    unordered_map<int, unordered_map<int, int>> matriz;
+    matriz = preencheHashMatrizInfinito(matriz);
+    matriz = preencheHash(matriz);
+    matriz = procuraMenorCaminho(matriz);
+
+
+//imprime coluna do nó desejado
+cout << "Fecho transitivo indireto do vertice " << idNo << " : ";
+for (auto linha : matriz)
+{
+    for (auto coluna : linha.second)
+    {
+        if (coluna.first == idNo)
+        {
+            cout << coluna.second << " ";
+        }
+    }
+}
+}
+
 
 void Grafo::auxFechoTransitivoDireto(No* no, int* percorridos, int tam, int* n){
     if(!no) exit(1);  // se no nao existe, para a recusividade
@@ -874,7 +952,7 @@ int Grafo::Djkstra(int idNoinicio, int idNofim)
     return distance[idNofim];
 }
 
-int Grafo::Floyd(int idNoinicio, int idNofim)
+unordered_map<int, unordered_map<int, int>> Grafo::Floyd(int idNoinicio, int idNofim)
 {
     auto preencheHashMatrizInfinito = [this](unordered_map<int, unordered_map<int, int>> matriz)
     {
@@ -926,7 +1004,7 @@ for (No *k = this->getNoRaiz(); k != NULL; k = k->getProxNo())
     if (!inicio || !fim)
     {
         cout << "o no " << idNoinicio << " e/ou " << idNofim << " nao estao no grafo.";
-        return -1;
+        return {};
     }
 
     unordered_map<int, unordered_map<int, int>> matriz;
@@ -964,5 +1042,5 @@ for (No *k = this->getNoRaiz(); k != NULL; k = k->getProxNo())
     matriz = procuraMenorCaminho(matriz);
     imprimeMatriz(matriz);
     cout << "O menor caminho: " << matriz[idNoinicio][idNofim] << endl;
-    return matriz[idNoinicio][idNofim];
+    return matriz;
 }
