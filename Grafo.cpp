@@ -672,7 +672,7 @@ bool Grafo::isDigraph()
  * @return No* - uma "lista" de nós que pertencem ao fecho transitivo do nó de id == idNo. Nessa lista o ponteiro proxNo de cada Nó aponta para o proximo Nó
  */
 
-void Grafo::fechoTransitivoDireto(int idNo)
+void Grafo::fechoTransitivoIndiretoFunc(int idNo)
 {
 
     auto preencheHashMatrizInfinito = [this](unordered_map<int, unordered_map<int, int>> matriz)
@@ -742,7 +742,7 @@ for (auto linha : matriz)
     
 }
 
-void Grafo::fechoTransitivoIndiretoFunc(int idNo)
+void Grafo::fechoTransitivoDireto(int idNo)
 {
 
     auto preencheHashMatrizInfinito = [this](unordered_map<int, unordered_map<int, int>> matriz)
