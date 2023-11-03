@@ -29,6 +29,7 @@ public:
     // Aresta* fechoTransitivo(int idNo);
     void fechoTransitivoDireto(int idNo);
     void fechoTransitivoIndireto(int idNo);
+    void fechoTransitivoIndiretoFunc(int idNo);
     void imprimeVetor(int vetor[], int tam);
 
     //--- Funcoes de Aresta ---
@@ -53,7 +54,8 @@ public:
     // Aresta* getArestaAux();
     string getGrau();
     bool isDigraph();  
-    int Floyd(int idNoinicio, int idNofim);
+    unordered_map<int, unordered_map<int, int>> Floyd(int idNoinicio, int idNofim);
+
 private:
     // int grau; // vertice com maior grau do grafo
     bool estarNoVetor(int vetor[], int idNo, int tam);
