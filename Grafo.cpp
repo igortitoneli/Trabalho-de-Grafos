@@ -724,7 +724,7 @@ for (auto linha : matriz)
 
         for (auto coluna : linha.second)
         {
-            if(matriz[linha.first][coluna.first]!=infinito)
+            if(matriz[linha.first][coluna.first]<infinito)
             //imprimir indice da linha e coluna
             cout << coluna.first << " ";
             
@@ -799,7 +799,7 @@ for (auto coluna : matriz)
 
         for (auto linha : coluna.second)
         {
-            if(matriz[linha.first][coluna.first]!=infinito)
+            if(matriz[linha.first][coluna.first]<infinito)
             //imprimir indice da linha e coluna
             cout << linha.first << " ";
             
