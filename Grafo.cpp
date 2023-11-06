@@ -664,19 +664,19 @@ bool Grafo::isDigraph()
  * @param idNo (id do nó)
  * @return No* - uma "lista" de nós que pertencem ao fecho transitivo do nó de id == idNo. Nessa lista o ponteiro proxNo de cada Nó aponta para o proximo Nó
  */
-void Grafo::fechoTransitivoDireto(int idNo)
+void Grafo::fechoTransitivoDireto(int idNo) //imprimindo a coluna
 {
-
+    double infinito = 99999;
     auto preencheHashMatrizInfinito = [this](unordered_map<int, unordered_map<int, int>> matriz)
     {
-        auto infinito = std::numeric_limits<int>::infinity();
+        auto infinito = 99999;
 
         for (No *coluna = this->getNoRaiz(); coluna != NULL; coluna = coluna->getProxNo())
         {
             for (No *linha = this->getNoRaiz(); linha != NULL; linha = linha->getProxNo())
             {
 
-                matriz[linha->getIdNo()][coluna->getIdNo()] = 99999;
+                matriz[linha->getIdNo()][coluna->getIdNo()] = infinito;
             }
         }
         return matriz;
@@ -724,7 +724,10 @@ for (auto linha : matriz)
 
         for (auto coluna : linha.second)
         {
-            cout << coluna.second << " ";
+            if(matriz[linha.first][coluna.first]!=7)
+            //imprimir indice da linha e coluna
+            cout << coluna.first << " ";
+            
         }
         cout << endl;
         break;  // Para sair do loop após imprimir a linha desejada, se for único
@@ -734,19 +737,19 @@ for (auto linha : matriz)
     
 }
 
-void Grafo::fechoTransitivoIndiretoFunc(int idNo)
+void Grafo::fechoTransitivoIndiretoFunc(int idNo) //imprimindo a linha
 {
-
+    double infinito = 99999;
     auto preencheHashMatrizInfinito = [this](unordered_map<int, unordered_map<int, int>> matriz)
     {
-        auto infinito = std::numeric_limits<int>::infinity();
+        auto infinito = 99999;
 
         for (No *coluna = this->getNoRaiz(); coluna != NULL; coluna = coluna->getProxNo())
         {
             for (No *linha = this->getNoRaiz(); linha != NULL; linha = linha->getProxNo())
             {
 
-                matriz[linha->getIdNo()][coluna->getIdNo()] = 99999;
+                matriz[linha->getIdNo()][coluna->getIdNo()] = infinito;
             }
         }
         return matriz;
@@ -787,18 +790,27 @@ for (No *k = this->getNoRaiz(); k != NULL; k = k->getProxNo())
     matriz = procuraMenorCaminho(matriz);
 
 
-//imprime coluna do nó desejado
+
 cout << "Fecho transitivo indireto do vertice " << idNo << " : ";
-for (auto linha : matriz)
+for (auto coluna : matriz)
 {
-    for (auto coluna : linha.second)
+    if (coluna.first == idNo)
     {
-        if (coluna.first == idNo)
+
+        for (auto linha : coluna.second)
         {
-            cout << coluna.second << " ";
+            if(matriz[linha.first][coluna.first]!=7)
+            //imprimir indice da linha e coluna
+            cout << linha.first << " ";
+            
         }
+        cout << endl;
+        break;  // Para sair do loop após imprimir a linha desejada, se for único
     }
 }
+
+
+
 }
 
 
@@ -948,14 +960,14 @@ unordered_map<int, unordered_map<int, int>> Grafo::Floyd(int idNoinicio, int idN
 {
     auto preencheHashMatrizInfinito = [this](unordered_map<int, unordered_map<int, int>> matriz)
     {
-        auto infinito = std::numeric_limits<int>::infinity();
+        auto infinito = 99999;
 
         for (No *coluna = this->getNoRaiz(); coluna != NULL; coluna = coluna->getProxNo())
         {
             for (No *linha = this->getNoRaiz(); linha != NULL; linha = linha->getProxNo())
             {
 
-                matriz[linha->getIdNo()][coluna->getIdNo()] = 99999;
+                matriz[linha->getIdNo()][coluna->getIdNo()] = infinito;
             }
         }
         return matriz;
