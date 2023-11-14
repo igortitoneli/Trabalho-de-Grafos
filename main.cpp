@@ -22,7 +22,7 @@ int main()
     // cout << "Digite o numero de arestas : ";
     // cin >> n;
     
-    Grafo grafo(direcionado, 0 , 0);
+    Grafo grafo(direcionado);
     
     // cout << "Nó (i j)" << endl;
     // for(int k=0; k<n; k++)
@@ -30,21 +30,28 @@ int main()
     //     cin >> i >> j;
     //     grafo.insertAresta(i,j,0,0,direcionado);    
     // }
-    grafo.insertAresta(1, 2, 3);
-    grafo.insertAresta(1, 4, 7);
-    grafo.insertAresta(2, 1, 8);
-    grafo.insertAresta(2, 3, 2);
-    grafo.insertAresta(3, 1, 5);
-    grafo.insertAresta(3, 4, 1);
-    grafo.insertAresta(4, 1, 2);
+    // grafo.insertAresta(1, 2, 3);
+    // grafo.insertAresta(1, 4, 7);
+    // grafo.insertAresta(2, 1, 8);
+    // grafo.insertAresta(2, 3, 2);
+    // grafo.insertAresta(3, 1, 5);
+    // grafo.insertAresta(3, 4, 1);
+    // grafo.insertAresta(4, 1, 2);
 
+    grafo.insertAresta(1, 2, 7);
+    grafo.insertAresta(1, 4, 3);
+    grafo.insertAresta(2, 3, 2);
+    grafo.insertAresta(4, 3, 1);
     
     // grafo.imprime();
     //grafo.fechoTransitivoIndireto(3);
 
     // cout << "menor caminho: " << grafo.Djkstra(0,4) << endl;
-    grafo.Floyd(2,4);
-    grafo.fechoTransitivoDireto(4);
-    grafo.fechoTransitivoIndiretoFunc(4);
+    // grafo.Floyd(4,2);
+    // grafo.fechoTransitivoDireto(4);
+    // grafo.fechoTransitivoIndiretoFunc(4);
+    // grafo.prim(1);
+    
+
     return 1;
 }

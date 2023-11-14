@@ -15,7 +15,7 @@ class Grafo {
 public:
 
     //--- Construtor e Destrutor ---
-    Grafo(bool isDigrafo, bool weightArc, bool weightNo);
+    Grafo(bool isDigrafo);
     virtual ~Grafo();
 
     //--- Seters ---
@@ -54,7 +54,9 @@ public:
     // Aresta* getArestaAux();
     string getGrau();
     bool isDigraph();  
-    unordered_map<int, unordered_map<int, int>> Floyd(int idNoinicio, int idNofim);
+    int* Floyd(int idNoinicio, int idNofim);
+
+    Grafo* prim(int idNo);
 
 private:
     // int grau; // vertice com maior grau do grafo
@@ -65,8 +67,6 @@ private:
     int ordem; // numero de vertices do grafo
     int numAresta;
     bool digrafo;
-    bool weigthNo;
-    bool weightArc;
 
     No *noRaiz;
 };
