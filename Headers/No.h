@@ -3,10 +3,9 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
-#include "Aresta.h"
+#include "../Headers/Aresta.h"
 
 using namespace std;
-class Aresta;
 
 class No {
 public:

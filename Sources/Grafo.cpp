@@ -5,7 +5,7 @@
 #include <vector>
 #include <limits>
 #include <unordered_map>
-#include "Grafo.h"
+#include "../Headers/Grafo.h"
 
 using namespace std;
 typedef vector<No *> NodeVector;
@@ -401,89 +401,6 @@ bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta)
 
     return false;
 }
-/*bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta, bool weigthArc, bool isDirected) {
-
-   //Verifica se já existem os dois nós com esses ids no grafo CHECK
-   //Se ja existem, eé so inserir a aresta em cada um se o grafo for nao direcionado ou apenas de
-   //   origem pra destino, caso o grafo seja orientado.
-   //Se para algum ou ambos os ids não existe o no no grafo, e preciso inserir nos com esses ids antes de incluir a aresta
-    No *noFonte, *noDestino;
-
-    noFonte = procurarNoPeloId(idNoOrigem,0);
-
-    if(noFonte == NULL) {
-        noFonte = this->insereNo(idNoOrigem,0);
-        this->incOrdem();
-    }
-
-    noDestino = procurarNoPeloId(idNoDestino,0);
-
-    // ou seja, ele será diferente de nulo e diferente de noFonte
-    if(noDestino != noFonte){
-        noDestino = this->insereNo(idNoDestino,0);
-        this->incOrdem();
-    }
-
-    if(isDirected)
-    {
-        if(this->criaAresta(noFonte, noDestino, pesoAresta))
-        {
-            this->numAresta ++;
-            return true;
-        }
-    }
-    else
-    {
-        if(this->criaAresta(noFonte, noDestino, pesoAresta) && this->criaAresta(noDestino, noFonte, pesoAresta))
-        {
-            //selfloop
-            if(noFonte == noDestino) this->numAresta++;
-
-            this->numAresta ++;
-
-            return true;
-        }
-    }
-
-    return false;
-}
-
-bool Grafo::criaAresta(No *noFonte, No *Destino, int pesoAresta)
-{
-    if(noFonte->getPrimeiraAresta() == NULL) // ARESTA NAO EXISTE
-    {
-        Aresta *aresta = new Aresta(Destino, NULL, pesoAresta);
-        noFonte->setPrimeiraAresta(aresta);
-        noFonte->setUltimaAresta(aresta);
-        noFonte->incrementaGrauSaida();
-        Destino->incrementaGrauEntrada();
-        return true;
-    }
-    else
-    {
-        if(noFonte != Destino){
-            if(!noFonte->procuraAresta(noFonte->getPrimeiraAresta(), Destino))
-            {
-                Aresta *aresta = new Aresta(Destino, NULL, pesoAresta);
-                Aresta *ultimaAresta = noFonte->getUltimaAresta();
-                ultimaAresta->setProxAresta(aresta);
-                noFonte->setUltimaAresta(aresta);
-                noFonte->incrementaGrauSaida();
-                Destino->incrementaGrauEntrada();
-                return true;
-            }
-        }
-
-        //NAO TRABALHAMOS COM SELF LOOP SO GRAFOS SIMPLES
-        // selfloop
-        else{
-            noFonte->incrementaGrauSaida();
-            Destino->incrementaGrauEntrada();
-            return true;
-        }
-    }
-    return false;
-}*/
 
 /**
  * This function search in a no the edges that points to the same destiny no.\n
@@ -1072,6 +989,7 @@ int* Grafo::Floyd(int idNoinicio, int idNofim)
     return caminhoMinimo;
 }
 
+
 Grafo* Grafo::prim(int idNo)
 {
     auto preenchePercorridos = [](No* no, int* percorridos, int *n){
@@ -1122,3 +1040,58 @@ Grafo* Grafo::prim(int idNo)
     arvoreGeradoraMinima->imprime();
 
 }
+
+
+Grafo* Grafo::caminhoEmProfundidade(int idNo)
+{
+    // auto empilha = [](No* no, No *pilha){
+    //     no->setProxNo(pilha);
+    //     pilha = no;
+    // };
+
+    // auto inserePercorridos = [](No *no, No *percorridos){
+    //     no->setProxNo(percorridos);
+    //     percorridos = no;
+    // };
+
+    // auto percorrido = [](No no, No percorridos){ 
+    //     while(&percorridos != NULL){
+    //         if(&percorridos == &no) return true;
+    //         percorridos = *percorridos.getProxNo();  
+    //     }
+    //     return false;
+    // };
+
+
+    // No* no = procurarNoPeloId(idNo);
+
+    // if(!no){
+    //     cout << "O no " << idNo << " nao esta no grafo";
+    //     return NULL;
+    // }
+
+    // No* pilha;
+    // No* percorridos;
+    // Grafo* caminhoProfundidade = new Grafo(this->isDigraph());
+
+    // while(pilha){
+    //     if(!percorrido(*no, *percorridos)){
+    //         caminhoProfundidade->insertAresta()
+    //         for(Aresta *adjacentes=no->getPrimeiraAresta(); adjacentes; adjacentes=adjacentes->getProxAresta()){
+    //             empilha(adjacentes->getNoDestino(),pilha);
+    //         }
+    //     }
+    //     else{
+
+    //     }
+    //     no = pilha;
+    //     pilha = pilha->getProxNo();
+    //     inserePercorridos(no, percorridos);
+    // }
+
+        
+
+
+}
+
+

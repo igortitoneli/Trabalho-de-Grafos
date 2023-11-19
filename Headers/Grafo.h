@@ -3,13 +3,10 @@
 #include <iostream>
 #include <stdlib.h>
 #include <sstream>
-#include "No.h"
-#include "Aresta.h"
+#include "../Headers/No.h"
+#include "../Headers/Aresta.h"
 
 using namespace std;
-
-class No;
-class Aresta;
 
 class Grafo {
 public:
@@ -49,6 +46,7 @@ public:
     void verificaGrau();
     void imprime();
     int Djkstra(int idNoinicio, int idNofim);
+    Grafo* caminhoEmProfundidade(int idNo);
     
     void sdecOrdem();
     // Aresta* getArestaAux();
