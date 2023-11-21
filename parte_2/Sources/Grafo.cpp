@@ -88,13 +88,13 @@ No *Grafo::procurarNoPeloId(int idFindNo, bool anteiror = false)
 }
 
 
-No *Grafo::insereNo(int idNo, float x, float y)
+No *Grafo::insereNo(int idNo, float x, float y, int demanda = 0)
 {
     No *procurado = procurarNoPeloId(idNo, 0);
 
     if (procurado == NULL)
     {
-        No *novoNo = new No(idNo, x, y);
+        No *novoNo = new No(idNo, x, y, demanda);
 
         if (this->noRaiz == NULL)
         {
@@ -232,10 +232,11 @@ void Grafo::removeAresta(No *origem, No *destino)
     }
 }
 
-bool Grafo::insertAresta(No* NoOrigem, No* NoDestino, double pesoAresta)
-{
+bool Grafo::insertAresta(No* NoOrigem, No* destino, double pesoAresta){
+    No* NoDestino = this->insereNo(destino->getIdNo(), destino->getX(), destino->getY(), destino->getDemanda());
     if(this->procurarNoPeloId(NoOrigem->getIdNo()) == NULL){
         this->insereNo(NoOrigem);
+        this->imprime();
     }
     if(this->procurarNoPeloId(NoDestino->getIdNo()) == NULL){
         this->insereNo(NoDestino);

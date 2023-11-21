@@ -13,6 +13,17 @@ No::No(int idNo, float x, float y) {
     this->primeiraAresta = NULL;
 }
 
+No::No(int idNo, float x, float y, int demanda){
+    this->idNo = idNo;
+    this->demanda = demanda;
+    this->x = x;
+    this->y = y;
+    this->grauEntrada = 0;
+    this->grauSaida = 0;
+    this->proxNo = NULL;
+    this->primeiraAresta = NULL;
+}
+
 No::~No() {
     Aresta* auxEdge = getPrimeiraAresta();
     while ( auxEdge != NULL ) {

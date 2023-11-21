@@ -11,6 +11,7 @@ class No {
 public:
 
     No(int idNo, float x, float y);
+    No(int idNo, float x, float y, int demanda);
     virtual ~No();
 
     // get()

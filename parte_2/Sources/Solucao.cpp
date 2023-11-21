@@ -9,6 +9,7 @@
 #include "../Sources/Grafo.cpp"
 #include "../Sources/Aresta.cpp"
 #include "../Sources/No.cpp"
+#include <cfloat>
 
 
 using namespace std;
@@ -19,6 +20,7 @@ Solucao::Solucao(string txt)
     construirArestas();
     // this->grafo->imprime();
     construirMatriz();
+    //imprimeMatriz();
     guloso();
 }
 
@@ -160,11 +162,12 @@ bool Solucao::inPercorridos(No* procurado, unordered_map<No*,bool> percorridos)
 No* Solucao::findMinDistance(No* partida, unordered_map<No*,bool> percorridos)
 {
     // ALTERAR PARA MAIOR VALOR DA LINGUAGEM 
-    double minDistance = 999999;
+    //double minDistance = 999999;
+    double minDistance = DBL_MAX;
     No* destino;
     for (No *i = this->grafo->getNoRaiz(); i; i = i->getProxNo())
     {
-        if(matrizDistancias[partida][i] < minDistance && !inPercorridos(i,percorridos)){
+        if(matrizDistancias[partida][i] < minDistance && !inPercorridos(i,percorridos) && i!= partida){
             minDistance = matrizDistancias[partida][i];
             destino = i;
         }
@@ -200,12 +203,14 @@ Grafo* Solucao::guloso()
     unordered_map<No*,bool> percorridos = initHash();
 
     Grafo *guloso = new Grafo; 
+    No* galpaoGuloso = guloso->insereNo(galpao->getIdNo(), galpao->getX(), galpao->getY(), galpao->getDemanda());
+    
 
     for(int i=0; i < caminhoes; i++){
         No* destino = findMinDistance(galpao, percorridos);
         percorridos[destino] = true;
         double distancia = matrizDistancias[galpao][destino];
-        guloso->insertAresta(galpao, destino, distancia) ? cout << "true" << endl : cout << "false" << endl;
+        guloso->insertAresta(galpaoGuloso, destino, distancia);
     }
     guloso->imprime();
 

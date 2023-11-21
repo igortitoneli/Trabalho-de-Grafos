@@ -20,7 +20,7 @@ public:
 
     //--- Funcoes do No ---
     No *procurarNoPeloId(int idFindNo, bool anterior);
-    No *insereNo(int idNostrings, float x, float y);
+    No *insereNo(int idNo, float x, float y, int demanda);
     No *insereNo(No* novoNo);
     bool removeNo(int idNo, bool isDigrafo);
     // Aresta* fechoTransitivo(int idNo);
@@ -58,6 +58,8 @@ public:
 
     Grafo* prim(int idNo);
 
+    int somaPesoArestas(); //implementar no cpp
+
 private:
     // int grau; // vertice com maior grau do grafo
     bool estarNoVetor(int vetor[], int idNo, int tam);
@@ -70,6 +72,7 @@ private:
 
     No *noRaiz;
 };
+
 
 
 #endif // GRAPH_H
