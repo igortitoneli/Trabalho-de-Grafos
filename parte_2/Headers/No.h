@@ -25,9 +25,11 @@ public:
     No* getProxNo() { return this->proxNo; };
     int getX() { return this->x; };
     int getY() { return this->y; };
+    int getDemanda() { return this->demanda; };
 
     // set()
     void setIdNo(int id) { this->idNo = id; };
+    void setDemanda(int demanda) { this->demanda = demanda; };
     // void setPeso(int peso) { this->pesoNo = peso; };
     void setProxNo(No *novoNo) { this->proxNo = novoNo; };
     void setPrimeiraAresta(Aresta *novaAresta) { this->primeiraAresta = novaAresta; };
@@ -59,6 +61,7 @@ private:
     Aresta* auxGetArestaAnterior(Aresta *aresta, No *noDestino);
 
     int idNo;
+    int demanda;
     int x;
     int y;
     int grauEntrada;

@@ -45,8 +45,16 @@ void Solucao::lerArquivo(string txt)
 
         string chave;
         ss >> chave;
-
-        if (chave == "DIMENSION")
+        if (chave == "COMMENT")
+        {
+            while (ss >> chave) {
+                if (chave == "trucks:") {
+                    ss >> this->caminhoes;
+                    break;   
+                }
+            }
+        }
+        else if (chave == "DIMENSION")
         {
             ss >> chave;
             ss >> dimension;
@@ -69,6 +77,17 @@ void Solucao::lerArquivo(string txt)
         int idno, x, y;
         ss >> idno >> x >> y;
         grafo->insereNo(idno, x, y);
+    }
+
+    getline(arquivo, linha);
+
+    for(int i = 0; i < dimension; i++)
+    {
+        getline(arquivo, linha);
+        istringstream ss(linha);
+        int no, demanda;
+        ss >> no >> demanda;
+        grafo->procurarNoPeloId(no)->setDemanda(demanda);
     }
     
     arquivo.close();
@@ -129,20 +148,26 @@ void Solucao::imprimeMatriz()
 }
 
 
+
+
+// começar do no 1 (Galpão)
+// verificar se ir pra o proximo no de menor caminho, irá passar o limite de demanda
+// true ? ir para o proximo no de menor caminho
+// false ? voltar para a base
 Grafo* guloso()
 {
-    
+
 }
 
 
 Grafo* gulosoRandomizadoAdaptativo()
 {
-    
+
 }
 
 
 Grafo* gulosoRandomizadoAdaptativoReativo()
 {
-    
+
 }
 

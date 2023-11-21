@@ -27,6 +27,7 @@ class Solucao{
         Grafo* grafo;
         unordered_map<No*, unordered_map<No*, float>> matrizDistancias;  
         int capacidade;
+        int caminhoes;
 };
 
 

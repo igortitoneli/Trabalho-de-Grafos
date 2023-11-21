@@ -4,6 +4,7 @@ using namespace std;
 
 No::No(int idNo, int x, int y) {
     this->idNo = idNo;
+    this->demanda = 0;
     this->x = x;
     this->y = y;
     this->grauEntrada = 0;
