@@ -10,7 +10,7 @@ using namespace std;
 class No {
 public:
 
-    No(int idNo, int x, int y);
+    No(int idNo, float x, float y);
     virtual ~No();
 
     // get()
@@ -53,7 +53,7 @@ public:
     void removeAresta(No *noRemovido);
     Aresta *verificaNoAresta(No *procurado);
     void imprimeArestas();
-    bool insereArestaNo(No *Destino, float pesoAresta);
+    bool insereArestaNo(No *Destino, double pesoAresta);
     bool in_percorridos(No percorridos [], int tam);
     
 private:
@@ -62,8 +62,8 @@ private:
 
     int idNo;
     int demanda;
-    int x;
-    int y;
+    float x;
+    float y;
     int grauEntrada;
     int grauSaida;
     No *proxNo;    

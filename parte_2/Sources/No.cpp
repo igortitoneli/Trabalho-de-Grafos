@@ -2,7 +2,7 @@
 
 using namespace std;
 
-No::No(int idNo, int x, int y) {
+No::No(int idNo, float x, float y) {
     this->idNo = idNo;
     this->demanda = 0;
     this->x = x;
@@ -107,7 +107,7 @@ bool No::verificaRemoveAresta(No *destino)
 
 }
 
-bool No::insereArestaNo(No *noDestino, float pesoAresta)
+bool No::insereArestaNo(No *noDestino, double pesoAresta)
 {
     if(this->getPrimeiraAresta() == NULL) // NÃO EXISTE NENHUMA ARESTA NESSE NO 
     {  

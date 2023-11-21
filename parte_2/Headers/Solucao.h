@@ -23,6 +23,10 @@ class Solucao{
         void construirArestas();
         void construirMatriz();
         void imprimeMatriz();
+        No* findMinDistance(No* partida, unordered_map<No*,bool> percorridos);
+        bool inPercorridos(No* procurado, unordered_map<No*,bool> percorridos);
+        unordered_map<No*, bool> initHash();
+
 
         Grafo* grafo;
         unordered_map<No*, unordered_map<No*, float>> matrizDistancias;  

@@ -20,15 +20,18 @@ public:
 
     //--- Funcoes do No ---
     No *procurarNoPeloId(int idFindNo, bool anterior);
-    No *insereNo(int idNostrings, int x, int y);
+    No *insereNo(int idNostrings, float x, float y);
+    No *insereNo(No* novoNo);
     bool removeNo(int idNo, bool isDigrafo);
     // Aresta* fechoTransitivo(int idNo);
     void fechoTransitivoDireto(int idNo);
     void fechoTransitivoIndireto(int idNo);
     void fechoTransitivoIndiretoFunc(int idNo);
     void imprimeVetor(int vetor[], int tam);
+    No* getGalpao();
 
     //--- Funcoes de Aresta ---
+    bool insertAresta(No* NoOrigem, No* NoDestino, double pesoAresta);
     bool insertAresta(int idNoOrigem, int idNoDestino, float pesoAresta);
     bool removeAresta(int idNoOrigem, int idNoDestino, bool isDirected);
     bool criaAresta(No *noFonte, No *Destino, int pesoAresta);

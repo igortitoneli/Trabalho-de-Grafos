@@ -17,7 +17,9 @@ Solucao::Solucao(string txt)
 {
     lerArquivo(txt);
     construirArestas();
+    // this->grafo->imprime();
     construirMatriz();
+    guloso();
 }
 
 
@@ -74,7 +76,8 @@ void Solucao::lerArquivo(string txt)
     {
         getline(arquivo, linha);
         istringstream ss(linha);
-        int idno, x, y;
+        int idno;
+        float x, y;
         ss >> idno >> x >> y;
         grafo->insereNo(idno, x, y);
     }
@@ -148,25 +151,74 @@ void Solucao::imprimeMatriz()
 }
 
 
+bool Solucao::inPercorridos(No* procurado, unordered_map<No*,bool> percorridos)
+{
+    return percorridos[procurado];
+}
 
 
-// começar do no 1 (Galpão)
-// verificar se ir pra o proximo no de menor caminho, irá passar o limite de demanda
+No* Solucao::findMinDistance(No* partida, unordered_map<No*,bool> percorridos)
+{
+    // ALTERAR PARA MAIOR VALOR DA LINGUAGEM 
+    double minDistance = 999999;
+    No* destino;
+    for (No *i = this->grafo->getNoRaiz(); i; i = i->getProxNo())
+    {
+        if(matrizDistancias[partida][i] < minDistance && !inPercorridos(i,percorridos)){
+            minDistance = matrizDistancias[partida][i];
+            destino = i;
+        }
+    }
+    return destino;
+}
+
+
+unordered_map<No*, bool> Solucao::initHash(){
+    unordered_map<No*, bool> hash;
+
+    for(No* i = grafo->getNoRaiz(); i; i=i->getProxNo()){
+        hash[i] = false;
+    }
+    return hash;
+}
+
+// começar do no 1 (demanda = 0) (Galpão)
+// iniciar o primeiro caminhao com o menor caminho do galpao ate um no
+// fazer o mesmo para todos os caminhoes pegando nos nao acessados
+// verificar se ir pra o proximo no de menor caminho nao acessado, irá passar o limite de demanda
 // true ? ir para o proximo no de menor caminho
 // false ? voltar para a base
-Grafo* guloso()
+Grafo* Solucao::guloso()
+{
+    No* galpao = this->grafo->getGalpao();
+
+    if(!galpao){
+        cout << "erro ao encontrar o galpao." << endl;
+        return NULL;
+    }
+
+    unordered_map<No*,bool> percorridos = initHash();
+
+    Grafo *guloso = new Grafo; 
+
+    for(int i=0; i < caminhoes; i++){
+        No* destino = findMinDistance(galpao, percorridos);
+        percorridos[destino] = true;
+        double distancia = matrizDistancias[galpao][destino];
+        guloso->insertAresta(galpao, destino, distancia) ? cout << "true" << endl : cout << "false" << endl;
+    }
+    guloso->imprime();
+
+}
+
+
+Grafo* Solucao::gulosoRandomizadoAdaptativo()
 {
 
 }
 
 
-Grafo* gulosoRandomizadoAdaptativo()
-{
-
-}
-
-
-Grafo* gulosoRandomizadoAdaptativoReativo()
+Grafo* Solucao::gulosoRandomizadoAdaptativoReativo()
 {
 
 }
