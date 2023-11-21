@@ -3,10 +3,9 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
-#include "../Headers/Aresta.h"
-#include "../Headers/No.h"
-#include "../Headers/Grafo.h"
-
+#include <unordered_map>
+#include "./No.h"
+#include "./Grafo.h"
 
 using namespace std;
 
@@ -20,9 +19,13 @@ class Solucao{
         Grafo* gulosoRandomizadoAdaptativoReativo();
 
     private:
-        Grafo* lerArquivo(string txt);
+        void lerArquivo(string txt);
+        void construirArestas();
+        void construirMatriz();
+        void imprimeMatriz();
 
         Grafo* grafo;
+        unordered_map<No*, unordered_map<No*, float>> matrizDistancias;  
         int capacidade;
 };
 

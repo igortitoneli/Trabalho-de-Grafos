@@ -9,27 +9,27 @@ using namespace std;
 
 class No;
 
-class Aresta {
+class Aresta
+{
 public:
-    Aresta(int noDestino);
-    Aresta(int noDestino, int pesoAresta);
-    Aresta(No *noDestino, Aresta *proxAresta);
-    Aresta(No *noDestino, Aresta *proxAresta, int peso);
+    // Aresta(int noDestino);
+    // Aresta(int noDestino, int pesoAresta);
+    // Aresta(No *noDestino, Aresta *proxAresta);
+    Aresta(No *noDestino, Aresta *proxAresta, float peso);
 
     ~Aresta();
 
-    int getPeso();
+    float getPeso();
     void setPeso(int peso);
     void setNoDestino(No *destino);
-    No* getNoDestino();
+    No *getNoDestino();
     void setProxAresta(Aresta *prox);
-    Aresta* getProxAresta();
+    Aresta *getProxAresta();
 
-    
-    //void setProxAresta(Aresta *valor);
-    
+    // void setProxAresta(Aresta *valor);
+
 private:
-    int peso;
+    float peso;
     No *noDestino;
     Aresta *proxAresta;
 };

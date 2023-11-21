@@ -9,15 +9,10 @@
 
 using namespace std;
 typedef vector<No *> NodeVector;
-// typedef EdgeSearchInfo EdgeInfo;
 
 //------------------------ Construtors and Destrutors ------------------------
 
-/**
- * Grafo Construtor.
- *
- * @param isDigrafo (new valor)
- */
+
 Grafo::Grafo(bool isDigrafo)
 {
     this->numAresta = 0;
@@ -26,9 +21,7 @@ Grafo::Grafo(bool isDigrafo)
     this->digrafo = isDigrafo;
 }
 
-/**
- * Destructor
- */
+
 Grafo::~Grafo()
 {
     No *noAux = getNoRaiz();
@@ -43,17 +36,13 @@ Grafo::~Grafo()
 
 //----------------------------------- Seters -----------------------------------
 
-/**
- * Funcao incrementa Ordem do grafo em um.
- */
+
 void Grafo::incOrdem()
 {
     this->ordem++;
 }
 
-/**
- * Funcao decrementa Ordem do grafo em um.
- */
+
 void Grafo::decOrdem()
 {
     this->ordem--;
@@ -61,14 +50,7 @@ void Grafo::decOrdem()
 
 //------------------------------ Funcoes do No ------------------------------
 
-/**
- * EauxSSa funcao busca o No pelo nome.
- * Para achar o No, faça grafo->getNoAux()
- *
- * @param nome (no nome)
- * @return true - se achar no.
- *         false - se Nao achar.
- */
+
 No *Grafo::procurarNoPeloId(int idFindNo, bool anteiror = false)
 {
 
@@ -93,12 +75,7 @@ No *Grafo::procurarNoPeloId(int idFindNo, bool anteiror = false)
         return noAux;
 }
 
-/**
- * A funcao insere o No caso ele nao existe ou atualiza seu peso.
- *
- * @param nome
- * @param peso (peso do No)
- */
+
 No *Grafo::insereNo(int idNo, int peso)
 {
 
@@ -142,13 +119,7 @@ void Grafo::imprime()
          << " = " << endl;
 }
 
-// o que fazer?
-// criar uma função que retona o no anterior ao nó a ser removido
-// a fim de que, ao final da função, quando fazer o ponteiro do anterior
-// apontar para o proximo, n precise percorrer tudo dnv
-//
-// desalocar todos as arestas que pertencem a esse no
-// criar uma função que faça isso para todas as arestas
+
 bool Grafo::removeNo(int idNo, bool isDigrafo)
 {
 
@@ -193,93 +164,6 @@ bool Grafo::removeNo(int idNo, bool isDigrafo)
     return false;
 }
 
-/**
- * Remove No de um grafo
- *
- * @param nome (no nome)
- */
-// bool Grafo::removeNo(int idNo, bool isDigrafo) {
-//    // Pesquisa o No a ser excluido
-//    // Remove todas as arestas/arcos onde este nó ocorre
-//    // Remove o no
-//
-//     No *removido = this->procurarNoPeloId(idNo);
-//     int grau = removido->getGrau();
-//
-//     if(removido){
-//         int contador = 0;
-//         bool achou = false;
-//
-//         No *noAux = this->getNoRaiz();
-//         No *anterior = NULL;
-//
-//         //percorre todos os vertices do grafo
-//         while(noAux && (contador < grau || !achou))
-//         {
-//             if(noAux == removido){
-//                 this->removeAresta(anterior,noAux);
-//                 achou = true;
-//             }
-//             //verificar se noAux é um no destino das arestas de removido
-//             else if(Aresta *aresta = noAux->getArestaAnterior(removido)){
-//                 // se a aresta existe
-//                 if(aresta){
-//                     if(aresta->getProxAresta()){
-//                         // se o proximo dessa aresta existe e ele nao é o ultimo, remove a aresta entre o noAux e o destino desalocando memoria
-//                         if(aresta->getProxAresta() != noAux->getUltimaAresta()){
-//                             aresta->setProxAresta(aresta->getProxAresta()->getProxAresta());
-//                             // aresta->getProxAresta()->~Aresta();
-//                         }
-//                         // se o proximo é o ultimo, altera o ponteiro pro ultimo e desaloca a memoria
-//                         else{
-//                             // Aresta *proxima = aresta->getProxAresta();
-//                             // proxima->~Aresta();
-//
-//                             noAux->setUltimaAresta(aresta);
-//                             aresta->setProxAresta(NULL);
-//                         }
-//                         contador++;
-//                     }
-//                 }
-//                 else{
-//                     noAux->setPrimeiraAresta(NULL);
-//                     noAux->setUltimaAresta(NULL);
-//                 }
-//             }
-//             // passa pro proximo vertice
-//             anterior = noAux;
-//             noAux = noAux->getProxNo();
-//
-//             // while(noAux && (contador < no->getGrau() || !achou)){
-//
-//             //     if(noAux->verificaRemoveAresta(no)) contador++;
-//             //     if(noAux != no){
-//             //         if(no->verificaRemoveAresta(noAux)) contador++;
-//             //     }
-//             //     if(noAux == no){
-//             //         achou == true;
-//             //         cout << "a" << endl;
-//             //         anterior->setProxNo(noAux->getProxNo());
-//             //         cout << "b" << endl;
-//             //     }
-//
-//             //     anterior = noAux;
-//             //     noAux = noAux->getProxNo();
-//             // }
-//         }
-//
-//         // Caso queira implementar o int grau no private do Grafo.h
-//         // if(no->getGrau() == this->getOrdem()){
-//         //     this->verificaOrdem();
-//         // }
-//
-//         this->decOrdem();
-//         this->numAresta -= grau;
-//         return true;
-//     }
-//
-//    return false;
-// }
 
 void Grafo::removeAresta(No *origem, No *destino)
 {
@@ -320,44 +204,8 @@ void Grafo::removeAresta(No *origem, No *destino)
             delete delAresta;
         }
     }
-
-    // // se noAux for a raiz, a raiz passa a apontar para o proximo;
-    // if(noAux == this->getNoRaiz()){
-    //     this->noRaiz = noAux->getProxNo();
-    //     noAux->~No();
-    //     noAux = this->getNoRaiz();
-    // }
-    // // se nao, anterior aponta pro proximo de noAux, desaloca noAux;
-    // else{
-    //     anterior->setProxNo(noAux->getProxNo());
-    //     noAux->~No();
-    //     noAux = anterior->getProxNo();
-    // }
 }
 
-/*
-Caso queira implementar o int grau no private do Grafo.h
-void Grafo::verificaGrau(){
-
-    this->grau = this->getNoRaiz()->getGrau();
-
-    No *aux = this->getNoRaiz()->getProxNo();
-
-    while(aux){
-        if(this->grau < aux->getGrau()) this->grau = aux->getGrau();
-        aux = aux->getProxNo();
-    }
-}
-*/
-
-/**
- * Insere a aresta de A para B se não adjacencia nao existir,
- * caso exista, a funcao atualiza o peso
- *
- * @param noFonteNome ()
- * @param noDestinoNome ()
- * @param pesoAresta ()
- */
 
 bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta)
 {
@@ -402,19 +250,7 @@ bool Grafo::insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta)
     return false;
 }
 
-/**
- * This function search in a no the edges that points to the same destiny no.\n
- * If 'removeAll' is TRUE, all of these edges will be removed, only 1 otherwise. (multigraph)\n
- * If 'considerarPeso' is TRUE, only the edge with peso equals to 'peso' will be removed.\n
- * If 'considerarPeso' is FALSE, don't matter the valor paauxSSed as parameter in 'peso'.
- *
- * @param *noDestino (the no that refers to the edges that will be removed)
- * @param *noOrigem (the no that refers to the edges that will be removed)
- * @param isDirected (flag to inform graph or digraph)
- * @param peso (peso)
- *
- * @return int (numero arestas excluidas)
- */
+
 bool Grafo::removeAresta(int idNoOrigem, int idNoDestino, bool isDirected)
 {
     // Procura o nó origem e busca na sua lista de arestas o idNoDestino
@@ -446,6 +282,7 @@ bool Grafo::removeAresta(int idNoOrigem, int idNoDestino, bool isDirected)
     return false;
 }
 
+
 bool Grafo::decrementaNumAresta()
 {
     if (this->isDigraph())
@@ -463,13 +300,6 @@ bool Grafo::decrementaNumAresta()
     return false;
 }
 
-//--- Caracteristica do Grafo ---
-
-/**
- * Retorna o numero de aresta do grafo.
- */
-
-// IRRELEVANTE
 
 int Grafo::AtualizaNumAresta()
 {
@@ -487,26 +317,19 @@ int Grafo::AtualizaNumAresta()
     return this->numAresta / 2; // PERGUNTAR PQ DIVIDE POR 2
 }
 
+
 int Grafo::getNumAresta()
 {
     return this->numAresta;
 }
 
-/**
- * Retorna 'rootNode'.
- */
 
-/**
- * Retorna ordem do grafo.
- */
 int Grafo::getOrdem()
 {
     return this->ordem;
 }
 
-/**
- * Retorna grau de entrada.
- */
+
 int Grafo::getGrauEntrada()
 {
     int inputDegree = 0;
@@ -523,9 +346,7 @@ int Grafo::getGrauEntrada()
     return inputDegree;
 }
 
-/**
- * Retorna grau de saida.
- */
+
 int Grafo::getGrauSaida()
 {
     int outputDegree = 0;
@@ -542,9 +363,6 @@ int Grafo::getGrauSaida()
     return outputDegree;
 }
 
-/**
- * Retorna grau do grafo.
- */
 
 string Grafo::getGrau()
 {
@@ -567,18 +385,13 @@ string Grafo::getGrau()
     return auxSS.str();
 }
 
-/**
- * @return true - se grafo e digrafo.
- *        false - se grafo NAO e digrafo.
- */
+
 bool Grafo::isDigraph()
 {
     return this->digrafo;
 }
-/**
- * @param idNo (id do nó)
- * @return No* - uma "lista" de nós que pertencem ao fecho transitivo do nó de id == idNo. Nessa lista o ponteiro proxNo de cada Nó aponta para o proximo Nó
- */
+
+
 void Grafo::fechoTransitivoDireto(int idNo) // imprimindo a coluna
 {
     double infinito = 99999;
