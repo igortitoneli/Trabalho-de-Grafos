@@ -166,18 +166,33 @@ No* Solucao::findMinDistance(No* partida, unordered_map<No*,bool> percorridos, d
     // ALTERAR PARA MAIOR VALOR DA LINGUAGEM 
     //double minDistance = 999999;
     double minDistance = DBL_MAX;
-    No* destino;
+    No* destino = NULL;
+
+    // cout << "\n\n findMinDistance() " << endl; 
     for (No *i = this->grafo->getNoRaiz(); i; i = i->getProxNo())
     {
+        // cout << "demanda noh " << i->getIdNo() << " - " << i->getDemanda() << endl;
+        // if(matrizDistancias[partida->getIdNo()][i->getIdNo()] >= minDistance) 
+        //     cout << "matrizDistancias " << i->getIdNo() << " >= " << minDistance << endl;
+        // if(inPercorridos(i,percorridos))
+        //     cout << i->getIdNo() << " ja percorrido" << endl;
+        // if(i == partida)
+        //     cout << i->getIdNo() << " == " << partida->getIdNo() << endl;
+        // if(capacidade + i->getDemanda() >= this->capacidade)
+        //     cout << i->getIdNo() << " passa da demanda" << endl;
+
         if(matrizDistancias[partida->getIdNo()][i->getIdNo()] < minDistance && 
             !inPercorridos(i,percorridos) && 
             i!= partida && 
             capacidade + i->getDemanda() < this->capacidade
             ){
+                // cout << "noh " << i->getIdNo() << " SUPRIU" << endl;
             minDistance = matrizDistancias[partida->getIdNo()][i->getIdNo()];
             destino = i;
         }
     }
+    // cout << "noh " << destino->getIdNo() << " FOI ACEITO!" << endl;
+
     return destino;
 }
 
@@ -200,6 +215,20 @@ unordered_map<No*, bool> Solucao::initHash(){
 // false ? voltar para a base
 Grafo* Solucao::guloso()
 {
+    auto imprimehash = [](unordered_map<int, No*> hash){
+        for (auto i = hash.begin(); i != hash.end(); ++i) {
+            cout << "Chave: " << i->first << ", Valor: " << i->second->getIdNo() << endl;
+        }
+        cout << endl;
+    };
+
+    auto equals = [this](unordered_map<int, No*> hash1, unordered_map<int, No*> hash2){
+        for(int i=0; i<this->caminhoes; i++)
+            if(hash1[i]->getIdNo() != hash2[i]->getIdNo())
+                return false;
+        return true;
+    };
+
     No* galpao = this->grafo->getGalpao();
 
     if(!galpao){
@@ -213,19 +242,25 @@ Grafo* Solucao::guloso()
     
     unordered_map<int, No*> hashMenorCaminho = initHashMenorCaminho(galpaoGuloso);
     unordered_map<int, double> capacidade = setCapacidade();
-    int i = 0;
 
-    unordered_map<int, No*> stop;
+    No *teste = new No(2, 2, 2, 2);
+    unordered_map<int, No*> stop = initHashMenorCaminho(teste);
 
-    while(!checadosHash(percorridos) && stop != hashMenorCaminho){
-        No* destino = findMinDistance(hashMenorCaminho[i%caminhoes], percorridos, capacidade[i%caminhoes]);
-        capacidade[i%caminhoes] += destino->getDemanda();
-        double distancia = matrizDistancias[hashMenorCaminho[i%caminhoes]->getIdNo()][destino->getIdNo()];
-        No* newDestino = guloso->insertAresta(hashMenorCaminho[i%caminhoes], destino, distancia);
+    while(!checadosHash(percorridos) && !equals(stop,hashMenorCaminho)){
         stop = hashMenorCaminho;
-        hashMenorCaminho[i%caminhoes] = newDestino;
-        percorridos[destino] = true;
-        i++;
+        for (int i=0; i<caminhoes; i++){
+            // imprimehash(hashMenorCaminho);
+            // imprimehash(stop);
+            No* destino = findMinDistance(hashMenorCaminho[i], percorridos, capacidade[i]);
+            if(destino != NULL){
+                capacidade[i] += destino->getDemanda();
+                double distancia = matrizDistancias[hashMenorCaminho[i]->getIdNo()][destino->getIdNo()];
+                No* newDestino = guloso->insertAresta(hashMenorCaminho[i], destino, distancia);
+                hashMenorCaminho[i] = newDestino;
+                percorridos[destino] = true;
+            }
+            cout << "rota " << i << " - " << capacidade[i] << endl;
+        }
     }
 
     for(int i=0; i<caminhoes; i++){
@@ -233,7 +268,12 @@ Grafo* Solucao::guloso()
         guloso->insertAresta(hashMenorCaminho[i], galpaoGuloso, distancia);
     }
 
+    guloso->imprime();
+    if(stop == hashMenorCaminho){
+        cout << "Nao foi possivel terminar a execucao do algoritmo." << endl;
+    }
     this->custoMinimo(guloso);
+    
 }
 
 unordered_map<int, double> Solucao::setCapacidade(){
@@ -245,9 +285,14 @@ unordered_map<int, double> Solucao::setCapacidade(){
 }
 
 bool Solucao::checadosHash(unordered_map<No*,bool> hash){
+    // int cont = 0;
     for(No *i = this->grafo->getNoRaiz(); i; i = i->getProxNo())
-        if(hash[i] == false)
+        if(hash[i] == false){
+            // cont ++;
+            // cout << "FALTA O Noh " << i->getIdNo() << endl; 
             return false;
+        }
+    // return cont == 0;
     return true;
 }
 
