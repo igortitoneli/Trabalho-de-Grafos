@@ -13,7 +13,7 @@ class Solucao{
     public:
         Solucao(string txt);
         ~Solucao();
-
+        Grafo* Solucao::startHashMenorCaminho();
         Grafo* guloso();
         Grafo* gulosoRandomizadoAdaptativo();
         Grafo* gulosoRandomizadoAdaptativoReativo();
@@ -26,6 +26,7 @@ class Solucao{
         No* findMinDistance(No* partida, unordered_map<No*,bool> percorridos);
         bool inPercorridos(No* procurado, unordered_map<No*,bool> percorridos);
         unordered_map<No*, bool> initHash();
+        unordered_map<int, No*> initHashMenorCaminho();
 
 
         Grafo* grafo;

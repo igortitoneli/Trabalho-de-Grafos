@@ -205,14 +205,27 @@ Grafo* Solucao::guloso()
     Grafo *guloso = new Grafo; 
     No* galpaoGuloso = guloso->insereNo(galpao->getIdNo(), galpao->getX(), galpao->getY(), galpao->getDemanda());
     
-
-    for(int i=0; i < caminhoes; i++){
+    unordered_map<int, No*> hashMenorCaminho = initHashMenorCaminho();
+    int i = 0;
+    while(i<10){
+        cout<<"teste"<<endl;
         No* destino = findMinDistance(galpao, percorridos);
+        hashMenorCaminho[i] = destino;
         percorridos[destino] = true;
         double distancia = matrizDistancias[galpao][destino];
         guloso->insertAresta(galpaoGuloso, destino, distancia);
+        i++;
+        cout<<"tam da hash: "<< percorridos.size()<<endl;
     }
     guloso->imprime();
+
+}
+
+unordered_map<int, No*> Solucao::initHashMenorCaminho(){
+    unordered_map<int, No*> hashMenorCaminho;
+    for(int i=0; i<caminhoes; i++){
+        hashMenorCaminho[i] = NULL;
+    }
 
 }
 
