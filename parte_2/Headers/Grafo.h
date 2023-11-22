@@ -31,7 +31,7 @@ public:
     No* getGalpao();
 
     //--- Funcoes de Aresta ---
-    bool insertAresta(No* NoOrigem, No* NoDestino, double pesoAresta);
+    No* insertAresta(No* NoOrigem, No* NoDestino, double pesoAresta);
     bool insertAresta(int idNoOrigem, int idNoDestino, float pesoAresta);
     bool removeAresta(int idNoOrigem, int idNoDestino, bool isDirected);
     bool criaAresta(No *noFonte, No *Destino, int pesoAresta);
@@ -58,7 +58,7 @@ public:
 
     Grafo* prim(int idNo);
 
-    int somaPesoArestas(); //implementar no cpp
+    double somaPesoArestas(); //implementar no cpp
 
 private:
     // int grau; // vertice com maior grau do grafo

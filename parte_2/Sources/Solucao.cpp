@@ -20,7 +20,7 @@ Solucao::Solucao(string txt)
     construirArestas();
     // this->grafo->imprime();
     construirMatriz();
-    //imprimeMatriz();
+    // imprimeMatriz();
     guloso();
 }
 
@@ -94,7 +94,9 @@ void Solucao::lerArquivo(string txt)
         ss >> no >> demanda;
         grafo->procurarNoPeloId(no)->setDemanda(demanda);
     }
-    
+
+    this->galpao = this->grafo->getGalpao();
+
     arquivo.close();
 }
 
@@ -119,7 +121,7 @@ void Solucao::construirMatriz()
 {
     for(No *i = this->grafo->getNoRaiz(); i; i=i->getProxNo()){
         for(Aresta *a = i->getPrimeiraAresta(); a; a=a->getProxAresta()){
-            this->matrizDistancias[i][a->getNoDestino()] = a->getPeso(); 
+            this->matrizDistancias[i->getIdNo()][a->getNoDestino()->getIdNo()] = a->getPeso(); 
         }
     }
 }
@@ -146,7 +148,7 @@ void Solucao::imprimeMatriz()
             for (No *linha = this->grafo->getNoRaiz(); linha != NULL; linha = linha->getProxNo())
             {
 
-                cout << this->matrizDistancias[linha][coluna] << "\t";
+                cout << this->matrizDistancias[linha->getIdNo()][coluna->getIdNo()] << "\t";
             }
             cout << endl;
         }
@@ -167,8 +169,8 @@ No* Solucao::findMinDistance(No* partida, unordered_map<No*,bool> percorridos)
     No* destino;
     for (No *i = this->grafo->getNoRaiz(); i; i = i->getProxNo())
     {
-        if(matrizDistancias[partida][i] < minDistance && !inPercorridos(i,percorridos) && i!= partida){
-            minDistance = matrizDistancias[partida][i];
+        if(matrizDistancias[partida->getIdNo()][i->getIdNo()] < minDistance && !inPercorridos(i,percorridos) && i!= partida){
+            minDistance = matrizDistancias[partida->getIdNo()][i->getIdNo()];
             destino = i;
         }
     }
@@ -182,6 +184,7 @@ unordered_map<No*, bool> Solucao::initHash(){
     for(No* i = grafo->getNoRaiz(); i; i=i->getProxNo()){
         hash[i] = false;
     }
+    hash[this->galpao] = true;
     return hash;
 }
 
@@ -201,32 +204,49 @@ Grafo* Solucao::guloso()
     }
 
     unordered_map<No*,bool> percorridos = initHash();
-
     Grafo *guloso = new Grafo; 
     No* galpaoGuloso = guloso->insereNo(galpao->getIdNo(), galpao->getX(), galpao->getY(), galpao->getDemanda());
     
-    unordered_map<int, No*> hashMenorCaminho = initHashMenorCaminho();
+    unordered_map<int, No*> hashMenorCaminho = initHashMenorCaminho(galpaoGuloso);
     int i = 0;
-    while(i<10){
-        cout<<"teste"<<endl;
-        No* destino = findMinDistance(galpao, percorridos);
-        hashMenorCaminho[i] = destino;
+    while(!checadosHash(percorridos)){
+        No* destino = findMinDistance(hashMenorCaminho[i%caminhoes], percorridos);
+        double distancia = matrizDistancias[hashMenorCaminho[i%caminhoes]->getIdNo()][destino->getIdNo()];
+        cout << hashMenorCaminho[i%caminhoes] << endl;
+        No* newDestino = guloso->insertAresta(hashMenorCaminho[i%caminhoes], destino, distancia);
+        hashMenorCaminho[i%caminhoes] = newDestino;
         percorridos[destino] = true;
-        double distancia = matrizDistancias[galpao][destino];
-        guloso->insertAresta(galpaoGuloso, destino, distancia);
         i++;
-        cout<<"tam da hash: "<< percorridos.size()<<endl;
     }
-    guloso->imprime();
 
+    for(int i=0; i<caminhoes; i++){
+        float distancia = matrizDistancias[hashMenorCaminho[i]->getIdNo()][galpao->getIdNo()];
+        guloso->insertAresta(hashMenorCaminho[i], galpaoGuloso, distancia);
+    }
+
+    this->custoMinimo(guloso);
 }
 
-unordered_map<int, No*> Solucao::initHashMenorCaminho(){
+bool Solucao::checadosHash(unordered_map<No*,bool> hash){
+    for(No *i = this->grafo->getNoRaiz(); i; i = i->getProxNo())
+        if(hash[i] == false)
+            return false;
+    return true;
+}
+
+double Solucao::custoMinimo(Grafo *grafo)
+{   
+    cout << "O custo minimo foi de " << grafo->somaPesoArestas() / 2 << endl;
+    return grafo->somaPesoArestas() / 2;
+}
+
+
+unordered_map<int, No*> Solucao::initHashMenorCaminho(No* galpao){
     unordered_map<int, No*> hashMenorCaminho;
     for(int i=0; i<caminhoes; i++){
-        hashMenorCaminho[i] = NULL;
+        hashMenorCaminho[i] = galpao;
     }
-
+    return hashMenorCaminho;
 }
 
 

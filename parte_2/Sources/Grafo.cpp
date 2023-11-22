@@ -232,7 +232,7 @@ void Grafo::removeAresta(No *origem, No *destino)
     }
 }
 
-bool Grafo::insertAresta(No* NoOrigem, No* destino, double pesoAresta){
+No* Grafo::insertAresta(No* NoOrigem, No* destino, double pesoAresta){
     No* NoDestino = this->insereNo(destino->getIdNo(), destino->getX(), destino->getY(), destino->getDemanda());
     if(this->procurarNoPeloId(NoOrigem->getIdNo()) == NULL){
         this->insereNo(NoOrigem);
@@ -244,9 +244,9 @@ bool Grafo::insertAresta(No* NoOrigem, No* destino, double pesoAresta){
     if (NoOrigem->insereArestaNo(NoDestino, pesoAresta) && NoDestino->insereArestaNo(NoOrigem, pesoAresta))
     {
         this->numAresta++;
-        return true;
+        return NoDestino;
     }
-    return false;
+    return NoDestino;
 }
 
 
@@ -895,6 +895,14 @@ Grafo* Grafo::prim(int idNo)
 
 }
 
+double Grafo::somaPesoArestas(){
+    double soma = 0;
+    for(No *n = this->getNoRaiz(); n; n=n->getProxNo())
+        for(Aresta *a = n->getPrimeiraAresta(); a; a=a->getProxAresta())
+            soma += a->getPeso();
+    return soma;
+
+}
 
 Grafo* Grafo::caminhoEmProfundidade(int idNo)
 {

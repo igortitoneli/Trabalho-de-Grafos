@@ -13,10 +13,10 @@ class Solucao{
     public:
         Solucao(string txt);
         ~Solucao();
-        Grafo* Solucao::startHashMenorCaminho();
         Grafo* guloso();
         Grafo* gulosoRandomizadoAdaptativo();
         Grafo* gulosoRandomizadoAdaptativoReativo();
+        double custoMinimo(Grafo *grafo);
 
     private:
         void lerArquivo(string txt);
@@ -26,13 +26,16 @@ class Solucao{
         No* findMinDistance(No* partida, unordered_map<No*,bool> percorridos);
         bool inPercorridos(No* procurado, unordered_map<No*,bool> percorridos);
         unordered_map<No*, bool> initHash();
-        unordered_map<int, No*> initHashMenorCaminho();
+        unordered_map<int, No*> initHashMenorCaminho(No* galpao);
+        bool checadosHash(unordered_map<No*,bool> hash);
+
 
 
         Grafo* grafo;
-        unordered_map<No*, unordered_map<No*, float>> matrizDistancias;  
+        unordered_map<int, unordered_map<int, float>> matrizDistancias;  
         int capacidade;
         int caminhoes;
+        No* galpao;
 };
 
 
