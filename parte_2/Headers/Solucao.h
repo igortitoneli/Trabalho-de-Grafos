@@ -23,11 +23,12 @@ class Solucao{
         void construirArestas();
         void construirMatriz();
         void imprimeMatriz();
-        No* findMinDistance(No* partida, unordered_map<No*,bool> percorridos);
+        No* findMinDistance(No* partida, unordered_map<No*,bool> percorridos,  double capacidade);
         bool inPercorridos(No* procurado, unordered_map<No*,bool> percorridos);
         unordered_map<No*, bool> initHash();
         unordered_map<int, No*> initHashMenorCaminho(No* galpao);
         bool checadosHash(unordered_map<No*,bool> hash);
+        unordered_map<int, double> setCapacidade();
 
 
 

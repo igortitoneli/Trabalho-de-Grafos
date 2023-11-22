@@ -161,7 +161,7 @@ bool Solucao::inPercorridos(No* procurado, unordered_map<No*,bool> percorridos)
 }
 
 
-No* Solucao::findMinDistance(No* partida, unordered_map<No*,bool> percorridos)
+No* Solucao::findMinDistance(No* partida, unordered_map<No*,bool> percorridos, double capacidade)
 {
     // ALTERAR PARA MAIOR VALOR DA LINGUAGEM 
     //double minDistance = 999999;
@@ -169,7 +169,11 @@ No* Solucao::findMinDistance(No* partida, unordered_map<No*,bool> percorridos)
     No* destino;
     for (No *i = this->grafo->getNoRaiz(); i; i = i->getProxNo())
     {
-        if(matrizDistancias[partida->getIdNo()][i->getIdNo()] < minDistance && !inPercorridos(i,percorridos) && i!= partida){
+        if(matrizDistancias[partida->getIdNo()][i->getIdNo()] < minDistance && 
+            !inPercorridos(i,percorridos) && 
+            i!= partida && 
+            capacidade + i->getDemanda() < this->capacidade
+            ){
             minDistance = matrizDistancias[partida->getIdNo()][i->getIdNo()];
             destino = i;
         }
@@ -208,12 +212,17 @@ Grafo* Solucao::guloso()
     No* galpaoGuloso = guloso->insereNo(galpao->getIdNo(), galpao->getX(), galpao->getY(), galpao->getDemanda());
     
     unordered_map<int, No*> hashMenorCaminho = initHashMenorCaminho(galpaoGuloso);
+    unordered_map<int, double> capacidade = setCapacidade();
     int i = 0;
-    while(!checadosHash(percorridos)){
-        No* destino = findMinDistance(hashMenorCaminho[i%caminhoes], percorridos);
+
+    unordered_map<int, No*> stop;
+
+    while(!checadosHash(percorridos) && stop != hashMenorCaminho){
+        No* destino = findMinDistance(hashMenorCaminho[i%caminhoes], percorridos, capacidade[i%caminhoes]);
+        capacidade[i%caminhoes] += destino->getDemanda();
         double distancia = matrizDistancias[hashMenorCaminho[i%caminhoes]->getIdNo()][destino->getIdNo()];
-        cout << hashMenorCaminho[i%caminhoes] << endl;
         No* newDestino = guloso->insertAresta(hashMenorCaminho[i%caminhoes], destino, distancia);
+        stop = hashMenorCaminho;
         hashMenorCaminho[i%caminhoes] = newDestino;
         percorridos[destino] = true;
         i++;
@@ -225,6 +234,14 @@ Grafo* Solucao::guloso()
     }
 
     this->custoMinimo(guloso);
+}
+
+unordered_map<int, double> Solucao::setCapacidade(){
+    unordered_map<int, double> capacidade;
+    for(int i=0; i<caminhoes; i++){
+        capacidade[i] = 0;
+    }
+    return capacidade;
 }
 
 bool Solucao::checadosHash(unordered_map<No*,bool> hash){
