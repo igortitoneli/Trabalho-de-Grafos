@@ -1,10 +1,9 @@
-#include "../Headers/No.h"
+#include "No.h"
 
 using namespace std;
 
 No::No(int idNo = -1, int peso = 0) {
     this->idNo = idNo;
-    this-
     this->pesoNo = peso;
     this->grauEntrada = 0;
     this->grauSaida = 0;

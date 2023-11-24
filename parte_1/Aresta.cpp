@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
-#include "../Headers/Aresta.h"
+#include "Aresta.h"
 
 using namespace std;
 

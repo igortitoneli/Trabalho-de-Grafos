@@ -5,7 +5,7 @@
 #include <vector>
 #include <limits>
 #include <unordered_map>
-#include "../Headers/Grafo.h"
+#include "Grafo.h"
 
 using namespace std;
 typedef vector<No *> NodeVector;
@@ -13,12 +13,14 @@ typedef vector<No *> NodeVector;
 //------------------------ Construtors and Destrutors ------------------------
 
 
-Grafo::Grafo(bool isDigrafo)
+Grafo::Grafo(bool isDigrafo, bool weightedNo, bool weightedAresta)
 {
     this->numAresta = 0;
     this->ordem = 0;
     this->noRaiz = NULL;
     this->digrafo = isDigrafo;
+    this->weightedNo = weightedNo;
+    this->weightedAresta = weightedAresta;
 }
 
 
@@ -839,7 +841,7 @@ Grafo* Grafo::prim(int idNo)
     }
 
     int* percorridos;
-    Grafo* arvoreGeradoraMinima = new Grafo(this->digrafo);
+    Grafo* arvoreGeradoraMinima = new Grafo(this->digrafo, this->weightedNo, this->weightedAresta);
     arvoreGeradoraMinima->insereNo(no->getIdNo(), no->getPeso());
 
     for(int i=0; i<this->getOrdem(); i++){

@@ -6,9 +6,8 @@
 #include <unordered_map>
 #include "../Headers/Solucao.h"
 #include "../Headers/Grafo.h"
-#include "../Sources/Grafo.cpp"
-#include "../Sources/Aresta.cpp"
-#include "../Sources/No.cpp"
+#include "../Headers/Aresta.h"
+#include "../Headers/No.h"
 #include <cfloat>
 
 
@@ -33,7 +32,7 @@ Solucao::~Solucao()
 
 void Solucao::lerArquivo(string txt)
 {
-    ifstream arquivo("./parte_2/arquivos/" + txt);
+    ifstream arquivo("./parte_2/Instances/" + txt);
 
     if (!arquivo.is_open())
     {
