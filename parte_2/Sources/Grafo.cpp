@@ -893,7 +893,7 @@ Grafo* Grafo::prim(int idNo)
     }
 
     arvoreGeradoraMinima->imprime();
-
+    return NULL;
 }
 
 double Grafo::somaPesoArestas(){
@@ -952,7 +952,7 @@ Grafo* Grafo::caminhoEmProfundidade(int idNo)
     //     inserePercorridos(no, percorridos);
     // }
 
-    
+return NULL;    
 }
 
 No* Grafo::getGalpao()

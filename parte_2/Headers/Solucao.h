@@ -12,6 +12,7 @@ using namespace std;
 class Solucao{
     public:
         Solucao(string txt);
+        
         ~Solucao();
         Grafo* guloso(ofstream &output_file);
         Grafo* gulosoRandomizadoAdaptativo(ofstream &output_file, float param_1, int maxIter);
@@ -19,6 +20,7 @@ class Solucao{
         double custoMinimo(Grafo *grafo);
 
     private:
+        int gerarNumeroAleatorio(int inicio, int fim);
         void lerArquivo(string txt);
         void construirArestas();
         void construirMatriz();

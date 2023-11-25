@@ -272,7 +272,7 @@ Grafo* Solucao::guloso(ofstream &output_file)
     } 
 
 
-
+return NULL;
 }
 
 unordered_map<int, double> Solucao::setCapacidade(){
@@ -313,7 +313,7 @@ unordered_map<int, No*> Solucao::initHashMenorCaminho(No* galpao){
 }
 
 
-int gerarNumeroAleatorio(int inicio, int fim) {
+int Solucao::gerarNumeroAleatorio(int inicio, int fim) {
     // Cria um gerador de números aleatórios
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -328,12 +328,12 @@ int gerarNumeroAleatorio(int inicio, int fim) {
 
 Grafo* Solucao::gulosoRandomizadoAdaptativo(ofstream &output_file, float param_1, int maxIter)
 {
-
+return NULL;
 }
 
 
 Grafo* Solucao::gulosoRandomizadoAdaptativoReativo(ofstream &output_file, float param_1, int maxIter)
 {
-
+return NULL;
 }
 
