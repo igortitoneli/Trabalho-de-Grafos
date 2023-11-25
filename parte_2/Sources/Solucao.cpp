@@ -224,6 +224,11 @@ unordered_map<No*, bool> Solucao::initHash(){
 
 Grafo* Solucao::guloso(ofstream &output_file)
 {
+    auto makeCandidatos = [](){
+
+    };
+
+
     No* galpao = this->grafo->getGalpao();
 
     if(!galpao){
