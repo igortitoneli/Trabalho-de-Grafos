@@ -34,17 +34,18 @@ public:
     bool getWeightedEdge (){return this->weightedAresta;};
 
     //--- Caracteristica do Grafo ---
-    void imprime();
-    int Dijkstra(int idNoinicio, int idNofim);
+    void imprime(ofstream &output_file);
+    float Dijkstra(int idNoinicio, int idNofim);
     Grafo* caminhoEmProfundidade(ofstream &output_file, int idNo);
+    void escreveArquivoSaida(ofstream &output_file, string mensagem);
     
     void sdecOrdem();
     // Aresta* getArestaAux();
     string getGrau();
     bool isDigraph();  
-    int* Floyd(int idNoinicio, int idNofim);
+    int* Floyd(ofstream &output_file, int idNoinicio, int idNofim);
 
-    Grafo* prim(int idNo);
+    Grafo* prim(ofstream &output_file, int idNo);
 
 private:
     //--- Seters ---

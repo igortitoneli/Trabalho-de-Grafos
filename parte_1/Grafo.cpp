@@ -1,3 +1,4 @@
+#include <fstream>
 #include <iostream>
 #include <stdlib.h>
 #include <string>
@@ -6,6 +7,7 @@
 #include <limits>
 #include <unordered_map>
 #include "Grafo.h"
+#include <cfloat>
 
 using namespace std;
 typedef vector<No *> NodeVector;
@@ -115,7 +117,7 @@ No *Grafo::insereNo(int idNo, int peso)
     }
 }
 
-void Grafo::imprime()
+void Grafo::imprime(ofstream &output_file)
 {
 
     No *aux = this->noRaiz;
@@ -123,13 +125,19 @@ void Grafo::imprime()
     {
         cout << " | " << endl
              << " V " << endl;
+        output_file << " | " << endl
+             << " V " << endl;
         cout << " " << aux->getIdNo();
-        aux->imprimeArestas();
+        output_file << " " << aux->getIdNo();
+        aux->imprimeArestas(output_file);
         aux = aux->getProxNo();
     }
     cout << " | " << endl
          << " = " << endl;
+    output_file << " | " << endl
+         << " = " << endl;
 }
+
 
 
 bool Grafo::removeNo(int idNo, bool isDigrafo)
@@ -404,9 +412,10 @@ bool Grafo::isDigraph()
 }
 
 
+
 void Grafo::fechoTransitivoDireto(ofstream &output_file, int idNo) // imprimindo a coluna
 {
-    double infinito = 99999;
+    int infinito = 99999;
     auto preencheHashMatrizInfinito = [this](unordered_map<int, unordered_map<int, int>> matriz)
     {
         auto infinito = 99999;
@@ -457,6 +466,7 @@ void Grafo::fechoTransitivoDireto(ofstream &output_file, int idNo) // imprimindo
     matriz = procuraMenorCaminho(matriz);
 
     cout << "Fecho transitivo direto do vertice " << idNo << " : ";
+    output_file << "Fecho transitivo direto do vertice " << idNo << " : ";
     for (auto linha : matriz)
     {
         if (linha.first == idNo)
@@ -467,17 +477,21 @@ void Grafo::fechoTransitivoDireto(ofstream &output_file, int idNo) // imprimindo
                 if (matriz[linha.first][coluna.first] < infinito)
                     // imprimir indice da linha e coluna
                     cout << coluna.first << " ";
+                    output_file << coluna.first << " ";
+                    
             }
             cout << endl;
+            output_file << endl;
             break; // Para sair do loop após imprimir a linha desejada, se for único
         }
     }
+
 }
 
 
 void Grafo::fechoTransitivoIndireto(ofstream &output_file, int idNo) // imprimindo a linha
 {
-    double infinito = 99999;
+    int infinito = 99999;
     auto preencheHashMatrizInfinito = [this](unordered_map<int, unordered_map<int, int>> matriz)
     {
         auto infinito = 99999;
@@ -528,6 +542,7 @@ void Grafo::fechoTransitivoIndireto(ofstream &output_file, int idNo) // imprimin
     matriz = procuraMenorCaminho(matriz);
 
     cout << "Fecho transitivo indireto do vertice " << idNo << " : ";
+    output_file << "Fecho transitivo indireto do vertice " << idNo << " : ";
     for (auto coluna : matriz)
     {
         if (coluna.first == idNo)
@@ -538,8 +553,10 @@ void Grafo::fechoTransitivoIndireto(ofstream &output_file, int idNo) // imprimin
                 if (matriz[linha.first][coluna.first] < infinito)
                     // imprimir indice da linha e coluna
                     cout << linha.first << " ";
+                    output_file << linha.first << " ";
             }
             cout << endl;
+            output_file << endl;
             break; // Para sair do loop após imprimir a linha desejada, se for único
         }
     }
@@ -601,7 +618,7 @@ void Grafo::imprimeVetor(int vetor[], int tam)
 
 
 
-int Grafo::Dijkstra(int idNoinicio, int idNofim)
+float Grafo::Dijkstra(int idNoinicio, int idNofim)
 {
 
     auto preencheHash = [](int idNoinicio, unordered_map<int, int> distance, No *no)
@@ -657,14 +674,11 @@ int Grafo::Dijkstra(int idNoinicio, int idNofim)
 }
 
 
-int* Grafo::Floyd(int idNoinicio, int idNofim)
+int* Grafo::Floyd(ofstream &output_file, int idNoinicio, int idNofim)
 {
     auto preencheHashMatrizInfinito = [this](unordered_map<int, unordered_map<int, int>> matriz)
     {
-        int infinito = 9999;
-        // int infinito = 9999999;
-        // int infinito = numeric_limits<int>::infinity();  
-        // cout << infinito << endl;
+        int infinito = 99999;
 
         for (No *coluna = this->getNoRaiz(); coluna != NULL; coluna = coluna->getProxNo())
         {
@@ -743,14 +757,17 @@ int* Grafo::Floyd(int idNoinicio, int idNofim)
         return caminho;
     };
 
-    auto imprimeCaminho = [this](int *caminhoMinimo, int n, int idNoinicio, int idNofim)
+    auto imprimeCaminho = [this](ofstream &output_file, int *caminhoMinimo, int n, int idNoinicio, int idNofim)
     {
         cout << "Caminho Minimo de "<< idNoinicio << " para " << idNofim << " eh ";
+        output_file << "Caminho Minimo de "<< idNoinicio << " para " << idNofim << " eh ";
 
         for(int i=0; i < n; i++){
             cout << " [" << caminhoMinimo[i] << "]"; 
+            output_file << " [" << caminhoMinimo[i] << "]"; 
         }
         cout << endl;
+        output_file << endl;
     };
 
     No *inicio = procurarNoPeloId(idNoinicio);
@@ -759,7 +776,8 @@ int* Grafo::Floyd(int idNoinicio, int idNofim)
     if (!inicio || !fim)
     {
         cout << "o no " << idNoinicio << " e/ou " << idNofim << " nao estao no grafo.";
-        return {};
+        output_file << "o no " << idNoinicio << " e/ou " << idNofim << " nao estao no grafo.";
+        return NULL;
     }
 
     unordered_map<int, unordered_map<int, int>> matriz;  
@@ -769,12 +787,12 @@ int* Grafo::Floyd(int idNoinicio, int idNofim)
     int n = 0;
     int* caminhoMinimo = procuraMenorCaminho(matriz, idNoinicio, idNofim, &n);
     // imprimeMatriz(matriz);
-    imprimeCaminho(caminhoMinimo, n, idNoinicio, idNofim);
+    imprimeCaminho(output_file, caminhoMinimo, n, idNoinicio, idNofim);
     return caminhoMinimo;
 }
 
 
-Grafo* Grafo::prim(int idNo)
+Grafo* Grafo::prim(ofstream &output_file, int idNo)
 {
     auto preenchePercorridos = [](No* no, int* percorridos, int *n){
         for(Aresta* aresta = no->getPrimeiraAresta(); aresta!= NULL; aresta = aresta->getProxAresta()){
@@ -821,7 +839,7 @@ Grafo* Grafo::prim(int idNo)
         arvoreGeradoraMinima->insereNo(no->getIdNo(), no->getPeso());        
     }
 
-    arvoreGeradoraMinima->imprime();
+    arvoreGeradoraMinima->imprime(output_file);
     return arvoreGeradoraMinima;
 }
 

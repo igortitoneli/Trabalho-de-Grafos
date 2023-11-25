@@ -57,7 +57,7 @@ public:
     bool verificaRemoveAresta(No *destino);
     void removeAresta(No *noRemovido);
     Aresta *verificaNoAresta(No *procurado);
-    void imprimeArestas();
+    void imprimeArestas(ofstream &output_file);
     bool insereArestaNo(No *Destino, int pesoAresta);
     bool in_percorridos(No percorridos[], int tam);
 

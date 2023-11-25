@@ -1,4 +1,5 @@
 #include "No.h"
+#include <fstream>
 
 using namespace std;
 
@@ -171,14 +172,16 @@ Aresta* No::verificaNoAresta(No *no)
     return NULL;
 }
 
-void No::imprimeArestas(){
+void No::imprimeArestas(ofstream &output_file){
     Aresta *aux = this->primeiraAresta;
 
     while(aux){
         cout << " -> " <<  "[ " << aux->getNoDestino()->getIdNo() << " | " << aux->getPeso() << " ]";
+        output_file << " -> " <<  "[ " << aux->getNoDestino()->getIdNo() << " | " << aux->getPeso() << " ]";
         aux = aux->getProxAresta();
     }
     cout << endl;
+    output_file << endl;
 }
 
 bool No::in_percorridos(No percorridos [], int tam){

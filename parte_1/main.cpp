@@ -37,7 +37,7 @@ Grafo *leitura(ifstream &input_file, int directed, int weightedEdge, int weighte
 
     } else if (graph->getWeightedEdge() && !graph->getWeightedNode()) {
 
-        float edgeWeight;
+        int edgeWeight;
 
         while (input_file >> idNodeSource >> idNodeTarget >> edgeWeight) {
 
@@ -47,7 +47,7 @@ Grafo *leitura(ifstream &input_file, int directed, int weightedEdge, int weighte
 
     } else if (graph->getWeightedNode() && !graph->getWeightedEdge()) {
 
-        float nodeSourceWeight, nodeTargetWeight;
+        int nodeSourceWeight, nodeTargetWeight;
 
         while (input_file >> idNodeSource >> nodeSourceWeight >> idNodeTarget >> nodeTargetWeight) {
 
@@ -59,7 +59,7 @@ Grafo *leitura(ifstream &input_file, int directed, int weightedEdge, int weighte
 
     } else if (graph->getWeightedNode() && graph->getWeightedEdge()) {
 
-        float nodeSourceWeight, nodeTargetWeight, edgeWeight;
+        int nodeSourceWeight, nodeTargetWeight, edgeWeight;
 
         while (input_file >> idNodeSource >> nodeSourceWeight >> idNodeTarget >> nodeTargetWeight) {
 
@@ -142,12 +142,13 @@ void selecionar(int selecao, Grafo *graph, ofstream &output_file) {
             // Caminho Mínimo entre dois vértices - Dijkstra ;
         case 3: {
             int id1, id2;
-            cout << "Digite o vértcie de inicio: ";
+            cout << "Digite o vértice de inicio: ";
             cin >> id1;
-            cout << "Digite o vértcie final: ";
+            cout << "Digite o vértice final: ";
             cin >> id2;
             float distancia = graph->Dijkstra(id1, id2);
             cout << "A distancia entre " << id1 << " e " << id2 << " é de: " << distancia << endl;
+            output_file << "A distancia entre " << id1 << " e " << id2 << " é de: " << distancia << endl;
             break;
         }
 
@@ -158,13 +159,13 @@ void selecionar(int selecao, Grafo *graph, ofstream &output_file) {
             cin >> id_one;
             cout << "Digite o id do vertice de destino: ";
             cin >> id_two;
-            graph->Floyd(id_one, id_two);
+            graph->Floyd(output_file, id_one, id_two);
             break;
         }
             //Árvore Geradora Mínima - Prim;
         case 5: {
             cout << "Árvore Geradora Mínima - Prim" << endl;
-            graph->prim(graph->getNoRaiz()->getIdNo());
+            graph->prim(output_file, graph->getNoRaiz()->getIdNo());
             break;
         }
             //Árvore Geradora Mínima - Kruskal;
@@ -242,10 +243,17 @@ int main(int argc, char const *argv[])
         auto start = chrono::steady_clock::now();
         graph = leitura(input_file, atoi(argv[3]), atoi(argv[4]), atoi(argv[5]));
         auto end = chrono::steady_clock::now();
+
         cout << "Demorou  "
                 << chrono::duration_cast<chrono::milliseconds>(end - start).count()
                 << " ms para ler o arquivo de entrada." << endl;
-        graph->imprime();
+
+        if (!output_file.is_open())
+        {
+            cout << "Erro ao abrir arquivo de saída" << endl;
+            return 1;
+        }
+        //graph->imprime(output_file);
         // graph->printGraphDot(output_file);
 
     } else
