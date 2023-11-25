@@ -64,7 +64,7 @@ void Grafo::decOrdem()
  * @return true - se achar no.
  *         false - se Nao achar.
  */
-No *Grafo::procurarNoPeloId(int idFindNo, bool anteiror = false)
+No *Grafo::procurarNoPeloId(int idFindNo, bool anteiror)
 {
 
     // bool anterior serve para caso necessario, retorne o anterior ao nó que contem id = id;
@@ -88,7 +88,7 @@ No *Grafo::procurarNoPeloId(int idFindNo, bool anteiror = false)
 }
 
 
-No *Grafo::insereNo(int idNo, float x, float y, int demanda = 0)
+No *Grafo::insereNo(int idNo, float x, float y, int demanda)
 {
     No *procurado = procurarNoPeloId(idNo, 0);
 
@@ -103,6 +103,7 @@ No *Grafo::insereNo(int idNo, float x, float y, int demanda = 0)
         else
         {
             novoNo->setProxNo(noRaiz);
+            this->incOrdem();
             noRaiz = novoNo;
         }
         return novoNo;

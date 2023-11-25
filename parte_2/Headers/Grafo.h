@@ -19,8 +19,8 @@ public:
     void decOrdem();
 
     //--- Funcoes do No ---
-    No *procurarNoPeloId(int idFindNo, bool anterior);
-    No *insereNo(int idNo, float x, float y, int demanda);
+    No *procurarNoPeloId(int idFindNo, bool anterior = false);
+    No *insereNo(int idNo, float x, float y, int demanda = 0);
     No *insereNo(No* novoNo);
     bool removeNo(int idNo, bool isDigrafo);
     // Aresta* fechoTransitivo(int idNo);

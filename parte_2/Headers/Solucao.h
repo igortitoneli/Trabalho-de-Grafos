@@ -13,9 +13,9 @@ class Solucao{
     public:
         Solucao(string txt);
         ~Solucao();
-        Grafo* guloso();
-        Grafo* gulosoRandomizadoAdaptativo();
-        Grafo* gulosoRandomizadoAdaptativoReativo();
+        Grafo* guloso(ofstream &output_file);
+        Grafo* gulosoRandomizadoAdaptativo(ofstream &output_file, float param_1, int maxIter);
+        Grafo* gulosoRandomizadoAdaptativoReativo(ofstream &output_file, float param_1, int maxIter);
         double custoMinimo(Grafo *grafo);
 
     private:

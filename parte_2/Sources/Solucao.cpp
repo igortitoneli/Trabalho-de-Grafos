@@ -3,12 +3,16 @@
 #include <fstream>
 #include <string>
 #include <math.h>
+#include <chrono>
+#include <cstdlib>
 #include <unordered_map>
 #include "../Headers/Solucao.h"
 #include "../Headers/Grafo.h"
 #include "../Headers/Aresta.h"
 #include "../Headers/No.h"
 #include <cfloat>
+#include <ctime>
+#include <random>
 
 
 using namespace std;
@@ -17,10 +21,7 @@ Solucao::Solucao(string txt)
 {
     lerArquivo(txt);
     construirArestas();
-    // this->grafo->imprime();
     construirMatriz();
-    // imprimeMatriz();
-    guloso();
 }
 
 
@@ -42,6 +43,7 @@ void Solucao::lerArquivo(string txt)
 
     int dimension = -1;
     string linha;
+    auto start = chrono::steady_clock::now();
     while (getline(arquivo, linha))
     {
         istringstream ss(linha);
@@ -95,6 +97,11 @@ void Solucao::lerArquivo(string txt)
     }
 
     this->galpao = this->grafo->getGalpao();
+    auto end = chrono::steady_clock::now();
+
+    cout << "Demorou  "
+            << chrono::duration_cast<chrono::milliseconds>(end - start).count()
+            << " ms para ler o arquivo de entrada." << endl;
 
     arquivo.close();
 }
@@ -134,7 +141,7 @@ void Solucao::imprimeMatriz()
             cout << no->getIdNo() << "\t";
         }
         cout << endl
-             << "   ";
+                << "   ";
         for (No *no = this->grafo->getNoRaiz(); no != NULL; no = no->getProxNo())
         {
             cout << "-" << "\t";
@@ -206,28 +213,17 @@ unordered_map<No*, bool> Solucao::initHash(){
     return hash;
 }
 
-// começar do no 1 (demanda = 0) (Galpão)
-// iniciar o primeiro caminhao com o menor caminho do galpao ate um no
-// fazer o mesmo para todos os caminhoes pegando nos nao acessados
-// verificar se ir pra o proximo no de menor caminho nao acessado, irá passar o limite de demanda
-// true ? ir para o proximo no de menor caminho
-// false ? voltar para a base
-Grafo* Solucao::guloso()
+// primeira iteraçao 100% randomizada
+// criar vetor de candidatos
+// perguntar pra todos os nos, qual o no mais perto de algum ultimo no de uma rota
+// tira da lista de candidatos o no que foi inserido
+// procurar outros candidatos 
+// verificar se inseriu todos
+        // true ? volta pro galpao
+        // false ? continua
+
+Grafo* Solucao::guloso(ofstream &output_file)
 {
-    auto imprimehash = [](unordered_map<int, No*> hash){
-        for (auto i = hash.begin(); i != hash.end(); ++i) {
-            cout << "Chave: " << i->first << ", Valor: " << i->second->getIdNo() << endl;
-        }
-        cout << endl;
-    };
-
-    auto equals = [this](unordered_map<int, No*> hash1, unordered_map<int, No*> hash2){
-        for(int i=0; i<this->caminhoes; i++)
-            if(hash1[i]->getIdNo() != hash2[i]->getIdNo())
-                return false;
-        return true;
-    };
-
     No* galpao = this->grafo->getGalpao();
 
     if(!galpao){
@@ -235,44 +231,43 @@ Grafo* Solucao::guloso()
         return NULL;
     }
 
-    unordered_map<No*,bool> percorridos = initHash();
+    struct info_node {
+        No* no;
+        double distancia;
+        int demanda;
+    };
+
+    // <rota_id>, <candidato>, <distancia>, <carga>
+    unordered_map<int, info_node> candidatos;
+    
+    unordered_map<No*, bool> percorridos = initHash();
+    
     Grafo *guloso = new Grafo; 
     No* galpaoGuloso = guloso->insereNo(galpao->getIdNo(), galpao->getX(), galpao->getY(), galpao->getDemanda());
     
-    unordered_map<int, No*> hashMenorCaminho = initHashMenorCaminho(galpaoGuloso);
+    // Capacidade de cada rota (caminhao)
     unordered_map<int, double> capacidade = setCapacidade();
 
-    No *teste = new No(2, 2, 2, 2);
-    unordered_map<int, No*> stop = initHashMenorCaminho(teste);
+    srand(static_cast<unsigned>(time(nullptr)));
 
-    while(!checadosHash(percorridos) && !equals(stop,hashMenorCaminho)){
-        stop = hashMenorCaminho;
-        for (int i=0; i<caminhoes; i++){
-            // imprimehash(hashMenorCaminho);
-            // imprimehash(stop);
-            No* destino = findMinDistance(hashMenorCaminho[i], percorridos, capacidade[i]);
-            if(destino != NULL){
-                capacidade[i] += destino->getDemanda();
-                double distancia = matrizDistancias[hashMenorCaminho[i]->getIdNo()][destino->getIdNo()];
-                No* newDestino = guloso->insertAresta(hashMenorCaminho[i], destino, distancia);
-                hashMenorCaminho[i] = newDestino;
-                percorridos[destino] = true;
-            }
-            cout << "rota " << i << " - " << capacidade[i] << endl;
+    // Inicializa """randomicamente"""
+    for(int i=0; i<this->caminhoes; i++){
+
+        int fim = this->grafo->getOrdem();
+        int inicio = this->galpao->getIdNo();
+        int numeroAleatorio = gerarNumeroAleatorio(inicio, fim);
+        
+        No* destino = this->grafo->procurarNoPeloId(numeroAleatorio);
+        
+        if(destino != NULL && !inPercorridos(destino,percorridos)){
+            capacidade[i] += destino->getDemanda();
+            percorridos[destino] = true;
+            cout << "rota " << i << " - " << "No - " << destino->getIdNo() << " - capacidade - " << capacidade[i] << endl;
         }
-    }
+    } 
 
-    for(int i=0; i<caminhoes; i++){
-        float distancia = matrizDistancias[hashMenorCaminho[i]->getIdNo()][galpao->getIdNo()];
-        guloso->insertAresta(hashMenorCaminho[i], galpaoGuloso, distancia);
-    }
 
-    guloso->imprime();
-    if(stop == hashMenorCaminho){
-        cout << "Nao foi possivel terminar a execucao do algoritmo." << endl;
-    }
-    this->custoMinimo(guloso);
-    
+
 }
 
 unordered_map<int, double> Solucao::setCapacidade(){
@@ -282,6 +277,7 @@ unordered_map<int, double> Solucao::setCapacidade(){
     }
     return capacidade;
 }
+
 
 bool Solucao::checadosHash(unordered_map<No*,bool> hash){
     // int cont = 0;
@@ -294,6 +290,7 @@ bool Solucao::checadosHash(unordered_map<No*,bool> hash){
     // return cont == 0;
     return true;
 }
+
 
 double Solucao::custoMinimo(Grafo *grafo)
 {   
@@ -311,13 +308,26 @@ unordered_map<int, No*> Solucao::initHashMenorCaminho(No* galpao){
 }
 
 
-Grafo* Solucao::gulosoRandomizadoAdaptativo()
+int gerarNumeroAleatorio(int inicio, int fim) {
+    // Cria um gerador de números aleatórios
+    std::random_device rd;
+    std::mt19937 gen(rd());
+
+    // Define a faixa desejada
+    std::uniform_int_distribution<int> distribuicao(inicio, fim);
+
+    // Gera e retorna o número aleatório
+    return distribuicao(gen);
+}
+
+
+Grafo* Solucao::gulosoRandomizadoAdaptativo(ofstream &output_file, float param_1, int maxIter)
 {
 
 }
 
 
-Grafo* Solucao::gulosoRandomizadoAdaptativoReativo()
+Grafo* Solucao::gulosoRandomizadoAdaptativoReativo(ofstream &output_file, float param_1, int maxIter)
 {
 
 }
