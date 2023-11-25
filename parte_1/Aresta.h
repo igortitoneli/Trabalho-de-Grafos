@@ -7,12 +7,13 @@
 
 using namespace std;
 
+class No;
 class Aresta
 {
 public:
     // Aresta(int noDestino);
     // Aresta(int noDestino, int pesoAresta);
-    // Aresta(No *noDestino, Aresta *proxAresta);
+    Aresta(No *noDestino, Aresta *proxAresta);
     Aresta(No *noDestino, Aresta *proxAresta, int peso);
 
     ~Aresta();

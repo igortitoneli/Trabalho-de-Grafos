@@ -7,6 +7,7 @@
 
 using namespace std;
 
+class Aresta;
 class No
 {
 public:

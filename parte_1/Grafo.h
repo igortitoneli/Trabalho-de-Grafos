@@ -13,27 +13,30 @@ public:
 
     //--- Construtor e Destrutor ---
     Grafo(bool isDigrafo, bool weightedNo, bool weightedAresta);
+    Grafo(int ordem, bool isDigrafo, bool weightedNo, bool weightedAresta);
     virtual ~Grafo();
 
     //--- Funcoes do No ---
-    No *procurarNoPeloId(int idFindNo, bool anterior);
+    No *procurarNoPeloId(int idFindNo, bool anterior = false);
     No *insereNo(int idNostrings, int pesoNo);
     bool removeNo(int idNo, bool isDigrafo);
-    // Aresta* fechoTransitivo(int idNo);
-    void fechoTransitivoDireto(int idNo);
-    void fechoTransitivoIndireto(int idNo);
-    void fechoTransitivoIndiretoFunc(int idNo);
+    No *getNoRaiz() { return this->noRaiz; };
+
+    void fechoTransitivoDireto(ofstream &output_file, int idNo);
+    void fechoTransitivoIndireto(ofstream &output_file, int idNo);
+    bool getWeightedNode(){return this->weightedNo;};
 
     //--- Funcoes de Aresta ---
     bool insertAresta(int idNoOrigem, int idNoDestino, int pesoAresta);
     bool removeAresta(int idNoOrigem, int idNoDestino, bool isDirected);
     bool criaAresta(No *noFonte, No *Destino, int pesoAresta);
     void removeAresta(No *anterior, No *noAux);
+    bool getWeightedEdge (){return this->weightedAresta;};
 
     //--- Caracteristica do Grafo ---
     void imprime();
-    int Djkstra(int idNoinicio, int idNofim);
-    Grafo* caminhoEmProfundidade(int idNo);
+    int Dijkstra(int idNoinicio, int idNofim);
+    Grafo* caminhoEmProfundidade(ofstream &output_file, int idNo);
     
     void sdecOrdem();
     // Aresta* getArestaAux();
@@ -51,7 +54,6 @@ private:
 
     int AtualizaNumAresta();
     int getNumAresta();
-    No *getNoRaiz() { return this->noRaiz; };
     int getOrdem();
     int getGrauEntrada();
     int getGrauSaida();

@@ -23,6 +23,16 @@ Grafo::Grafo(bool isDigrafo, bool weightedNo, bool weightedAresta)
     this->weightedAresta = weightedAresta;
 }
 
+Grafo::Grafo(int ordem,bool isDigrafo, bool weightedNo, bool weightedAresta)
+{
+    this->numAresta = 0;
+    this->ordem = ordem;
+    this->noRaiz = NULL;
+    this->digrafo = isDigrafo;
+    this->weightedNo = weightedNo;
+    this->weightedAresta = weightedAresta;
+}
+
 
 Grafo::~Grafo()
 {
@@ -53,7 +63,7 @@ void Grafo::decOrdem()
 //------------------------------ Funcoes do No ------------------------------
 
 
-No *Grafo::procurarNoPeloId(int idFindNo, bool anteiror = false)
+No *Grafo::procurarNoPeloId(int idFindNo, bool anterior)
 {
 
     // bool anterior serve para caso necessario, retorne o anterior ao nó que contem id = id;
@@ -71,7 +81,7 @@ No *Grafo::procurarNoPeloId(int idFindNo, bool anteiror = false)
         noAuxAnterior = noAux;
         noAux = noAux->getProxNo();
     }
-    if (anteiror)
+    if (anterior)
         return noAuxAnterior;
     else
         return noAux;
@@ -394,7 +404,7 @@ bool Grafo::isDigraph()
 }
 
 
-void Grafo::fechoTransitivoDireto(int idNo) // imprimindo a coluna
+void Grafo::fechoTransitivoDireto(ofstream &output_file, int idNo) // imprimindo a coluna
 {
     double infinito = 99999;
     auto preencheHashMatrizInfinito = [this](unordered_map<int, unordered_map<int, int>> matriz)
@@ -465,7 +475,7 @@ void Grafo::fechoTransitivoDireto(int idNo) // imprimindo a coluna
 }
 
 
-void Grafo::fechoTransitivoIndiretoFunc(int idNo) // imprimindo a linha
+void Grafo::fechoTransitivoIndireto(ofstream &output_file, int idNo) // imprimindo a linha
 {
     double infinito = 99999;
     auto preencheHashMatrizInfinito = [this](unordered_map<int, unordered_map<int, int>> matriz)
@@ -589,50 +599,9 @@ void Grafo::imprimeVetor(int vetor[], int tam)
 }
 
 
-void Grafo::fechoTransitivoIndireto(int idNo)
-{
-    if (this->digrafo)
-    {
-        No *procurado = this->procurarNoPeloId(idNo);
-        if (procurado)
-        {
-            cout << "Fecho transitivo indireto do vertice " << idNo << " : ";
-
-            No *percorre = this->getNoRaiz();
-
-            int vetor[this->getOrdem()] = {0};
-            vetor[0] = procurado->getIdNo();
-            int tam = 1;
-            bool reiniciar = false;
-
-            while (percorre)
-            {
-                if (!estarNoVetor(vetor, percorre->getIdNo(), tam))
-                {
-                    if (arestaNoVetor(vetor, percorre, tam))
-                    {
-                        vetor[tam] = percorre->getIdNo();
-                        tam = tam + 1;
-                        percorre = this->getNoRaiz();
-                        reiniciar = true;
-                    }
-                }
-                if (reiniciar == false)
-                    percorre = percorre->getProxNo();
-                else
-                    reiniciar = false;
-            }
-            imprimeVetor(vetor, tam);
-        }
-        else
-        {
-            cout << "O no " << idNo << " nao esta no grafo." << endl;
-        }
-    }
-}
 
 
-int Grafo::Djkstra(int idNoinicio, int idNofim)
+int Grafo::Dijkstra(int idNoinicio, int idNofim)
 {
 
     auto preencheHash = [](int idNoinicio, unordered_map<int, int> distance, No *no)
@@ -853,11 +822,11 @@ Grafo* Grafo::prim(int idNo)
     }
 
     arvoreGeradoraMinima->imprime();
-
+    return arvoreGeradoraMinima;
 }
 
 
-Grafo* Grafo::caminhoEmProfundidade(int idNo)
+Grafo* Grafo::caminhoEmProfundidade(ofstream &output_file, int idNo)
 {
     // auto empilha = [](No* no, No *pilha){
     //     no->setProxNo(pilha);
@@ -904,7 +873,7 @@ Grafo* Grafo::caminhoEmProfundidade(int idNo)
     //     inserePercorridos(no, percorridos);
     // }
 
-        
+    return NULL;
 
 
 }
