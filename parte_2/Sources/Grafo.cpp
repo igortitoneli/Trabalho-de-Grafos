@@ -237,7 +237,7 @@ No* Grafo::insertAresta(No* NoOrigem, No* destino, double pesoAresta){
     No* NoDestino = this->insereNo(destino->getIdNo(), destino->getX(), destino->getY(), destino->getDemanda());
     if(this->procurarNoPeloId(NoOrigem->getIdNo()) == NULL){
         this->insereNo(NoOrigem);
-        this->imprime();
+        // this->imprime();
     }
     if(this->procurarNoPeloId(NoDestino->getIdNo()) == NULL){
         this->insereNo(NoDestino);

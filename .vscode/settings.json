@@ -105,7 +105,11 @@
     "streambuf": "cpp",
     "typeinfo": "cpp",
     "fstream": "cpp",
-    "chrono": "cpp"
+    "chrono": "cpp",
+    "ctime": "cpp",
+    "list": "cpp",
+    "ratio": "cpp",
+    "iomanip": "cpp"
   },
   "C_Cpp.dimInactiveRegions": false,
   "C_Cpp.errorSquiggles": "enabled"

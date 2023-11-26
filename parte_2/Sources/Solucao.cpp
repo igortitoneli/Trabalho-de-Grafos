@@ -161,55 +161,42 @@ void Solucao::imprimeMatriz()
 }
 
 
-bool Solucao::inPercorridos(No* procurado, unordered_map<No*,bool> percorridos)
+bool Solucao::inPercorridos(No* procurado, unordered_map<int,bool> percorridos)
 {
-    return percorridos[procurado];
+    return percorridos[procurado->getIdNo()];
 }
 
 
-No* Solucao::findMinDistance(No* partida, unordered_map<No*,bool> percorridos, double capacidade)
+No* Solucao::findMinDistance(No* partida, unordered_map<int,bool> percorridos, double capacidade)
 {
     // ALTERAR PARA MAIOR VALOR DA LINGUAGEM 
     //double minDistance = 999999;
     double minDistance = DBL_MAX;
     No* destino = NULL;
-
-    // cout << "\n\n findMinDistance() " << endl; 
+    
     for (No *i = this->grafo->getNoRaiz(); i; i = i->getProxNo())
     {
-        // cout << "demanda noh " << i->getIdNo() << " - " << i->getDemanda() << endl;
-        // if(matrizDistancias[partida->getIdNo()][i->getIdNo()] >= minDistance) 
-        //     cout << "matrizDistancias " << i->getIdNo() << " >= " << minDistance << endl;
-        // if(inPercorridos(i,percorridos))
-        //     cout << i->getIdNo() << " ja percorrido" << endl;
-        // if(i == partida)
-        //     cout << i->getIdNo() << " == " << partida->getIdNo() << endl;
-        // if(capacidade + i->getDemanda() >= this->capacidade)
-        //     cout << i->getIdNo() << " passa da demanda" << endl;
-
         if(matrizDistancias[partida->getIdNo()][i->getIdNo()] < minDistance && 
             !inPercorridos(i,percorridos) && 
             i!= partida && 
             capacidade + i->getDemanda() < this->capacidade
             ){
-                // cout << "noh " << i->getIdNo() << " SUPRIU" << endl;
             minDistance = matrizDistancias[partida->getIdNo()][i->getIdNo()];
             destino = i;
         }
     }
-    // cout << "noh " << destino->getIdNo() << " FOI ACEITO!" << endl;
 
     return destino;
 }
 
 
-unordered_map<No*, bool> Solucao::initHash(){
-    unordered_map<No*, bool> hash;
+unordered_map<int, bool> Solucao::initHash(){
+    unordered_map<int, bool> hash;
 
     for(No* i = grafo->getNoRaiz(); i; i=i->getProxNo()){
-        hash[i] = false;
+        hash[i->getIdNo()] = false;
     }
-    hash[this->galpao] = true;
+    hash[this->galpao->getIdNo()] = true;
     return hash;
 }
 
@@ -224,10 +211,73 @@ unordered_map<No*, bool> Solucao::initHash(){
 
 Grafo* Solucao::guloso(ofstream &output_file)
 {
-    auto makeCandidatos = [](){
-
+    struct info_node {
+        No* no;
+        double distancia;
     };
 
+    auto noValido = [this](No* destino , unordered_map<int, bool> percorridos, int i, unordered_map<int, double> capacidade) -> bool{
+        return (destino != NULL && !inPercorridos(destino,percorridos) && capacidade[i] + destino->getDemanda() < this->capacidade);
+    };
+
+    auto makeCandidatos = [this](unordered_map<int, info_node> candidatos, unordered_map<int, No*> rota, unordered_map<int, bool> percorridos) -> unordered_map<int, info_node> {
+        for(int i=0; i<this->caminhoes; i++){
+            candidatos[i].distancia = DBL_MAX;
+        }
+        
+        // para todas as rotas
+        for(int i=0; i<this->caminhoes; i++)
+        {
+            // para todos os nós do grafo
+            for(No *no = this->grafo->getNoRaiz(); no; no = no->getProxNo())
+            {    
+                // distancia entre o ultimo nó da rota e o nó do for
+                double dist = this->matrizDistancias[rota[i]->getIdNo()][no->getIdNo()] ;
+
+                if(dist < candidatos[i].distancia && !this->inPercorridos(no,percorridos))
+                {
+                    candidatos[i].no = no;
+                    candidatos[i].distancia = dist;
+                }
+            }
+            cout << "canditado - "<< i << " - " << candidatos[i].no->getIdNo() << " - " << candidatos[i].distancia << endl; 
+        }
+        return candidatos;
+    };
+
+    auto atualizarCandidatos = [this](  unordered_map<int, info_node> candidatos,
+                                        unordered_map<int, bool> percorridos, 
+                                        No* alterado, 
+                                        unordered_map<int, double> capacidade,
+                                        unordered_map<int, No*> rota) -> unordered_map<int, info_node> {
+        bool retorno = false;
+        for(int i=0; i < this->caminhoes; i++){
+            if(candidatos[i].no == alterado){
+                candidatos[i].no = NULL;
+                candidatos[i].distancia = DBL_MAX;
+                for(No *no = this->grafo->getNoRaiz(); no; no = no->getProxNo()){
+                    double dist = this->matrizDistancias[rota[i]->getIdNo()][no->getIdNo()];
+                    if(!inPercorridos(no,percorridos) && capacidade[i] + no->getDemanda() < this->capacidade && dist < candidatos[i].distancia){
+                        candidatos[i].distancia = dist;
+                        candidatos[i].no = no;
+                    }
+                }
+            }
+        }
+        return candidatos;
+    };
+
+    auto getMinDist = [this](unordered_map<int, info_node> candidatos) -> int {
+        double min = candidatos[0].distancia;
+        int cont = 0;
+        for(int i=1; i<this->caminhoes; i++){
+            if(min > candidatos[i].distancia){
+                min = candidatos[i].distancia;
+                cont = i;
+            }     
+        }
+        return cont;
+    };
 
     No* galpao = this->grafo->getGalpao();
 
@@ -236,44 +286,73 @@ Grafo* Solucao::guloso(ofstream &output_file)
         return NULL;
     }
 
-    struct info_node {
-        No* no;
-        double distancia;
-        int demanda;
+    auto imprimeCandidatos = [this](unordered_map<int, info_node> candidatos){
+        for(int i=0; i<this->caminhoes; i++){
+            cout << "candidato[" << i << "] - " << candidatos[i].no->getIdNo() << endl;
+        }
+    };
+
+    auto parar = [this](unordered_map<int, info_node> candidatos, unordered_map<int, info_node> stop){
+        for(int i=0; i<this->caminhoes; i++){
+            if(candidatos[i].no != stop[i].no)
+                return false;
+        }
+        return true;
     };
 
     // <rota_id>, <candidato>, <distancia>, <carga>
     unordered_map<int, info_node> candidatos;
-    
-    unordered_map<No*, bool> percorridos = initHash();
+    unordered_map<int, bool> percorridos = initHash();
+    unordered_map<int, double> capacidade = setCapacidade();
+    unordered_map<int, No*> rota;
     
     Grafo *guloso = new Grafo; 
-    No* galpaoGuloso = guloso->insereNo(galpao->getIdNo(), galpao->getX(), galpao->getY(), galpao->getDemanda());
     
-    // Capacidade de cada rota (caminhao)
-    unordered_map<int, double> capacidade = setCapacidade();
+    No* galpaoGuloso = guloso->insereNo(galpao->getIdNo(), galpao->getX(), galpao->getY(), galpao->getDemanda());
+
+    int fim = this->grafo->getOrdem();
+    int inicio = this->galpao->getIdNo();
 
     srand(static_cast<unsigned>(time(nullptr)));
 
-    // Inicializa """randomicamente"""
-    for(int i=0; i<this->caminhoes; i++){
-
-        int fim = this->grafo->getOrdem();
-        int inicio = this->galpao->getIdNo();
-        int numeroAleatorio = gerarNumeroAleatorio(inicio, fim);
-        
+    // inicializa randomicamente
+    for(int i=0; i<this->caminhoes; i){
+        int numeroAleatorio = rand() % (fim - inicio + 1) + inicio;
         No* destino = this->grafo->procurarNoPeloId(numeroAleatorio);
         
-        if(destino != NULL && !inPercorridos(destino,percorridos)){
+        if(noValido(destino, percorridos, i , capacidade)){
             capacidade[i] += destino->getDemanda();
-            percorridos[destino] = true;
-            cout << "rota " << i << " - " << "No - " << destino->getIdNo() << " - capacidade - " << capacidade[i] << endl;
+            percorridos[destino->getIdNo()] = true;
+            guloso->insertAresta(galpaoGuloso, destino, this->matrizDistancias[galpao->getIdNo()][destino->getIdNo()]);
+            rota[i] = destino;
+            i++;
         }
     } 
 
+    candidatos = makeCandidatos(candidatos, rota, percorridos);
+    unordered_map<int, info_node> stopWhile = candidatos;
 
-return NULL;
+    while(guloso->getOrdem() < this->grafo->getOrdem())
+    {
+        int i = getMinDist(candidatos);
+        guloso->insertAresta(rota[i],candidatos[i].no,candidatos[i].distancia);
+        percorridos[candidatos[i].no->getIdNo()] = true;
+
+        // imprimeCandidatos(candidatos);
+
+        candidatos = atualizarCandidatos(candidatos,percorridos,candidatos[i].no,capacidade,rota);
+        if(parar(candidatos, stopWhile)) break;        
+        stopWhile = candidatos;
+        // imprimeCandidatos(candidatos);
+    }
+
+
+    
+    guloso->imprime();
+
+    return NULL;
 }
+
 
 unordered_map<int, double> Solucao::setCapacidade(){
     unordered_map<int, double> capacidade;
@@ -314,15 +393,7 @@ unordered_map<int, No*> Solucao::initHashMenorCaminho(No* galpao){
 
 
 int Solucao::gerarNumeroAleatorio(int inicio, int fim) {
-    // Cria um gerador de números aleatórios
-    std::random_device rd;
-    std::mt19937 gen(rd());
-
-    // Define a faixa desejada
-    std::uniform_int_distribution<int> distribuicao(inicio, fim);
-
-    // Gera e retorna o número aleatório
-    return distribuicao(gen);
+    
 }
 
 
