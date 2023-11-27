@@ -126,6 +126,7 @@ No *Grafo::insereNo(No* novoNo)
         novoNo->setProxNo(noRaiz);
         noRaiz = novoNo;
     }
+    this->incOrdem();
     return novoNo;
 }
 
