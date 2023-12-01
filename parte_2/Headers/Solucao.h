@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string>
 #include <unordered_map>
+#include <vector>
 #include "./No.h"
 #include "./Grafo.h"
 
@@ -25,8 +26,8 @@ class Solucao{
         void construirArestas();
         void construirMatriz();
         void imprimeMatriz();
-        No* findMinDistance(No* partida, unordered_map<int,bool> percorridos,  double capacidade);
-        bool inPercorridos(No* procurado, unordered_map<int,bool> percorridos);
+        No* findMinDistance(No* partida, vector<int> percorridos,  double capacidade);
+        bool inPercorridos(No* procurado, vector<int> percorridos);
         unordered_map<int, bool> initHash();
         unordered_map<int, No*> initHashMenorCaminho(No* galpao);
         bool checadosHash(unordered_map<No*,bool> hash);
