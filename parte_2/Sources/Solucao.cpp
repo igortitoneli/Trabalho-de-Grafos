@@ -354,9 +354,9 @@ Grafo* Solucao::guloso(ofstream &output_file)
             cout << " - carga: " << rotas[i].cargaAtual << endl;
         }
         cout << "total - " << total << endl;
-        if (this->optimal_value){
+        if (this->optimal_value > 0){
             cout << "optimal_value: " << this->optimal_value << endl;
-            cout << "% acima: " << ((total/this->optimal_value) - 1) * 100 << "%" << endl; 
+            cout << "% acima: " << ((total/this->optimal_value) - 1) * 100 << "%" << RESET << endl; 
         }
         else{
             cout << "Nao possui optimal_value" << RESET <<  endl;
