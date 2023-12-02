@@ -16,6 +16,10 @@
 #include <vector>
 #include <algorithm>
 
+#define RESET   "\033[0m"
+#define RED     "\033[31m"
+#define GREEN   "\033[32m"
+
 using namespace std;
 
 Solucao::Solucao(string txt)
@@ -56,8 +60,9 @@ void Solucao::lerArquivo(string txt)
             while (ss >> chave) {
                 if (chave == "trucks:") {
                     ss >> this->caminhoes;
-                    break;   
                 }
+                else if(chave == "value:")
+                    ss >> this->optimal_value;
             }
         }
         else if (chave == "DIMENSION")
@@ -330,9 +335,15 @@ Grafo* Solucao::guloso(ofstream &output_file)
         return rota;
     };
 
-    auto imprimeRotas = [this](unordered_map<int, rota> rotas){
-        cout << endl << "Imprimindo as rotas" << endl << endl;
+    auto imprimeRotas = [this](unordered_map<int, rota> rotas, bool completa){
+        
+        if(completa)
+            cout << endl << GREEN << "Imprimindo as rotas" << endl << endl;
+        else
+            cout << endl << RED << "Imprimindo as rotas" << endl << endl;
+        
         double total = 0;
+        
         for(int i=0; i<this->caminhoes; i++){
             cout << "percurso rota " << i << " : < ";  
             for(int j=0; j<rotas[i].percurso.size(); j++){
@@ -342,7 +353,14 @@ Grafo* Solucao::guloso(ofstream &output_file)
             cout << ">  - distancia: " << rotas[i].distancia;
             cout << " - carga: " << rotas[i].cargaAtual << endl;
         }
-        cout << "total - " << total;
+        cout << "total - " << total << endl;
+        if (this->optimal_value){
+            cout << "optimal_value: " << this->optimal_value << endl;
+            cout << "% acima: " << ((total/this->optimal_value) - 1) * 100 << "%" << endl; 
+        }
+        else{
+            cout << "Nao possui optimal_value" << RESET <<  endl;
+        }
     };
 
     auto makeStop = [this]() -> unordered_map<int, candidato> {
@@ -374,11 +392,13 @@ Grafo* Solucao::guloso(ofstream &output_file)
     unordered_map<int, candidato> stop = makeStop();
     
     // peso / distancia
-    while(percorridos.size() != this->grafo->getOrdem() && !parar(candidatos, stop))
+    bool completa = true;
+    while(percorridos.size() != this->grafo->getOrdem())
     {   
         stop = candidatos;
         i = getCandidatos(candidatos);
         if(i == -1){
+            completa = false;
             cout << "Nao foi possivel encontrar candidatos." << endl;
             break;
         }     
@@ -391,7 +411,7 @@ Grafo* Solucao::guloso(ofstream &output_file)
         rotas[i] = atualizaRota(rotas[i], this->grafo->getGalpao());
     }
 
-    imprimeRotas(rotas);
+    imprimeRotas(rotas, completa);
 }
 
 

@@ -40,6 +40,7 @@ class Solucao{
         int capacidade;
         int caminhoes;
         No* galpao;
+        double optimal_value = -1;
 };
 
 
