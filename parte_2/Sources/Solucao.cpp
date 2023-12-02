@@ -165,7 +165,6 @@ void Solucao::imprimeMatriz()
 bool Solucao::inPercorridos(No* procurado, vector<int> percorridos)
 {   
     if (std::find(percorridos.begin(), percorridos.end(), procurado->getIdNo()) != percorridos.end()) {
-        cout << "inPercorridos" << procurado->getIdNo() << endl;
         return true;
     }
     return false;
@@ -229,13 +228,13 @@ Grafo* Solucao::guloso(ofstream &output_file)
     struct rota{
         No* ultimoNo;
         double cargaAtual = 0;
-        vector<int> percurso = {0};
+        vector<int> percurso = { 1 };
         double distancia = 0.0;
     };
 
     struct candidato{
         No* no;
-        double euristica = 0.0;
+        double euristica = 0;
     };
 
     unordered_map<int, rota> rotas;
@@ -258,7 +257,9 @@ Grafo* Solucao::guloso(ofstream &output_file)
                 if(!this->inPercorridos(no,percorridos)){
                     // (peso / distancia) entre o ultimo nó da rota e o nó do for
                     if(this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no->getIdNo()] != 0){
+                        
                         double euristica = no->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no->getIdNo()];
+                        
                         if(euristica > candidatos[i].euristica)
                         {
                             candidatos[i].no = no;
@@ -275,19 +276,18 @@ Grafo* Solucao::guloso(ofstream &output_file)
         // para todas as rotas
         for(int i=0; i<this->caminhoes; i++)
         {
-            cout << "rotas[" << i << "].ultimoNo->getIdNo()  -  " << rotas[i].ultimoNo->getIdNo() << endl;
-            cout << "alterado->getIdNo()  -  " << alterado->getIdNo() << endl;
             if(rotas[i].ultimoNo->getIdNo() == alterado->getIdNo()){
-                cout << "entou" << endl;
-                cout << "rotas[" << i << "] - " << rotas[i].ultimoNo->getIdNo() << endl;
-                candidatos[i].euristica = DBL_MAX;
+                
+                candidatos[i].euristica = 0;
                 // para todos os nós do grafo
                 for(No *no = this->grafo->getNoRaiz(); no; no = no->getProxNo())
                 {
-                    // distancia entre o ultimo nó da rota e o nó do for
+                    // demanda / distancia entre o ultimo nó da rota e o nó do for
                     double euristica = no->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no->getIdNo()] ;
-
-                    if(euristica < candidatos[i].euristica && !this->inPercorridos(no,percorridos))
+                    
+                    if(euristica > candidatos[i].euristica &&
+                        !this->inPercorridos(no,percorridos) && 
+                        rotas[i].cargaAtual + no->getDemanda() <= this->capacidade)
                     {
                         candidatos[i].no = no;
                         candidatos[i].euristica = euristica;
@@ -302,7 +302,7 @@ Grafo* Solucao::guloso(ofstream &output_file)
         double max = DBL_MIN;
         int cont = -1;
         for(int i=0; i < this->caminhoes; i++){
-            cout << "candidato " << candidatos[i].no->getIdNo() << " - " << candidatos[i].euristica << endl; 
+            // cout << "candidato " << candidatos[i].no->getIdNo() << " - " << candidatos[i].euristica << endl; 
             if(max < candidatos[i].euristica){
                 max = candidatos[i].euristica;
                 cont = i;
@@ -313,8 +313,8 @@ Grafo* Solucao::guloso(ofstream &output_file)
 
     auto parar = [this](unordered_map<int, candidato> candidatos, unordered_map<int, candidato> stop) -> bool {
         for(int i=0; i<this->caminhoes; i++){
-            cout << "stop[i]" << stop[i].no->getIdNo() << endl;
-            cout << "candidatos[i]" <<  candidatos[i].no->getIdNo() << endl;
+            // cout << "stop[i]" << stop[i].no->getIdNo() << endl;
+            // cout << "candidatos[i]" <<  candidatos[i].no->getIdNo() << endl;
 
             if(stop[i].no->getIdNo() != candidatos[i].no->getIdNo())
                 return false;
@@ -336,10 +336,11 @@ Grafo* Solucao::guloso(ofstream &output_file)
         for(int i=0; i<this->caminhoes; i++){
             cout << "percurso rota " << i << " : < ";  
             for(int j=0; j<rotas[i].percurso.size(); j++){
-                cout << rotas[i].percurso[j] << "  ";
+                cout << rotas[i].percurso[j] << " ";
             }
             total += rotas[i].distancia;
-            cout << " >  - total " << rotas[i].distancia << endl;
+            cout << ">  - distancia: " << rotas[i].distancia;
+            cout << " - carga: " << rotas[i].cargaAtual << endl;
         }
         cout << "total - " << total;
     };
@@ -351,7 +352,6 @@ Grafo* Solucao::guloso(ofstream &output_file)
         }
         return stop;
     };
-
 
     int fim = this->grafo->getOrdem();
     int inicio = this->galpao->getIdNo();
@@ -377,9 +377,7 @@ Grafo* Solucao::guloso(ofstream &output_file)
     while(percorridos.size() != this->grafo->getOrdem() && !parar(candidatos, stop))
     {   
         stop = candidatos;
-        cout << "foi" << endl;
         i = getCandidatos(candidatos);
-        cout << "foi" << endl;
         if(i == -1){
             cout << "Nao foi possivel encontrar candidatos." << endl;
             break;
@@ -387,8 +385,13 @@ Grafo* Solucao::guloso(ofstream &output_file)
         percorridos.push_back(candidatos[i].no->getIdNo());
         rotas[i] = atualizaRota(rotas[i], candidatos[i].no);
         candidatos = atualizaCandidatos(percorridos, rotas, candidatos[i].no, candidatos);
-        imprimeRotas(rotas);
     }
+    
+    for(int i=0; i< this->caminhoes; i++){
+        rotas[i] = atualizaRota(rotas[i], this->grafo->getGalpao());
+    }
+
+    imprimeRotas(rotas);
 }
 
 
