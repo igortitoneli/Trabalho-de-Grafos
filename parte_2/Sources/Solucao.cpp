@@ -476,7 +476,7 @@ void Solucao::initVariables(){
 unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_file, float alpha, int maxIter)
 {
     int iter = 0;
-    while(iter < maxIter ){
+    while(iter < maxIter){
         // inicializa randomicamente
         initVariables();
         
