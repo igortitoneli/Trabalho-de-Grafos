@@ -36,7 +36,7 @@ int menu() {
 
 }
 
-void selecionar(int selecao, Solucao *graph, ofstream &output_file, float param1 = 0 , int maxIter = 0) {
+void selecionar(int selecao, Solucao *graph, ofstream &output_file, float alpha = 0 , int maxIter = 0) {
 
     switch (selecao) {
             // Guloso ;
@@ -46,12 +46,12 @@ void selecionar(int selecao, Solucao *graph, ofstream &output_file, float param1
         }
             // Guloso Randomizado Adaptativo;
         case 2: {
-            graph->gulosoRandomizadoAdaptativo(output_file, param1, maxIter);
+            graph->gulosoRandomizadoAdaptativo(output_file, alpha, maxIter);
             break;
         }
             // Guloso Randomizado Adaptativo Reativo
         case 3: {
-            graph->gulosoRandomizadoAdaptativoReativo(output_file, param1, maxIter);
+            graph->gulosoRandomizadoAdaptativoReativo(output_file, alpha, maxIter);
             break;
         }
         default: {
@@ -60,13 +60,14 @@ void selecionar(int selecao, Solucao *graph, ofstream &output_file, float param1
     }
 }
 
-int mainMenu(ofstream &output_file, Solucao *graph, int selecao, int param1 = 0, int maxIter = 0) {
+int mainMenu(ofstream &output_file, Solucao *graph, int selecao, float alpha = 0, int maxIter = 0) {
     
     // system("clear");
     
-    if (output_file.is_open())
-        selecionar(selecao, graph, output_file, param1, maxIter);
+    if (output_file.is_open()){
 
+        selecionar(selecao, graph, output_file, alpha, maxIter);
+    }
     else
         cout << "Unable to open the output_file" << endl;
 
@@ -118,16 +119,17 @@ int main(int argc, char const *argv[])
     // graph->imprime(output_file);
     // graph->printGraphDot(output_file);
     
+
     // Chama o guloso
     if(argc == 4){
-        mainMenu(output_file, graph, atoi(argv[3]));
+        mainMenu(output_file, graph, atoi(argv[3]), atof(argv[4]), atoi(argv[5]));
     }
     // Chama o guloso randomizado
     else{
-        mainMenu(output_file, graph, atoi(argv[3]), atoi(argv[4]), atoi(argv[5]));
+        mainMenu(output_file, graph, atoi(argv[3]), atof(argv[4]), atoi(argv[5]));
     }
 
-    //Fechando arquivo de saída
+    //Fechando arquivo de saídai
     output_file.close();
 
     return 0;

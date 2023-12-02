@@ -1,1 +1,1601 @@
+Iteracao  =  1
+
+percurso rota 0 : < 1 8 41 46 28 10 29 3 42 1 >  - distancia: 432.616 - carga: 89
+percurso rota 1 : < 1 13 7 19 45 36 1 >  - distancia: 129.451 - carga: 90
+percurso rota 2 : < 1 20 26 38 37 41 15 1 >  - distancia: 293.369 - carga: 100
+percurso rota 3 : < 1 35 11 17 48 18 15 1 >  - distancia: 221.041 - carga: 95
+percurso rota 4 : < 1 43 12 16 9 40 27 21 1 >  - distancia: 620.59 - carga: 96
+percurso rota 5 : < 1 34 47 31 22 14 5 25 10 1 >  - distancia: 653.894 - carga: 94
+percurso rota 6 : < 1 24 44 6 2 7 23 1 >  - distancia: 249.053 - carga: 97
+total - 2600.01
+optimal_value: 1073
+% acima: 142.313%
+
+
+==========================================================
+
+Iteracao  =  2
+
+percurso rota 0 : < 1 40 16 9 27 21 28 1 >  - distancia: 505.062 - carga: 93
+percurso rota 1 : < 1 25 31 22 47 34 11 29 1 >  - distancia: 521.488 - carga: 99
+percurso rota 2 : < 1 5 16 12 43 14 29 3 42 1 >  - distancia: 593.01 - carga: 93
+percurso rota 3 : < 1 23 2 7 6 13 32 1 >  - distancia: 260.287 - carga: 96
+percurso rota 4 : < 1 10 16 28 46 17 48 1 >  - distancia: 351.18 - carga: 99
+percurso rota 5 : < 1 26 38 20 39 37 41 1 >  - distancia: 342.172 - carga: 97
+percurso rota 6 : < 1 15 19 45 36 37 41 24 1 >  - distancia: 166.486 - carga: 100
+total - 2739.69
+optimal_value: 1073
+% acima: 155.329%
+
+
+==========================================================
+
+Iteracao  =  3
+
+percurso rota 0 : < 1 38 39 20 26 13 32 23 33 1 >  - distancia: 418.193 - carga: 95
+percurso rota 1 : < 1 44 7 2 6 24 45 1 >  - distancia: 215.029 - carga: 99
+percurso rota 2 : < 1 43 40 28 46 37 19 1 >  - distancia: 358.436 - carga: 99
+percurso rota 3 : < 1 16 9 40 27 21 28 35 1 >  - distancia: 565.228 - carga: 96
+percurso rota 4 : < 1 31 47 34 3 42 13 32 1 >  - distancia: 413.341 - carga: 100
+percurso rota 5 : < 1 29 34 11 17 48 1 >  - distancia: 261.694 - carga: 95
+percurso rota 6 : < 1 41 17 18 15 36 45 12 1 >  - distancia: 232.743 - carga: 93
+total - 2464.66
+optimal_value: 1073
+% acima: 129.698%
+
+
+==========================================================
+
+Iteracao  =  4
+
+percurso rota 0 : < 1 35 10 16 9 40 27 21 25 1 >  - distancia: 647.559 - carga: 99
+percurso rota 1 : < 1 5 16 28 46 17 48 1 >  - distancia: 367.615 - carga: 100
+percurso rota 2 : < 1 22 11 34 47 31 14 25 1 >  - distancia: 553.698 - carga: 99
+percurso rota 3 : < 1 41 37 38 20 39 26 33 1 >  - distancia: 379.908 - carga: 100
+percurso rota 4 : < 1 23 37 7 19 45 36 32 1 >  - distancia: 221.889 - carga: 100
+percurso rota 5 : < 1 12 40 19 18 15 42 1 >  - distancia: 261.664 - carga: 93
+percurso rota 6 : < 1 44 13 6 2 19 1 >  - distancia: 175.818 - carga: 100
+total - 2608.15
+optimal_value: 1073
+% acima: 143.071%
+
+
+==========================================================
+
+Iteracao  =  5
+
+percurso rota 0 : < 1 3 42 15 10 30 1 >  - distancia: 251.15 - carga: 51
+percurso rota 1 : < 1 37 41 46 38 20 39 33 1 >  - distancia: 361.439 - carga: 100
+percurso rota 2 : < 1 12 5 25 14 47 31 22 34 1 >  - distancia: 680.029 - carga: 98
+percurso rota 3 : < 1 43 40 27 21 9 16 28 35 1 >  - distancia: 653.998 - carga: 100
+percurso rota 4 : < 1 11 29 17 48 18 10 1 >  - distancia: 276.449 - carga: 100
+percurso rota 5 : < 1 45 36 19 13 6 44 1 >  - distancia: 160.745 - carga: 100
+percurso rota 6 : < 1 4 26 7 2 24 18 1 >  - distancia: 288.9 - carga: 93
+total - 2672.71
+optimal_value: 1073
+% acima: 149.088%
+
+
+==========================================================
+
+Iteracao  =  6
+
+percurso rota 0 : < 1 7 13 24 19 45 41 8 1 >  - distancia: 223.692 - carga: 100
+percurso rota 1 : < 1 15 17 18 42 3 46 35 1 >  - distancia: 273.528 - carga: 97
+percurso rota 2 : < 1 12 47 37 38 20 1 >  - distancia: 360.519 - carga: 96
+percurso rota 3 : < 1 29 11 34 47 14 25 10 1 >  - distancia: 520.409 - carga: 100
+percurso rota 4 : < 1 2 44 13 6 24 41 1 >  - distancia: 227.748 - carga: 98
+percurso rota 5 : < 1 5 47 31 22 14 16 9 43 1 >  - distancia: 680.547 - carga: 96
+percurso rota 6 : < 1 30 11 17 48 18 42 1 >  - distancia: 259.511 - carga: 97
+total - 2545.95
+optimal_value: 1073
+% acima: 137.274%
+
+
+==========================================================
+
+Iteracao  =  7
+
+percurso rota 0 : < 1 3 11 34 47 14 5 1 >  - distancia: 457.091 - carga: 98
+percurso rota 1 : < 1 45 36 19 7 23 46 41 1 >  - distancia: 233.781 - carga: 98
+percurso rota 2 : < 1 13 7 2 6 32 1 >  - distancia: 212.121 - carga: 91
+percurso rota 3 : < 1 33 38 20 39 26 9 40 1 >  - distancia: 467.681 - carga: 100
+percurso rota 4 : < 1 31 22 47 14 25 16 9 10 1 >  - distancia: 657.049 - carga: 99
+percurso rota 5 : < 1 37 7 44 24 18 41 1 >  - distancia: 207.071 - carga: 99
+percurso rota 6 : < 1 15 17 48 18 42 46 35 1 >  - distancia: 253.429 - carga: 99
+total - 2488.22
+optimal_value: 1073
+% acima: 131.894%
+
+
+==========================================================
+
+Iteracao  =  8
+
+percurso rota 0 : < 1 21 27 40 9 16 28 1 >  - distancia: 505.062 - carga: 93
+percurso rota 1 : < 1 14 47 31 22 34 29 19 1 >  - distancia: 483.154 - carga: 97
+percurso rota 2 : < 1 43 16 12 5 25 29 42 15 45 1 >  - distancia: 553.645 - carga: 96
+percurso rota 3 : < 1 33 37 38 20 39 26 1 >  - distancia: 341.855 - carga: 91
+percurso rota 4 : < 1 41 37 38 7 44 32 1 >  - distancia: 263.254 - carga: 97
+percurso rota 5 : < 1 35 46 28 10 5 19 36 1 >  - distancia: 374.625 - carga: 91
+percurso rota 6 : < 1 11 3 17 48 18 1 >  - distancia: 207.522 - carga: 95
+total - 2729.12
+optimal_value: 1073
+% acima: 154.345%
+
+
+==========================================================
+
+Iteracao  =  9
+
+percurso rota 0 : < 1 34 47 31 22 11 3 1 >  - distancia: 441.735 - carga: 96
+percurso rota 1 : < 1 40 21 27 9 28 46 41 1 >  - distancia: 516.824 - carga: 100
+percurso rota 2 : < 1 26 37 7 2 44 1 >  - distancia: 247.095 - carga: 99
+percurso rota 3 : < 1 19 13 24 36 45 18 25 1 >  - distancia: 206.553 - carga: 100
+percurso rota 4 : < 1 16 27 12 5 25 14 10 29 35 43 1 >  - distancia: 801.399 - carga: 98
+percurso rota 5 : < 1 20 39 38 37 7 33 1 >  - distancia: 316.467 - carga: 100
+percurso rota 6 : < 1 4 37 7 6 13 1 >  - distancia: 249.883 - carga: 99
+total - 2779.95
+optimal_value: 1073
+% acima: 159.082%
+
+
+==========================================================
+
+Iteracao  =  10
+
+percurso rota 0 : < 1 28 37 7 2 44 32 1 >  - distancia: 280.772 - carga: 100
+percurso rota 1 : < 1 11 17 48 3 34 1 >  - distancia: 263.647 - carga: 100
+percurso rota 2 : < 1 9 21 40 27 16 12 43 35 1 >  - distancia: 680.756 - carga: 99
+percurso rota 3 : < 1 15 18 17 19 45 36 23 8 1 >  - distancia: 207.021 - carga: 100
+percurso rota 4 : < 1 20 39 38 37 7 33 1 >  - distancia: 316.467 - carga: 100
+percurso rota 5 : < 1 10 46 19 24 26 4 47 1 >  - distancia: 407.948 - carga: 100
+percurso rota 6 : < 1 41 17 19 13 6 1 >  - distancia: 168.14 - carga: 100
+total - 2324.75
+optimal_value: 1073
+% acima: 116.659%
+
+
+==========================================================
+
+Iteracao  =  11
+
+percurso rota 0 : < 1 39 26 20 19 13 18 1 >  - distancia: 262.231 - carga: 100
+percurso rota 1 : < 1 38 37 41 19 45 36 1 >  - distancia: 190.91 - carga: 100
+percurso rota 2 : < 1 35 28 16 9 40 27 21 1 >  - distancia: 565.228 - carga: 96
+percurso rota 3 : < 1 44 6 2 7 24 32 23 1 >  - distancia: 285.274 - carga: 99
+percurso rota 4 : < 1 10 46 48 18 15 42 3 1 >  - distancia: 285.574 - carga: 96
+percurso rota 5 : < 1 12 16 46 48 3 29 22 30 1 >  - distancia: 537.981 - carga: 97
+percurso rota 6 : < 1 31 47 34 11 17 1 >  - distancia: 341.411 - carga: 98
+total - 2468.61
+optimal_value: 1073
+% acima: 130.066%
+
+
+==========================================================
+
+Iteracao  =  12
+
+percurso rota 0 : < 1 45 37 7 2 6 1 >  - distancia: 198.092 - carga: 99
+percurso rota 1 : < 1 16 40 27 21 9 28 35 1 >  - distancia: 565.228 - carga: 96
+percurso rota 2 : < 1 33 37 7 13 44 24 1 >  - distancia: 226.851 - carga: 100
+percurso rota 3 : < 1 41 37 7 19 36 23 1 >  - distancia: 209.578 - carga: 100
+percurso rota 4 : < 1 29 17 48 11 34 1 >  - distancia: 261.694 - carga: 95
+percurso rota 5 : < 1 43 5 25 14 47 31 22 10 46 35 1 >  - distancia: 784.913 - carga: 97
+percurso rota 6 : < 1 20 38 26 7 23 39 4 1 >  - distancia: 433.222 - carga: 98
+total - 2679.58
+optimal_value: 1073
+% acima: 149.728%
+
+
+==========================================================
+
+Iteracao  =  13
+
+percurso rota 0 : < 1 19 37 41 46 10 5 43 1 >  - distancia: 396.428 - carga: 98
+percurso rota 1 : < 1 32 6 2 7 13 45 1 >  - distancia: 226.263 - carga: 98
+percurso rota 2 : < 1 28 9 16 40 27 21 1 >  - distancia: 505.062 - carga: 93
+percurso rota 3 : < 1 18 48 15 36 45 24 44 23 1 >  - distancia: 208.382 - carga: 92
+percurso rota 4 : < 1 38 20 39 26 37 41 1 >  - distancia: 342.172 - carga: 97
+percurso rota 5 : < 1 47 31 22 34 11 3 1 >  - distancia: 441.735 - carga: 96
+percurso rota 6 : < 1 42 17 48 15 29 12 14 1 >  - distancia: 364.743 - carga: 97
+total - 2484.78
+optimal_value: 1073
+% acima: 131.574%
+
+
+==========================================================
+
+Iteracao  =  14
+
+percurso rota 0 : < 1 9 27 12 5 25 14 10 29 35 43 1 >  - distancia: 802.874 - carga: 98
+percurso rota 1 : < 1 38 26 37 41 13 1 >  - distancia: 254.117 - carga: 95
+percurso rota 2 : < 1 36 45 19 37 41 13 1 >  - distancia: 164.362 - carga: 99
+percurso rota 3 : < 1 20 7 2 6 44 32 1 >  - distancia: 274.237 - carga: 98
+percurso rota 4 : < 1 21 27 40 16 28 46 41 1 >  - distancia: 515.349 - carga: 100
+percurso rota 5 : < 1 18 17 48 11 3 1 >  - distancia: 207.522 - carga: 95
+percurso rota 6 : < 1 47 31 22 34 29 42 15 1 >  - distancia: 429.499 - carga: 90
+total - 2647.96
+optimal_value: 1073
+% acima: 146.781%
+
+
+==========================================================
+
+Iteracao  =  15
+
+percurso rota 0 : < 1 32 2 7 6 13 45 1 >  - distancia: 226.263 - carga: 98
+percurso rota 1 : < 1 4 20 26 19 45 24 44 23 1 >  - distancia: 350.731 - carga: 97
+percurso rota 2 : < 1 46 28 16 9 40 27 1 >  - distancia: 465.309 - carga: 95
+percurso rota 3 : < 1 36 37 38 20 39 28 1 >  - distancia: 320.443 - carga: 100
+percurso rota 4 : < 1 31 14 25 10 29 48 18 15 45 1 >  - distancia: 459.281 - carga: 95
+percurso rota 5 : < 1 47 34 11 17 15 1 >  - distancia: 271.44 - carga: 99
+percurso rota 6 : < 1 5 12 16 21 19 41 1 >  - distancia: 409.897 - carga: 89
+total - 2503.36
+optimal_value: 1073
+% acima: 133.305%
+
+
+==========================================================
+
+Iteracao  =  16
+
+percurso rota 0 : < 1 16 28 9 40 27 21 4 1 >  - distancia: 582.856 - carga: 98
+percurso rota 1 : < 1 34 31 22 47 14 5 25 10 35 1 >  - distancia: 714.06 - carga: 97
+percurso rota 2 : < 1 23 20 36 41 29 12 43 42 1 >  - distancia: 447.096 - carga: 84
+percurso rota 3 : < 1 46 38 20 39 26 2 1 >  - distancia: 362.263 - carga: 99
+percurso rota 4 : < 1 6 13 44 24 19 45 1 >  - distancia: 168.56 - carga: 99
+percurso rota 5 : < 1 3 11 17 48 18 1 >  - distancia: 207.522 - carga: 95
+percurso rota 6 : < 1 37 7 2 36 15 1 >  - distancia: 170.298 - carga: 94
+total - 2652.66
+optimal_value: 1073
+% acima: 147.219%
+
+
+==========================================================
+
+Iteracao  =  17
+
+percurso rota 0 : < 1 11 47 3 42 44 1 >  - distancia: 279.54 - carga: 85
+percurso rota 1 : < 1 16 28 9 40 27 21 1 >  - distancia: 505.062 - carga: 93
+percurso rota 2 : < 1 32 6 2 7 13 45 1 >  - distancia: 226.263 - carga: 98
+percurso rota 3 : < 1 35 10 46 17 48 18 15 1 >  - distancia: 288.253 - carga: 95
+percurso rota 4 : < 1 29 37 41 19 45 36 24 1 >  - distancia: 211.18 - carga: 98
+percurso rota 5 : < 1 34 31 22 47 14 5 25 12 1 >  - distancia: 680.029 - carga: 98
+percurso rota 6 : < 1 33 37 38 20 39 26 4 1 >  - distancia: 419.65 - carga: 96
+total - 2609.98
+optimal_value: 1073
+% acima: 143.241%
+
+
+==========================================================
+
+Iteracao  =  18
+
+percurso rota 0 : < 1 37 7 19 45 15 41 1 >  - distancia: 168.348 - carga: 100
+percurso rota 1 : < 1 26 7 19 15 42 29 30 1 >  - distancia: 311.337 - carga: 100
+percurso rota 2 : < 1 32 2 7 6 44 24 23 1 >  - distancia: 285.274 - carga: 99
+percurso rota 3 : < 1 36 17 19 15 42 28 1 >  - distancia: 186.526 - carga: 100
+percurso rota 4 : < 1 18 48 19 38 20 23 8 1 >  - distancia: 290.262 - carga: 100
+percurso rota 5 : < 1 13 2 19 15 42 29 1 >  - distancia: 201.184 - carga: 99
+percurso rota 6 : < 1 11 3 17 48 34 1 >  - distancia: 263.647 - carga: 100
+total - 1706.58
+optimal_value: 1073
+% acima: 59.0475%
+
+
+==========================================================
+
+Iteracao  =  19
+
+percurso rota 0 : < 1 39 20 38 37 41 46 35 1 >  - distancia: 383.87 - carga: 100
+percurso rota 1 : < 1 47 34 11 3 48 1 >  - distancia: 319.419 - carga: 94
+percurso rota 2 : < 1 19 36 45 24 44 32 18 29 1 >  - distancia: 215.727 - carga: 94
+percurso rota 3 : < 1 17 18 15 42 29 31 22 1 >  - distancia: 317.602 - carga: 91
+percurso rota 4 : < 1 7 2 6 13 32 1 >  - distancia: 212.121 - carga: 91
+percurso rota 5 : < 1 26 38 46 10 5 25 14 43 1 >  - distancia: 607.141 - carga: 97
+percurso rota 6 : < 1 28 9 16 40 27 21 1 >  - distancia: 505.062 - carga: 93
+total - 2560.94
+optimal_value: 1073
+% acima: 138.671%
+
+
+==========================================================
+
+Iteracao  =  20
+
+percurso rota 0 : < 1 16 28 9 46 10 5 25 43 1 >  - distancia: 615.981 - carga: 100
+percurso rota 1 : < 1 12 9 46 10 47 31 22 30 1 >  - distancia: 631.744 - carga: 96
+percurso rota 2 : < 1 3 48 17 11 34 1 >  - distancia: 263.647 - carga: 100
+percurso rota 3 : < 1 26 38 20 39 37 41 1 >  - distancia: 342.172 - carga: 97
+percurso rota 4 : < 1 6 44 13 2 19 1 >  - distancia: 175.818 - carga: 100
+percurso rota 5 : < 1 36 7 19 45 24 18 1 >  - distancia: 136.037 - carga: 95
+percurso rota 6 : < 1 40 27 21 9 46 10 29 35 1 >  - distancia: 595.918 - carga: 98
+total - 2761.32
+optimal_value: 1073
+% acima: 157.345%
+
+
+==========================================================
+
+Iteracao  =  21
+
+percurso rota 0 : < 1 41 19 45 36 13 32 9 43 1 >  - distancia: 327.179 - carga: 98
+percurso rota 1 : < 1 30 34 47 31 22 14 5 25 10 35 1 >  - distancia: 788.303 - carga: 99
+percurso rota 2 : < 1 44 7 2 6 24 1 >  - distancia: 200.886 - carga: 92
+percurso rota 3 : < 1 39 38 20 26 7 23 1 >  - distancia: 355.427 - carga: 93
+percurso rota 4 : < 1 18 48 17 46 28 27 1 >  - distancia: 305.802 - carga: 98
+percurso rota 5 : < 1 37 7 13 24 15 1 >  - distancia: 166.252 - carga: 95
+percurso rota 6 : < 1 3 11 34 47 14 27 1 >  - distancia: 459.775 - carga: 99
+total - 2603.62
+optimal_value: 1073
+% acima: 142.649%
+
+
+==========================================================
+
+Iteracao  =  22
+
+percurso rota 0 : < 1 32 44 13 6 2 24 41 1 >  - distancia: 263.969 - carga: 100
+percurso rota 1 : < 1 9 27 16 28 46 10 29 1 >  - distancia: 504.545 - carga: 98
+percurso rota 2 : < 1 20 2 18 42 3 47 1 >  - distancia: 315.035 - carga: 97
+percurso rota 3 : < 1 40 21 27 16 12 5 25 43 1 >  - distancia: 707.515 - carga: 97
+percurso rota 4 : < 1 26 38 37 7 23 33 1 >  - distancia: 313.158 - carga: 97
+percurso rota 5 : < 1 15 17 48 11 34 1 >  - distancia: 217 - carga: 97
+percurso rota 6 : < 1 39 7 19 45 36 24 41 1 >  - distancia: 218.43 - carga: 97
+total - 2539.65
+optimal_value: 1073
+% acima: 136.687%
+
+
+==========================================================
+
+Iteracao  =  23
+
+percurso rota 0 : < 1 20 7 44 24 19 45 1 >  - distancia: 199.382 - carga: 96
+percurso rota 1 : < 1 12 47 31 22 14 5 25 10 29 35 1 >  - distancia: 795.182 - carga: 100
+percurso rota 2 : < 1 2 7 6 13 32 41 1 >  - distancia: 250.173 - carga: 100
+percurso rota 3 : < 1 37 46 10 29 18 15 36 1 >  - distancia: 272.495 - carga: 99
+percurso rota 4 : < 1 3 48 17 11 34 1 >  - distancia: 263.647 - carga: 100
+percurso rota 5 : < 1 40 9 16 28 46 10 35 1 >  - distancia: 506.356 - carga: 96
+percurso rota 6 : < 1 38 39 26 21 27 1 >  - distancia: 380.12 - carga: 73
+total - 2667.36
+optimal_value: 1073
+% acima: 148.589%
+
+
+==========================================================
+
+Iteracao  =  24
+
+percurso rota 0 : < 1 5 25 14 47 31 22 11 29 1 >  - distancia: 625.12 - carga: 99
+percurso rota 1 : < 1 34 17 48 18 15 36 1 >  - distancia: 193.992 - carga: 99
+percurso rota 2 : < 1 46 38 39 7 19 1 >  - distancia: 237.786 - carga: 95
+percurso rota 3 : < 1 30 47 31 17 3 42 12 1 >  - distancia: 476.785 - carga: 96
+percurso rota 4 : < 1 24 44 13 6 2 23 33 1 >  - distancia: 275.597 - carga: 97
+percurso rota 5 : < 1 26 20 38 37 41 15 1 >  - distancia: 293.369 - carga: 100
+percurso rota 6 : < 1 43 9 16 28 40 27 21 1 >  - distancia: 593.831 - carga: 97
+total - 2696.48
+optimal_value: 1073
+% acima: 151.303%
+
+
+==========================================================
+
+Iteracao  =  25
+
+percurso rota 0 : < 1 46 38 19 18 15 29 1 >  - distancia: 214.05 - carga: 97
+percurso rota 1 : < 1 22 34 11 17 48 1 >  - distancia: 284.23 - carga: 94
+percurso rota 2 : < 1 13 2 6 44 24 45 1 >  - distancia: 203.837 - carga: 96
+percurso rota 3 : < 1 8 41 37 38 20 39 26 1 >  - distancia: 390.546 - carga: 99
+percurso rota 4 : < 1 7 37 19 45 36 1 >  - distancia: 137.501 - carga: 93
+percurso rota 5 : < 1 35 10 5 25 14 47 31 12 43 29 1 >  - distancia: 805.059 - carga: 96
+percurso rota 6 : < 1 16 28 9 40 27 21 4 1 >  - distancia: 582.856 - carga: 98
+total - 2618.08
+optimal_value: 1073
+% acima: 143.996%
+
+
+==========================================================
+
+Iteracao  =  26
+
+percurso rota 0 : < 1 34 3 42 15 24 44 32 1 >  - distancia: 275.707 - carga: 86
+percurso rota 1 : < 1 11 47 12 43 20 26 4 1 >  - distancia: 550.843 - carga: 99
+percurso rota 2 : < 1 36 19 45 37 38 39 1 >  - distancia: 213.323 - carga: 99
+percurso rota 3 : < 1 13 7 2 6 32 1 >  - distancia: 212.121 - carga: 91
+percurso rota 4 : < 1 22 14 47 31 5 25 10 46 41 1 >  - distancia: 674.029 - carga: 99
+percurso rota 5 : < 1 29 37 41 17 48 18 1 >  - distancia: 229.893 - carga: 98
+percurso rota 6 : < 1 27 21 40 9 16 28 1 >  - distancia: 505.062 - carga: 93
+total - 2660.98
+optimal_value: 1073
+% acima: 147.994%
+
+
+==========================================================
+
+Iteracao  =  27
+
+percurso rota 0 : < 1 32 2 7 19 45 24 15 1 >  - distancia: 197.011 - carga: 100
+percurso rota 1 : < 1 36 7 19 18 15 29 35 1 >  - distancia: 223.396 - carga: 99
+percurso rota 2 : < 1 12 16 9 40 27 21 25 1 >  - distancia: 613.527 - carga: 100
+percurso rota 3 : < 1 23 2 19 48 3 42 22 1 >  - distancia: 320.523 - carga: 100
+percurso rota 4 : < 1 47 11 34 17 15 1 >  - distancia: 271.44 - carga: 99
+percurso rota 5 : < 1 44 13 6 2 19 1 >  - distancia: 175.818 - carga: 100
+percurso rota 6 : < 1 38 37 41 46 28 10 30 1 >  - distancia: 414.806 - carga: 100
+total - 2216.52
+optimal_value: 1073
+% acima: 106.572%
+
+
+==========================================================
+
+Iteracao  =  28
+
+percurso rota 0 : < 1 37 38 20 39 26 4 1 >  - distancia: 381.914 - carga: 93
+percurso rota 1 : < 1 47 31 22 11 17 3 1 >  - distancia: 406.363 - carga: 100
+percurso rota 2 : < 1 9 27 40 21 16 12 43 1 >  - distancia: 620.59 - carga: 96
+percurso rota 3 : < 1 2 6 13 44 24 45 1 >  - distancia: 203.837 - carga: 96
+percurso rota 4 : < 1 42 17 48 18 15 36 45 1 >  - distancia: 171.94 - carga: 100
+percurso rota 5 : < 1 34 3 19 7 23 41 1 >  - distancia: 276.997 - carga: 96
+percurso rota 6 : < 1 28 40 12 5 25 14 10 46 1 >  - distancia: 638.073 - carga: 99
+total - 2699.72
+optimal_value: 1073
+% acima: 151.604%
+
+
+==========================================================
+
+Iteracao  =  29
+
+percurso rota 0 : < 1 21 27 40 9 16 28 1 >  - distancia: 505.062 - carga: 93
+percurso rota 1 : < 1 2 13 6 7 23 1 >  - distancia: 224.066 - carga: 94
+percurso rota 2 : < 1 3 11 34 31 22 29 1 >  - distancia: 405.441 - carga: 87
+percurso rota 3 : < 1 17 19 36 24 44 32 15 1 >  - distancia: 177.645 - carga: 98
+percurso rota 4 : < 1 25 10 46 37 41 19 45 1 >  - distancia: 316.192 - carga: 98
+percurso rota 5 : < 1 47 14 5 12 43 48 18 15 1 >  - distancia: 520.313 - carga: 98
+percurso rota 6 : < 1 33 38 20 39 26 37 41 1 >  - distancia: 379.908 - carga: 100
+total - 2528.63
+optimal_value: 1073
+% acima: 135.659%
+
+
+==========================================================
+
+Iteracao  =  30
+
+percurso rota 0 : < 1 28 40 27 21 9 16 1 >  - distancia: 505.062 - carga: 93
+percurso rota 1 : < 1 34 11 17 48 3 1 >  - distancia: 263.647 - carga: 100
+percurso rota 2 : < 1 47 22 10 46 41 20 39 1 >  - distancia: 459.084 - carga: 85
+percurso rota 3 : < 1 30 25 5 14 31 22 10 12 43 1 >  - distancia: 749.022 - carga: 76
+percurso rota 4 : < 1 13 6 2 7 23 1 >  - distancia: 224.066 - carga: 94
+percurso rota 5 : < 1 32 7 44 24 18 15 42 1 >  - distancia: 208.685 - carga: 92
+percurso rota 6 : < 1 33 19 45 36 37 38 4 1 >  - distancia: 268.388 - carga: 99
+total - 2677.95
+optimal_value: 1073
+% acima: 149.576%
+
+
+==========================================================
+
+Iteracao  =  31
+
+percurso rota 0 : < 1 12 5 25 14 47 31 22 34 1 >  - distancia: 680.029 - carga: 98
+percurso rota 1 : < 1 32 13 6 44 24 19 1 >  - distancia: 190.639 - carga: 94
+percurso rota 2 : < 1 23 7 2 6 44 36 1 >  - distancia: 241.237 - carga: 98
+percurso rota 3 : < 1 18 19 45 36 37 41 39 1 >  - distancia: 204.73 - carga: 100
+percurso rota 4 : < 1 4 20 38 26 39 17 1 >  - distancia: 374.52 - carga: 92
+percurso rota 5 : < 1 27 40 9 16 28 46 35 1 >  - distancia: 525.475 - carga: 98
+percurso rota 6 : < 1 42 19 17 48 3 29 1 >  - distancia: 238.615 - carga: 100
+total - 2455.25
+optimal_value: 1073
+% acima: 128.821%
+
+
+==========================================================
+
+Iteracao  =  32
+
+percurso rota 0 : < 1 6 7 2 44 20 1 >  - distancia: 238.015 - carga: 96
+percurso rota 1 : < 1 40 28 16 9 27 12 43 1 >  - distancia: 596.762 - carga: 97
+percurso rota 2 : < 1 19 45 36 7 38 4 1 >  - distancia: 233.793 - carga: 96
+percurso rota 3 : < 1 21 28 10 5 25 14 47 31 30 35 1 >  - distancia: 801.503 - carga: 100
+percurso rota 4 : < 1 3 48 17 11 34 1 >  - distancia: 263.647 - carga: 100
+percurso rota 5 : < 1 37 41 46 38 20 39 1 >  - distancia: 323.703 - carga: 97
+percurso rota 6 : < 1 32 13 44 24 38 26 4 1 >  - distancia: 347.017 - carga: 93
+total - 2804.44
+optimal_value: 1073
+% acima: 161.364%
+
+
+==========================================================
+
+Iteracao  =  33
+
+percurso rota 0 : < 1 18 42 47 31 22 14 5 25 43 1 >  - distancia: 651.714 - carga: 97
+percurso rota 1 : < 1 6 2 7 13 32 1 >  - distancia: 212.121 - carga: 91
+percurso rota 2 : < 1 34 17 19 45 36 24 1 >  - distancia: 181.627 - carga: 99
+percurso rota 3 : < 1 21 9 28 46 17 29 35 1 >  - distancia: 454.172 - carga: 99
+percurso rota 4 : < 1 41 37 38 20 39 26 1 >  - distancia: 342.172 - carga: 97
+percurso rota 5 : < 1 15 17 48 11 3 29 1 >  - distancia: 259.416 - carga: 100
+percurso rota 6 : < 1 16 40 27 9 28 46 35 1 >  - distancia: 525.475 - carga: 98
+total - 2626.7
+optimal_value: 1073
+% acima: 144.799%
+
+
+==========================================================
+
+Iteracao  =  34
+
+percurso rota 0 : < 1 20 37 38 26 39 23 33 1 >  - distancia: 390.022 - carga: 96
+percurso rota 1 : < 1 47 11 29 19 45 36 1 >  - distancia: 252.822 - carga: 96
+percurso rota 2 : < 1 28 9 38 7 44 32 1 >  - distancia: 333.284 - carga: 96
+percurso rota 3 : < 1 34 22 29 41 13 6 1 >  - distancia: 325.953 - carga: 90
+percurso rota 4 : < 1 42 11 3 48 18 15 1 >  - distancia: 218.361 - carga: 96
+percurso rota 5 : < 1 21 27 40 9 16 12 43 1 >  - distancia: 620.59 - carga: 96
+percurso rota 6 : < 1 31 14 5 25 10 46 17 15 1 >  - distancia: 512.975 - carga: 99
+total - 2654.01
+optimal_value: 1073
+% acima: 147.345%
+
+
+==========================================================
+
+Iteracao  =  35
+
+percurso rota 0 : < 1 39 37 7 6 44 32 1 >  - distancia: 267.078 - carga: 95
+percurso rota 1 : < 1 41 37 38 20 26 1 >  - distancia: 281.707 - carga: 89
+percurso rota 2 : < 1 30 11 17 48 18 15 1 >  - distancia: 235.117 - carga: 94
+percurso rota 3 : < 1 34 31 22 47 14 25 10 12 1 >  - distancia: 663.594 - carga: 97
+percurso rota 4 : < 1 21 9 16 28 46 10 29 1 >  - distancia: 508.63 - carga: 100
+percurso rota 5 : < 1 5 16 40 27 12 43 29 3 1 >  - distancia: 646.388 - carga: 98
+percurso rota 6 : < 1 24 19 45 36 7 2 1 >  - distancia: 167.996 - carga: 100
+total - 2770.51
+optimal_value: 1073
+% acima: 158.202%
+
+
+==========================================================
+
+Iteracao  =  36
+
+percurso rota 0 : < 1 3 34 11 17 48 1 >  - distancia: 263.647 - carga: 100
+percurso rota 1 : < 1 18 15 19 45 36 37 33 1 >  - distancia: 155.611 - carga: 97
+percurso rota 2 : < 1 32 7 6 24 26 40 43 1 >  - distancia: 404.07 - carga: 97
+percurso rota 3 : < 1 13 44 6 24 26 21 1 >  - distancia: 308.498 - carga: 99
+percurso rota 4 : < 1 42 11 29 28 16 9 1 >  - distancia: 383.388 - carga: 100
+percurso rota 5 : < 1 2 44 24 26 21 27 5 30 1 >  - distancia: 527.736 - carga: 100
+percurso rota 6 : < 1 46 37 38 20 39 23 33 1 >  - distancia: 371.553 - carga: 96
+total - 2414.5
+optimal_value: 1073
+% acima: 125.024%
+
+
+==========================================================
+
+Iteracao  =  37
+
+percurso rota 0 : < 1 21 27 40 9 16 28 35 1 >  - distancia: 565.228 - carga: 96
+percurso rota 1 : < 1 5 12 14 25 10 29 41 26 44 1 >  - distancia: 627.219 - carga: 99
+percurso rota 2 : < 1 43 16 12 14 26 1 >  - distancia: 427.775 - carga: 61
+percurso rota 3 : < 1 3 11 34 47 31 22 30 1 >  - distancia: 515.977 - carga: 98
+percurso rota 4 : < 1 18 19 45 36 17 48 1 >  - distancia: 137.029 - carga: 98
+percurso rota 5 : < 1 8 46 37 38 20 39 23 1 >  - distancia: 382.191 - carga: 95
+percurso rota 6 : < 1 7 6 2 13 32 1 >  - distancia: 212.121 - carga: 91
+total - 2867.54
+optimal_value: 1073
+% acima: 167.245%
+
+
+==========================================================
+
+Iteracao  =  38
+
+percurso rota 0 : < 1 32 6 2 7 13 1 >  - distancia: 212.121 - carga: 91
+percurso rota 1 : < 1 15 18 17 48 11 22 1 >  - distancia: 239.767 - carga: 100
+percurso rota 2 : < 1 29 34 47 31 22 14 25 10 35 1 >  - distancia: 683.101 - carga: 95
+percurso rota 3 : < 1 38 39 20 26 28 12 43 1 >  - distancia: 515.889 - carga: 96
+percurso rota 4 : < 1 23 2 13 44 24 37 1 >  - distancia: 237.952 - carga: 97
+percurso rota 5 : < 1 5 16 9 40 27 21 10 1 >  - distancia: 593.001 - carga: 99
+percurso rota 6 : < 1 19 45 36 37 41 46 1 >  - distancia: 182.473 - carga: 93
+total - 2664.3
+optimal_value: 1073
+% acima: 148.304%
+
+
+==========================================================
+
+Iteracao  =  39
+
+percurso rota 0 : < 1 27 21 40 9 16 28 35 43 1 >  - distancia: 653.998 - carga: 100
+percurso rota 1 : < 1 38 7 23 36 18 15 1 >  - distancia: 205.003 - carga: 92
+percurso rota 2 : < 1 39 20 26 37 41 17 1 >  - distancia: 316.281 - carga: 98
+percurso rota 3 : < 1 24 44 13 2 19 45 33 1 >  - distancia: 210.198 - carga: 100
+percurso rota 4 : < 1 5 25 47 31 22 34 17 1 >  - distancia: 531.326 - carga: 99
+percurso rota 5 : < 1 14 25 10 46 37 41 19 1 >  - distancia: 390.616 - carga: 100
+percurso rota 6 : < 1 6 7 2 19 29 1 >  - distancia: 208.84 - carga: 99
+total - 2516.26
+optimal_value: 1073
+% acima: 134.507%
+
+
+==========================================================
+
+Iteracao  =  40
+
+percurso rota 0 : < 1 2 13 6 7 23 1 >  - distancia: 224.066 - carga: 94
+percurso rota 1 : < 1 36 7 44 32 20 26 4 1 >  - distancia: 351.436 - carga: 90
+percurso rota 2 : < 1 17 18 15 48 3 42 1 >  - distancia: 197.24 - carga: 94
+percurso rota 3 : < 1 22 11 34 47 5 25 29 1 >  - distancia: 527.17 - carga: 100
+percurso rota 4 : < 1 24 19 45 37 38 39 1 >  - distancia: 221.138 - carga: 98
+percurso rota 5 : < 1 12 9 16 28 46 10 29 1 >  - distancia: 511.561 - carga: 100
+percurso rota 6 : < 1 31 14 47 5 10 40 27 21 1 >  - distancia: 693.13 - carga: 100
+total - 2725.74
+optimal_value: 1073
+% acima: 154.03%
+
+
+==========================================================
+
+Iteracao  =  41
+
+percurso rota 0 : < 1 9 28 46 37 38 33 1 >  - distancia: 351.464 - carga: 100
+percurso rota 1 : < 1 45 36 37 7 2 23 33 1 >  - distancia: 258.681 - carga: 98
+percurso rota 2 : < 1 22 14 5 25 10 11 34 30 43 1 >  - distancia: 700.623 - carga: 98
+percurso rota 3 : < 1 19 37 7 6 32 1 >  - distancia: 184.894 - carga: 97
+percurso rota 4 : < 1 47 11 3 48 18 15 1 >  - distancia: 274.956 - carga: 100
+percurso rota 5 : < 1 17 37 41 20 39 26 1 >  - distancia: 316.281 - carga: 98
+percurso rota 6 : < 1 21 27 40 16 28 46 41 1 >  - distancia: 515.349 - carga: 100
+total - 2602.25
+optimal_value: 1073
+% acima: 142.521%
+
+
+==========================================================
+
+Iteracao  =  42
+
+percurso rota 0 : < 1 36 45 19 37 38 39 1 >  - distancia: 213.323 - carga: 99
+percurso rota 1 : < 1 35 11 34 47 31 22 14 43 1 >  - distancia: 620.927 - carga: 98
+percurso rota 2 : < 1 6 13 44 7 20 1 >  - distancia: 226.154 - carga: 98
+percurso rota 3 : < 1 5 16 9 40 27 21 10 1 >  - distancia: 593.001 - carga: 99
+percurso rota 4 : < 1 24 7 2 37 41 29 1 >  - distancia: 260.86 - carga: 100
+percurso rota 5 : < 1 42 11 17 48 18 23 1 >  - distancia: 233.435 - carga: 100
+percurso rota 6 : < 1 4 26 20 46 28 10 25 12 1 >  - distancia: 588.599 - carga: 100
+total - 2736.3
+optimal_value: 1073
+% acima: 155.014%
+
+
+==========================================================
+
+Iteracao  =  43
+
+percurso rota 0 : < 1 15 48 17 11 3 29 1 >  - distancia: 259.416 - carga: 100
+percurso rota 1 : < 1 33 38 39 19 45 36 13 1 >  - distancia: 243.008 - carga: 99
+percurso rota 2 : < 1 34 31 22 47 14 5 25 10 43 1 >  - distancia: 742.663 - carga: 98
+percurso rota 3 : < 1 27 9 16 28 40 21 1 >  - distancia: 505.062 - carga: 93
+percurso rota 4 : < 1 35 46 37 7 2 23 1 >  - distancia: 302.433 - carga: 94
+percurso rota 5 : < 1 26 39 19 18 42 6 32 1 >  - distancia: 278.655 - carga: 100
+percurso rota 6 : < 1 20 38 37 7 23 1 >  - distancia: 266.433 - carga: 94
+total - 2597.67
+optimal_value: 1073
+% acima: 142.094%
+
+
+==========================================================
+
+Iteracao  =  44
+
+percurso rota 0 : < 1 6 13 44 2 19 1 >  - distancia: 175.818 - carga: 100
+percurso rota 1 : < 1 41 19 18 15 17 48 30 1 >  - distancia: 227.976 - carga: 100
+percurso rota 2 : < 1 38 20 39 26 37 33 25 1 >  - distancia: 423.562 - carga: 99
+percurso rota 3 : < 1 23 20 46 28 16 9 27 1 >  - distancia: 489.288 - carga: 100
+percurso rota 4 : < 1 14 31 22 47 34 11 29 1 >  - distancia: 528.347 - carga: 100
+percurso rota 5 : < 1 7 13 17 3 42 1 >  - distancia: 214.878 - carga: 99
+percurso rota 6 : < 1 24 19 45 36 37 46 35 1 >  - distancia: 231.27 - carga: 99
+total - 2291.14
+optimal_value: 1073
+% acima: 113.527%
+
+
+==========================================================
+
+Iteracao  =  45
+
+percurso rota 0 : < 1 10 11 17 48 18 41 1 >  - distancia: 258.145 - carga: 100
+percurso rota 1 : < 1 16 27 40 9 21 12 43 1 >  - distancia: 620.59 - carga: 96
+percurso rota 2 : < 1 25 14 31 22 17 3 42 36 1 >  - distancia: 480.91 - carga: 100
+percurso rota 3 : < 1 30 11 34 17 18 15 1 >  - distancia: 269.157 - carga: 98
+percurso rota 4 : < 1 6 13 44 24 19 45 1 >  - distancia: 168.56 - carga: 99
+percurso rota 5 : < 1 5 14 47 31 17 46 41 1 >  - distancia: 479.428 - carga: 97
+percurso rota 6 : < 1 28 37 38 20 39 36 1 >  - distancia: 320.443 - carga: 100
+total - 2597.23
+optimal_value: 1073
+% acima: 142.053%
+
+
+==========================================================
+
+Iteracao  =  46
+
+percurso rota 0 : < 1 22 31 34 3 38 20 39 1 >  - distancia: 478.131 - carga: 99
+percurso rota 1 : < 1 29 48 18 42 3 38 4 1 >  - distancia: 345.62 - carga: 96
+percurso rota 2 : < 1 17 11 34 3 1 >  - distancia: 225.437 - carga: 84
+percurso rota 3 : < 1 40 16 9 27 21 28 1 >  - distancia: 505.062 - carga: 93
+percurso rota 4 : < 1 15 19 45 36 37 41 39 1 >  - distancia: 200.268 - carga: 96
+percurso rota 5 : < 1 47 31 14 5 25 10 28 46 35 1 >  - distancia: 687.507 - carga: 100
+percurso rota 6 : < 1 44 24 13 6 2 23 1 >  - distancia: 237.861 - carga: 94
+total - 2679.89
+optimal_value: 1073
+% acima: 149.756%
+
+
+==========================================================
+
+Iteracao  =  47
+
+percurso rota 0 : < 1 4 20 46 29 3 42 15 1 >  - distancia: 358.322 - carga: 85
+percurso rota 1 : < 1 43 5 25 14 31 22 34 11 1 >  - distancia: 637.133 - carga: 96
+percurso rota 2 : < 1 36 7 44 24 19 45 1 >  - distancia: 154.438 - carga: 93
+percurso rota 3 : < 1 33 38 20 39 26 37 41 1 >  - distancia: 379.908 - carga: 100
+percurso rota 4 : < 1 10 28 16 9 40 27 14 1 >  - distancia: 570.423 - carga: 98
+percurso rota 5 : < 1 47 34 17 48 18 1 >  - distancia: 256.112 - carga: 93
+percurso rota 6 : < 1 32 13 6 2 7 23 1 >  - distancia: 260.287 - carga: 96
+total - 2616.62
+optimal_value: 1073
+% acima: 143.861%
+
+
+==========================================================
+
+Iteracao  =  48
+
+percurso rota 0 : < 1 28 46 10 29 3 42 18 1 >  - distancia: 362.315 - carga: 93
+percurso rota 1 : < 1 8 46 37 41 19 45 36 1 >  - distancia: 230.847 - carga: 95
+percurso rota 2 : < 1 7 6 2 13 32 1 >  - distancia: 212.121 - carga: 91
+percurso rota 3 : < 1 38 20 39 26 37 41 1 >  - distancia: 342.172 - carga: 97
+percurso rota 4 : < 1 16 12 5 25 14 47 31 22 1 >  - distancia: 688.402 - carga: 96
+percurso rota 5 : < 1 30 34 11 17 48 15 1 >  - distancia: 291.242 - carga: 99
+percurso rota 6 : < 1 40 9 27 21 12 43 29 1 >  - distancia: 596.323 - carga: 87
+total - 2723.42
+optimal_value: 1073
+% acima: 153.814%
+
+
+==========================================================
+
+Iteracao  =  49
+
+percurso rota 0 : < 1 18 15 19 45 36 37 33 1 >  - distancia: 155.611 - carga: 97
+percurso rota 1 : < 1 46 28 38 20 39 26 1 >  - distancia: 384.437 - carga: 94
+percurso rota 2 : < 1 23 7 2 44 24 38 1 >  - distancia: 267.641 - carga: 98
+percurso rota 3 : < 1 10 28 16 9 40 27 31 1 >  - distancia: 563.49 - carga: 99
+percurso rota 4 : < 1 6 7 44 32 17 42 1 >  - distancia: 235.275 - carga: 100
+percurso rota 5 : < 1 14 5 25 47 31 22 34 3 1 >  - distancia: 641.323 - carga: 98
+percurso rota 6 : < 1 13 2 44 32 17 48 1 >  - distancia: 230.14 - carga: 97
+total - 2477.92
+optimal_value: 1073
+% acima: 130.934%
+
+
+==========================================================
+
+Iteracao  =  50
+
+percurso rota 0 : < 1 15 17 18 42 3 20 1 >  - distancia: 222.842 - carga: 94
+percurso rota 1 : < 1 26 7 13 24 19 1 >  - distancia: 195.925 - carga: 98
+percurso rota 2 : < 1 36 7 2 6 44 32 1 >  - distancia: 229.293 - carga: 95
+percurso rota 3 : < 1 29 17 48 11 34 1 >  - distancia: 261.694 - carga: 95
+percurso rota 4 : < 1 35 28 16 9 40 27 21 1 >  - distancia: 565.228 - carga: 96
+percurso rota 5 : < 1 25 47 31 14 5 12 43 10 46 1 >  - distancia: 742.869 - carga: 100
+percurso rota 6 : < 1 22 47 31 14 10 37 41 45 1 >  - distancia: 509.089 - carga: 96
+total - 2726.94
+optimal_value: 1073
+% acima: 154.142%
+
+
+==========================================================
+
+Iteracao  =  51
+
+percurso rota 0 : < 1 16 40 38 46 10 5 43 1 >  - distancia: 532.689 - carga: 98
+percurso rota 1 : < 1 4 37 19 45 36 17 1 >  - distancia: 204.761 - carga: 97
+percurso rota 2 : < 1 13 7 2 6 32 23 33 1 >  - distancia: 298.023 - carga: 99
+percurso rota 3 : < 1 30 22 31 47 34 11 3 1 >  - distancia: 515.977 - carga: 98
+percurso rota 4 : < 1 41 37 38 20 39 26 1 >  - distancia: 342.172 - carga: 97
+percurso rota 5 : < 1 25 47 34 17 48 42 1 >  - distancia: 357.75 - carga: 100
+percurso rota 6 : < 1 28 9 40 27 21 38 8 1 >  - distancia: 535.582 - carga: 100
+total - 2786.96
+optimal_value: 1073
+% acima: 159.735%
+
+
+==========================================================
+
+Iteracao  =  52
+
+percurso rota 0 : < 1 26 37 38 20 39 23 1 >  - distancia: 352.286 - carga: 93
+percurso rota 1 : < 1 22 25 46 41 19 45 36 24 1 >  - distancia: 325.484 - carga: 96
+percurso rota 2 : < 1 21 40 27 9 16 28 1 >  - distancia: 505.062 - carga: 93
+percurso rota 3 : < 1 17 37 7 2 23 1 >  - distancia: 224.813 - carga: 99
+percurso rota 4 : < 1 31 25 46 48 18 15 42 1 >  - distancia: 319.724 - carga: 90
+percurso rota 5 : < 1 5 16 12 43 48 3 13 1 >  - distancia: 486.464 - carga: 99
+percurso rota 6 : < 1 11 34 47 14 25 10 29 1 >  - distancia: 520.409 - carga: 100
+total - 2734.24
+optimal_value: 1073
+% acima: 154.822%
+
+
+==========================================================
+
+Iteracao  =  53
+
+percurso rota 0 : < 1 38 37 7 2 23 1 >  - distancia: 250.704 - carga: 98
+percurso rota 1 : < 1 36 45 19 13 6 44 1 >  - distancia: 160.745 - carga: 100
+percurso rota 2 : < 1 16 27 21 12 43 22 29 3 1 >  - distancia: 644.05 - carga: 93
+percurso rota 3 : < 1 39 20 26 37 7 23 33 1 >  - distancia: 374.665 - carga: 98
+percurso rota 4 : < 1 9 28 46 17 18 15 1 >  - distancia: 271.351 - carga: 99
+percurso rota 5 : < 1 40 28 10 5 25 14 47 31 30 1 >  - distancia: 735.252 - carga: 99
+percurso rota 6 : < 1 42 17 48 11 34 1 >  - distancia: 241.393 - carga: 100
+total - 2678.16
+optimal_value: 1073
+% acima: 149.596%
+
+
+==========================================================
+
+Iteracao  =  54
+
+percurso rota 0 : < 1 42 18 13 44 24 26 1 >  - distancia: 222.411 - carga: 92
+percurso rota 1 : < 1 19 7 2 6 32 1 >  - distancia: 188.706 - carga: 92
+percurso rota 2 : < 1 45 36 37 38 20 39 23 1 >  - distancia: 312.495 - carga: 97
+percurso rota 3 : < 1 16 9 27 21 28 10 29 1 >  - distancia: 544.298 - carga: 96
+percurso rota 4 : < 1 40 9 27 28 46 10 29 1 >  - distancia: 511.923 - carga: 96
+percurso rota 5 : < 1 15 17 48 11 34 1 >  - distancia: 217 - carga: 97
+percurso rota 6 : < 1 5 25 14 47 31 22 10 12 43 1 >  - distancia: 767.429 - carga: 92
+total - 2764.26
+optimal_value: 1073
+% acima: 157.62%
+
+
+==========================================================
+
+Iteracao  =  55
+
+percurso rota 0 : < 1 4 26 20 38 39 17 1 >  - distancia: 374.52 - carga: 92
+percurso rota 1 : < 1 19 13 7 37 33 1 >  - distancia: 178.449 - carga: 98
+percurso rota 2 : < 1 14 31 22 47 34 11 29 1 >  - distancia: 528.347 - carga: 100
+percurso rota 3 : < 1 44 24 13 6 2 23 1 >  - distancia: 237.861 - carga: 94
+percurso rota 4 : < 1 9 40 27 16 28 46 35 1 >  - distancia: 525.475 - carga: 98
+percurso rota 5 : < 1 15 48 17 18 42 3 1 >  - distancia: 197.24 - carga: 94
+percurso rota 6 : < 1 21 28 10 5 25 12 43 29 41 1 >  - distancia: 684.438 - carga: 94
+total - 2726.33
+optimal_value: 1073
+% acima: 154.085%
+
+
+==========================================================
+
+Iteracao  =  56
+
+percurso rota 0 : < 1 2 7 6 24 36 39 1 >  - distancia: 245.694 - carga: 100
+percurso rota 1 : < 1 44 6 13 24 19 45 1 >  - distancia: 168.56 - carga: 99
+percurso rota 2 : < 1 12 16 9 40 27 21 1 >  - distancia: 531.821 - carga: 92
+percurso rota 3 : < 1 15 17 48 11 3 29 1 >  - distancia: 259.416 - carga: 100
+percurso rota 4 : < 1 34 31 10 46 29 18 42 1 >  - distancia: 387.631 - carga: 94
+percurso rota 5 : < 1 25 5 14 47 31 22 10 28 29 1 >  - distancia: 708.257 - carga: 98
+percurso rota 6 : < 1 26 20 38 37 41 29 1 >  - distancia: 338.063 - carga: 98
+total - 2639.44
+optimal_value: 1073
+% acima: 145.987%
+
+
+==========================================================
+
+Iteracao  =  57
+
+percurso rota 0 : < 1 29 48 17 18 42 3 1 >  - distancia: 241.934 - carga: 92
+percurso rota 1 : < 1 15 19 45 36 13 44 41 1 >  - distancia: 166.278 - carga: 98
+percurso rota 2 : < 1 11 34 47 14 5 12 1 >  - distancia: 495.797 - carga: 98
+percurso rota 3 : < 1 32 6 2 7 13 1 >  - distancia: 212.121 - carga: 91
+percurso rota 4 : < 1 4 20 46 28 40 27 21 1 >  - distancia: 538.281 - carga: 94
+percurso rota 5 : < 1 25 47 31 22 14 16 9 10 1 >  - distancia: 657.049 - carga: 99
+percurso rota 6 : < 1 33 37 38 20 39 26 41 1 >  - distancia: 379.908 - carga: 100
+total - 2691.37
+optimal_value: 1073
+% acima: 150.826%
+
+
+==========================================================
+
+Iteracao  =  58
+
+percurso rota 0 : < 1 8 38 37 41 46 28 10 1 >  - distancia: 388.937 - carga: 100
+percurso rota 1 : < 1 4 38 20 39 26 37 33 1 >  - distancia: 419.65 - carga: 96
+percurso rota 2 : < 1 2 19 42 16 9 43 1 >  - distancia: 348.434 - carga: 97
+percurso rota 3 : < 1 7 19 36 42 16 43 1 >  - distancia: 284.535 - carga: 97
+percurso rota 4 : < 1 6 13 44 24 19 45 1 >  - distancia: 168.56 - carga: 99
+percurso rota 5 : < 1 11 48 17 18 15 22 1 >  - distancia: 239.767 - carga: 100
+percurso rota 6 : < 1 47 22 31 34 3 42 29 35 1 >  - distancia: 536.313 - carga: 96
+total - 2386.2
+optimal_value: 1073
+% acima: 122.385%
+
+
+==========================================================
+
+Iteracao  =  59
+
+percurso rota 0 : < 1 9 40 27 21 16 28 35 1 >  - distancia: 565.228 - carga: 96
+percurso rota 1 : < 1 34 3 42 15 20 23 33 1 >  - distancia: 327.991 - carga: 83
+percurso rota 2 : < 1 31 11 17 48 18 45 1 >  - distancia: 244.988 - carga: 98
+percurso rota 3 : < 1 26 7 37 38 39 1 >  - distancia: 287.72 - carga: 97
+percurso rota 4 : < 1 10 11 3 42 15 20 23 1 >  - distancia: 346.886 - carga: 96
+percurso rota 5 : < 1 12 16 46 41 19 45 36 1 >  - distancia: 315.839 - carga: 100
+percurso rota 6 : < 1 32 44 13 6 2 24 45 1 >  - distancia: 240.059 - carga: 98
+total - 2328.71
+optimal_value: 1073
+% acima: 117.028%
+
+
+==========================================================
+
+Iteracao  =  60
+
+percurso rota 0 : < 1 9 28 16 12 5 25 14 43 1 >  - distancia: 676.35 - carga: 97
+percurso rota 1 : < 1 8 17 18 15 42 3 46 35 1 >  - distancia: 321.902 - carga: 99
+percurso rota 2 : < 1 41 17 48 11 34 1 >  - distancia: 243.39 - carga: 95
+percurso rota 3 : < 1 45 37 38 20 39 26 1 >  - distancia: 318.262 - carga: 95
+percurso rota 4 : < 1 32 44 13 2 7 20 1 >  - distancia: 266.277 - carga: 98
+percurso rota 5 : < 1 6 44 24 19 36 18 1 >  - distancia: 153.189 - carga: 98
+percurso rota 6 : < 1 27 40 21 16 12 47 22 1 >  - distancia: 621.265 - carga: 100
+total - 2600.64
+optimal_value: 1073
+% acima: 142.37%
+
+
+==========================================================
+
+Iteracao  =  61
+
+percurso rota 0 : < 1 44 24 13 6 2 23 33 1 >  - distancia: 275.597 - carga: 97
+percurso rota 1 : < 1 39 2 23 41 29 10 5 14 47 1 >  - distancia: 590.535 - carga: 99
+percurso rota 2 : < 1 28 46 17 48 11 1 >  - distancia: 257.677 - carga: 97
+percurso rota 3 : < 1 8 17 18 15 42 3 34 1 >  - distancia: 279.653 - carga: 100
+percurso rota 4 : < 1 36 45 19 7 23 9 25 1 >  - distancia: 305.2 - carga: 99
+percurso rota 5 : < 1 37 38 20 7 23 1 >  - distancia: 266.433 - carga: 94
+percurso rota 6 : < 1 26 7 23 9 16 40 1 >  - distancia: 419.101 - carga: 98
+total - 2394.2
+optimal_value: 1073
+% acima: 123.131%
+
+
+==========================================================
+
+Iteracao  =  62
+
+percurso rota 0 : < 1 16 27 40 9 21 12 1 >  - distancia: 531.821 - carga: 92
+percurso rota 1 : < 1 6 44 13 2 19 1 >  - distancia: 175.818 - carga: 100
+percurso rota 2 : < 1 5 25 14 47 31 22 17 41 8 1 >  - distancia: 634.069 - carga: 99
+percurso rota 3 : < 1 43 25 10 17 48 18 15 41 1 >  - distancia: 382.283 - carga: 97
+percurso rota 4 : < 1 26 7 19 45 36 24 32 1 >  - distancia: 228.935 - carga: 98
+percurso rota 5 : < 1 29 11 34 47 12 1 >  - distancia: 376.271 - carga: 87
+percurso rota 6 : < 1 28 46 37 38 20 23 1 >  - distancia: 343.609 - carga: 100
+total - 2672.81
+optimal_value: 1073
+% acima: 149.097%
+
+
+==========================================================
+
+Iteracao  =  63
+
+percurso rota 0 : < 1 25 16 12 5 43 29 41 36 1 >  - distancia: 548.706 - carga: 86
+percurso rota 1 : < 1 30 11 34 47 31 22 14 43 1 >  - distancia: 635.004 - carga: 97
+percurso rota 2 : < 1 17 18 15 48 3 42 1 >  - distancia: 197.24 - carga: 94
+percurso rota 3 : < 1 10 28 46 37 38 39 1 >  - distancia: 362.975 - carga: 97
+percurso rota 4 : < 1 6 13 44 24 19 45 1 >  - distancia: 168.56 - carga: 99
+percurso rota 5 : < 1 40 27 21 9 16 28 1 >  - distancia: 505.062 - carga: 93
+percurso rota 6 : < 1 7 2 13 37 33 23 1 >  - distancia: 261.892 - carga: 100
+total - 2679.44
+optimal_value: 1073
+% acima: 149.715%
+
+
+==========================================================
+
+Iteracao  =  64
+
+percurso rota 0 : < 1 29 17 48 18 15 19 1 >  - distancia: 172.037 - carga: 98
+percurso rota 1 : < 1 16 40 27 21 9 28 35 1 >  - distancia: 565.228 - carga: 96
+percurso rota 2 : < 1 31 47 34 22 14 5 25 10 35 1 >  - distancia: 714.06 - carga: 97
+percurso rota 3 : < 1 30 11 37 46 36 45 1 >  - distancia: 263.857 - carga: 89
+percurso rota 4 : < 1 3 11 34 22 12 43 1 >  - distancia: 453.236 - carga: 86
+percurso rota 5 : < 1 26 39 20 38 37 41 8 1 >  - distancia: 390.546 - carga: 99
+percurso rota 6 : < 1 7 2 6 13 32 1 >  - distancia: 212.121 - carga: 91
+total - 2771.09
+optimal_value: 1073
+% acima: 158.256%
+
+
+==========================================================
+
+Iteracao  =  65
+
+percurso rota 0 : < 1 6 2 7 13 45 1 >  - distancia: 190.041 - carga: 96
+percurso rota 1 : < 1 32 7 13 44 24 19 1 >  - distancia: 193.871 - carga: 97
+percurso rota 2 : < 1 14 31 5 25 10 46 17 15 1 >  - distancia: 512.975 - carga: 99
+percurso rota 3 : < 1 30 22 31 47 5 12 43 48 18 1 >  - distancia: 654.853 - carga: 98
+percurso rota 4 : < 1 40 21 27 9 16 28 1 >  - distancia: 505.062 - carga: 93
+percurso rota 5 : < 1 36 7 37 38 39 23 1 >  - distancia: 281.954 - carga: 99
+percurso rota 6 : < 1 11 34 47 5 43 48 1 >  - distancia: 437.194 - carga: 95
+total - 2775.95
+optimal_value: 1073
+% acima: 158.709%
+
+
+==========================================================
+
+Iteracao  =  66
+
+percurso rota 0 : < 1 41 17 48 11 34 30 1 >  - distancia: 317.633 - carga: 97
+percurso rota 1 : < 1 21 27 40 9 16 28 35 43 1 >  - distancia: 653.998 - carga: 100
+percurso rota 2 : < 1 13 44 6 2 24 15 1 >  - distancia: 201.357 - carga: 100
+percurso rota 3 : < 1 45 36 19 37 7 23 1 >  - distancia: 185.668 - carga: 98
+percurso rota 4 : < 1 22 31 47 34 29 46 10 25 1 >  - distancia: 588.7 - carga: 99
+percurso rota 5 : < 1 3 34 29 18 15 42 20 1 >  - distancia: 314.569 - carga: 99
+percurso rota 6 : < 1 38 37 7 24 18 1 >  - distancia: 197.262 - carga: 100
+total - 2459.19
+optimal_value: 1073
+% acima: 129.188%
+
+
+==========================================================
+
+Iteracao  =  67
+
+percurso rota 0 : < 1 21 16 12 5 25 14 10 46 1 >  - distancia: 654.524 - carga: 100
+percurso rota 1 : < 1 20 7 44 24 19 45 33 1 >  - distancia: 237.118 - carga: 99
+percurso rota 2 : < 1 35 11 17 48 18 15 1 >  - distancia: 221.041 - carga: 95
+percurso rota 3 : < 1 37 7 38 26 39 33 1 >  - distancia: 325.456 - carga: 100
+percurso rota 4 : < 1 22 31 47 34 11 3 1 >  - distancia: 441.735 - carga: 96
+percurso rota 5 : < 1 23 7 2 6 13 32 1 >  - distancia: 260.287 - carga: 96
+percurso rota 6 : < 1 28 16 9 40 27 12 43 1 >  - distancia: 596.762 - carga: 97
+total - 2736.92
+optimal_value: 1073
+% acima: 155.072%
+
+
+==========================================================
+
+Iteracao  =  68
+
+percurso rota 0 : < 1 42 18 17 48 29 28 1 >  - distancia: 253.881 - carga: 93
+percurso rota 1 : < 1 26 37 7 2 23 33 1 >  - distancia: 298.472 - carga: 94
+percurso rota 2 : < 1 3 11 34 47 31 22 30 1 >  - distancia: 515.977 - carga: 98
+percurso rota 3 : < 1 4 37 7 23 9 16 43 1 >  - distancia: 469.135 - carga: 100
+percurso rota 4 : < 1 35 46 37 38 20 39 23 33 1 >  - distancia: 431.719 - carga: 99
+percurso rota 5 : < 1 15 19 45 36 37 41 29 1 >  - distancia: 196.159 - carga: 97
+percurso rota 6 : < 1 6 13 44 24 19 1 >  - distancia: 154.418 - carga: 92
+total - 2319.76
+optimal_value: 1073
+% acima: 116.194%
+
+
+==========================================================
+
+Iteracao  =  69
+
+percurso rota 0 : < 1 31 22 47 14 5 25 16 9 1 >  - distancia: 673.484 - carga: 100
+percurso rota 1 : < 1 18 19 45 36 7 44 32 1 >  - distancia: 180.101 - carga: 98
+percurso rota 2 : < 1 20 39 38 37 7 1 >  - distancia: 278.731 - carga: 97
+percurso rota 3 : < 1 11 3 17 48 46 35 1 >  - distancia: 305.896 - carga: 99
+percurso rota 4 : < 1 29 48 46 41 13 6 1 >  - distancia: 267.354 - carga: 94
+percurso rota 5 : < 1 34 47 14 12 40 27 10 1 >  - distancia: 599.361 - carga: 99
+percurso rota 6 : < 1 42 17 46 28 10 21 4 1 >  - distancia: 440.283 - carga: 98
+total - 2745.21
+optimal_value: 1073
+% acima: 155.844%
+
+
+==========================================================
+
+Iteracao  =  70
+
+percurso rota 0 : < 1 10 11 29 12 21 25 43 1 >  - distancia: 546.813 - carga: 85
+percurso rota 1 : < 1 18 17 48 11 3 1 >  - distancia: 207.522 - carga: 95
+percurso rota 2 : < 1 5 14 47 31 22 34 29 12 1 >  - distancia: 654.678 - carga: 99
+percurso rota 3 : < 1 44 13 2 19 45 36 1 >  - distancia: 164.647 - carga: 98
+percurso rota 4 : < 1 46 28 16 9 40 27 43 1 >  - distancia: 554.078 - carga: 99
+percurso rota 5 : < 1 6 2 7 37 33 23 1 >  - distancia: 269.852 - carga: 100
+percurso rota 6 : < 1 41 38 20 39 26 37 33 1 >  - distancia: 379.908 - carga: 100
+total - 2777.5
+optimal_value: 1073
+% acima: 158.854%
+
+
+==========================================================
+
+Iteracao  =  71
+
+percurso rota 0 : < 1 7 2 6 44 24 45 1 >  - distancia: 215.029 - carga: 99
+percurso rota 1 : < 1 30 34 47 31 14 5 25 10 29 35 1 >  - distancia: 765.767 - carga: 100
+percurso rota 2 : < 1 46 28 16 9 40 27 1 >  - distancia: 465.309 - carga: 95
+percurso rota 3 : < 1 22 34 11 17 48 1 >  - distancia: 284.23 - carga: 94
+percurso rota 4 : < 1 8 41 19 45 36 18 42 3 1 >  - distancia: 242.732 - carga: 97
+percurso rota 5 : < 1 13 2 19 18 15 1 >  - distancia: 124.897 - carga: 91
+percurso rota 6 : < 1 39 37 38 20 26 27 1 >  - distancia: 394.12 - carga: 100
+total - 2492.08
+optimal_value: 1073
+% acima: 132.254%
+
+
+==========================================================
+
+Iteracao  =  72
+
+percurso rota 0 : < 1 20 37 38 26 39 23 33 1 >  - distancia: 390.022 - carga: 96
+percurso rota 1 : < 1 45 13 6 2 7 1 >  - distancia: 190.041 - carga: 96
+percurso rota 2 : < 1 31 14 5 25 16 9 40 10 1 >  - distancia: 660.822 - carga: 100
+percurso rota 3 : < 1 22 5 10 28 46 19 36 1 >  - distancia: 393.351 - carga: 96
+percurso rota 4 : < 1 34 48 18 15 42 24 32 1 >  - distancia: 237.206 - carga: 90
+percurso rota 5 : < 1 41 17 48 11 3 29 1 >  - distancia: 285.806 - carga: 98
+percurso rota 6 : < 1 47 14 12 28 27 21 1 >  - distancia: 532.573 - carga: 82
+total - 2689.82
+optimal_value: 1073
+% acima: 150.682%
+
+
+==========================================================
+
+Iteracao  =  73
+
+percurso rota 0 : < 1 27 40 9 16 28 46 35 1 >  - distancia: 525.475 - carga: 98
+percurso rota 1 : < 1 3 34 47 31 22 10 29 41 8 1 >  - distancia: 597.397 - carga: 100
+percurso rota 2 : < 1 14 25 5 12 47 37 21 1 >  - distancia: 585.611 - carga: 99
+percurso rota 3 : < 1 42 19 37 38 39 23 1 >  - distancia: 264.534 - carga: 98
+percurso rota 4 : < 1 6 7 2 13 32 1 >  - distancia: 212.121 - carga: 91
+percurso rota 5 : < 1 45 13 44 24 19 36 41 1 >  - distancia: 181.299 - carga: 99
+percurso rota 6 : < 1 11 17 48 18 15 1 >  - distancia: 160.875 - carga: 92
+total - 2527.31
+optimal_value: 1073
+% acima: 135.537%
+
+
+==========================================================
+
+Iteracao  =  74
+
+percurso rota 0 : < 1 41 38 20 39 26 37 33 1 >  - distancia: 379.908 - carga: 100
+percurso rota 1 : < 1 47 31 22 14 5 25 10 46 29 1 >  - distancia: 692.333 - carga: 99
+percurso rota 2 : < 1 44 6 2 19 18 1 >  - distancia: 155.721 - carga: 93
+percurso rota 3 : < 1 21 27 40 9 16 28 1 >  - distancia: 505.062 - carga: 93
+percurso rota 4 : < 1 7 6 24 19 45 15 1 >  - distancia: 156.888 - carga: 100
+percurso rota 5 : < 1 32 13 6 24 36 18 15 1 >  - distancia: 189.962 - carga: 97
+percurso rota 6 : < 1 17 11 34 31 12 43 1 >  - distancia: 434.546 - carga: 98
+total - 2514.42
+optimal_value: 1073
+% acima: 134.335%
+
+
+==========================================================
+
+Iteracao  =  75
+
+percurso rota 0 : < 1 14 31 22 47 11 17 1 >  - distancia: 436.62 - carga: 95
+percurso rota 1 : < 1 43 16 9 40 27 21 28 1 >  - distancia: 593.831 - carga: 97
+percurso rota 2 : < 1 8 37 7 2 6 32 1 >  - distancia: 268.545 - carga: 96
+percurso rota 3 : < 1 39 20 38 26 7 24 1 >  - distancia: 333.944 - carga: 100
+percurso rota 4 : < 1 29 48 18 15 19 45 36 1 >  - distancia: 168.169 - carga: 94
+percurso rota 5 : < 1 41 37 7 13 44 32 1 >  - distancia: 236.706 - carga: 96
+percurso rota 6 : < 1 34 31 5 25 10 28 46 35 1 >  - distancia: 578.541 - carga: 93
+total - 2616.36
+optimal_value: 1073
+% acima: 143.836%
+
+
+==========================================================
+
+Iteracao  =  76
+
+percurso rota 0 : < 1 5 16 9 40 27 21 10 1 >  - distancia: 593.001 - carga: 99
+percurso rota 1 : < 1 34 47 31 22 11 3 1 >  - distancia: 441.735 - carga: 96
+percurso rota 2 : < 1 32 44 13 6 2 24 41 1 >  - distancia: 263.969 - carga: 100
+percurso rota 3 : < 1 4 26 17 48 18 15 36 1 >  - distancia: 272.338 - carga: 100
+percurso rota 4 : < 1 33 38 26 7 19 45 1 >  - distancia: 247.668 - carga: 97
+percurso rota 5 : < 1 29 46 28 10 25 14 12 43 1 >  - distancia: 607.883 - carga: 85
+percurso rota 6 : < 1 20 39 38 37 7 1 >  - distancia: 278.731 - carga: 97
+total - 2705.33
+optimal_value: 1073
+% acima: 152.127%
+
+
+==========================================================
+
+Iteracao  =  77
+
+percurso rota 0 : < 1 41 17 48 18 15 36 24 1 >  - distancia: 186.478 - carga: 100
+percurso rota 1 : < 1 14 47 31 34 11 3 1 >  - distancia: 451.409 - carga: 97
+percurso rota 2 : < 1 22 47 31 5 25 10 46 29 35 1 >  - distancia: 663.933 - carga: 93
+percurso rota 3 : < 1 9 27 40 21 16 28 35 1 >  - distancia: 565.228 - carga: 96
+percurso rota 4 : < 1 12 47 29 42 44 1 >  - distancia: 316.602 - carga: 68
+percurso rota 5 : < 1 23 2 7 6 13 32 1 >  - distancia: 260.287 - carga: 96
+percurso rota 6 : < 1 4 20 38 37 19 45 1 >  - distancia: 275.597 - carga: 99
+total - 2719.53
+optimal_value: 1073
+% acima: 153.451%
+
+
+==========================================================
+
+Iteracao  =  78
+
+percurso rota 0 : < 1 15 48 18 42 3 20 1 >  - distancia: 224.174 - carga: 86
+percurso rota 1 : < 1 43 5 25 14 47 31 22 10 29 41 8 1 >  - distancia: 813.196 - carga: 98
+percurso rota 2 : < 1 17 11 34 47 10 1 >  - distancia: 330.658 - carga: 98
+percurso rota 3 : < 1 12 9 46 10 29 3 1 >  - distancia: 418.991 - carga: 81
+percurso rota 4 : < 1 16 40 27 21 9 28 35 1 >  - distancia: 565.228 - carga: 96
+percurso rota 5 : < 1 19 36 45 37 38 39 1 >  - distancia: 213.323 - carga: 99
+percurso rota 6 : < 1 6 2 7 13 32 1 >  - distancia: 212.121 - carga: 91
+total - 2777.69
+optimal_value: 1073
+% acima: 158.871%
+
+
+==========================================================
+
+Iteracao  =  79
+
+percurso rota 0 : < 1 23 2 13 44 19 45 41 1 >  - distancia: 231.998 - carga: 99
+percurso rota 1 : < 1 16 28 46 11 29 10 35 1 >  - distancia: 450.614 - carga: 97
+percurso rota 2 : < 1 24 6 2 7 44 32 1 >  - distancia: 237.108 - carga: 94
+percurso rota 3 : < 1 38 37 7 20 39 1 >  - distancia: 278.731 - carga: 97
+percurso rota 4 : < 1 17 18 15 36 41 26 27 1 >  - distancia: 284.386 - carga: 100
+percurso rota 5 : < 1 3 34 11 48 18 41 1 >  - distancia: 280.946 - carga: 100
+percurso rota 6 : < 1 9 28 46 11 29 31 30 43 1 >  - distancia: 565.688 - carga: 100
+total - 2329.47
+optimal_value: 1073
+% acima: 117.099%
+
+
+==========================================================
+
+Iteracao  =  80
+
+percurso rota 0 : < 1 14 47 31 22 34 11 29 1 >  - distancia: 528.347 - carga: 100
+percurso rota 1 : < 1 28 9 16 40 27 21 1 >  - distancia: 505.062 - carga: 93
+percurso rota 2 : < 1 24 44 37 33 42 3 12 43 1 >  - distancia: 423.366 - carga: 99
+percurso rota 3 : < 1 20 37 38 26 39 23 33 1 >  - distancia: 390.022 - carga: 96
+percurso rota 4 : < 1 32 13 6 2 7 23 1 >  - distancia: 260.287 - carga: 96
+percurso rota 5 : < 1 19 45 36 37 41 18 1 >  - distancia: 144.265 - carga: 92
+percurso rota 6 : < 1 10 46 17 48 18 15 1 >  - distancia: 228.087 - carga: 92
+total - 2479.44
+optimal_value: 1073
+% acima: 131.075%
+
+
+==========================================================
+
+Iteracao  =  81
+
+percurso rota 0 : < 1 29 46 37 38 20 39 1 >  - distancia: 342.007 - carga: 97
+percurso rota 1 : < 1 24 6 2 7 44 32 23 1 >  - distancia: 285.274 - carga: 99
+percurso rota 2 : < 1 34 22 31 14 5 25 10 12 43 1 >  - distancia: 747.029 - carga: 94
+percurso rota 3 : < 1 27 21 40 9 16 28 35 1 >  - distancia: 565.228 - carga: 96
+percurso rota 4 : < 1 47 11 3 48 18 15 1 >  - distancia: 274.956 - carga: 100
+percurso rota 5 : < 1 4 26 41 42 1 >  - distancia: 224.704 - carga: 44
+percurso rota 6 : < 1 17 19 45 36 13 41 8 1 >  - distancia: 205.342 - carga: 100
+total - 2644.54
+optimal_value: 1073
+% acima: 146.462%
+
+
+==========================================================
+
+Iteracao  =  82
+
+percurso rota 0 : < 1 15 48 46 28 16 9 1 >  - distancia: 337.181 - carga: 94
+percurso rota 1 : < 1 18 19 45 36 37 41 39 1 >  - distancia: 204.73 - carga: 100
+percurso rota 2 : < 1 25 14 47 31 22 34 11 1 >  - distancia: 553.698 - carga: 99
+percurso rota 3 : < 1 42 48 3 46 10 5 12 43 1 >  - distancia: 530.888 - carga: 99
+percurso rota 4 : < 1 13 2 37 38 39 1 >  - distancia: 251.811 - carga: 98
+percurso rota 5 : < 1 33 19 17 48 3 46 35 1 >  - distancia: 298.439 - carga: 99
+percurso rota 6 : < 1 24 44 6 2 7 23 1 >  - distancia: 249.053 - carga: 97
+total - 2425.8
+optimal_value: 1073
+% acima: 126.076%
+
+
+==========================================================
+
+Iteracao  =  83
+
+percurso rota 0 : < 1 12 21 7 2 6 32 1 >  - distancia: 367 - carga: 97
+percurso rota 1 : < 1 11 34 3 42 7 1 >  - distancia: 272.028 - carga: 99
+percurso rota 2 : < 1 41 17 48 18 15 36 45 1 >  - distancia: 173.937 - carga: 95
+percurso rota 3 : < 1 5 25 14 31 22 17 42 24 1 >  - distancia: 517.731 - carga: 96
+percurso rota 4 : < 1 47 34 3 42 7 23 33 1 >  - distancia: 392.58 - carga: 99
+percurso rota 5 : < 1 16 27 40 9 28 46 35 1 >  - distancia: 525.475 - carga: 98
+percurso rota 6 : < 1 19 37 38 20 39 23 1 >  - distancia: 292.291 - carga: 100
+total - 2541.04
+optimal_value: 1073
+% acima: 136.817%
+
+
+==========================================================
+
+Iteracao  =  84
+
+percurso rota 0 : < 1 42 48 17 11 34 1 >  - distancia: 241.393 - carga: 100
+percurso rota 1 : < 1 28 9 16 40 27 12 43 1 >  - distancia: 596.762 - carga: 97
+percurso rota 2 : < 1 7 6 19 45 36 29 1 >  - distancia: 193.767 - carga: 99
+percurso rota 3 : < 1 37 41 46 38 20 39 1 >  - distancia: 323.703 - carga: 97
+percurso rota 4 : < 1 33 2 19 18 15 3 29 35 1 >  - distancia: 301.244 - carga: 98
+percurso rota 5 : < 1 32 2 6 13 44 24 45 1 >  - distancia: 240.059 - carga: 98
+percurso rota 6 : < 1 21 9 38 26 18 10 30 1 >  - distancia: 473.001 - carga: 98
+total - 2369.93
+optimal_value: 1073
+% acima: 120.869%
+
+
+==========================================================
+
+Iteracao  =  85
+
+percurso rota 0 : < 1 8 38 7 23 18 15 42 1 >  - distancia: 270.564 - carga: 95
+percurso rota 1 : < 1 33 37 38 20 39 26 1 >  - distancia: 341.855 - carga: 91
+percurso rota 2 : < 1 34 17 48 11 3 1 >  - distancia: 263.647 - carga: 100
+percurso rota 3 : < 1 27 9 16 28 46 10 29 1 >  - distancia: 504.545 - carga: 98
+percurso rota 4 : < 1 12 5 25 14 47 31 22 10 29 1 >  - distancia: 735.016 - carga: 97
+percurso rota 5 : < 1 13 2 7 6 32 1 >  - distancia: 212.121 - carga: 91
+percurso rota 6 : < 1 24 19 45 36 7 44 32 1 >  - distancia: 190.66 - carga: 95
+total - 2518.41
+optimal_value: 1073
+% acima: 134.707%
+
+
+==========================================================
+
+Iteracao  =  86
+
+percurso rota 0 : < 1 10 28 16 9 40 27 5 1 >  - distancia: 569.172 - carga: 100
+percurso rota 1 : < 1 11 48 17 18 15 45 1 >  - distancia: 175.017 - carga: 99
+percurso rota 2 : < 1 25 16 21 47 31 22 34 1 >  - distancia: 581.84 - carga: 96
+percurso rota 3 : < 1 23 7 2 6 13 32 1 >  - distancia: 260.287 - carga: 96
+percurso rota 4 : < 1 36 37 41 46 19 45 1 >  - distancia: 182.473 - carga: 93
+percurso rota 5 : < 1 33 37 38 20 39 26 4 1 >  - distancia: 419.65 - carga: 96
+percurso rota 6 : < 1 12 9 21 47 14 29 3 1 >  - distancia: 569.08 - carga: 96
+total - 2757.52
+optimal_value: 1073
+% acima: 156.992%
+
+
+==========================================================
+
+Iteracao  =  87
+
+percurso rota 0 : < 1 19 37 7 26 39 33 1 >  - distancia: 275.493 - carga: 100
+percurso rota 1 : < 1 28 46 37 38 20 23 1 >  - distancia: 343.609 - carga: 100
+percurso rota 2 : < 1 45 13 7 26 36 18 1 >  - distancia: 205.57 - carga: 98
+percurso rota 3 : < 1 10 16 9 40 27 21 5 1 >  - distancia: 593.001 - carga: 99
+percurso rota 4 : < 1 47 14 5 25 31 22 34 3 1 >  - distancia: 641.323 - carga: 98
+percurso rota 5 : < 1 24 13 6 2 44 32 41 1 >  - distancia: 263.969 - carga: 100
+percurso rota 6 : < 1 43 9 12 11 17 42 1 >  - distancia: 398.816 - carga: 100
+total - 2721.78
+optimal_value: 1073
+% acima: 153.661%
+
+
+==========================================================
+
+Iteracao  =  88
+
+percurso rota 0 : < 1 20 26 38 39 46 41 15 1 >  - distancia: 363.894 - carga: 99
+percurso rota 1 : < 1 47 11 29 46 10 5 25 30 1 >  - distancia: 575.484 - carga: 100
+percurso rota 2 : < 1 36 19 45 13 6 44 1 >  - distancia: 160.745 - carga: 100
+percurso rota 3 : < 1 42 11 3 18 15 12 43 1 >  - distancia: 365.936 - carga: 98
+percurso rota 4 : < 1 37 7 2 24 18 1 >  - distancia: 182.576 - carga: 97
+percurso rota 5 : < 1 22 11 34 17 48 1 >  - distancia: 284.23 - carga: 94
+percurso rota 6 : < 1 9 27 40 21 16 28 35 43 1 >  - distancia: 653.998 - carga: 100
+total - 2586.86
+optimal_value: 1073
+% acima: 141.087%
+
+
+==========================================================
+
+Iteracao  =  89
+
+percurso rota 0 : < 1 6 13 44 32 18 16 25 1 >  - distancia: 329.604 - carga: 100
+percurso rota 1 : < 1 24 44 7 2 37 33 1 >  - distancia: 238.713 - carga: 98
+percurso rota 2 : < 1 19 36 45 37 41 46 35 1 >  - distancia: 242.64 - carga: 96
+percurso rota 3 : < 1 4 38 20 39 26 37 33 1 >  - distancia: 419.65 - carga: 96
+percurso rota 4 : < 1 14 31 22 47 34 11 29 1 >  - distancia: 528.347 - carga: 100
+percurso rota 5 : < 1 23 38 37 41 17 42 1 >  - distancia: 266.194 - carga: 100
+percurso rota 6 : < 1 3 34 17 48 18 15 1 >  - distancia: 233.434 - carga: 100
+total - 2258.58
+optimal_value: 1073
+% acima: 110.492%
+
+
+==========================================================
+
+Iteracao  =  90
+
+percurso rota 0 : < 1 9 21 28 12 47 31 22 30 1 >  - distancia: 670.873 - carga: 99
+percurso rota 1 : < 1 32 2 7 6 44 24 1 >  - distancia: 237.108 - carga: 94
+percurso rota 2 : < 1 16 40 27 21 28 12 43 1 >  - distancia: 608.749 - carga: 93
+percurso rota 3 : < 1 45 37 41 46 28 10 5 43 1 >  - distancia: 468.021 - carga: 97
+percurso rota 4 : < 1 13 7 19 36 42 1 >  - distancia: 151.364 - carga: 97
+percurso rota 5 : < 1 11 17 48 18 15 1 >  - distancia: 160.875 - carga: 92
+percurso rota 6 : < 1 23 37 38 20 39 26 4 1 >  - distancia: 430.08 - carga: 98
+total - 2727.07
+optimal_value: 1073
+% acima: 154.154%
+
+
+==========================================================
+
+Iteracao  =  91
+
+percurso rota 0 : < 1 13 24 44 6 2 23 1 >  - distancia: 237.861 - carga: 94
+percurso rota 1 : < 1 46 38 20 39 26 9 1 >  - distancia: 396.277 - carga: 97
+percurso rota 2 : < 1 33 19 45 36 37 38 4 1 >  - distancia: 268.388 - carga: 99
+percurso rota 3 : < 1 43 5 25 14 34 3 42 9 1 >  - distancia: 595.07 - carga: 98
+percurso rota 4 : < 1 7 37 41 28 16 4 1 >  - distancia: 358.411 - carga: 97
+percurso rota 5 : < 1 11 48 17 18 15 1 >  - distancia: 160.875 - carga: 92
+percurso rota 6 : < 1 22 31 47 34 3 42 29 35 1 >  - distancia: 536.313 - carga: 96
+total - 2553.2
+optimal_value: 1073
+% acima: 137.949%
+
+
+==========================================================
+
+Iteracao  =  92
+
+percurso rota 0 : < 1 9 16 40 21 38 41 1 >  - distancia: 445.627 - carga: 98
+percurso rota 1 : < 1 47 34 11 17 15 1 >  - distancia: 271.44 - carga: 99
+percurso rota 2 : < 1 4 26 20 38 39 46 41 1 >  - distancia: 430.027 - carga: 93
+percurso rota 3 : < 1 27 12 5 25 14 31 22 10 29 41 1 >  - distancia: 770.419 - carga: 100
+percurso rota 4 : < 1 28 16 40 38 46 10 1 >  - distancia: 426.861 - carga: 98
+percurso rota 5 : < 1 7 44 13 6 24 32 1 >  - distancia: 225.246 - carga: 96
+percurso rota 6 : < 1 37 19 45 36 24 2 1 >  - distancia: 164.855 - carga: 100
+total - 2734.47
+optimal_value: 1073
+% acima: 154.844%
+
+
+==========================================================
+
+Iteracao  =  93
+
+percurso rota 0 : < 1 3 17 48 11 34 1 >  - distancia: 263.647 - carga: 100
+percurso rota 1 : < 1 36 7 2 6 44 32 23 1 >  - distancia: 277.459 - carga: 100
+percurso rota 2 : < 1 29 34 47 31 22 14 5 25 30 1 >  - distancia: 713.613 - carga: 95
+percurso rota 3 : < 1 43 12 16 9 40 27 21 1 >  - distancia: 620.59 - carga: 96
+percurso rota 4 : < 1 18 19 45 37 7 23 1 >  - distancia: 182.924 - carga: 100
+percurso rota 5 : < 1 28 46 37 38 20 23 1 >  - distancia: 343.609 - carga: 100
+percurso rota 6 : < 1 33 19 13 24 15 42 1 >  - distancia: 161.164 - carga: 85
+total - 2563.01
+optimal_value: 1073
+% acima: 138.864%
+
+
+==========================================================
+
+Iteracao  =  94
+
+percurso rota 0 : < 1 21 9 40 27 12 43 10 35 41 1 >  - distancia: 709.067 - carga: 100
+percurso rota 1 : < 1 46 38 7 23 36 18 1 >  - distancia: 247.674 - carga: 97
+percurso rota 2 : < 1 45 37 38 20 39 26 4 1 >  - distancia: 396.056 - carga: 100
+percurso rota 3 : < 1 28 37 7 2 36 1 >  - distancia: 228.893 - carga: 98
+percurso rota 4 : < 1 6 13 44 24 19 1 >  - distancia: 154.418 - carga: 92
+percurso rota 5 : < 1 16 12 5 25 14 47 31 22 30 1 >  - distancia: 762.645 - carga: 98
+percurso rota 6 : < 1 29 34 11 17 48 1 >  - distancia: 261.694 - carga: 95
+total - 2760.45
+optimal_value: 1073
+% acima: 157.264%
+
+
+==========================================================
+
+Iteracao  =  95
+
+percurso rota 0 : < 1 28 9 38 4 36 45 24 1 >  - distancia: 352.612 - carga: 93
+percurso rota 1 : < 1 33 7 2 6 13 32 1 >  - distancia: 249.857 - carga: 94
+percurso rota 2 : < 1 8 41 37 38 20 39 26 1 >  - distancia: 390.546 - carga: 99
+percurso rota 3 : < 1 40 38 4 36 18 15 42 1 >  - distancia: 311.274 - carga: 97
+percurso rota 4 : < 1 19 37 46 10 47 22 1 >  - distancia: 353.833 - carga: 100
+percurso rota 5 : < 1 29 17 48 11 34 1 >  - distancia: 261.694 - carga: 95
+percurso rota 6 : < 1 21 27 9 16 12 5 25 43 1 >  - distancia: 701.612 - carga: 99
+total - 2621.43
+optimal_value: 1073
+% acima: 144.308%
+
+
+==========================================================
+
+Iteracao  =  96
+
+percurso rota 0 : < 1 33 7 2 37 36 15 1 >  - distancia: 208.034 - carga: 97
+percurso rota 1 : < 1 6 13 44 24 19 45 1 >  - distancia: 168.56 - carga: 99
+percurso rota 2 : < 1 34 17 42 47 31 22 30 43 1 >  - distancia: 561.371 - carga: 100
+percurso rota 3 : < 1 40 16 28 46 37 41 1 >  - distancia: 375.536 - carga: 99
+percurso rota 4 : < 1 18 48 17 11 3 35 8 1 >  - distancia: 316.062 - carga: 100
+percurso rota 5 : < 1 9 27 21 38 36 47 1 >  - distancia: 440.47 - carga: 98
+percurso rota 6 : < 1 4 26 20 38 39 36 47 1 >  - distancia: 449.16 - carga: 99
+total - 2519.19
+optimal_value: 1073
+% acima: 134.78%
+
+
+==========================================================
+
+Iteracao  =  97
+
+percurso rota 0 : < 1 33 7 2 6 13 32 23 1 >  - distancia: 298.023 - carga: 99
+percurso rota 1 : < 1 12 9 28 10 29 41 36 24 1 >  - distancia: 460.21 - carga: 100
+percurso rota 2 : < 1 39 20 38 37 7 1 >  - distancia: 278.731 - carga: 97
+percurso rota 3 : < 1 35 11 17 48 18 42 1 >  - distancia: 245.435 - carga: 98
+percurso rota 4 : < 1 47 31 22 34 11 3 1 >  - distancia: 441.735 - carga: 96
+percurso rota 5 : < 1 14 25 5 16 9 40 27 43 1 >  - distancia: 687.078 - carga: 96
+percurso rota 6 : < 1 46 17 18 15 19 45 1 >  - distancia: 145.945 - carga: 96
+total - 2557.16
+optimal_value: 1073
+% acima: 138.318%
+
+
+==========================================================
+
+Iteracao  =  98
+
+percurso rota 0 : < 1 17 11 34 47 31 1 >  - distancia: 341.411 - carga: 98
+percurso rota 1 : < 1 21 27 16 12 5 25 14 22 30 1 >  - distancia: 772.447 - carga: 96
+percurso rota 2 : < 1 29 48 18 15 19 45 36 1 >  - distancia: 168.169 - carga: 94
+percurso rota 3 : < 1 43 16 28 46 37 41 36 1 >  - distancia: 395.173 - carga: 100
+percurso rota 4 : < 1 24 44 13 6 2 1 >  - distancia: 189.695 - carga: 89
+percurso rota 5 : < 1 38 39 20 26 7 23 1 >  - distancia: 355.427 - carga: 93
+percurso rota 6 : < 1 9 40 27 16 12 10 35 1 >  - distancia: 568.782 - carga: 91
+total - 2791.1
+optimal_value: 1073
+% acima: 160.122%
+
+
+==========================================================
+
+Iteracao  =  99
+
+percurso rota 0 : < 1 6 44 13 2 19 1 >  - distancia: 175.818 - carga: 100
+percurso rota 1 : < 1 35 28 16 9 40 27 21 1 >  - distancia: 565.228 - carga: 96
+percurso rota 2 : < 1 30 34 11 17 48 15 1 >  - distancia: 291.242 - carga: 99
+percurso rota 3 : < 1 37 41 46 38 20 39 1 >  - distancia: 323.703 - carga: 97
+percurso rota 4 : < 1 31 47 34 3 18 29 10 43 1 >  - distancia: 536.972 - carga: 100
+percurso rota 5 : < 1 26 7 19 45 36 24 32 1 >  - distancia: 228.935 - carga: 98
+percurso rota 6 : < 1 42 11 3 18 29 22 14 1 >  - distancia: 392.304 - carga: 95
+total - 2514.2
+optimal_value: 1073
+% acima: 134.315%
+
+
+==========================================================
+
+Iteracao  =  100
+
+percurso rota 0 : < 1 3 11 17 48 18 1 >  - distancia: 207.522 - carga: 95
+percurso rota 1 : < 1 47 11 29 19 45 36 1 >  - distancia: 252.822 - carga: 96
+percurso rota 2 : < 1 28 9 16 40 21 12 43 1 >  - distancia: 600.847 - carga: 99
+percurso rota 3 : < 1 8 41 37 38 20 39 26 1 >  - distancia: 390.546 - carga: 99
+percurso rota 4 : < 1 34 31 22 14 5 25 10 46 35 1 >  - distancia: 675.743 - carga: 95
+percurso rota 5 : < 1 27 16 40 38 46 29 35 1 >  - distancia: 492.247 - carga: 97
+percurso rota 6 : < 1 2 13 6 7 23 1 >  - distancia: 224.066 - carga: 94
+total - 2843.79
+optimal_value: 1073
+% acima: 165.032%
+
+
+==========================================================
+
 

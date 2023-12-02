@@ -32,17 +32,18 @@ class Solucao{
         
         ~Solucao();
         unordered_map<int,rota> guloso(ofstream &output_file);
-        unordered_map<int,rota> gulosoRandomizadoAdaptativo(ofstream &output_file, float param_1, int maxIter);
-        unordered_map<int,rota> gulosoRandomizadoAdaptativoReativo(ofstream &output_file, float param_1, int maxIter);
+        unordered_map<int,rota> gulosoRandomizadoAdaptativo(ofstream &output_file, float alpha, int maxIter);
+        unordered_map<int,rota> gulosoRandomizadoAdaptativoReativo(ofstream &output_file, float alpha, int maxIter);
         double custoMinimo(Grafo *grafo);
         void imprimeRotas(bool completa) const;
 
     private:
-        int gerarNumeroAleatorio();
+        int gerarNumeroAleatorio(int inicio, int fim);
         void lerArquivo(string txt);
         void construirArestas();
         void construirMatriz();
         void imprimeMatriz();
+        void escreveRotas(ofstream &output_file, bool completa, int iter);
         
         
         No* findMinDistance(No* partida, vector<int> percorridos,  double capacidade);
@@ -55,12 +56,17 @@ class Solucao{
         
         bool noValido(No* destino , vector<int> percorridos, int i, unordered_map<int, rota> rotas);
         void makeCandidatos();
+        void makeCandidatosRandomizado(float alpha);
         void atualizaCandidatos(No* alterado);
+        void atualizaCandidatosRandomizado(No* alterado, float alpha);
         int getCandidatos();
         bool parar();
         void atualizaRota(int i, No* destino);
         void makeStop();
         void backToGalpao();
+        pair<No*, double> ordena(unordered_map<No*, double> listCandidatos, float alpha);
+        void initVariables();
+
 
 
         Grafo* grafo;
