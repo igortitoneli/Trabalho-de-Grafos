@@ -190,12 +190,12 @@ void Solucao::makeCandidatos(){
                 // (peso / distancia) entre o ultimo nó da rota e o nó do for
                 if(this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first] != 0){
                     
-                    double euristica = no.second->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first];
+                    double heuristica = no.second->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first];
                     
-                    if(euristica > candidatos[i].euristica)
+                    if(heuristica > candidatos[i].heuristica)
                     {
                         candidatos[i].no = no.second;
-                        candidatos[i].euristica = euristica;
+                        candidatos[i].heuristica = heuristica;
                     }
                 }
             }
@@ -216,15 +216,15 @@ void Solucao::makeCandidatosRandomizado(float alpha){
                 // (peso / distancia) entre o ultimo nó da rota e o nó do for
                 if(this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first] != 0){
                     
-                    double euristica = no.second->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first];
+                    double heuristica = no.second->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first];
                     
-                    listCandidatos[no.second] = euristica;
+                    listCandidatos[no.second] = heuristica;
                 }
             }
         }
         pair<No*, double> NoEscolhido = ordena(listCandidatos, alpha); 
         candidatos[i].no = NoEscolhido.first;
-        candidatos[i].euristica = NoEscolhido.second; 
+        candidatos[i].heuristica = NoEscolhido.second; 
     }
 }
 
@@ -244,8 +244,8 @@ pair<No*, double> Solucao::ordena(unordered_map<No*, double> listCandidatos, flo
     
     No* no = list.at(numero_aleatorio).first;
     
-    double euristica = list.at(numero_aleatorio).second; 
-    pair<No*,double> NoEscolhido (no, euristica);
+    double heuristica = list.at(numero_aleatorio).second; 
+    pair<No*,double> NoEscolhido (no, heuristica);
     
     return NoEscolhido; 
 }
@@ -257,18 +257,18 @@ void Solucao::atualizaCandidatos(No* alterado){
     {
         if(rotas[i].ultimoNo->getIdNo() == alterado->getIdNo()){
             
-            candidatos[i].euristica = 0;
+            candidatos[i].heuristica = 0;
             // para todos os nós do grafo
             for (const auto& no : grafo->getHashNo()) {        
                 // demanda / distancia entre o ultimo nó da rota e o nó do for
-                double euristica = no.second->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first] ;
+                double heuristica = no.second->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first] ;
                 
-                if(euristica > candidatos[i].euristica &&
+                if(heuristica > candidatos[i].heuristica &&
                     !this->inPercorridos(no.second,percorridos) && 
                     rotas[i].cargaAtual + no.second->getDemanda() <= this->capacidade)
                 {
                     candidatos[i].no = no.second;
-                    candidatos[i].euristica = euristica;
+                    candidatos[i].heuristica = heuristica;
                 }
             }
         }
@@ -283,18 +283,18 @@ void Solucao::atualizaCandidatosRandomizado(No* alterado, float alpha){
         unordered_map<No*, double> listCandidatos;
         if(rotas[i].ultimoNo->getIdNo() == alterado->getIdNo()){
             
-            candidatos[i].euristica = 0;
+            candidatos[i].heuristica = 0;
             // para todos os nós do grafo
             for (const auto& no : grafo->getHashNo()) {
                 // demanda / distancia entre o ultimo nó da rota e o nó do for
-                double euristica = no.second->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first] ;
+                double heuristica = no.second->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first] ;
                 
-                listCandidatos[no.second] = euristica;
+                listCandidatos[no.second] = heuristica;
             }
         }
         pair<No*, double> NoEscolhido = ordena(listCandidatos, alpha); 
         candidatos[i].no = NoEscolhido.first;
-        candidatos[i].euristica = NoEscolhido.second; 
+        candidatos[i].heuristica = NoEscolhido.second; 
     }
 }
 
@@ -303,8 +303,8 @@ int Solucao::getCandidatos() {
     double max = DBL_MIN;
     int cont = -1;
     for(int i=0; i < this->caminhoes; i++){ 
-        if(max < candidatos[i].euristica){
-            max = candidatos[i].euristica;
+        if(max < candidatos[i].heuristica){
+            max = candidatos[i].heuristica;
             cont = i;
         }     
     }

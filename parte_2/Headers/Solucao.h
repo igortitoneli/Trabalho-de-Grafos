@@ -23,7 +23,7 @@ struct rota{
 
 struct candidato{
     No* no;
-    double euristica = 0;
+    double heuristica = 0;
 };
 
 
