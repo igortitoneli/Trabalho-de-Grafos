@@ -43,7 +43,7 @@ Solucao::~Solucao()
 
 void Solucao::lerArquivo(string txt)
 {
-    ifstream arquivo("./parte_2/Instances/" + txt);
+    ifstream arquivo("./parte_2/Instances/" + txt + ".vrp.txt");
 
     if (!arquivo.is_open())
     {
@@ -120,26 +120,26 @@ void Solucao::lerArquivo(string txt)
 
 void Solucao::construirArestas()
 {
-    for(No* i = this->grafo->getNoRaiz(); i; i=i->getProxNo()){
-        for(No* j = this->grafo->getNoRaiz(); j; j=j->getProxNo()){
-            if(i!=j){
-                float difX = abs(i->getX() - j->getX()) * abs(i->getX() - j->getX());
-                float difY = abs(i->getY() - j->getY()) * abs(i->getY() - j->getY());
+    for (const auto& i : grafo->getHashNo()) {
+        for (const auto& j : grafo->getHashNo()) {
+            if(i.first!=j.first){
+                float difX = abs(i.second->getX() - j.second->getX()) * abs(i.second->getX() - j.second->getX());
+                float difY = abs(i.second->getY() - j.second->getY()) * abs(i.second->getY() - j.second->getY());
 
                 float pesoAresta = sqrt(difX + difY);
-                i->insereArestaNo(j,pesoAresta);
-            }
-        }
+                i.second->insereArestaNo(j.second,pesoAresta);
+            }    
+        }        
     }
 }
 
 
 void Solucao::construirMatriz()
 {
-    for(No *i = this->grafo->getNoRaiz(); i; i=i->getProxNo()){
-        for(Aresta *a = i->getPrimeiraAresta(); a; a=a->getProxAresta()){
-            this->matrizDistancias[i->getIdNo()][a->getNoDestino()->getIdNo()] = a->getPeso(); 
-        }
+    for (const auto& i : grafo->getHashNo()) {
+        for(Aresta *a = i.second->getPrimeiraAresta(); a; a=a->getProxAresta()){
+            this->matrizDistancias[i.second->getIdNo()][a->getNoDestino()->getIdNo()] = a->getPeso(); 
+        }     
     }
 }
 
@@ -147,28 +147,22 @@ void Solucao::construirMatriz()
 void Solucao::imprimeMatriz()
 {
     cout << "   ";
-        for (No *no = this->grafo->getNoRaiz(); no != NULL; no = no->getProxNo())
-        {
-            cout << no->getIdNo() << "\t";
-        }
-        cout << endl
-                << "   ";
-        for (No *no = this->grafo->getNoRaiz(); no != NULL; no = no->getProxNo())
-        {
-            cout << "-" << "\t";
+    for (const auto& no : grafo->getHashNo()) {
+        cout << no.first << "\t";
+    }
+    cout << endl
+            << "   ";
+    for (const auto& no : grafo->getHashNo()) {
+        cout << "-" << "\t";    
+    }
+    cout << endl;
+    for (const auto& coluna : grafo->getHashNo()) {
+        cout << coluna.first << "|\t";
+        for (const auto& linha : grafo->getHashNo()) {
+            cout << this->matrizDistancias[linha.first][coluna.first] << "\t";
         }
         cout << endl;
-
-        for (No *coluna = this->grafo->getNoRaiz(); coluna != NULL; coluna = coluna->getProxNo())
-        {
-            cout << coluna->getIdNo() << "|\t";
-            for (No *linha = this->grafo->getNoRaiz(); linha != NULL; linha = linha->getProxNo())
-            {
-
-                cout << this->matrizDistancias[linha->getIdNo()][coluna->getIdNo()] << "\t";
-            }
-            cout << endl;
-        }
+    }
 }
 
 
@@ -191,17 +185,16 @@ void Solucao::makeCandidatos(){
     for(int i=0; i<this->caminhoes; i++)
     {
         // para todos os nós do grafo
-        for(No *no = this->grafo->getNoRaiz(); no; no = no->getProxNo())
-        {    
-            if(!this->inPercorridos(no,percorridos)){
+        for (const auto& no : grafo->getHashNo()) {
+            if(!this->inPercorridos(no.second,percorridos)){
                 // (peso / distancia) entre o ultimo nó da rota e o nó do for
-                if(this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no->getIdNo()] != 0){
+                if(this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first] != 0){
                     
-                    double euristica = no->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no->getIdNo()];
+                    double euristica = no.second->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first];
                     
                     if(euristica > candidatos[i].euristica)
                     {
-                        candidatos[i].no = no;
+                        candidatos[i].no = no.second;
                         candidatos[i].euristica = euristica;
                     }
                 }
@@ -218,15 +211,14 @@ void Solucao::makeCandidatosRandomizado(float alpha){
     {
         unordered_map<No*, double> listCandidatos;
         // para todos os nós do grafo
-        for(No *no = this->grafo->getNoRaiz(); no; no = no->getProxNo())
-        {    
-            if(!this->inPercorridos(no,percorridos)){
+        for (const auto& no : grafo->getHashNo()) {
+            if(!this->inPercorridos(no.second,percorridos)){
                 // (peso / distancia) entre o ultimo nó da rota e o nó do for
-                if(this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no->getIdNo()] != 0){
+                if(this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first] != 0){
                     
-                    double euristica = no->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no->getIdNo()];
+                    double euristica = no.second->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first];
                     
-                    listCandidatos[no] = euristica;
+                    listCandidatos[no.second] = euristica;
                 }
             }
         }
@@ -267,16 +259,15 @@ void Solucao::atualizaCandidatos(No* alterado){
             
             candidatos[i].euristica = 0;
             // para todos os nós do grafo
-            for(No *no = this->grafo->getNoRaiz(); no; no = no->getProxNo())
-            {
+            for (const auto& no : grafo->getHashNo()) {        
                 // demanda / distancia entre o ultimo nó da rota e o nó do for
-                double euristica = no->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no->getIdNo()] ;
+                double euristica = no.second->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first] ;
                 
                 if(euristica > candidatos[i].euristica &&
-                    !this->inPercorridos(no,percorridos) && 
-                    rotas[i].cargaAtual + no->getDemanda() <= this->capacidade)
+                    !this->inPercorridos(no.second,percorridos) && 
+                    rotas[i].cargaAtual + no.second->getDemanda() <= this->capacidade)
                 {
-                    candidatos[i].no = no;
+                    candidatos[i].no = no.second;
                     candidatos[i].euristica = euristica;
                 }
             }
@@ -294,12 +285,11 @@ void Solucao::atualizaCandidatosRandomizado(No* alterado, float alpha){
             
             candidatos[i].euristica = 0;
             // para todos os nós do grafo
-            for(No *no = this->grafo->getNoRaiz(); no; no = no->getProxNo())
-            {
+            for (const auto& no : grafo->getHashNo()) {
                 // demanda / distancia entre o ultimo nó da rota e o nó do for
-                double euristica = no->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no->getIdNo()] ;
+                double euristica = no.second->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first] ;
                 
-                listCandidatos[no] = euristica;
+                listCandidatos[no.second] = euristica;
             }
         }
         pair<No*, double> NoEscolhido = ordena(listCandidatos, alpha); 
@@ -342,7 +332,60 @@ void Solucao::atualizaRota(int i, No* destino) {
 };
 
 
-void Solucao::imprimeRotas(bool completa) const{
+double Solucao::media(){
+    double soma = 0;
+    for(double rota : total_rotas){
+        soma += rota;
+    }
+    if (!total_rotas.empty()) {
+        double media = soma / total_rotas.size();
+        cout << "Media: " << media << endl;
+        return media;
+    } else {
+        cout << "Não foi possivel calcular media." << endl;
+        return 0;
+    }
+
+}
+
+
+double Solucao::desvioPadrao(double media){
+    double soma = 0; 
+
+    for(double valor : total_rotas){
+        soma += pow(abs(valor - media),2);
+    }
+    soma = soma / total_rotas.size();
+    double desvioPadrao = sqrt(soma);
+    cout << "Desvio Padrao: " << desvioPadrao << endl;
+    return desvioPadrao;
+}
+
+
+void Solucao::mape(){
+    
+    double soma = 0;
+    for(double valor : total_rotas){
+        soma += (valor - optimal_value)/valor;
+    }
+    cout << "Mape: " << soma/total_rotas.size();
+
+}
+
+
+void Solucao::Estatisticas(){
+    if(total_rotas.empty()){
+        cout << "Nao foi possivel calcular Estatisticas." << endl;
+        exit(1);
+    }
+
+    double media = this->media();
+    desvioPadrao(media);
+    mape();
+}
+
+
+void Solucao::imprimeRotas(bool completa){
     
     if(completa)
         cout << endl << GREEN << "Imprimindo as rotas" << endl << endl;
@@ -364,6 +407,8 @@ void Solucao::imprimeRotas(bool completa) const{
     if (this->optimal_value > 0){
         cout << "optimal_value: " << this->optimal_value << endl;
         cout << "% acima: " << ((total/this->optimal_value) - 1) * 100 << "%" << RESET << endl; 
+        Estatisticas();
+    
     }
     else{
         cout << "Nao possui optimal_value" << RESET <<  endl;
@@ -388,6 +433,7 @@ void Solucao::backToGalpao(){
 int Solucao::gerarNumeroAleatorio(int inicio, int fim) {
     return (rand() % (fim - inicio + 1) + inicio);
 }
+
 
 void Solucao::escreveRotas(ofstream &output_file, bool completa, int iter){
 
@@ -424,6 +470,7 @@ void Solucao::escreveRotas(ofstream &output_file, bool completa, int iter){
 
 }
 
+
 unordered_map<int,rota> Solucao::guloso(ofstream &output_file)
 {
     // inicializa randomicamente
@@ -452,6 +499,7 @@ unordered_map<int,rota> Solucao::guloso(ofstream &output_file)
             atualizaCandidatos(candidatos[i].no);
         }
         catch(const ExcecaoSemCandidatos& e){
+            completa = false;
             backToGalpao();
             e.what();
             return rotas;
@@ -460,6 +508,8 @@ unordered_map<int,rota> Solucao::guloso(ofstream &output_file)
     backToGalpao();
 
     imprimeRotas(completa); 
+
+    escreveRotas(output_file,completa,0);
     return this->rotas;
 }
 
@@ -467,19 +517,40 @@ unordered_map<int,rota> Solucao::guloso(ofstream &output_file)
 void Solucao::initVariables(){
     for(int i=0; i<this->caminhoes; i++){
         rotas[i] = rota();
+        best[i] = rota();
+        best[i].distancia = DBL_MAX;
         percorridos = {1};
     }
 
 }
 
 
+void Solucao::calculaBest(){
+    double total_best = 0;
+    double total_rota = 0;
+    for(int i=0; i<caminhoes; i++){
+        total_best += best[i].distancia; 
+        total_rota += rotas[i].distancia; 
+    }
+
+    total_rotas.push_back(total_rota);
+    
+    if(total_rota < total_best){
+        best = rotas;
+    }
+}
+
+
 unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_file, float alpha, int maxIter)
 {
     int iter = 0;
+    bool completa = true;
+
     while(iter < maxIter){
+
         // inicializa randomicamente
         initVariables();
-        
+
         int i = 0;
         while(i < this->caminhoes){
             No* destino = this->grafo->procurarNoPeloId(gerarNumeroAleatorio(inicio,fim));
@@ -494,7 +565,7 @@ unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_fi
         makeStop();
         
         // peso / distancia
-        bool completa = true;
+        completa = true;
         while(percorridos.size() != this->grafo->getOrdem())
         {
             try{
@@ -505,24 +576,75 @@ unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_fi
                 atualizaCandidatos(candidatos[i].no);
             }
             catch(const ExcecaoSemCandidatos& e){
+                completa = false;
                 e.what();
                 break;
             }
         }
         backToGalpao();
-
-        imprimeRotas(completa); 
-
-        escreveRotas(output_file,completa,iter);
+        if(completa) calculaBest();
         iter++;
     }
+
+    rotas = best;
+    imprimeRotas(completa); 
+    // escreveRotas(output_file,completa,iter);
+
     return this->rotas;
 }
 
 
-unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativoReativo(ofstream &output_file, float param_1, int maxIter)
+unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativoReativo(ofstream &output_file, float alpha, int maxIter)
 {
-    return rotas;
+    int iter = 0;
+    bool completa = true;
+
+    while(iter < maxIter){
+
+        // inicializa randomicamente
+        initVariables();
+
+        int i = 0;
+        while(i < this->caminhoes){
+            No* destino = this->grafo->procurarNoPeloId(gerarNumeroAleatorio(inicio,fim));
+            if(noValido(destino, percorridos, i, rotas)){
+                percorridos.push_back(destino->getIdNo());
+                atualizaRota(i, destino);
+                i++;
+            }
+        }
+
+        makeCandidatosRandomizado(alpha);
+        makeStop();
+        
+        // peso / distancia
+        completa = true;
+        while(percorridos.size() != this->grafo->getOrdem())
+        {
+            try{
+                stop = candidatos;
+                i = getCandidatos();
+                percorridos.push_back(candidatos[i].no->getIdNo());
+                atualizaRota(i, candidatos[i].no);
+                atualizaCandidatos(candidatos[i].no);
+            }
+            catch(const ExcecaoSemCandidatos& e){
+                completa = false;
+                e.what();
+                break;
+            }
+        }
+        backToGalpao();
+        if(completa) calculaBest();
+        iter++;
+    }
+
+    rotas = best;
+    imprimeRotas(completa); 
+    // escreveRotas(output_file,completa,iter);
+
+    return this->rotas;
+
 }
 
 
@@ -540,15 +662,14 @@ No* Solucao::findMinDistance(No* partida, vector<int> percorridos, double capaci
     double minDistance = DBL_MAX;
     No* destino = NULL;
     
-    for (No *i = this->grafo->getNoRaiz(); i; i = i->getProxNo())
-    {
-        if(matrizDistancias[partida->getIdNo()][i->getIdNo()] < minDistance && 
-            !inPercorridos(i,percorridos) && 
-            i!= partida && 
-            capacidade + i->getDemanda() < this->capacidade
+    for (const auto& i : grafo->getHashNo()) {
+        if(matrizDistancias[partida->getIdNo()][i.first] < minDistance && 
+            !inPercorridos(i.second,percorridos) && 
+            i.second!= partida && 
+            capacidade + i.second->getDemanda() < this->capacidade
             ){
-            minDistance = matrizDistancias[partida->getIdNo()][i->getIdNo()];
-            destino = i;
+            minDistance = matrizDistancias[partida->getIdNo()][i.first];
+            destino = i.second;
         }
     }
 
@@ -558,48 +679,47 @@ No* Solucao::findMinDistance(No* partida, vector<int> percorridos, double capaci
 
 unordered_map<int, bool> Solucao::initHash(){
     unordered_map<int, bool> hash;
-
-    for(No* i = grafo->getNoRaiz(); i; i=i->getProxNo()){
-        hash[i->getIdNo()] = false;
+    for (const auto& no : grafo->getHashNo()) {        
+        hash[no.first] = false;
     }
     hash[this->galpao->getIdNo()] = true;
     return hash;
 }
 
-bool Solucao::checadosHash(unordered_map<No*,bool> hash){
-    // int cont = 0;
-    for(No *i = this->grafo->getNoRaiz(); i; i = i->getProxNo())
-        if(hash[i] == false){
-            // cont ++;
-            // cout << "FALTA O Noh " << i->getIdNo() << endl; 
-            return false;
-        }
-    // return cont == 0;
-    return true;
-}
+// bool Solucao::checadosHash(unordered_map<No*,bool> hash) {
+//     // int cont = 0;
+//     for (const auto& no : grafo->getHashNo()) {
+//         if(hash[no.second] == false){
+//             // cont ++;
+//             // cout << "FALTA O Noh " << i->getIdNo() << endl; 
+//             return false;
+//         }
+//     // return cont == 0;
+//     return true;
+// }
 
 
-double Solucao::custoMinimo(Grafo *grafo)
-{   
-    cout << "O custo minimo foi de " << grafo->somaPesoArestas() / 2 << endl;
-    return grafo->somaPesoArestas() / 2;
-}
+// double Solucao::custoMinimo(Grafo *grafo)
+// {   
+//     cout << "O custo minimo foi de " << grafo->somaPesoArestas() / 2 << endl;
+//     return grafo->somaPesoArestas() / 2;
+// }
 
 
-unordered_map<int, No*> Solucao::initHashMenorCaminho(No* galpao){
-    unordered_map<int, No*> hashMenorCaminho;
-    for(int i=0; i<caminhoes; i++){
-        hashMenorCaminho[i] = galpao;
-    }
-    return hashMenorCaminho;
-}
+// unordered_map<int, No*> Solucao::initHashMenorCaminho(No* galpao){
+//     unordered_map<int, No*> hashMenorCaminho;
+//     for(int i=0; i<caminhoes; i++){
+//         hashMenorCaminho[i] = galpao;
+//     }
+//     return hashMenorCaminho;
+// }
 
 
-unordered_map<int, double> Solucao::setCapacidade(){
-    unordered_map<int, double> capacidade;
-    for(int i=0; i<caminhoes; i++){
-        capacidade[i] = 0;
-    }
-    return capacidade;
-}
+// unordered_map<int, double> Solucao::setCapacidade(){
+//     unordered_map<int, double> capacidade;
+//     for(int i=0; i<caminhoes; i++){
+//         capacidade[i] = 0;
+//     }
+//     return capacidade;
+// }
 

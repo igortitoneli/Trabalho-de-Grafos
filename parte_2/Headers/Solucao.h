@@ -8,6 +8,7 @@
 #include "./No.h"
 #include "./Grafo.h"
 #include <exception>
+#include <cfloat>
 
 using namespace std;
 
@@ -35,7 +36,7 @@ class Solucao{
         unordered_map<int,rota> gulosoRandomizadoAdaptativo(ofstream &output_file, float alpha, int maxIter);
         unordered_map<int,rota> gulosoRandomizadoAdaptativoReativo(ofstream &output_file, float alpha, int maxIter);
         double custoMinimo(Grafo *grafo);
-        void imprimeRotas(bool completa) const;
+        void imprimeRotas(bool completa);
 
     private:
         int gerarNumeroAleatorio(int inicio, int fim);
@@ -66,22 +67,23 @@ class Solucao{
         void backToGalpao();
         pair<No*, double> ordena(unordered_map<No*, double> listCandidatos, float alpha);
         void initVariables();
-
+        void initBest();
+        void calculaBest();
+        void Estatisticas();
+        double media();
+        double desvioPadrao(double media);
+        void mape();
 
 
         Grafo* grafo;
         unordered_map<int, unordered_map<int, float>> matrizDistancias;  
-        int capacidade;
-        int caminhoes;
+        int capacidade, caminhoes, fim, inicio;
         No* galpao;
         double optimal_value = -1;
-        unordered_map<int, rota> rotas;
         vector<int> percorridos = {1};
-        unordered_map<int, candidato> candidatos;
-        unordered_map<int, candidato> stop; 
-
-        int inicio;
-        int fim;
+        vector<double> total_rotas;
+        unordered_map<int, rota> rotas, best;
+        unordered_map<int, candidato> candidatos, stop;
 };
 
 
@@ -95,12 +97,12 @@ public:
     ExcecaoSemCandidatos(const Solucao* solucao) : solucao(solucao) {}
 
     virtual const char* what() const noexcept override {
-        cout << "ExcecaoSemCandidatos: ";
-        cout << endl;
-        if (solucao) {
-            solucao->imprimeRotas(false);
-        }
-        return "Nao foi possivel encontrar novos Candidatos";
+        // cout << "ExcecaoSemCandidatos: ";
+        // cout << endl;
+        // if (solucao) {
+            // solucao->imprimeRotas(false);
+        // }
+        // return "Nao foi possivel encontrar novos Candidatos";
     }
 };
 

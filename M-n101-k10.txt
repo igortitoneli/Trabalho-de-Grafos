@@ -1,0 +1,20 @@
+Iteracao  =  1
+
+percurso rota 0 : < 1 85 86 89 88 87 90 92 91 83 84 82 1 >  - distancia: 322.183 - carga: 200
+percurso rota 1 : < 1 99 94 95 97 16 17 15 13 20 1 >  - distancia: 343.335 - carga: 200
+percurso rota 2 : < 1 37 34 35 39 38 40 26 23 1 >  - distancia: 249.404 - carga: 200
+percurso rota 3 : < 1 46 47 43 42 41 45 49 51 52 53 50 48 44 26 1 >  - distancia: 284.366 - carga: 200
+percurso rota 4 : < 1 6 4 8 9 7 3 2 76 5 10 12 11 22 1 >  - distancia: 224.295 - carga: 200
+percurso rota 5 : < 1 75 63 67 70 69 65 62 73 58 56 60 21 1 >  - distancia: 273.726 - carga: 200
+percurso rota 6 : < 1 64 63 67 65 55 57 59 36 1 >  - distancia: 238.437 - carga: 200
+percurso rota 7 : < 1 96 94 93 98 101 100 97 16 1 >  - distancia: 308.46 - carga: 200
+percurso rota 8 : < 1 66 68 63 67 65 55 54 61 16 18 1 >  - distancia: 280.996 - carga: 200
+percurso rota 9 : < 1 32 34 33 35 39 26 29 1 >  - distancia: 205.162 - carga: 200
+total - 2730.36
+optimal_value: 820
+% acima: 232.971%
+
+
+==========================================================
+
+

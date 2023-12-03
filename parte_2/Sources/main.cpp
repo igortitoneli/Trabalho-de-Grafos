@@ -61,7 +61,6 @@ void selecionar(int selecao, Solucao *graph, ofstream &output_file, float alpha 
 }
 
 int mainMenu(ofstream &output_file, Solucao *graph, int selecao, float alpha = 0, int maxIter = 0) {
-    
     // system("clear");
     
     if (output_file.is_open()){
@@ -122,7 +121,7 @@ int main(int argc, char const *argv[])
 
     // Chama o guloso
     if(argc == 4){
-        mainMenu(output_file, graph, atoi(argv[3]), atof(argv[4]), atoi(argv[5]));
+        mainMenu(output_file, graph, atoi(argv[3]));
     }
     // Chama o guloso randomizado
     else{

@@ -19,7 +19,7 @@ public:
     void decOrdem();
 
     //--- Funcoes do No ---
-    No *procurarNoPeloId(int idFindNo, bool anterior = false);
+    No *procurarNoPeloId(int idFindNo);
     No *insereNo(int idNo, float x, float y, int demanda = 0);
     No *insereNo(No* novoNo);
     bool removeNo(int idNo, bool isDigrafo);
@@ -40,7 +40,7 @@ public:
     //--- Caracteristica do Grafo ---
     int AtualizaNumAresta();
     int getNumAresta();
-    No *getNoRaiz() { return this->noRaiz; };
+    // No *getNoRaiz() { return this->noRaiz; };
     int getOrdem();
     int getGrauEntrada();
     int getGrauSaida();
@@ -50,6 +50,7 @@ public:
     int Djkstra(int idNoinicio, int idNofim);
     Grafo* caminhoEmProfundidade(int idNo);
     
+    unordered_map<int,No*> getHashNo() { return hashNo; } ;
     void sdecOrdem();
     // Aresta* getArestaAux();
     string getGrau();
@@ -70,7 +71,7 @@ private:
     int numAresta;
     bool digrafo;
 
-    No *noRaiz;
+    unordered_map<int,No*> hashNo;
 };
 
 
