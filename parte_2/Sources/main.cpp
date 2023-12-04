@@ -16,7 +16,6 @@ Solucao *leitura(string arq) {
 
     //Criando objeto Solucao
     Solucao*graph = new Solucao(arq);
-
     return graph;
 }
 

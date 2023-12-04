@@ -20,7 +20,8 @@ Aresta::Aresta(No *noDestino, Aresta *proxAresta, float peso=1) {
 
 /** Destructor */
 Aresta::~Aresta() {
-    
+    delete noDestino;
+    delete proxAresta;
 }
 
 /**

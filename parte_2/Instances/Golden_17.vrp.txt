@@ -1,5 +1,5 @@
 NAME : Golden_17
-COMMENT : 707.79
+COMMENT : trucks: 12, Optimal value: 707.79
 TYPE : CVRP
 DIMENSION : 241
 EDGE_WEIGHT_TYPE : EUC_2D

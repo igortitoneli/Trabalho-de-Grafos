@@ -15,7 +15,8 @@
 #include <random>
 #include <vector>
 #include <algorithm>
-
+#include <limits.h>
+#include <cmath>
 
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
@@ -24,12 +25,13 @@
 using namespace std;
 
 
+
 Solucao::Solucao(string txt)
 {
     lerArquivo(txt);
     construirArestas();
     construirMatriz();
-    srand(static_cast<unsigned>(time(nullptr)));
+    srand(14342);
     fim = this->grafo->getOrdem();
     inicio = this->galpao->getIdNo();
 }   
@@ -37,7 +39,15 @@ Solucao::Solucao(string txt)
 
 Solucao::~Solucao()
 {
-    delete this->grafo;
+    delete grafo;
+    matrizDistancias.clear();
+    rotas.clear();
+    best.clear();
+    candidatos.clear();
+    stop.clear();
+    percorridos.clear();
+    total_rotas.clear();
+    delete galpao;
 }
 
 
@@ -168,16 +178,38 @@ void Solucao::imprimeMatriz()
 
 bool Solucao::inPercorridos(No* procurado, vector<int> percorridos)
 {   
-    if (std::find(percorridos.begin(), percorridos.end(), procurado->getIdNo()) != percorridos.end()) {
-        return true;
+    int idProcurado = procurado->getIdNo(); 
+    for(int no : percorridos){
+        if(no == idProcurado)
+            return true;
     }
     return false;
 }
 
 
 bool Solucao::noValido(No* destino , vector<int> percorridos, int i, unordered_map<int, rota> rotas) {  
-    return (destino != NULL && !inPercorridos(destino,percorridos) && rotas[i].cargaAtual + destino->getDemanda() <= this->capacidade);
+    return (destino != NULL && 
+            !inPercorridos(destino,percorridos) && 
+            rotas[i].cargaAtual + destino->getDemanda() <= this->capacidade
+        );
 }
+
+
+bool Solucao::noValidoReativo(No* destino , vector<int> percorridos, int i, unordered_map<int, rota> rotas) {  
+    return (destino != NULL && 
+            !inPercorridos(destino,percorridos) && 
+            rotas[i].cargaAtual + destino->getDemanda() <= this->capacidade
+            && verificaRaio(destino,percorridos)
+        );
+}
+
+
+bool Solucao::verificaRaio(No* destino, vector<int> percorridos){
+    for(int no : percorridos)
+        if (matrizDistancias[destino->getIdNo()][no] < raio) 
+            return false;
+    return true;
+}   
 
 
 void Solucao::makeCandidatos(){    
@@ -255,7 +287,7 @@ void Solucao::atualizaCandidatos(No* alterado){
     // para todas as rotas
     for(int i=0; i<this->caminhoes; i++)
     {
-        if(rotas[i].ultimoNo->getIdNo() == alterado->getIdNo()){
+        // if(rotas[i].ultimoNo->getIdNo() == alterado->getIdNo()){
             
             candidatos[i].heuristica = 0;
             // para todos os nós do grafo
@@ -271,7 +303,7 @@ void Solucao::atualizaCandidatos(No* alterado){
                     candidatos[i].heuristica = heuristica;
                 }
             }
-        }
+        // }
     }
 }
 
@@ -318,9 +350,10 @@ int Solucao::getCandidatos() {
 bool Solucao::parar() {
     for(int i=0; i<this->caminhoes; i++){
         if(stop[i].no->getIdNo() != candidatos[i].no->getIdNo())
-            return false;
+            // throw ExcecaoSemCandidatos(this);
+            return true;
     }
-    return true;
+    return false;
 };
 
 
@@ -395,7 +428,7 @@ void Solucao::imprimeRotas(bool completa){
     double total = 0;
     
     for(int i=0; i<this->caminhoes; i++){
-        cout << "percurso rota " << i << " : < ";  
+        cout << "Rota " << i << " : < ";  
         for(int j=0; j<rotas.at(i).percurso.size(); j++){
             cout << rotas.at(i).percurso[j] << " ";
         }
@@ -408,7 +441,6 @@ void Solucao::imprimeRotas(bool completa){
         cout << "optimal_value: " << this->optimal_value << endl;
         cout << "% acima: " << ((total/this->optimal_value) - 1) * 100 << "%" << RESET << endl; 
         Estatisticas();
-    
     }
     else{
         cout << "Nao possui optimal_value" << RESET <<  endl;
@@ -431,8 +463,19 @@ void Solucao::backToGalpao(){
 
 
 int Solucao::gerarNumeroAleatorio(int inicio, int fim) {
-    return (rand() % (fim - inicio + 1) + inicio);
+    int var = (rand() % (fim-1 - inicio + 1) + inicio + 1);
+    cout << var << endl;
+    return var;
 }
+
+// int Solucao::gerarNumeroAleatorio(int inicio, int fim) {
+//     random_device rd;   // Gera uma seed aleatória
+//     mt19937 gen(rd());  // Mersenne Twister 19937 generator
+//     uniform_int_distribution<> distribuicao(inicio, fim);
+//     cout << distribuicao(gen) << endl;
+//     return distribuicao(gen);
+// }
+
 
 
 void Solucao::escreveRotas(ofstream &output_file, bool completa, int iter){
@@ -471,6 +514,26 @@ void Solucao::escreveRotas(ofstream &output_file, bool completa, int iter){
 }
 
 
+void Solucao::VerificaVeracidade(){
+    auto passou = [](vector<int> repetido, int no){
+        for(int i : repetido){
+            if(i==no) return true;
+        }
+        return false;
+    };
+
+    vector<int> repetido;
+    cout << endl << "Verificacao Comecando" << endl;
+
+    for(int i=0; i<caminhoes; i++){
+        for(int no : rotas[i].percurso){
+            if(!passou(repetido, no)) repetido.push_back(no);
+            else if(no != 1) cout << "o no: " << no << " se repete" << endl;
+        }
+    }
+    cout << endl << "Verificacao Terminada" << endl;
+}
+
 unordered_map<int,rota> Solucao::guloso(ofstream &output_file)
 {
     // inicializa randomicamente
@@ -499,16 +562,22 @@ unordered_map<int,rota> Solucao::guloso(ofstream &output_file)
             atualizaCandidatos(candidatos[i].no);
         }
         catch(const ExcecaoSemCandidatos& e){
-            completa = false;
-            backToGalpao();
+            VerificaVeracidade();
+            imprimeRotas(false);
             e.what();
-            return rotas;
+            rotas.clear();
+            best.clear();
+            candidatos.clear();
+            stop.clear();
+            percorridos.clear();
+            total_rotas.clear();
+            return guloso(output_file);
         }
     }
     backToGalpao();
+    VerificaVeracidade();
 
     imprimeRotas(completa); 
-
     escreveRotas(output_file,completa,0);
     return this->rotas;
 }
@@ -588,9 +657,46 @@ unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_fi
 
     rotas = best;
     imprimeRotas(completa); 
-    // escreveRotas(output_file,completa,iter);
+    escreveRotas(output_file,completa,iter);
 
     return this->rotas;
+}
+
+// pegar maior x e y
+// pegar menor x e y
+// pegar maior demanda - se torna menor raio ? quanto menor 
+// pegar menor demanda - se torna raio completo
+// dividir em quadrantes por n caminhoes
+// 
+// inicializar randomicamente os nos e construir uma delimitação
+//      quadrada em torno do no de acordo com o peso dele. 
+//      peso acima da media ?  diminui o quadrado
+//      peso abaixo da media ?  aumenta o quadrado
+
+
+double Solucao::calculaFormulaRaio(){
+
+    for(pair<int, No*> no : grafo->getHashNo()){
+        int x = no.second->getX();
+        int y = no.second->getY();
+        int demanda = no.second->getDemanda();
+
+        if(maiorX < x) maiorX = x;
+        if(menorX > x) menorX = x;
+        if(maiorY < y) maiorY = y;
+        if(menorY > y) menorY = y;
+        if(maiorDemanda < demanda) maiorDemanda = demanda;
+        if(menorDemanda > demanda && demanda > 0) menorDemanda = demanda;
+    }
+    
+    area = (maiorX - menorX) * (maiorY - menorY);
+    double pi = M_PI;
+    raio = sqrt((area/caminhoes)/pi);
+}
+
+
+double Solucao::getRaio(No* no){
+    return (menorDemanda * raio)/(no->getDemanda());
 }
 
 
@@ -598,6 +704,7 @@ unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativoReativo(ofstream &ou
 {
     int iter = 0;
     bool completa = true;
+    calculaFormulaRaio();
 
     while(iter < maxIter){
 
@@ -607,6 +714,8 @@ unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativoReativo(ofstream &ou
         int i = 0;
         while(i < this->caminhoes){
             No* destino = this->grafo->procurarNoPeloId(gerarNumeroAleatorio(inicio,fim));
+            cout << "raio no " << destino->getIdNo() << " = " << raio << endl;
+            cout << verificaRaio(destino, percorridos) << endl;
             if(noValido(destino, percorridos, i, rotas)){
                 percorridos.push_back(destino->getIdNo());
                 atualizaRota(i, destino);
@@ -646,80 +755,3 @@ unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativoReativo(ofstream &ou
     return this->rotas;
 
 }
-
-
-
-
-
-
-
-
-
-No* Solucao::findMinDistance(No* partida, vector<int> percorridos, double capacidade)
-{
-    // ALTERAR PARA MAIOR VALOR DA LINGUAGEM 
-    //double minDistance = 999999;
-    double minDistance = DBL_MAX;
-    No* destino = NULL;
-    
-    for (const auto& i : grafo->getHashNo()) {
-        if(matrizDistancias[partida->getIdNo()][i.first] < minDistance && 
-            !inPercorridos(i.second,percorridos) && 
-            i.second!= partida && 
-            capacidade + i.second->getDemanda() < this->capacidade
-            ){
-            minDistance = matrizDistancias[partida->getIdNo()][i.first];
-            destino = i.second;
-        }
-    }
-
-    return destino;
-}
-
-
-unordered_map<int, bool> Solucao::initHash(){
-    unordered_map<int, bool> hash;
-    for (const auto& no : grafo->getHashNo()) {        
-        hash[no.first] = false;
-    }
-    hash[this->galpao->getIdNo()] = true;
-    return hash;
-}
-
-// bool Solucao::checadosHash(unordered_map<No*,bool> hash) {
-//     // int cont = 0;
-//     for (const auto& no : grafo->getHashNo()) {
-//         if(hash[no.second] == false){
-//             // cont ++;
-//             // cout << "FALTA O Noh " << i->getIdNo() << endl; 
-//             return false;
-//         }
-//     // return cont == 0;
-//     return true;
-// }
-
-
-// double Solucao::custoMinimo(Grafo *grafo)
-// {   
-//     cout << "O custo minimo foi de " << grafo->somaPesoArestas() / 2 << endl;
-//     return grafo->somaPesoArestas() / 2;
-// }
-
-
-// unordered_map<int, No*> Solucao::initHashMenorCaminho(No* galpao){
-//     unordered_map<int, No*> hashMenorCaminho;
-//     for(int i=0; i<caminhoes; i++){
-//         hashMenorCaminho[i] = galpao;
-//     }
-//     return hashMenorCaminho;
-// }
-
-
-// unordered_map<int, double> Solucao::setCapacidade(){
-//     unordered_map<int, double> capacidade;
-//     for(int i=0; i<caminhoes; i++){
-//         capacidade[i] = 0;
-//     }
-//     return capacidade;
-// }
-

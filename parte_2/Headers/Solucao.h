@@ -9,6 +9,7 @@
 #include "./Grafo.h"
 #include <exception>
 #include <cfloat>
+#include <climits>
 
 using namespace std;
 
@@ -56,6 +57,7 @@ class Solucao{
         
         
         bool noValido(No* destino , vector<int> percorridos, int i, unordered_map<int, rota> rotas);
+        bool noValidoReativo(No* destino , vector<int> percorridos, int i, unordered_map<int, rota> rotas);
         void makeCandidatos();
         void makeCandidatosRandomizado(float alpha);
         void atualizaCandidatos(No* alterado);
@@ -73,6 +75,11 @@ class Solucao{
         double media();
         double desvioPadrao(double media);
         void mape();
+        double calculaFormulaRaio();
+        double getRaio(No* no);
+        bool verificaRaio(No* destino, vector<int> percorridos);
+        void VerificaVeracidade();
+
 
 
         Grafo* grafo;
@@ -84,6 +91,14 @@ class Solucao{
         vector<double> total_rotas;
         unordered_map<int, rota> rotas, best;
         unordered_map<int, candidato> candidatos, stop;
+        int maiorX = INT_MIN;
+        int menorX = INT_MAX;
+        int maiorY = INT_MIN;
+        int menorY = INT_MAX;
+        int maiorDemanda = INT_MIN;
+        int menorDemanda = INT_MAX;
+        int area;
+        double raio;
 };
 
 
@@ -97,12 +112,12 @@ public:
     ExcecaoSemCandidatos(const Solucao* solucao) : solucao(solucao) {}
 
     virtual const char* what() const noexcept override {
-        // cout << "ExcecaoSemCandidatos: ";
+        cout << "ExcecaoSemCandidatos: "<< endl;
         // cout << endl;
         // if (solucao) {
-            // solucao->imprimeRotas(false);
+        //     solucao->imprimeRotas(false);
         // }
-        // return "Nao foi possivel encontrar novos Candidatos";
+        return "Nao foi possivel encontrar novos Candidatos";
     }
 };
 
