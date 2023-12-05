@@ -100,7 +100,7 @@ int main(int argc, char const *argv[])
         string instance = input_file_name.substr(input_file_name.find("v"));
         cout << "Running " << program_name << " with instance " << instance << " ... " << endl;
     }
-
+    
     //Abrindo arquivo de entrada
     ofstream output_file;
     output_file.open(argv[2], ios::out | ios::trunc);

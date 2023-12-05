@@ -78,7 +78,8 @@ class Solucao{
         double calculaFormulaRaio();
         double getRaio(No* no);
         bool verificaRaio(No* destino, vector<int> percorridos);
-        void VerificaVeracidade();
+        bool VerificaVeracidade();
+        void initRotas();
 
 
 
@@ -99,6 +100,7 @@ class Solucao{
         int menorDemanda = INT_MAX;
         int area;
         double raio;
+        double best_distancia = DBL_MAX;
 };
 
 

@@ -29,8 +29,8 @@ public:
     // void setProxAresta(Aresta *valor);
 
 private:
-    float peso;
-    No *noDestino;
+    float peso; 
+    No *noDestino; 
     Aresta *proxAresta;
 };
 
