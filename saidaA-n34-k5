@@ -1,0 +1,146 @@
+Resultados Instancia A-n34-k5 em: 
+Tue Dec  5 18:59:26 -03 2023
+====================================================================
+   RESULTADOS         Guloso   
+====================================================================
+Demorou  1 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+
+[32mImprimindo as rotas
+
+Rota 0 : < 1 15 1 >  - distancia: 63.2456 - carga: 13
+Rota 1 : < 1 25 4 1 >  - distancia: 231.064 - carga: 44
+Rota 2 : < 1 20 1 >  - distancia: 139.313 - carga: 16
+Rota 3 : < 1 22 1 >  - distancia: 84.3801 - carga: 16
+Rota 4 : < 1 23 1 >  - distancia: 109.836 - carga: 13
+total - 627.839
+optimal_value: 778
+% acima: -19.3009%[0m
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+
+[32mImprimindo as rotas
+
+Rota 0 : < 1 15 1 >  - distancia: 63.2456 - carga: 13
+Rota 1 : < 1 25 4 1 >  - distancia: 231.064 - carga: 44
+Rota 2 : < 1 20 1 >  - distancia: 139.313 - carga: 16
+Rota 3 : < 1 22 1 >  - distancia: 84.3801 - carga: 16
+Rota 4 : < 1 23 1 >  - distancia: 109.836 - carga: 13
+total - 627.839
+optimal_value: 778
+% acima: -19.3009%[0m
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+
+[32mImprimindo as rotas
+
+Rota 0 : < 1 15 1 >  - distancia: 63.2456 - carga: 13
+Rota 1 : < 1 25 4 1 >  - distancia: 231.064 - carga: 44
+Rota 2 : < 1 20 1 >  - distancia: 139.313 - carga: 16
+Rota 3 : < 1 22 1 >  - distancia: 84.3801 - carga: 16
+Rota 4 : < 1 23 1 >  - distancia: 109.836 - carga: 13
+total - 627.839
+optimal_value: 778
+% acima: -19.3009%[0m
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+
+[32mImprimindo as rotas
+
+Rota 0 : < 1 15 1 >  - distancia: 63.2456 - carga: 13
+Rota 1 : < 1 25 4 1 >  - distancia: 231.064 - carga: 44
+Rota 2 : < 1 20 1 >  - distancia: 139.313 - carga: 16
+Rota 3 : < 1 22 1 >  - distancia: 84.3801 - carga: 16
+Rota 4 : < 1 23 1 >  - distancia: 109.836 - carga: 13
+total - 627.839
+optimal_value: 778
+% acima: -19.3009%[0m
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+
+[32mImprimindo as rotas
+
+Rota 0 : < 1 15 1 >  - distancia: 63.2456 - carga: 13
+Rota 1 : < 1 25 4 1 >  - distancia: 231.064 - carga: 44
+Rota 2 : < 1 20 1 >  - distancia: 139.313 - carga: 16
+Rota 3 : < 1 22 1 >  - distancia: 84.3801 - carga: 16
+Rota 4 : < 1 23 1 >  - distancia: 109.836 - carga: 13
+total - 627.839
+optimal_value: 778
+% acima: -19.3009%[0m
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+
+[32mImprimindo as rotas
+
+Rota 0 : < 1 22 1 >  - distancia: 84.3801 - carga: 16
+Rota 1 : < 1 10 1 >  - distancia: 114.543 - carga: 13
+Rota 2 : < 1 31 4 1 >  - distancia: 227.88 - carga: 43
+Rota 3 : < 1 14 1 >  - distancia: 72.111 - carga: 14
+Rota 4 : < 1 32 1 >  - distancia: 139.313 - carga: 4
+total - 638.227
+optimal_value: 778
+% acima: -17.9657%[0m
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+
+[32mImprimindo as rotas
+
+Rota 0 : < 1 22 1 >  - distancia: 84.3801 - carga: 16
+Rota 1 : < 1 10 1 >  - distancia: 114.543 - carga: 13
+Rota 2 : < 1 31 4 1 >  - distancia: 227.88 - carga: 43
+Rota 3 : < 1 14 1 >  - distancia: 72.111 - carga: 14
+Rota 4 : < 1 32 1 >  - distancia: 139.313 - carga: 4
+total - 638.227
+optimal_value: 778
+% acima: -17.9657%[0m
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+
+[32mImprimindo as rotas
+
+Rota 0 : < 1 22 1 >  - distancia: 84.3801 - carga: 16
+Rota 1 : < 1 10 1 >  - distancia: 114.543 - carga: 13
+Rota 2 : < 1 31 4 1 >  - distancia: 227.88 - carga: 43
+Rota 3 : < 1 14 1 >  - distancia: 72.111 - carga: 14
+Rota 4 : < 1 32 1 >  - distancia: 139.313 - carga: 4
+total - 638.227
+optimal_value: 778
+% acima: -17.9657%[0m
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+
+[32mImprimindo as rotas
+
+Rota 0 : < 1 22 1 >  - distancia: 84.3801 - carga: 16
+Rota 1 : < 1 10 1 >  - distancia: 114.543 - carga: 13
+Rota 2 : < 1 31 4 1 >  - distancia: 227.88 - carga: 43
+Rota 3 : < 1 14 1 >  - distancia: 72.111 - carga: 14
+Rota 4 : < 1 32 1 >  - distancia: 139.313 - carga: 4
+total - 638.227
+optimal_value: 778
+% acima: -17.9657%[0m
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+
+[32mImprimindo as rotas
+
+Rota 0 : < 1 22 1 >  - distancia: 84.3801 - carga: 16
+Rota 1 : < 1 10 1 >  - distancia: 114.543 - carga: 13
+Rota 2 : < 1 31 4 1 >  - distancia: 227.88 - carga: 43
+Rota 3 : < 1 14 1 >  - distancia: 72.111 - carga: 14
+Rota 4 : < 1 32 1 >  - distancia: 139.313 - carga: 4
+total - 638.227
+optimal_value: 778
+% acima: -17.9657%[0m
+Nao foi possivel calcular Estatisticas.
+Tue Dec  5 18:59:27 -03 2023

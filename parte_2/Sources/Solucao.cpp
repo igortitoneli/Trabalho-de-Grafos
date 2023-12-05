@@ -296,22 +296,20 @@ void Solucao::atualizaCandidatos(No* alterado){
     // para todas as rotas
     for(int i=0; i<this->caminhoes; i++)
     {
-        if(rotas[i].ultimoNo->getIdNo() == alterado->getIdNo()){
-            candidatos[i].heuristica = 0;
-            candidatos[i].no = grafo->getGalpao();
-            // para todos os nós do grafo
-            for (const auto& no : grafo->getHashNo()) {
-                // demanda / distancia entre o ultimo nó da rota e o nó do for
-                if(no.first != rotas[i].ultimoNo->getIdNo()){
-                    double heuristica = no.second->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first];
+        candidatos[i].heuristica = -1;
+        candidatos[i].no = grafo->getGalpao();
+        // para todos os nós do grafo
+        for (const auto& no : grafo->getHashNo()) {
+            // demanda / distancia entre o ultimo nó da rota e o nó do for
+            if(no.first != rotas[i].ultimoNo->getIdNo()){
+                double heuristica = no.second->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first];
 
-                    if(!inPercorridos(no.second,percorridos) &&
-                        heuristica > candidatos[i].heuristica &&
-                        rotas[i].cargaAtual + no.second->getDemanda() <= this->capacidade)
-                    {
-                        candidatos[i].no = no.second;
-                        candidatos[i].heuristica = heuristica;
-                    }
+                if(!inPercorridos(no.second,percorridos) &&
+                    heuristica > candidatos[i].heuristica &&
+                    rotas[i].cargaAtual + no.second->getDemanda() <= this->capacidade)
+                {
+                    candidatos[i].no = no.second;
+                    candidatos[i].heuristica = heuristica;
                 }
             }
         }
@@ -525,31 +523,35 @@ void Solucao::escreveRotas(ofstream &output_file, bool completa, int iter){
 }
 
 
+
 bool Solucao::VerificaVeracidade(){
-    auto passou = [](vector<int> repetido, int no){
-        for(int i : repetido){
-            if(i==no) return true;
-        }
-        return false;
-    };
 
-    vector<int> repetido;
-    // cout << endl << "Verificacao Comecando" << endl;
-
-    // for(int i=0; i<caminhoes; i++){
-    //     for(int no : rotas[i].percurso){
-    //         if(!passou(repetido, no)) repetido.push_back(no);
-    //         else if(no != 1) cout << "o no: " << no << " se repete" << endl;
-    //     }
-    // }
+    bool completa = true;
+    bool list_percorridos[grafo->getOrdem()] = {false};
+    
     for(int i=0; i<caminhoes; i++){
+        double total_rota = 0;
         for(int no : rotas[i].percurso){
-            if(!passou(repetido, no) && no != 1) return false;
+            if(list_percorridos[no-1] == true && no != 1){
+                cout << "o no " << no << " se repete" << endl;
+                completa = false;
+            }
+            list_percorridos[no-1] = true; 
+        }
+        if(rotas[i].cargaAtual > capacidade){
+            cout << "rotas[" << i << "].cargaAtual " << rotas[i].cargaAtual << endl; 
+            completa = false;
+        } 
+    }
+    for(bool no : list_percorridos){
+        if(no == false && no != 0) {
+            cout << "falta o no " << no+1 << endl;
+            completa = false;
         }
     }
-    return true;
-    // cout << endl << "Verificacao Terminada" << endl;
+    return completa;
 }
+
 
 void Solucao::initRotas(){
     for(int i=0; i<caminhoes; i++){
@@ -596,20 +598,12 @@ unordered_map<int,rota> Solucao::guloso(ofstream &output_file)
             atualizaCandidatos(candidatos[i].no);
         }
         catch(const ExcecaoSemCandidatos& e){
-            VerificaVeracidade();
-            imprimeRotas(false);
             e.what();
-            rotas.clear();
-            best.clear();
-            candidatos.clear();
-            stop.clear();
-            percorridos.clear();
-            total_rotas.clear();
-            return guloso(output_file);
+            break;
         }
     }
     backToGalpao();
-    // VerificaVeracidade();
+    completa = VerificaVeracidade();
 
     imprimeRotas(completa); 
     escreveRotas(output_file,completa,0);
@@ -725,6 +719,7 @@ double Solucao::calculaFormulaRaio(){
     area = (maiorX - menorX) * (maiorY - menorY);
     double pi = M_PI;
     raio = sqrt((area/caminhoes)/pi);
+    return raio;
 }
 
 
