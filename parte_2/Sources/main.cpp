@@ -79,6 +79,10 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
+    auto seed = std::chrono::high_resolution_clock::now().time_since_epoch().count();
+
+    srand(static_cast<unsigned int>(seed));
+
     if (argc < 3 || argc > 6) {
         cout
                 << "ERROR: Expecting: ./<program_name> <input_file> <output_file> <Func> <param1> <maxIter>"

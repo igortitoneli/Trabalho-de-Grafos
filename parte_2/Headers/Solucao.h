@@ -61,7 +61,7 @@ class Solucao{
         void makeCandidatos();
         void makeCandidatosRandomizado(float alpha);
         void atualizaCandidatos(No* alterado);
-        void atualizaCandidatosRandomizado(No* alterado, float alpha);
+        void atualizaCandidatosRandomizado(float alpha);
         int getCandidatos();
         bool parar();
         void atualizaRota(int i, No* destino);

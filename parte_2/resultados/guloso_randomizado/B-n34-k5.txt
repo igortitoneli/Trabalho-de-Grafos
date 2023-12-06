@@ -1,234 +1,90 @@
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  27
-novoTamanho8
-listCandidatos.size()  26
-novoTamanho7
-listCandidatos.size()  24
-novoTamanho7
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  21
-novoTamanho6
-listCandidatos.size()  20
-novoTamanho6
-listCandidatos.size()  19
-novoTamanho5
-listCandidatos.size()  19
-novoTamanho5
-listCandidatos.size()  17
-novoTamanho5
-listCandidatos.size()  16
-novoTamanho4
-listCandidatos.size()  15
-novoTamanho4
-listCandidatos.size()  14
-novoTamanho4
-listCandidatos.size()  13
-novoTamanho3
+Rota 0 : < 1 7 26 18 29 16 32 19 1 >  - distancia: 153.597 - carga: 100
+Rota 1 : < 1 23 5 9 24 11 12 31 1 >  - distancia: 248.436 - carga: 66
+Rota 2 : < 1 8 22 3 27 25 15 28 2 6 14 1 >  - distancia: 230.157 - carga: 99
+Rota 3 : < 1 21 34 33 13 17 1 >  - distancia: 181.709 - carga: 92
+Rota 4 : < 1 20 10 30 4 1 >  - distancia: 149.634 - carga: 100
+total - 963.533
+optimal_value: 788
+% acima: 22.2757%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  27
-novoTamanho8
-listCandidatos.size()  26
-novoTamanho7
-listCandidatos.size()  24
-novoTamanho7
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  21
-novoTamanho6
-listCandidatos.size()  20
-novoTamanho6
-listCandidatos.size()  19
-novoTamanho5
-listCandidatos.size()  19
-novoTamanho5
-listCandidatos.size()  17
-novoTamanho5
-listCandidatos.size()  16
-novoTamanho4
-listCandidatos.size()  15
-novoTamanho4
-listCandidatos.size()  14
-novoTamanho4
-listCandidatos.size()  13
-novoTamanho3
+Rota 0 : < 1 26 18 29 14 7 16 32 20 6 1 >  - distancia: 177.367 - carga: 100
+Rota 1 : < 1 9 8 33 23 12 31 1 >  - distancia: 239.381 - carga: 69
+Rota 2 : < 1 3 22 10 15 17 1 >  - distancia: 170.28 - carga: 100
+Rota 3 : < 1 27 24 25 28 19 2 30 4 13 1 >  - distancia: 247.725 - carga: 89
+Rota 4 : < 1 11 34 5 21 1 >  - distancia: 157.544 - carga: 99
+total - 992.298
+optimal_value: 788
+% acima: 25.9262%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  27
-novoTamanho8
-listCandidatos.size()  26
-novoTamanho7
-listCandidatos.size()  24
-novoTamanho7
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  21
-novoTamanho6
-listCandidatos.size()  20
-novoTamanho6
-listCandidatos.size()  19
-novoTamanho5
-listCandidatos.size()  19
-novoTamanho5
-listCandidatos.size()  17
-novoTamanho5
-listCandidatos.size()  16
-novoTamanho4
-listCandidatos.size()  15
-novoTamanho4
-listCandidatos.size()  14
-novoTamanho4
-listCandidatos.size()  13
-novoTamanho3
+Rota 0 : < 1 31 12 18 29 14 32 1 >  - distancia: 223.411 - carga: 61
+Rota 1 : < 1 16 26 34 27 13 28 1 >  - distancia: 225.633 - carga: 100
+Rota 2 : < 1 6 7 10 15 17 4 1 >  - distancia: 172.708 - carga: 100
+Rota 3 : < 1 21 5 3 24 8 19 2 11 1 >  - distancia: 277.166 - carga: 99
+Rota 4 : < 1 23 33 9 22 25 30 20 1 >  - distancia: 199.628 - carga: 97
+total - 1098.55
+optimal_value: 788
+% acima: 39.4094%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  27
-novoTamanho8
-listCandidatos.size()  26
-novoTamanho7
-listCandidatos.size()  24
-novoTamanho7
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  21
-novoTamanho6
-listCandidatos.size()  20
-novoTamanho6
-listCandidatos.size()  19
-novoTamanho5
-listCandidatos.size()  19
-novoTamanho5
-listCandidatos.size()  17
-novoTamanho5
-listCandidatos.size()  16
-novoTamanho4
-listCandidatos.size()  15
-novoTamanho4
-listCandidatos.size()  14
-novoTamanho4
-listCandidatos.size()  13
-novoTamanho3
+Rota 0 : < 1 24 10 30 15 17 1 >  - distancia: 193.754 - carga: 100
+Rota 1 : < 1 6 34 23 11 1 >  - distancia: 203.501 - carga: 74
+Rota 2 : < 1 18 7 26 29 16 14 32 2 1 >  - distancia: 163.425 - carga: 89
+Rota 3 : < 1 20 19 25 28 4 9 13 12 31 1 >  - distancia: 260.694 - carga: 94
+Rota 4 : < 1 27 5 33 8 3 22 21 1 >  - distancia: 167.102 - carga: 100
+total - 988.476
+optimal_value: 788
+% acima: 25.4412%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  27
-novoTamanho8
-listCandidatos.size()  26
-novoTamanho7
-listCandidatos.size()  24
-novoTamanho7
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  21
-novoTamanho6
-listCandidatos.size()  20
-novoTamanho6
-listCandidatos.size()  19
-novoTamanho5
-listCandidatos.size()  19
-novoTamanho5
-listCandidatos.size()  17
-novoTamanho5
-listCandidatos.size()  16
-novoTamanho4
-listCandidatos.size()  15
-novoTamanho4
-listCandidatos.size()  14
-novoTamanho4
-listCandidatos.size()  13
-novoTamanho3
+Rota 0 : < 1 7 26 18 29 14 20 15 17 1 >  - distancia: 182.196 - carga: 96
+Rota 1 : < 1 30 25 8 3 5 23 1 >  - distancia: 187.144 - carga: 100
+Rota 2 : < 1 12 27 9 24 11 2 16 32 6 1 >  - distancia: 266.329 - carga: 63
+Rota 3 : < 1 28 4 34 33 22 13 1 >  - distancia: 173.533 - carga: 100
+Rota 4 : < 1 21 10 19 31 1 >  - distancia: 266.322 - carga: 98
+total - 1075.52
+optimal_value: 788
+% acima: 36.4878%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  27
-novoTamanho8
-listCandidatos.size()  26
-novoTamanho7
-listCandidatos.size()  24
-novoTamanho7
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  21
-novoTamanho6
-listCandidatos.size()  20
-novoTamanho6
-listCandidatos.size()  19
-novoTamanho5
-listCandidatos.size()  19
-novoTamanho5
-listCandidatos.size()  17
-novoTamanho5
-listCandidatos.size()  16
-novoTamanho4
-listCandidatos.size()  15
-novoTamanho4
-listCandidatos.size()  14
-novoTamanho4
-listCandidatos.size()  13
-novoTamanho3
+Rota 0 : < 1 23 34 5 1 >  - distancia: 150.73 - carga: 94
+Rota 1 : < 1 8 22 21 33 27 13 12 31 1 >  - distancia: 242.702 - carga: 81
+Rota 2 : < 1 28 30 10 15 17 4 1 >  - distancia: 154.112 - carga: 98
+Rota 3 : < 1 24 11 9 3 25 7 2 14 1 >  - distancia: 297.594 - carga: 85
+Rota 4 : < 1 20 19 29 18 16 26 32 6 1 >  - distancia: 159.809 - carga: 99
+total - 1004.95
+optimal_value: 788
+% acima: 27.5314%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  27
-novoTamanho8
-listCandidatos.size()  24
-novoTamanho7
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  22
-novoTamanho6
-listCandidatos.size()  21
-novoTamanho6
-listCandidatos.size()  20
-novoTamanho6
-listCandidatos.size()  2
-novoTamanho0
-Demorou  1 ms para ler o arquivo de entrada.
-listCandidatos.size()  27
-novoTamanho8
-listCandidatos.size()  24
-novoTamanho7
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  22
-novoTamanho6
-listCandidatos.size()  21
-novoTamanho6
-listCandidatos.size()  20
-novoTamanho6
-listCandidatos.size()  2
-novoTamanho0
+Rota 0 : < 1 6 34 33 23 24 11 13 1 >  - distancia: 204.047 - carga: 99
+Rota 1 : < 1 14 29 7 18 26 16 32 1 >  - distancia: 130.505 - carga: 83
+Rota 2 : < 1 27 5 21 8 9 3 22 1 >  - distancia: 165.536 - carga: 99
+Rota 3 : < 1 19 10 15 17 1 >  - distancia: 145.314 - carga: 96
+Rota 4 : < 1 28 25 30 4 20 2 12 31 1 >  - distancia: 262.486 - carga: 80
+total - 907.888
+optimal_value: 788
+% acima: 15.2142%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  27
-novoTamanho8
-listCandidatos.size()  24
-novoTamanho7
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  22
-novoTamanho6
-listCandidatos.size()  21
-novoTamanho6
-listCandidatos.size()  20
-novoTamanho6
-listCandidatos.size()  2
-novoTamanho0
+Rota 0 : < 1 20 10 15 17 28 4 1 >  - distancia: 151.864 - carga: 97
+Rota 1 : < 1 30 25 19 2 5 27 1 >  - distancia: 217.343 - carga: 97
+Rota 2 : < 1 32 7 18 14 12 31 24 1 >  - distancia: 333.364 - carga: 68
+Rota 3 : < 1 13 34 8 21 11 1 >  - distancia: 177.919 - carga: 98
+Rota 4 : < 1 16 29 26 6 9 33 23 3 22 1 >  - distancia: 213.397 - carga: 97
+total - 1093.89
+optimal_value: 788
+% acima: 38.8182%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  27
-novoTamanho8
-listCandidatos.size()  24
-novoTamanho7
-listCandidatos.size()  23
-novoTamanho6
-listCandidatos.size()  22
-novoTamanho6
-listCandidatos.size()  21
-novoTamanho6
-listCandidatos.size()  20
-novoTamanho6
-listCandidatos.size()  2
-novoTamanho0
+Rota 0 : < 1 17 10 15 29 14 32 1 >  - distancia: 177.534 - carga: 100
+Rota 1 : < 1 24 11 9 34 13 4 1 >  - distancia: 185.81 - carga: 93
+Rota 2 : < 1 27 33 21 3 20 18 6 2 1 >  - distancia: 250.354 - carga: 90
+Rota 3 : < 1 28 30 25 19 7 26 16 1 >  - distancia: 183.736 - carga: 99
+Rota 4 : < 1 22 5 8 23 12 31 1 >  - distancia: 233.549 - carga: 75
+total - 1030.98
+optimal_value: 788
+% acima: 30.8354%
+Demorou  0 ms para ler o arquivo de entrada.
+Rota 0 : < 1 13 5 21 8 22 3 33 23 1 >  - distancia: 160.96 - carga: 97
+Rota 1 : < 1 31 12 34 9 28 1 >  - distancia: 247.411 - carga: 99
+Rota 2 : < 1 26 18 29 16 32 14 1 >  - distancia: 123.205 - carga: 65
+Rota 3 : < 1 6 7 10 15 17 1 >  - distancia: 164.294 - carga: 98
+Rota 4 : < 1 4 30 25 19 2 20 27 24 11 1 >  - distancia: 231.777 - carga: 98
+total - 927.647
+optimal_value: 788
+% acima: 17.7217%

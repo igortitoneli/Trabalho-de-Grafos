@@ -1,150 +1,120 @@
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  40
-novoTamanho12
-listCandidatos.size()  39
-novoTamanho11
-listCandidatos.size()  38
-novoTamanho11
-listCandidatos.size()  37
-novoTamanho11
-listCandidatos.size()  36
-novoTamanho10
-listCandidatos.size()  35
-novoTamanho10
-listCandidatos.size()  12
-novoTamanho3
+Rota 0 : < 1 46 42 11 36 47 23 25 44 1 >  - distancia: 166.258 - carga: 98
+Rota 1 : < 1 19 39 16 35 45 49 41 3 31 1 >  - distancia: 374.279 - carga: 80
+Rota 2 : < 1 7 32 15 14 24 4 38 1 >  - distancia: 138.352 - carga: 98
+Rota 3 : < 1 10 8 28 37 12 34 13 1 >  - distancia: 114.642 - carga: 98
+Rota 4 : < 1 21 17 50 26 48 27 1 >  - distancia: 189.291 - carga: 96
+Rota 5 : < 1 5 6 2 1 >  - distancia: 258.77 - carga: 92
+Rota 6 : < 1 43 22 9 18 40 1 >  - distancia: 226.921 - carga: 90
+Rota 7 : < 1 33 29 30 20 1 >  - distancia: 231.174 - carga: 83
+total - 1699.69
+optimal_value: 1312
+% acima: 29.5492%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  40
-novoTamanho12
-listCandidatos.size()  39
-novoTamanho11
-listCandidatos.size()  38
-novoTamanho11
-listCandidatos.size()  37
-novoTamanho11
-listCandidatos.size()  36
-novoTamanho10
-listCandidatos.size()  35
-novoTamanho10
-listCandidatos.size()  12
-novoTamanho3
+Rota 0 : < 1 48 6 1 >  - distancia: 236.466 - carga: 94
+Rota 1 : < 1 40 46 2 33 30 1 >  - distancia: 246.998 - carga: 97
+Rota 2 : < 1 11 42 36 39 7 45 35 1 >  - distancia: 138.307 - carga: 100
+Rota 3 : < 1 31 28 37 34 26 50 10 13 1 >  - distancia: 115.768 - carga: 100
+Rota 4 : < 1 27 5 19 29 16 1 >  - distancia: 341.011 - carga: 51
+Rota 5 : < 1 24 14 47 23 4 8 49 41 3 1 >  - distancia: 150.013 - carga: 97
+Rota 6 : < 1 32 15 17 25 12 21 38 44 1 >  - distancia: 131.043 - carga: 98
+Rota 7 : < 1 22 43 18 9 20 1 >  - distancia: 278.509 - carga: 98
+total - 1638.11
+optimal_value: 1312
+% acima: 24.8563%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  40
-novoTamanho12
-listCandidatos.size()  39
-novoTamanho11
-listCandidatos.size()  38
-novoTamanho11
-listCandidatos.size()  37
-novoTamanho11
-listCandidatos.size()  36
-novoTamanho10
-listCandidatos.size()  35
-novoTamanho10
-listCandidatos.size()  12
-novoTamanho3
+Rota 0 : < 1 11 24 42 46 33 1 >  - distancia: 225.708 - carga: 90
+Rota 1 : < 1 38 28 21 8 26 50 1 >  - distancia: 115.494 - carga: 99
+Rota 2 : < 1 49 35 3 6 1 >  - distancia: 220.535 - carga: 90
+Rota 3 : < 1 36 14 7 34 13 25 48 27 1 >  - distancia: 244.534 - carga: 94
+Rota 4 : < 1 4 47 39 40 30 29 1 >  - distancia: 242.269 - carga: 95
+Rota 5 : < 1 32 15 37 12 17 10 1 >  - distancia: 114.522 - carga: 100
+Rota 6 : < 1 9 43 18 22 2 23 31 44 41 1 >  - distancia: 234.184 - carga: 99
+Rota 7 : < 1 45 20 19 5 16 1 >  - distancia: 367.56 - carga: 68
+total - 1764.81
+optimal_value: 1312
+% acima: 34.5127%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  40
-novoTamanho12
-listCandidatos.size()  39
-novoTamanho11
-listCandidatos.size()  38
-novoTamanho11
-listCandidatos.size()  37
-novoTamanho11
-listCandidatos.size()  36
-novoTamanho10
-listCandidatos.size()  35
-novoTamanho10
-listCandidatos.size()  12
-novoTamanho3
+Rota 0 : < 1 3 30 33 19 1 >  - distancia: 288.674 - carga: 60
+Rota 1 : < 1 17 25 32 37 21 31 44 11 1 >  - distancia: 196.131 - carga: 100
+Rota 2 : < 1 13 10 34 8 50 47 22 1 >  - distancia: 218.825 - carga: 94
+Rota 3 : < 1 45 16 43 9 18 2 29 1 >  - distancia: 313.869 - carga: 97
+Rota 4 : < 1 39 24 36 46 14 4 1 >  - distancia: 133.201 - carga: 98
+Rota 5 : < 1 49 35 41 48 27 5 42 40 1 >  - distancia: 240.841 - carga: 95
+Rota 6 : < 1 6 20 1 >  - distancia: 226.05 - carga: 95
+Rota 7 : < 1 12 28 38 7 26 15 23 1 >  - distancia: 179.821 - carga: 96
+total - 1797.41
+optimal_value: 1312
+% acima: 36.998%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  40
-novoTamanho12
-listCandidatos.size()  39
-novoTamanho11
-listCandidatos.size()  38
-novoTamanho11
-listCandidatos.size()  37
-novoTamanho11
-listCandidatos.size()  36
-novoTamanho10
-listCandidatos.size()  35
-novoTamanho10
-listCandidatos.size()  12
-novoTamanho3
+Rota 0 : < 1 15 8 28 34 50 25 4 1 >  - distancia: 161.283 - carga: 94
+Rota 1 : < 1 21 17 37 26 38 13 19 27 1 >  - distancia: 239.536 - carga: 100
+Rota 2 : < 1 35 6 29 1 >  - distancia: 223.394 - carga: 96
+Rota 3 : < 1 16 22 9 43 33 1 >  - distancia: 285.727 - carga: 97
+Rota 4 : < 1 31 12 44 24 23 11 36 40 18 1 >  - distancia: 235.85 - carga: 93
+Rota 5 : < 1 5 48 20 30 2 1 >  - distancia: 274.728 - carga: 98
+Rota 6 : < 1 10 32 7 45 49 41 3 1 >  - distancia: 106.874 - carga: 57
+Rota 7 : < 1 47 14 42 46 39 1 >  - distancia: 141.608 - carga: 100
+total - 1669
+optimal_value: 1312
+% acima: 27.2105%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  40
-novoTamanho12
-listCandidatos.size()  39
-novoTamanho11
-listCandidatos.size()  38
-novoTamanho11
-listCandidatos.size()  37
-novoTamanho11
-listCandidatos.size()  36
-novoTamanho10
-listCandidatos.size()  35
-novoTamanho10
-listCandidatos.size()  12
-novoTamanho3
+Rota 0 : < 1 2 9 43 18 16 1 >  - distancia: 233.525 - carga: 80
+Rota 1 : < 1 49 35 45 26 17 25 37 13 1 >  - distancia: 128.3 - carga: 100
+Rota 2 : < 1 33 6 34 3 1 >  - distancia: 220.374 - carga: 100
+Rota 3 : < 1 14 11 36 40 22 4 31 41 1 >  - distancia: 195.316 - carga: 100
+Rota 4 : < 1 20 30 29 1 >  - distancia: 230.52 - carga: 62
+Rota 5 : < 1 32 7 8 10 38 21 50 44 1 >  - distancia: 129.58 - carga: 99
+Rota 6 : < 1 27 5 48 19 28 15 12 1 >  - distancia: 249.7 - carga: 97
+Rota 7 : < 1 47 46 42 39 24 23 1 >  - distancia: 137.03 - carga: 97
+total - 1524.34
+optimal_value: 1312
+% acima: 16.1848%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  40
-novoTamanho12
-listCandidatos.size()  39
-novoTamanho11
-listCandidatos.size()  38
-novoTamanho11
-listCandidatos.size()  37
-novoTamanho11
-listCandidatos.size()  36
-novoTamanho10
-listCandidatos.size()  35
-novoTamanho10
-listCandidatos.size()  12
-novoTamanho3
+Rota 0 : < 1 31 32 17 37 44 21 15 1 1 >  - distancia: 129.967 - carga: 95
+Rota 1 : < 1 38 28 50 34 7 45 49 41 3 1 >  - distancia: 110.722 - carga: 74
+Rota 2 : < 1 13 10 12 25 1 >  - distancia: 110.345 - carga: 32
+Rota 3 : < 1 8 26 48 5 19 27 1 >  - distancia: 210.012 - carga: 96
+Rota 4 : < 1 24 36 42 40 11 23 35 1 >  - distancia: 148.911 - carga: 100
+Rota 5 : < 1 2 22 18 33 30 1 >  - distancia: 270.986 - carga: 93
+Rota 6 : < 1 43 9 20 29 1 >  - distancia: 267.998 - carga: 76
+Rota 7 : < 1 39 47 14 4 46 16 1 >  - distancia: 189.386 - carga: 100
+total - 1438.33
+optimal_value: 1312
+% acima: 9.62854%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  40
-novoTamanho12
-listCandidatos.size()  39
-novoTamanho11
-listCandidatos.size()  38
-novoTamanho11
-listCandidatos.size()  37
-novoTamanho11
-listCandidatos.size()  36
-novoTamanho10
-listCandidatos.size()  35
-novoTamanho10
-listCandidatos.size()  12
-novoTamanho3
-Demorou  1 ms para ler o arquivo de entrada.
-listCandidatos.size()  40
-novoTamanho12
-listCandidatos.size()  39
-novoTamanho11
-listCandidatos.size()  38
-novoTamanho11
-listCandidatos.size()  37
-novoTamanho11
-listCandidatos.size()  36
-novoTamanho10
-listCandidatos.size()  35
-novoTamanho10
-listCandidatos.size()  12
-novoTamanho3
+Rota 0 : < 1 48 27 19 18 1 >  - distancia: 308.316 - carga: 51
+Rota 1 : < 1 22 40 39 47 16 1 >  - distancia: 238.278 - carga: 92
+Rota 2 : < 1 43 9 20 30 29 1 >  - distancia: 268.15 - carga: 100
+Rota 3 : < 1 2 42 37 25 50 35 45 49 41 3 1 >  - distancia: 222.385 - carga: 99
+Rota 4 : < 1 36 11 46 24 14 4 23 44 1 >  - distancia: 163.043 - carga: 97
+Rota 5 : < 1 5 6 33 1 >  - distancia: 252.006 - carga: 99
+Rota 6 : < 1 17 12 26 8 10 13 1 >  - distancia: 128.26 - carga: 98
+Rota 7 : < 1 38 28 32 21 34 15 31 7 1 >  - distancia: 121.331 - carga: 99
+total - 1701.77
+optimal_value: 1312
+% acima: 29.708%
 Demorou  0 ms para ler o arquivo de entrada.
-listCandidatos.size()  40
-novoTamanho12
-listCandidatos.size()  39
-novoTamanho11
-listCandidatos.size()  38
-novoTamanho11
-listCandidatos.size()  37
-novoTamanho11
-listCandidatos.size()  36
-novoTamanho10
-listCandidatos.size()  35
-novoTamanho10
-listCandidatos.size()  12
-novoTamanho3
+Rota 0 : < 1 28 26 8 7 35 1 >  - distancia: 104.492 - carga: 100
+Rota 1 : < 1 23 42 14 4 49 3 1 >  - distancia: 134.544 - carga: 59
+Rota 2 : < 1 46 40 9 18 43 1 >  - distancia: 205.485 - carga: 88
+Rota 3 : < 1 10 38 21 37 44 25 48 27 19 1 >  - distancia: 211.855 - carga: 97
+Rota 4 : < 1 17 12 32 15 31 50 34 13 45 41 1 >  - distancia: 152.44 - carga: 100
+Rota 5 : < 1 16 6 5 1 >  - distancia: 292.891 - carga: 94
+Rota 6 : < 1 36 24 11 39 47 22 1 >  - distancia: 202.333 - carga: 100
+Rota 7 : < 1 30 20 29 33 2 1 >  - distancia: 246.086 - carga: 97
+total - 1550.13
+optimal_value: 1312
+% acima: 18.1499%
+Demorou  0 ms para ler o arquivo de entrada.
+Rota 0 : < 1 32 26 38 8 17 1 >  - distancia: 142.597 - carga: 100
+Rota 1 : < 1 5 48 19 16 1 >  - distancia: 288.524 - carga: 62
+Rota 2 : < 1 27 6 40 50 1 >  - distancia: 272.344 - carga: 99
+Rota 3 : < 1 20 30 24 15 31 25 41 1 >  - distancia: 271.401 - carga: 95
+Rota 4 : < 1 2 22 9 43 18 1 >  - distancia: 210.433 - carga: 86
+Rota 5 : < 1 33 29 46 36 14 4 1 >  - distancia: 224.952 - carga: 95
+Rota 6 : < 1 7 28 10 37 21 12 44 34 13 1 >  - distancia: 110.844 - carga: 99
+Rota 7 : < 1 35 3 45 49 39 47 42 11 23 1 >  - distancia: 149.073 - carga: 99
+total - 1670.17
+optimal_value: 1312
+% acima: 27.2993%
