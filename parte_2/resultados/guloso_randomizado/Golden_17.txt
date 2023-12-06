@@ -1,0 +1,2394 @@
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  217
+novoTamanho65
+listCandidatos.size()  216
+novoTamanho64
+listCandidatos.size()  215
+novoTamanho64
+listCandidatos.size()  215
+novoTamanho64
+listCandidatos.size()  215
+novoTamanho64
+listCandidatos.size()  215
+novoTamanho64
+listCandidatos.size()  215
+novoTamanho64
+listCandidatos.size()  215
+novoTamanho64
+listCandidatos.size()  214
+novoTamanho64
+listCandidatos.size()  213
+novoTamanho63
+listCandidatos.size()  212
+novoTamanho63
+listCandidatos.size()  212
+novoTamanho63
+listCandidatos.size()  212
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  210
+novoTamanho63
+listCandidatos.size()  209
+novoTamanho62
+listCandidatos.size()  208
+novoTamanho62
+listCandidatos.size()  207
+novoTamanho62
+listCandidatos.size()  206
+novoTamanho61
+listCandidatos.size()  205
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  203
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  201
+novoTamanho60
+listCandidatos.size()  200
+novoTamanho60
+listCandidatos.size()  199
+novoTamanho59
+listCandidatos.size()  198
+novoTamanho59
+listCandidatos.size()  198
+novoTamanho59
+listCandidatos.size()  198
+novoTamanho59
+listCandidatos.size()  197
+novoTamanho59
+listCandidatos.size()  196
+novoTamanho58
+listCandidatos.size()  195
+novoTamanho58
+listCandidatos.size()  194
+novoTamanho58
+listCandidatos.size()  193
+novoTamanho57
+listCandidatos.size()  192
+novoTamanho57
+listCandidatos.size()  168
+novoTamanho50
+listCandidatos.size()  190
+novoTamanho57
+listCandidatos.size()  189
+novoTamanho56
+listCandidatos.size()  188
+novoTamanho56
+listCandidatos.size()  187
+novoTamanho56
+listCandidatos.size()  186
+novoTamanho55
+listCandidatos.size()  185
+novoTamanho55
+listCandidatos.size()  184
+novoTamanho55
+listCandidatos.size()  183
+novoTamanho54
+listCandidatos.size()  182
+novoTamanho54
+listCandidatos.size()  181
+novoTamanho54
+listCandidatos.size()  180
+novoTamanho54
+listCandidatos.size()  179
+novoTamanho53
+listCandidatos.size()  178
+novoTamanho53
+listCandidatos.size()  177
+novoTamanho53
+listCandidatos.size()  176
+novoTamanho52
+listCandidatos.size()  175
+novoTamanho52
+listCandidatos.size()  155
+novoTamanho46
+listCandidatos.size()  174
+novoTamanho52
+listCandidatos.size()  172
+novoTamanho51
+listCandidatos.size()  171
+novoTamanho51
+listCandidatos.size()  170
+novoTamanho51
+listCandidatos.size()  169
+novoTamanho50
+listCandidatos.size()  168
+novoTamanho50
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  165
+novoTamanho49
+listCandidatos.size()  164
+novoTamanho49
+listCandidatos.size()  163
+novoTamanho48
+listCandidatos.size()  162
+novoTamanho48
+listCandidatos.size()  161
+novoTamanho48
+listCandidatos.size()  160
+novoTamanho48
+listCandidatos.size()  159
+novoTamanho47
+listCandidatos.size()  159
+novoTamanho47
+listCandidatos.size()  159
+novoTamanho47
+listCandidatos.size()  158
+novoTamanho47
+listCandidatos.size()  157
+novoTamanho47
+listCandidatos.size()  146
+novoTamanho43
+listCandidatos.size()  116
+novoTamanho34
+listCandidatos.size()  154
+novoTamanho46
+listCandidatos.size()  153
+novoTamanho45
+listCandidatos.size()  152
+novoTamanho45
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  139
+novoTamanho41
+listCandidatos.size()  112
+novoTamanho33
+listCandidatos.size()  136
+novoTamanho40
+listCandidatos.size()  143
+novoTamanho42
+listCandidatos.size()  142
+novoTamanho42
+listCandidatos.size()  141
+novoTamanho42
+listCandidatos.size()  140
+novoTamanho42
+listCandidatos.size()  138
+novoTamanho41
+listCandidatos.size()  137
+novoTamanho41
+listCandidatos.size()  136
+novoTamanho40
+listCandidatos.size()  106
+novoTamanho31
+listCandidatos.size()  133
+novoTamanho39
+listCandidatos.size()  132
+novoTamanho39
+listCandidatos.size()  131
+novoTamanho39
+listCandidatos.size()  130
+novoTamanho39
+listCandidatos.size()  129
+novoTamanho38
+listCandidatos.size()  128
+novoTamanho38
+listCandidatos.size()  120
+novoTamanho36
+listCandidatos.size()  101
+novoTamanho30
+listCandidatos.size()  125
+novoTamanho37
+listCandidatos.size()  124
+novoTamanho37
+listCandidatos.size()  117
+novoTamanho35
+listCandidatos.size()  116
+novoTamanho34
+listCandidatos.size()  98
+novoTamanho29
+listCandidatos.size()  119
+novoTamanho35
+listCandidatos.size()  118
+novoTamanho35
+listCandidatos.size()  111
+novoTamanho33
+listCandidatos.size()  94
+novoTamanho28
+listCandidatos.size()  115
+novoTamanho34
+listCandidatos.size()  114
+novoTamanho34
+listCandidatos.size()  108
+novoTamanho32
+listCandidatos.size()  92
+novoTamanho27
+listCandidatos.size()  110
+novoTamanho33
+listCandidatos.size()  109
+novoTamanho32
+listCandidatos.size()  108
+novoTamanho32
+listCandidatos.size()  107
+novoTamanho32
+listCandidatos.size()  106
+novoTamanho31
+listCandidatos.size()  105
+novoTamanho31
+listCandidatos.size()  105
+novoTamanho31
+listCandidatos.size()  104
+novoTamanho31
+listCandidatos.size()  103
+novoTamanho30
+listCandidatos.size()  102
+novoTamanho30
+listCandidatos.size()  101
+novoTamanho30
+listCandidatos.size()  100
+novoTamanho30
+listCandidatos.size()  99
+novoTamanho29
+listCandidatos.size()  96
+novoTamanho28
+listCandidatos.size()  95
+novoTamanho28
+listCandidatos.size()  96
+novoTamanho28
+listCandidatos.size()  95
+novoTamanho28
+listCandidatos.size()  94
+novoTamanho28
+listCandidatos.size()  93
+novoTamanho27
+listCandidatos.size()  91
+novoTamanho27
+listCandidatos.size()  90
+novoTamanho27
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  87
+novoTamanho26
+listCandidatos.size()  86
+novoTamanho25
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  84
+novoTamanho25
+listCandidatos.size()  83
+novoTamanho24
+listCandidatos.size()  81
+novoTamanho24
+listCandidatos.size()  80
+novoTamanho24
+listCandidatos.size()  70
+novoTamanho21
+listCandidatos.size()  79
+novoTamanho23
+listCandidatos.size()  78
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  76
+novoTamanho22
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  73
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  64
+novoTamanho19
+listCandidatos.size()  70
+novoTamanho21
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  67
+novoTamanho20
+listCandidatos.size()  60
+novoTamanho18
+listCandidatos.size()  66
+novoTamanho19
+listCandidatos.size()  65
+novoTamanho19
+listCandidatos.size()  64
+novoTamanho19
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  62
+novoTamanho18
+listCandidatos.size()  61
+novoTamanho18
+listCandidatos.size()  60
+novoTamanho18
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  57
+novoTamanho17
+listCandidatos.size()  56
+novoTamanho16
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  54
+novoTamanho16
+listCandidatos.size()  53
+novoTamanho15
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  51
+novoTamanho15
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  49
+novoTamanho14
+listCandidatos.size()  48
+novoTamanho14
+listCandidatos.size()  46
+novoTamanho13
+listCandidatos.size()  45
+novoTamanho13
+listCandidatos.size()  39
+novoTamanho11
+listCandidatos.size()  44
+novoTamanho13
+listCandidatos.size()  42
+novoTamanho12
+Rota 0 : < 1 120 13 138 241 235 26 142 195 82 150 152 30 143 95 157 162 1 >  - distancia: 89.0254 - carga: 200
+Rota 1 : < 1 102 10 160 52 171 106 80 84 94 92 23 22 27 29 203 1 >  - distancia: 85.4664 - carga: 200
+Rota 2 : < 1 175 62 21 25 126 232 116 96 42 163 31 1 >  - distancia: 79.5577 - carga: 200
+Rota 3 : < 1 48 66 133 179 16 177 51 226 172 59 47 14 1 >  - distancia: 80.7366 - carga: 200
+Rota 4 : < 1 58 12 60 18 184 164 101 158 165 166 54 1 >  - distancia: 87.3187 - carga: 200
+Rota 5 : < 1 174 127 2 117 191 161 40 37 215 1 >  - distancia: 81.8174 - carga: 200
+Rota 6 : < 1 236 187 70 218 7 114 33 15 24 79 1 >  - distancia: 91.807 - carga: 200
+Rota 7 : < 1 225 131 122 81 77 179 55 107 227 53 113 237 1 >  - distancia: 98.3578 - carga: 200
+Rota 8 : < 1 197 133 4 128 63 87 147 1 >  - distancia: 75.2516 - carga: 200
+Rota 9 : < 1 209 189 69 87 193 101 98 1 >  - distancia: 90.8844 - carga: 170
+Rota 10 : < 1 39 6 8 132 56 167 176 5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 >  - distancia: 71.7724 - carga: 200
+Rota 11 : < 1 93 9 149 154 186 108 122 20 204 1 >  - distancia: 78.1652 - carga: 200
+Rota 12 : < 1 129 69 183 140 201 194 196 112 118 1 >  - distancia: 75.5679 - carga: 200
+Rota 13 : < 1 180 73 13 192 126 109 1 >  - distancia: 56.2075 - carga: 200
+Rota 14 : < 1 144 123 182 199 115 67 57 234 239 78 1 >  - distancia: 60.9069 - carga: 200
+Rota 15 : < 1 222 130 88 205 135 137 139 115 186 159 228 1 >  - distancia: 101.963 - carga: 200
+Rota 16 : < 1 90 64 32 148 34 156 49 219 168 68 75 1 >  - distancia: 77.7942 - carga: 200
+Rota 17 : < 1 208 69 89 145 146 134 28 17 235 188 1 >  - distancia: 90.3835 - carga: 200
+Rota 18 : < 1 35 64 155 3 85 125 72 1 >  - distancia: 68.4129 - carga: 200
+Rota 19 : < 1 124 64 185 11 224 36 1 >  - distancia: 51.1892 - carga: 200
+Rota 20 : < 1 103 65 169 70 41 44 151 43 110 52 1 >  - distancia: 65.75 - carga: 200
+Rota 21 : < 1 119 127 125 229 71 221 153 207 1 >  - distancia: 79.7658 - carga: 200
+total - 1738.1
+optimal_value: 707.79
+% acima: 145.567%
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  217
+novoTamanho65
+listCandidatos.size()  216
+novoTamanho64
+listCandidatos.size()  215
+novoTamanho64
+listCandidatos.size()  214
+novoTamanho64
+listCandidatos.size()  213
+novoTamanho63
+listCandidatos.size()  212
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  210
+novoTamanho63
+listCandidatos.size()  209
+novoTamanho62
+listCandidatos.size()  208
+novoTamanho62
+listCandidatos.size()  207
+novoTamanho62
+listCandidatos.size()  206
+novoTamanho61
+listCandidatos.size()  205
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  203
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  201
+novoTamanho60
+listCandidatos.size()  200
+novoTamanho60
+listCandidatos.size()  199
+novoTamanho59
+listCandidatos.size()  198
+novoTamanho59
+listCandidatos.size()  197
+novoTamanho59
+listCandidatos.size()  196
+novoTamanho58
+listCandidatos.size()  195
+novoTamanho58
+listCandidatos.size()  194
+novoTamanho58
+listCandidatos.size()  193
+novoTamanho57
+listCandidatos.size()  192
+novoTamanho57
+listCandidatos.size()  191
+novoTamanho57
+listCandidatos.size()  190
+novoTamanho57
+listCandidatos.size()  189
+novoTamanho56
+listCandidatos.size()  188
+novoTamanho56
+listCandidatos.size()  187
+novoTamanho56
+listCandidatos.size()  186
+novoTamanho55
+listCandidatos.size()  185
+novoTamanho55
+listCandidatos.size()  184
+novoTamanho55
+listCandidatos.size()  183
+novoTamanho54
+listCandidatos.size()  182
+novoTamanho54
+listCandidatos.size()  181
+novoTamanho54
+listCandidatos.size()  163
+novoTamanho48
+listCandidatos.size()  162
+novoTamanho48
+listCandidatos.size()  124
+novoTamanho37
+listCandidatos.size()  177
+novoTamanho53
+listCandidatos.size()  176
+novoTamanho52
+listCandidatos.size()  123
+novoTamanho36
+listCandidatos.size()  174
+novoTamanho52
+listCandidatos.size()  173
+novoTamanho51
+listCandidatos.size()  172
+novoTamanho51
+listCandidatos.size()  171
+novoTamanho51
+listCandidatos.size()  170
+novoTamanho51
+listCandidatos.size()  169
+novoTamanho50
+listCandidatos.size()  168
+novoTamanho50
+listCandidatos.size()  167
+novoTamanho50
+listCandidatos.size()  166
+novoTamanho49
+listCandidatos.size()  165
+novoTamanho49
+listCandidatos.size()  154
+novoTamanho46
+listCandidatos.size()  164
+novoTamanho49
+listCandidatos.size()  163
+novoTamanho48
+listCandidatos.size()  163
+novoTamanho48
+listCandidatos.size()  162
+novoTamanho48
+listCandidatos.size()  161
+novoTamanho48
+listCandidatos.size()  160
+novoTamanho48
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  118
+novoTamanho35
+listCandidatos.size()  117
+novoTamanho35
+listCandidatos.size()  155
+novoTamanho46
+listCandidatos.size()  154
+novoTamanho46
+listCandidatos.size()  153
+novoTamanho45
+listCandidatos.size()  146
+novoTamanho43
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  116
+novoTamanho34
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  145
+novoTamanho43
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  149
+novoTamanho44
+listCandidatos.size()  148
+novoTamanho44
+listCandidatos.size()  147
+novoTamanho44
+listCandidatos.size()  140
+novoTamanho42
+listCandidatos.size()  146
+novoTamanho43
+listCandidatos.size()  145
+novoTamanho43
+listCandidatos.size()  144
+novoTamanho43
+listCandidatos.size()  143
+novoTamanho42
+listCandidatos.size()  142
+novoTamanho42
+listCandidatos.size()  141
+novoTamanho42
+listCandidatos.size()  135
+novoTamanho40
+listCandidatos.size()  134
+novoTamanho40
+listCandidatos.size()  135
+novoTamanho40
+listCandidatos.size()  134
+novoTamanho40
+listCandidatos.size()  129
+novoTamanho38
+listCandidatos.size()  103
+novoTamanho30
+listCandidatos.size()  127
+novoTamanho38
+listCandidatos.size()  131
+novoTamanho39
+listCandidatos.size()  102
+novoTamanho30
+listCandidatos.size()  129
+novoTamanho38
+listCandidatos.size()  128
+novoTamanho38
+listCandidatos.size()  123
+novoTamanho36
+listCandidatos.size()  122
+novoTamanho36
+listCandidatos.size()  97
+novoTamanho29
+listCandidatos.size()  119
+novoTamanho35
+listCandidatos.size()  95
+novoTamanho28
+listCandidatos.size()  117
+novoTamanho35
+listCandidatos.size()  94
+novoTamanho28
+listCandidatos.size()  117
+novoTamanho35
+listCandidatos.size()  116
+novoTamanho34
+listCandidatos.size()  112
+novoTamanho33
+listCandidatos.size()  111
+novoTamanho33
+listCandidatos.size()  90
+novoTamanho27
+listCandidatos.size()  111
+novoTamanho33
+listCandidatos.size()  110
+novoTamanho33
+listCandidatos.size()  109
+novoTamanho32
+listCandidatos.size()  108
+novoTamanho32
+listCandidatos.size()  107
+novoTamanho32
+listCandidatos.size()  103
+novoTamanho30
+listCandidatos.size()  102
+novoTamanho30
+listCandidatos.size()  104
+novoTamanho31
+listCandidatos.size()  103
+novoTamanho30
+listCandidatos.size()  102
+novoTamanho30
+listCandidatos.size()  101
+novoTamanho30
+listCandidatos.size()  100
+novoTamanho30
+listCandidatos.size()  97
+novoTamanho29
+listCandidatos.size()  96
+novoTamanho28
+listCandidatos.size()  81
+novoTamanho24
+listCandidatos.size()  80
+novoTamanho24
+listCandidatos.size()  94
+novoTamanho28
+listCandidatos.size()  93
+novoTamanho27
+listCandidatos.size()  92
+novoTamanho27
+listCandidatos.size()  91
+novoTamanho27
+listCandidatos.size()  90
+novoTamanho27
+listCandidatos.size()  89
+novoTamanho26
+listCandidatos.size()  88
+novoTamanho26
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  84
+novoTamanho25
+listCandidatos.size()  83
+novoTamanho24
+listCandidatos.size()  82
+novoTamanho24
+listCandidatos.size()  79
+novoTamanho23
+listCandidatos.size()  71
+novoTamanho21
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  76
+novoTamanho22
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  73
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  64
+novoTamanho19
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  69
+novoTamanho20
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  67
+novoTamanho20
+listCandidatos.size()  65
+novoTamanho19
+listCandidatos.size()  64
+novoTamanho19
+listCandidatos.size()  58
+novoTamanho17
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  62
+novoTamanho18
+listCandidatos.size()  61
+novoTamanho18
+listCandidatos.size()  60
+novoTamanho18
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  58
+novoTamanho17
+listCandidatos.size()  57
+novoTamanho17
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  54
+novoTamanho16
+listCandidatos.size()  53
+novoTamanho15
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  51
+novoTamanho15
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  49
+novoTamanho14
+listCandidatos.size()  48
+novoTamanho14
+listCandidatos.size()  43
+novoTamanho12
+listCandidatos.size()  44
+novoTamanho13
+listCandidatos.size()  43
+novoTamanho12
+listCandidatos.size()  42
+novoTamanho12
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  36
+novoTamanho10
+Rota 0 : < 1 169 71 9 23 203 29 207 92 151 38 105 163 223 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 >  - distancia: 92.6899 - carga: 200
+Rota 1 : < 1 152 124 148 83 40 43 95 125 162 210 145 144 1 >  - distancia: 87.8144 - carga: 200
+Rota 2 : < 1 127 7 192 197 199 86 141 21 24 84 1 >  - distancia: 78.2531 - carga: 200
+Rota 3 : < 1 130 190 96 32 49 232 238 173 226 39 47 1 >  - distancia: 82.4169 - carga: 200
+Rota 4 : < 1 182 122 14 77 240 188 208 195 1 >  - distancia: 79.0833 - carga: 200
+Rota 5 : < 1 70 10 97 161 6 192 159 1 >  - distancia: 66.8401 - carga: 200
+Rota 6 : < 1 67 7 183 88 93 41 218 45 1 >  - distancia: 53.1237 - carga: 200
+Rota 7 : < 1 176 12 9 154 82 94 149 64 143 102 222 1 >  - distancia: 90.0932 - carga: 200
+Rota 8 : < 1 123 63 28 202 80 135 15 140 25 23 1 >  - distancia: 57.6267 - carga: 200
+Rota 9 : < 1 160 185 156 131 103 31 153 212 37 221 91 1 >  - distancia: 87.5459 - carga: 200
+Rota 10 : < 1 85 8 15 55 18 137 17 109 46 58 180 175 1 >  - distancia: 78.3988 - carga: 200
+Rota 11 : < 1 126 66 52 48 4 148 44 211 1 >  - distancia: 62.8311 - carga: 200
+Rota 12 : < 1 219 186 224 229 177 111 53 5 98 99 108 1 >  - distancia: 73.6303 - carga: 200
+Rota 13 : < 1 215 10 101 155 224 170 164 225 103 104 110 112 1 >  - distancia: 82.8336 - carga: 200
+Rota 14 : < 1 142 63 68 194 76 61 200 79 120 107 16 19 1 >  - distancia: 72.2342 - carga: 200
+Rota 15 : < 1 209 129 33 3 147 22 191 216 100 1 >  - distancia: 97.2708 - carga: 200
+Rota 16 : < 1 189 129 128 133 57 106 227 1 >  - distancia: 82.7444 - carga: 200
+Rota 17 : < 1 187 13 193 140 201 206 204 146 235 75 1 >  - distancia: 77.689 - carga: 200
+Rota 18 : < 1 134 62 139 115 9 150 83 132 117 51 1 >  - distancia: 75.5719 - carga: 200
+Rota 19 : < 1 184 124 156 42 72 65 35 1 >  - distancia: 64.6833 - carga: 200
+Rota 20 : < 1 50 11 73 80 60 54 114 234 56 116 167 121 1 >  - distancia: 76.2571 - carga: 200
+Rota 21 : < 1 89 69 36 155 213 20 136 2 59 49 1 >  - distancia: 76.4124 - carga: 200
+total - 1696.04
+optimal_value: 707.79
+% acima: 139.625%
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  217
+novoTamanho65
+listCandidatos.size()  216
+novoTamanho64
+listCandidatos.size()  215
+novoTamanho64
+listCandidatos.size()  214
+novoTamanho64
+listCandidatos.size()  213
+novoTamanho63
+listCandidatos.size()  212
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  210
+novoTamanho63
+listCandidatos.size()  209
+novoTamanho62
+listCandidatos.size()  208
+novoTamanho62
+listCandidatos.size()  207
+novoTamanho62
+listCandidatos.size()  206
+novoTamanho61
+listCandidatos.size()  205
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  203
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  201
+novoTamanho60
+listCandidatos.size()  200
+novoTamanho60
+listCandidatos.size()  199
+novoTamanho59
+listCandidatos.size()  198
+novoTamanho59
+listCandidatos.size()  197
+novoTamanho59
+listCandidatos.size()  196
+novoTamanho58
+listCandidatos.size()  195
+novoTamanho58
+listCandidatos.size()  194
+novoTamanho58
+listCandidatos.size()  193
+novoTamanho57
+listCandidatos.size()  192
+novoTamanho57
+listCandidatos.size()  191
+novoTamanho57
+listCandidatos.size()  190
+novoTamanho57
+listCandidatos.size()  189
+novoTamanho56
+listCandidatos.size()  188
+novoTamanho56
+listCandidatos.size()  187
+novoTamanho56
+listCandidatos.size()  186
+novoTamanho55
+listCandidatos.size()  185
+novoTamanho55
+listCandidatos.size()  184
+novoTamanho55
+listCandidatos.size()  183
+novoTamanho54
+listCandidatos.size()  182
+novoTamanho54
+listCandidatos.size()  181
+novoTamanho54
+listCandidatos.size()  163
+novoTamanho48
+listCandidatos.size()  162
+novoTamanho48
+listCandidatos.size()  124
+novoTamanho37
+listCandidatos.size()  177
+novoTamanho53
+listCandidatos.size()  176
+novoTamanho52
+listCandidatos.size()  123
+novoTamanho36
+listCandidatos.size()  174
+novoTamanho52
+listCandidatos.size()  173
+novoTamanho51
+listCandidatos.size()  172
+novoTamanho51
+listCandidatos.size()  171
+novoTamanho51
+listCandidatos.size()  170
+novoTamanho51
+listCandidatos.size()  169
+novoTamanho50
+listCandidatos.size()  168
+novoTamanho50
+listCandidatos.size()  167
+novoTamanho50
+listCandidatos.size()  166
+novoTamanho49
+listCandidatos.size()  165
+novoTamanho49
+listCandidatos.size()  154
+novoTamanho46
+listCandidatos.size()  164
+novoTamanho49
+listCandidatos.size()  163
+novoTamanho48
+listCandidatos.size()  163
+novoTamanho48
+listCandidatos.size()  162
+novoTamanho48
+listCandidatos.size()  161
+novoTamanho48
+listCandidatos.size()  160
+novoTamanho48
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  118
+novoTamanho35
+listCandidatos.size()  117
+novoTamanho35
+listCandidatos.size()  155
+novoTamanho46
+listCandidatos.size()  154
+novoTamanho46
+listCandidatos.size()  153
+novoTamanho45
+listCandidatos.size()  146
+novoTamanho43
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  116
+novoTamanho34
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  145
+novoTamanho43
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  149
+novoTamanho44
+listCandidatos.size()  148
+novoTamanho44
+listCandidatos.size()  147
+novoTamanho44
+listCandidatos.size()  140
+novoTamanho42
+listCandidatos.size()  146
+novoTamanho43
+listCandidatos.size()  145
+novoTamanho43
+listCandidatos.size()  144
+novoTamanho43
+listCandidatos.size()  143
+novoTamanho42
+listCandidatos.size()  142
+novoTamanho42
+listCandidatos.size()  141
+novoTamanho42
+listCandidatos.size()  135
+novoTamanho40
+listCandidatos.size()  134
+novoTamanho40
+listCandidatos.size()  135
+novoTamanho40
+listCandidatos.size()  134
+novoTamanho40
+listCandidatos.size()  129
+novoTamanho38
+listCandidatos.size()  103
+novoTamanho30
+listCandidatos.size()  127
+novoTamanho38
+listCandidatos.size()  131
+novoTamanho39
+listCandidatos.size()  102
+novoTamanho30
+listCandidatos.size()  129
+novoTamanho38
+listCandidatos.size()  128
+novoTamanho38
+listCandidatos.size()  123
+novoTamanho36
+listCandidatos.size()  122
+novoTamanho36
+listCandidatos.size()  97
+novoTamanho29
+listCandidatos.size()  119
+novoTamanho35
+listCandidatos.size()  95
+novoTamanho28
+listCandidatos.size()  117
+novoTamanho35
+listCandidatos.size()  94
+novoTamanho28
+listCandidatos.size()  117
+novoTamanho35
+listCandidatos.size()  116
+novoTamanho34
+listCandidatos.size()  112
+novoTamanho33
+listCandidatos.size()  111
+novoTamanho33
+listCandidatos.size()  90
+novoTamanho27
+listCandidatos.size()  111
+novoTamanho33
+listCandidatos.size()  110
+novoTamanho33
+listCandidatos.size()  109
+novoTamanho32
+listCandidatos.size()  108
+novoTamanho32
+listCandidatos.size()  107
+novoTamanho32
+listCandidatos.size()  103
+novoTamanho30
+listCandidatos.size()  102
+novoTamanho30
+listCandidatos.size()  104
+novoTamanho31
+listCandidatos.size()  103
+novoTamanho30
+listCandidatos.size()  102
+novoTamanho30
+listCandidatos.size()  101
+novoTamanho30
+listCandidatos.size()  100
+novoTamanho30
+listCandidatos.size()  97
+novoTamanho29
+listCandidatos.size()  96
+novoTamanho28
+listCandidatos.size()  81
+novoTamanho24
+listCandidatos.size()  80
+novoTamanho24
+listCandidatos.size()  94
+novoTamanho28
+listCandidatos.size()  93
+novoTamanho27
+listCandidatos.size()  92
+novoTamanho27
+listCandidatos.size()  91
+novoTamanho27
+listCandidatos.size()  90
+novoTamanho27
+listCandidatos.size()  89
+novoTamanho26
+listCandidatos.size()  88
+novoTamanho26
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  84
+novoTamanho25
+listCandidatos.size()  83
+novoTamanho24
+listCandidatos.size()  82
+novoTamanho24
+listCandidatos.size()  79
+novoTamanho23
+listCandidatos.size()  71
+novoTamanho21
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  76
+novoTamanho22
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  73
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  64
+novoTamanho19
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  69
+novoTamanho20
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  67
+novoTamanho20
+listCandidatos.size()  65
+novoTamanho19
+listCandidatos.size()  64
+novoTamanho19
+listCandidatos.size()  58
+novoTamanho17
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  62
+novoTamanho18
+listCandidatos.size()  61
+novoTamanho18
+listCandidatos.size()  60
+novoTamanho18
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  58
+novoTamanho17
+listCandidatos.size()  57
+novoTamanho17
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  54
+novoTamanho16
+listCandidatos.size()  53
+novoTamanho15
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  51
+novoTamanho15
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  49
+novoTamanho14
+listCandidatos.size()  48
+novoTamanho14
+listCandidatos.size()  43
+novoTamanho12
+listCandidatos.size()  44
+novoTamanho13
+listCandidatos.size()  43
+novoTamanho12
+listCandidatos.size()  42
+novoTamanho12
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  36
+novoTamanho10
+Rota 0 : < 1 169 71 9 23 203 29 207 92 151 38 105 163 223 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 >  - distancia: 92.6899 - carga: 200
+Rota 1 : < 1 152 124 148 83 40 43 95 125 162 210 145 144 1 >  - distancia: 87.8144 - carga: 200
+Rota 2 : < 1 127 7 192 197 199 86 141 21 24 84 1 >  - distancia: 78.2531 - carga: 200
+Rota 3 : < 1 130 190 96 32 49 232 238 173 226 39 47 1 >  - distancia: 82.4169 - carga: 200
+Rota 4 : < 1 182 122 14 77 240 188 208 195 1 >  - distancia: 79.0833 - carga: 200
+Rota 5 : < 1 70 10 97 161 6 192 159 1 >  - distancia: 66.8401 - carga: 200
+Rota 6 : < 1 67 7 183 88 93 41 218 45 1 >  - distancia: 53.1237 - carga: 200
+Rota 7 : < 1 176 12 9 154 82 94 149 64 143 102 222 1 >  - distancia: 90.0932 - carga: 200
+Rota 8 : < 1 123 63 28 202 80 135 15 140 25 23 1 >  - distancia: 57.6267 - carga: 200
+Rota 9 : < 1 160 185 156 131 103 31 153 212 37 221 91 1 >  - distancia: 87.5459 - carga: 200
+Rota 10 : < 1 85 8 15 55 18 137 17 109 46 58 180 175 1 >  - distancia: 78.3988 - carga: 200
+Rota 11 : < 1 126 66 52 48 4 148 44 211 1 >  - distancia: 62.8311 - carga: 200
+Rota 12 : < 1 219 186 224 229 177 111 53 5 98 99 108 1 >  - distancia: 73.6303 - carga: 200
+Rota 13 : < 1 215 10 101 155 224 170 164 225 103 104 110 112 1 >  - distancia: 82.8336 - carga: 200
+Rota 14 : < 1 142 63 68 194 76 61 200 79 120 107 16 19 1 >  - distancia: 72.2342 - carga: 200
+Rota 15 : < 1 209 129 33 3 147 22 191 216 100 1 >  - distancia: 97.2708 - carga: 200
+Rota 16 : < 1 189 129 128 133 57 106 227 1 >  - distancia: 82.7444 - carga: 200
+Rota 17 : < 1 187 13 193 140 201 206 204 146 235 75 1 >  - distancia: 77.689 - carga: 200
+Rota 18 : < 1 134 62 139 115 9 150 83 132 117 51 1 >  - distancia: 75.5719 - carga: 200
+Rota 19 : < 1 184 124 156 42 72 65 35 1 >  - distancia: 64.6833 - carga: 200
+Rota 20 : < 1 50 11 73 80 60 54 114 234 56 116 167 121 1 >  - distancia: 76.2571 - carga: 200
+Rota 21 : < 1 89 69 36 155 213 20 136 2 59 49 1 >  - distancia: 76.4124 - carga: 200
+total - 1696.04
+optimal_value: 707.79
+% acima: 139.625%
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  217
+novoTamanho65
+listCandidatos.size()  216
+novoTamanho64
+listCandidatos.size()  215
+novoTamanho64
+listCandidatos.size()  214
+novoTamanho64
+listCandidatos.size()  213
+novoTamanho63
+listCandidatos.size()  212
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  210
+novoTamanho63
+listCandidatos.size()  209
+novoTamanho62
+listCandidatos.size()  208
+novoTamanho62
+listCandidatos.size()  207
+novoTamanho62
+listCandidatos.size()  206
+novoTamanho61
+listCandidatos.size()  205
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  203
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  201
+novoTamanho60
+listCandidatos.size()  200
+novoTamanho60
+listCandidatos.size()  199
+novoTamanho59
+listCandidatos.size()  198
+novoTamanho59
+listCandidatos.size()  197
+novoTamanho59
+listCandidatos.size()  196
+novoTamanho58
+listCandidatos.size()  195
+novoTamanho58
+listCandidatos.size()  194
+novoTamanho58
+listCandidatos.size()  193
+novoTamanho57
+listCandidatos.size()  192
+novoTamanho57
+listCandidatos.size()  191
+novoTamanho57
+listCandidatos.size()  190
+novoTamanho57
+listCandidatos.size()  189
+novoTamanho56
+listCandidatos.size()  188
+novoTamanho56
+listCandidatos.size()  187
+novoTamanho56
+listCandidatos.size()  186
+novoTamanho55
+listCandidatos.size()  185
+novoTamanho55
+listCandidatos.size()  184
+novoTamanho55
+listCandidatos.size()  183
+novoTamanho54
+listCandidatos.size()  182
+novoTamanho54
+listCandidatos.size()  181
+novoTamanho54
+listCandidatos.size()  163
+novoTamanho48
+listCandidatos.size()  162
+novoTamanho48
+listCandidatos.size()  124
+novoTamanho37
+listCandidatos.size()  177
+novoTamanho53
+listCandidatos.size()  176
+novoTamanho52
+listCandidatos.size()  123
+novoTamanho36
+listCandidatos.size()  174
+novoTamanho52
+listCandidatos.size()  173
+novoTamanho51
+listCandidatos.size()  172
+novoTamanho51
+listCandidatos.size()  171
+novoTamanho51
+listCandidatos.size()  170
+novoTamanho51
+listCandidatos.size()  169
+novoTamanho50
+listCandidatos.size()  168
+novoTamanho50
+listCandidatos.size()  167
+novoTamanho50
+listCandidatos.size()  166
+novoTamanho49
+listCandidatos.size()  165
+novoTamanho49
+listCandidatos.size()  154
+novoTamanho46
+listCandidatos.size()  164
+novoTamanho49
+listCandidatos.size()  163
+novoTamanho48
+listCandidatos.size()  163
+novoTamanho48
+listCandidatos.size()  162
+novoTamanho48
+listCandidatos.size()  161
+novoTamanho48
+listCandidatos.size()  160
+novoTamanho48
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  118
+novoTamanho35
+listCandidatos.size()  117
+novoTamanho35
+listCandidatos.size()  155
+novoTamanho46
+listCandidatos.size()  154
+novoTamanho46
+listCandidatos.size()  153
+novoTamanho45
+listCandidatos.size()  146
+novoTamanho43
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  116
+novoTamanho34
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  145
+novoTamanho43
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  149
+novoTamanho44
+listCandidatos.size()  148
+novoTamanho44
+listCandidatos.size()  147
+novoTamanho44
+listCandidatos.size()  140
+novoTamanho42
+listCandidatos.size()  146
+novoTamanho43
+listCandidatos.size()  145
+novoTamanho43
+listCandidatos.size()  144
+novoTamanho43
+listCandidatos.size()  143
+novoTamanho42
+listCandidatos.size()  142
+novoTamanho42
+listCandidatos.size()  141
+novoTamanho42
+listCandidatos.size()  135
+novoTamanho40
+listCandidatos.size()  134
+novoTamanho40
+listCandidatos.size()  135
+novoTamanho40
+listCandidatos.size()  134
+novoTamanho40
+listCandidatos.size()  129
+novoTamanho38
+listCandidatos.size()  103
+novoTamanho30
+listCandidatos.size()  127
+novoTamanho38
+listCandidatos.size()  131
+novoTamanho39
+listCandidatos.size()  102
+novoTamanho30
+listCandidatos.size()  129
+novoTamanho38
+listCandidatos.size()  128
+novoTamanho38
+listCandidatos.size()  123
+novoTamanho36
+listCandidatos.size()  122
+novoTamanho36
+listCandidatos.size()  97
+novoTamanho29
+listCandidatos.size()  119
+novoTamanho35
+listCandidatos.size()  95
+novoTamanho28
+listCandidatos.size()  117
+novoTamanho35
+listCandidatos.size()  94
+novoTamanho28
+listCandidatos.size()  117
+novoTamanho35
+listCandidatos.size()  116
+novoTamanho34
+listCandidatos.size()  112
+novoTamanho33
+listCandidatos.size()  111
+novoTamanho33
+listCandidatos.size()  90
+novoTamanho27
+listCandidatos.size()  111
+novoTamanho33
+listCandidatos.size()  110
+novoTamanho33
+listCandidatos.size()  109
+novoTamanho32
+listCandidatos.size()  108
+novoTamanho32
+listCandidatos.size()  107
+novoTamanho32
+listCandidatos.size()  103
+novoTamanho30
+listCandidatos.size()  102
+novoTamanho30
+listCandidatos.size()  104
+novoTamanho31
+listCandidatos.size()  103
+novoTamanho30
+listCandidatos.size()  102
+novoTamanho30
+listCandidatos.size()  101
+novoTamanho30
+listCandidatos.size()  100
+novoTamanho30
+listCandidatos.size()  97
+novoTamanho29
+listCandidatos.size()  96
+novoTamanho28
+listCandidatos.size()  81
+novoTamanho24
+listCandidatos.size()  80
+novoTamanho24
+listCandidatos.size()  94
+novoTamanho28
+listCandidatos.size()  93
+novoTamanho27
+listCandidatos.size()  92
+novoTamanho27
+listCandidatos.size()  91
+novoTamanho27
+listCandidatos.size()  90
+novoTamanho27
+listCandidatos.size()  89
+novoTamanho26
+listCandidatos.size()  88
+novoTamanho26
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  84
+novoTamanho25
+listCandidatos.size()  83
+novoTamanho24
+listCandidatos.size()  82
+novoTamanho24
+listCandidatos.size()  79
+novoTamanho23
+listCandidatos.size()  71
+novoTamanho21
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  76
+novoTamanho22
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  73
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  64
+novoTamanho19
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  69
+novoTamanho20
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  67
+novoTamanho20
+listCandidatos.size()  65
+novoTamanho19
+listCandidatos.size()  64
+novoTamanho19
+listCandidatos.size()  58
+novoTamanho17
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  62
+novoTamanho18
+listCandidatos.size()  61
+novoTamanho18
+listCandidatos.size()  60
+novoTamanho18
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  58
+novoTamanho17
+listCandidatos.size()  57
+novoTamanho17
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  54
+novoTamanho16
+listCandidatos.size()  53
+novoTamanho15
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  51
+novoTamanho15
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  49
+novoTamanho14
+listCandidatos.size()  48
+novoTamanho14
+listCandidatos.size()  43
+novoTamanho12
+listCandidatos.size()  44
+novoTamanho13
+listCandidatos.size()  43
+novoTamanho12
+listCandidatos.size()  42
+novoTamanho12
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  36
+novoTamanho10
+Rota 0 : < 1 169 71 9 23 203 29 207 92 151 38 105 163 223 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 >  - distancia: 92.6899 - carga: 200
+Rota 1 : < 1 152 124 148 83 40 43 95 125 162 210 145 144 1 >  - distancia: 87.8144 - carga: 200
+Rota 2 : < 1 127 7 192 197 199 86 141 21 24 84 1 >  - distancia: 78.2531 - carga: 200
+Rota 3 : < 1 130 190 96 32 49 232 238 173 226 39 47 1 >  - distancia: 82.4169 - carga: 200
+Rota 4 : < 1 182 122 14 77 240 188 208 195 1 >  - distancia: 79.0833 - carga: 200
+Rota 5 : < 1 70 10 97 161 6 192 159 1 >  - distancia: 66.8401 - carga: 200
+Rota 6 : < 1 67 7 183 88 93 41 218 45 1 >  - distancia: 53.1237 - carga: 200
+Rota 7 : < 1 176 12 9 154 82 94 149 64 143 102 222 1 >  - distancia: 90.0932 - carga: 200
+Rota 8 : < 1 123 63 28 202 80 135 15 140 25 23 1 >  - distancia: 57.6267 - carga: 200
+Rota 9 : < 1 160 185 156 131 103 31 153 212 37 221 91 1 >  - distancia: 87.5459 - carga: 200
+Rota 10 : < 1 85 8 15 55 18 137 17 109 46 58 180 175 1 >  - distancia: 78.3988 - carga: 200
+Rota 11 : < 1 126 66 52 48 4 148 44 211 1 >  - distancia: 62.8311 - carga: 200
+Rota 12 : < 1 219 186 224 229 177 111 53 5 98 99 108 1 >  - distancia: 73.6303 - carga: 200
+Rota 13 : < 1 215 10 101 155 224 170 164 225 103 104 110 112 1 >  - distancia: 82.8336 - carga: 200
+Rota 14 : < 1 142 63 68 194 76 61 200 79 120 107 16 19 1 >  - distancia: 72.2342 - carga: 200
+Rota 15 : < 1 209 129 33 3 147 22 191 216 100 1 >  - distancia: 97.2708 - carga: 200
+Rota 16 : < 1 189 129 128 133 57 106 227 1 >  - distancia: 82.7444 - carga: 200
+Rota 17 : < 1 187 13 193 140 201 206 204 146 235 75 1 >  - distancia: 77.689 - carga: 200
+Rota 18 : < 1 134 62 139 115 9 150 83 132 117 51 1 >  - distancia: 75.5719 - carga: 200
+Rota 19 : < 1 184 124 156 42 72 65 35 1 >  - distancia: 64.6833 - carga: 200
+Rota 20 : < 1 50 11 73 80 60 54 114 234 56 116 167 121 1 >  - distancia: 76.2571 - carga: 200
+Rota 21 : < 1 89 69 36 155 213 20 136 2 59 49 1 >  - distancia: 76.4124 - carga: 200
+total - 1696.04
+optimal_value: 707.79
+% acima: 139.625%
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  217
+novoTamanho65
+listCandidatos.size()  216
+novoTamanho64
+listCandidatos.size()  215
+novoTamanho64
+listCandidatos.size()  214
+novoTamanho64
+listCandidatos.size()  213
+novoTamanho63
+listCandidatos.size()  212
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  210
+novoTamanho63
+listCandidatos.size()  209
+novoTamanho62
+listCandidatos.size()  208
+novoTamanho62
+listCandidatos.size()  207
+novoTamanho62
+listCandidatos.size()  206
+novoTamanho61
+listCandidatos.size()  205
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  204
+novoTamanho61
+listCandidatos.size()  203
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  201
+novoTamanho60
+listCandidatos.size()  200
+novoTamanho60
+listCandidatos.size()  199
+novoTamanho59
+listCandidatos.size()  198
+novoTamanho59
+listCandidatos.size()  197
+novoTamanho59
+listCandidatos.size()  196
+novoTamanho58
+listCandidatos.size()  195
+novoTamanho58
+listCandidatos.size()  194
+novoTamanho58
+listCandidatos.size()  193
+novoTamanho57
+listCandidatos.size()  192
+novoTamanho57
+listCandidatos.size()  191
+novoTamanho57
+listCandidatos.size()  190
+novoTamanho57
+listCandidatos.size()  189
+novoTamanho56
+listCandidatos.size()  188
+novoTamanho56
+listCandidatos.size()  187
+novoTamanho56
+listCandidatos.size()  186
+novoTamanho55
+listCandidatos.size()  185
+novoTamanho55
+listCandidatos.size()  184
+novoTamanho55
+listCandidatos.size()  183
+novoTamanho54
+listCandidatos.size()  182
+novoTamanho54
+listCandidatos.size()  181
+novoTamanho54
+listCandidatos.size()  163
+novoTamanho48
+listCandidatos.size()  162
+novoTamanho48
+listCandidatos.size()  124
+novoTamanho37
+listCandidatos.size()  177
+novoTamanho53
+listCandidatos.size()  176
+novoTamanho52
+listCandidatos.size()  123
+novoTamanho36
+listCandidatos.size()  174
+novoTamanho52
+listCandidatos.size()  173
+novoTamanho51
+listCandidatos.size()  172
+novoTamanho51
+listCandidatos.size()  171
+novoTamanho51
+listCandidatos.size()  170
+novoTamanho51
+listCandidatos.size()  169
+novoTamanho50
+listCandidatos.size()  168
+novoTamanho50
+listCandidatos.size()  167
+novoTamanho50
+listCandidatos.size()  166
+novoTamanho49
+listCandidatos.size()  165
+novoTamanho49
+listCandidatos.size()  154
+novoTamanho46
+listCandidatos.size()  164
+novoTamanho49
+listCandidatos.size()  163
+novoTamanho48
+listCandidatos.size()  163
+novoTamanho48
+listCandidatos.size()  162
+novoTamanho48
+listCandidatos.size()  161
+novoTamanho48
+listCandidatos.size()  160
+novoTamanho48
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  118
+novoTamanho35
+listCandidatos.size()  117
+novoTamanho35
+listCandidatos.size()  155
+novoTamanho46
+listCandidatos.size()  154
+novoTamanho46
+listCandidatos.size()  153
+novoTamanho45
+listCandidatos.size()  146
+novoTamanho43
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  116
+novoTamanho34
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  145
+novoTamanho43
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  151
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  150
+novoTamanho45
+listCandidatos.size()  149
+novoTamanho44
+listCandidatos.size()  148
+novoTamanho44
+listCandidatos.size()  147
+novoTamanho44
+listCandidatos.size()  140
+novoTamanho42
+listCandidatos.size()  146
+novoTamanho43
+listCandidatos.size()  145
+novoTamanho43
+listCandidatos.size()  144
+novoTamanho43
+listCandidatos.size()  143
+novoTamanho42
+listCandidatos.size()  142
+novoTamanho42
+listCandidatos.size()  141
+novoTamanho42
+listCandidatos.size()  135
+novoTamanho40
+listCandidatos.size()  134
+novoTamanho40
+listCandidatos.size()  135
+novoTamanho40
+listCandidatos.size()  134
+novoTamanho40
+listCandidatos.size()  129
+novoTamanho38
+listCandidatos.size()  103
+novoTamanho30
+listCandidatos.size()  127
+novoTamanho38
+listCandidatos.size()  131
+novoTamanho39
+listCandidatos.size()  102
+novoTamanho30
+listCandidatos.size()  129
+novoTamanho38
+listCandidatos.size()  128
+novoTamanho38
+listCandidatos.size()  123
+novoTamanho36
+listCandidatos.size()  122
+novoTamanho36
+listCandidatos.size()  97
+novoTamanho29
+listCandidatos.size()  119
+novoTamanho35
+listCandidatos.size()  95
+novoTamanho28
+listCandidatos.size()  117
+novoTamanho35
+listCandidatos.size()  94
+novoTamanho28
+listCandidatos.size()  117
+novoTamanho35
+listCandidatos.size()  116
+novoTamanho34
+listCandidatos.size()  112
+novoTamanho33
+listCandidatos.size()  111
+novoTamanho33
+listCandidatos.size()  90
+novoTamanho27
+listCandidatos.size()  111
+novoTamanho33
+listCandidatos.size()  110
+novoTamanho33
+listCandidatos.size()  109
+novoTamanho32
+listCandidatos.size()  108
+novoTamanho32
+listCandidatos.size()  107
+novoTamanho32
+listCandidatos.size()  103
+novoTamanho30
+listCandidatos.size()  102
+novoTamanho30
+listCandidatos.size()  104
+novoTamanho31
+listCandidatos.size()  103
+novoTamanho30
+listCandidatos.size()  102
+novoTamanho30
+listCandidatos.size()  101
+novoTamanho30
+listCandidatos.size()  100
+novoTamanho30
+listCandidatos.size()  97
+novoTamanho29
+listCandidatos.size()  96
+novoTamanho28
+listCandidatos.size()  81
+novoTamanho24
+listCandidatos.size()  80
+novoTamanho24
+listCandidatos.size()  94
+novoTamanho28
+listCandidatos.size()  93
+novoTamanho27
+listCandidatos.size()  92
+novoTamanho27
+listCandidatos.size()  91
+novoTamanho27
+listCandidatos.size()  90
+novoTamanho27
+listCandidatos.size()  89
+novoTamanho26
+listCandidatos.size()  88
+novoTamanho26
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  84
+novoTamanho25
+listCandidatos.size()  83
+novoTamanho24
+listCandidatos.size()  82
+novoTamanho24
+listCandidatos.size()  79
+novoTamanho23
+listCandidatos.size()  71
+novoTamanho21
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  76
+novoTamanho22
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  73
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  64
+novoTamanho19
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  69
+novoTamanho20
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  67
+novoTamanho20
+listCandidatos.size()  65
+novoTamanho19
+listCandidatos.size()  64
+novoTamanho19
+listCandidatos.size()  58
+novoTamanho17
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  62
+novoTamanho18
+listCandidatos.size()  61
+novoTamanho18
+listCandidatos.size()  60
+novoTamanho18
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  58
+novoTamanho17
+listCandidatos.size()  57
+novoTamanho17
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  54
+novoTamanho16
+listCandidatos.size()  53
+novoTamanho15
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  51
+novoTamanho15
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  49
+novoTamanho14
+listCandidatos.size()  48
+novoTamanho14
+listCandidatos.size()  43
+novoTamanho12
+listCandidatos.size()  44
+novoTamanho13
+listCandidatos.size()  43
+novoTamanho12
+listCandidatos.size()  42
+novoTamanho12
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  36
+novoTamanho10
+Rota 0 : < 1 169 71 9 23 203 29 207 92 151 38 105 163 223 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 >  - distancia: 92.6899 - carga: 200
+Rota 1 : < 1 152 124 148 83 40 43 95 125 162 210 145 144 1 >  - distancia: 87.8144 - carga: 200
+Rota 2 : < 1 127 7 192 197 199 86 141 21 24 84 1 >  - distancia: 78.2531 - carga: 200
+Rota 3 : < 1 130 190 96 32 49 232 238 173 226 39 47 1 >  - distancia: 82.4169 - carga: 200
+Rota 4 : < 1 182 122 14 77 240 188 208 195 1 >  - distancia: 79.0833 - carga: 200
+Rota 5 : < 1 70 10 97 161 6 192 159 1 >  - distancia: 66.8401 - carga: 200
+Rota 6 : < 1 67 7 183 88 93 41 218 45 1 >  - distancia: 53.1237 - carga: 200
+Rota 7 : < 1 176 12 9 154 82 94 149 64 143 102 222 1 >  - distancia: 90.0932 - carga: 200
+Rota 8 : < 1 123 63 28 202 80 135 15 140 25 23 1 >  - distancia: 57.6267 - carga: 200
+Rota 9 : < 1 160 185 156 131 103 31 153 212 37 221 91 1 >  - distancia: 87.5459 - carga: 200
+Rota 10 : < 1 85 8 15 55 18 137 17 109 46 58 180 175 1 >  - distancia: 78.3988 - carga: 200
+Rota 11 : < 1 126 66 52 48 4 148 44 211 1 >  - distancia: 62.8311 - carga: 200
+Rota 12 : < 1 219 186 224 229 177 111 53 5 98 99 108 1 >  - distancia: 73.6303 - carga: 200
+Rota 13 : < 1 215 10 101 155 224 170 164 225 103 104 110 112 1 >  - distancia: 82.8336 - carga: 200
+Rota 14 : < 1 142 63 68 194 76 61 200 79 120 107 16 19 1 >  - distancia: 72.2342 - carga: 200
+Rota 15 : < 1 209 129 33 3 147 22 191 216 100 1 >  - distancia: 97.2708 - carga: 200
+Rota 16 : < 1 189 129 128 133 57 106 227 1 >  - distancia: 82.7444 - carga: 200
+Rota 17 : < 1 187 13 193 140 201 206 204 146 235 75 1 >  - distancia: 77.689 - carga: 200
+Rota 18 : < 1 134 62 139 115 9 150 83 132 117 51 1 >  - distancia: 75.5719 - carga: 200
+Rota 19 : < 1 184 124 156 42 72 65 35 1 >  - distancia: 64.6833 - carga: 200
+Rota 20 : < 1 50 11 73 80 60 54 114 234 56 116 167 121 1 >  - distancia: 76.2571 - carga: 200
+Rota 21 : < 1 89 69 36 155 213 20 136 2 59 49 1 >  - distancia: 76.4124 - carga: 200
+total - 1696.04
+optimal_value: 707.79
+% acima: 139.625%
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  217
+novoTamanho65
+listCandidatos.size()  216
+novoTamanho64
+listCandidatos.size()  215
+novoTamanho64
+listCandidatos.size()  214
+novoTamanho64
+listCandidatos.size()  213
+novoTamanho63
+listCandidatos.size()  212
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  210
+novoTamanho63
+listCandidatos.size()  209
+novoTamanho62
+listCandidatos.size()  208
+novoTamanho62
+listCandidatos.size()  207
+novoTamanho62
+listCandidatos.size()  206
+novoTamanho61
+listCandidatos.size()  205
+novoTamanho61
+listCandidatos.size()  170
+novoTamanho51
+listCandidatos.size()  203
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  201
+novoTamanho60
+listCandidatos.size()  199
+novoTamanho59
+listCandidatos.size()  198
+novoTamanho59
+listCandidatos.size()  197
+novoTamanho59
+listCandidatos.size()  167
+novoTamanho50
+listCandidatos.size()  166
+novoTamanho49
+listCandidatos.size()  123
+novoTamanho36
+listCandidatos.size()  192
+novoTamanho57
+listCandidatos.size()  191
+novoTamanho57
+listCandidatos.size()  162
+novoTamanho48
+Rota 0 : < 1 110 71 1 >  - distancia: 23.4786 - carga: 50
+Rota 1 : < 1 27 3 1 >  - distancia: 12.7097 - carga: 50
+Rota 2 : < 1 78 1 >  - distancia: 19.6977 - carga: 10
+Rota 3 : < 1 169 1 >  - distancia: 22.8035 - carga: 20
+Rota 4 : < 1 7 1 >  - distancia: 10.7703 - carga: 40
+Rota 5 : < 1 70 1 >  - distancia: 23.3238 - carga: 40
+Rota 6 : < 1 154 1 >  - distancia: 26.0768 - carga: 10
+Rota 7 : < 1 239 1 >  - distancia: 24.0832 - carga: 10
+Rota 8 : < 1 194 1 >  - distancia: 20.0998 - carga: 10
+Rota 9 : < 1 142 63 1 >  - distancia: 15.324 - carga: 50
+Rota 10 : < 1 86 1 >  - distancia: 21.6333 - carga: 10
+Rota 11 : < 1 211 1 >  - distancia: 20.0998 - carga: 10
+Rota 12 : < 1 89 1 >  - distancia: 20 - carga: 10
+Rota 13 : < 1 159 1 >  - distancia: 15.6205 - carga: 10
+Rota 14 : < 1 165 1 >  - distancia: 26 - carga: 10
+Rota 15 : < 1 68 1 >  - distancia: 23.3238 - carga: 40
+Rota 16 : < 1 198 1 >  - distancia: 33.1059 - carga: 10
+Rota 17 : < 1 74 2 1 >  - distancia: 12 - carga: 50
+Rota 18 : < 1 77 13 180 185 36 65 28 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 >  - distancia: 66.0452 - carga: 200
+Rota 19 : < 1 88 9 143 183 11 117 171 228 230 1 >  - distancia: 83.5556 - carga: 200
+Rota 20 : < 1 217 190 184 215 4 125 153 1 >  - distancia: 72.6755 - carga: 200
+Rota 21 : < 1 60 67 116 185 123 29 64 1 >  - distancia: 56.476 - carga: 200
+total - 648.903
+optimal_value: 707.79
+% acima: -8.31985%
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  217
+novoTamanho65
+listCandidatos.size()  216
+novoTamanho64
+listCandidatos.size()  215
+novoTamanho64
+listCandidatos.size()  214
+novoTamanho64
+listCandidatos.size()  213
+novoTamanho63
+listCandidatos.size()  212
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  210
+novoTamanho63
+listCandidatos.size()  209
+novoTamanho62
+listCandidatos.size()  208
+novoTamanho62
+listCandidatos.size()  207
+novoTamanho62
+listCandidatos.size()  206
+novoTamanho61
+listCandidatos.size()  205
+novoTamanho61
+listCandidatos.size()  170
+novoTamanho51
+listCandidatos.size()  203
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  201
+novoTamanho60
+listCandidatos.size()  199
+novoTamanho59
+listCandidatos.size()  198
+novoTamanho59
+listCandidatos.size()  197
+novoTamanho59
+listCandidatos.size()  167
+novoTamanho50
+listCandidatos.size()  166
+novoTamanho49
+listCandidatos.size()  123
+novoTamanho36
+listCandidatos.size()  192
+novoTamanho57
+listCandidatos.size()  191
+novoTamanho57
+listCandidatos.size()  162
+novoTamanho48
+Rota 0 : < 1 110 71 1 >  - distancia: 23.4786 - carga: 50
+Rota 1 : < 1 27 3 1 >  - distancia: 12.7097 - carga: 50
+Rota 2 : < 1 78 1 >  - distancia: 19.6977 - carga: 10
+Rota 3 : < 1 169 1 >  - distancia: 22.8035 - carga: 20
+Rota 4 : < 1 7 1 >  - distancia: 10.7703 - carga: 40
+Rota 5 : < 1 70 1 >  - distancia: 23.3238 - carga: 40
+Rota 6 : < 1 154 1 >  - distancia: 26.0768 - carga: 10
+Rota 7 : < 1 239 1 >  - distancia: 24.0832 - carga: 10
+Rota 8 : < 1 194 1 >  - distancia: 20.0998 - carga: 10
+Rota 9 : < 1 142 63 1 >  - distancia: 15.324 - carga: 50
+Rota 10 : < 1 86 1 >  - distancia: 21.6333 - carga: 10
+Rota 11 : < 1 211 1 >  - distancia: 20.0998 - carga: 10
+Rota 12 : < 1 89 1 >  - distancia: 20 - carga: 10
+Rota 13 : < 1 159 1 >  - distancia: 15.6205 - carga: 10
+Rota 14 : < 1 165 1 >  - distancia: 26 - carga: 10
+Rota 15 : < 1 68 1 >  - distancia: 23.3238 - carga: 40
+Rota 16 : < 1 198 1 >  - distancia: 33.1059 - carga: 10
+Rota 17 : < 1 74 2 1 >  - distancia: 12 - carga: 50
+Rota 18 : < 1 77 13 180 185 36 65 28 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 >  - distancia: 66.0452 - carga: 200
+Rota 19 : < 1 88 9 143 183 11 117 171 228 230 1 >  - distancia: 83.5556 - carga: 200
+Rota 20 : < 1 217 190 184 215 4 125 153 1 >  - distancia: 72.6755 - carga: 200
+Rota 21 : < 1 60 67 116 185 123 29 64 1 >  - distancia: 56.476 - carga: 200
+total - 648.903
+optimal_value: 707.79
+% acima: -8.31985%
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  217
+novoTamanho65
+listCandidatos.size()  216
+novoTamanho64
+listCandidatos.size()  215
+novoTamanho64
+listCandidatos.size()  214
+novoTamanho64
+listCandidatos.size()  213
+novoTamanho63
+listCandidatos.size()  212
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  210
+novoTamanho63
+listCandidatos.size()  209
+novoTamanho62
+listCandidatos.size()  208
+novoTamanho62
+listCandidatos.size()  207
+novoTamanho62
+listCandidatos.size()  206
+novoTamanho61
+listCandidatos.size()  205
+novoTamanho61
+listCandidatos.size()  170
+novoTamanho51
+listCandidatos.size()  203
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  201
+novoTamanho60
+listCandidatos.size()  199
+novoTamanho59
+listCandidatos.size()  198
+novoTamanho59
+listCandidatos.size()  197
+novoTamanho59
+listCandidatos.size()  167
+novoTamanho50
+listCandidatos.size()  166
+novoTamanho49
+listCandidatos.size()  123
+novoTamanho36
+listCandidatos.size()  192
+novoTamanho57
+listCandidatos.size()  191
+novoTamanho57
+listCandidatos.size()  162
+novoTamanho48
+Rota 0 : < 1 110 71 1 >  - distancia: 23.4786 - carga: 50
+Rota 1 : < 1 27 3 1 >  - distancia: 12.7097 - carga: 50
+Rota 2 : < 1 78 1 >  - distancia: 19.6977 - carga: 10
+Rota 3 : < 1 169 1 >  - distancia: 22.8035 - carga: 20
+Rota 4 : < 1 7 1 >  - distancia: 10.7703 - carga: 40
+Rota 5 : < 1 70 1 >  - distancia: 23.3238 - carga: 40
+Rota 6 : < 1 154 1 >  - distancia: 26.0768 - carga: 10
+Rota 7 : < 1 239 1 >  - distancia: 24.0832 - carga: 10
+Rota 8 : < 1 194 1 >  - distancia: 20.0998 - carga: 10
+Rota 9 : < 1 142 63 1 >  - distancia: 15.324 - carga: 50
+Rota 10 : < 1 86 1 >  - distancia: 21.6333 - carga: 10
+Rota 11 : < 1 211 1 >  - distancia: 20.0998 - carga: 10
+Rota 12 : < 1 89 1 >  - distancia: 20 - carga: 10
+Rota 13 : < 1 159 1 >  - distancia: 15.6205 - carga: 10
+Rota 14 : < 1 165 1 >  - distancia: 26 - carga: 10
+Rota 15 : < 1 68 1 >  - distancia: 23.3238 - carga: 40
+Rota 16 : < 1 198 1 >  - distancia: 33.1059 - carga: 10
+Rota 17 : < 1 74 2 1 >  - distancia: 12 - carga: 50
+Rota 18 : < 1 77 13 180 185 36 65 28 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 >  - distancia: 66.0452 - carga: 200
+Rota 19 : < 1 88 9 143 183 11 117 171 228 230 1 >  - distancia: 83.5556 - carga: 200
+Rota 20 : < 1 217 190 184 215 4 125 153 1 >  - distancia: 72.6755 - carga: 200
+Rota 21 : < 1 60 67 116 185 123 29 64 1 >  - distancia: 56.476 - carga: 200
+total - 648.903
+optimal_value: 707.79
+% acima: -8.31985%
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  217
+novoTamanho65
+listCandidatos.size()  216
+novoTamanho64
+listCandidatos.size()  215
+novoTamanho64
+listCandidatos.size()  214
+novoTamanho64
+listCandidatos.size()  213
+novoTamanho63
+listCandidatos.size()  212
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  210
+novoTamanho63
+listCandidatos.size()  209
+novoTamanho62
+listCandidatos.size()  208
+novoTamanho62
+listCandidatos.size()  207
+novoTamanho62
+listCandidatos.size()  206
+novoTamanho61
+listCandidatos.size()  205
+novoTamanho61
+listCandidatos.size()  170
+novoTamanho51
+listCandidatos.size()  203
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  201
+novoTamanho60
+listCandidatos.size()  199
+novoTamanho59
+listCandidatos.size()  198
+novoTamanho59
+listCandidatos.size()  197
+novoTamanho59
+listCandidatos.size()  167
+novoTamanho50
+listCandidatos.size()  166
+novoTamanho49
+listCandidatos.size()  123
+novoTamanho36
+listCandidatos.size()  192
+novoTamanho57
+listCandidatos.size()  191
+novoTamanho57
+listCandidatos.size()  162
+novoTamanho48
+Rota 0 : < 1 110 71 1 >  - distancia: 23.4786 - carga: 50
+Rota 1 : < 1 27 3 1 >  - distancia: 12.7097 - carga: 50
+Rota 2 : < 1 78 1 >  - distancia: 19.6977 - carga: 10
+Rota 3 : < 1 169 1 >  - distancia: 22.8035 - carga: 20
+Rota 4 : < 1 7 1 >  - distancia: 10.7703 - carga: 40
+Rota 5 : < 1 70 1 >  - distancia: 23.3238 - carga: 40
+Rota 6 : < 1 154 1 >  - distancia: 26.0768 - carga: 10
+Rota 7 : < 1 239 1 >  - distancia: 24.0832 - carga: 10
+Rota 8 : < 1 194 1 >  - distancia: 20.0998 - carga: 10
+Rota 9 : < 1 142 63 1 >  - distancia: 15.324 - carga: 50
+Rota 10 : < 1 86 1 >  - distancia: 21.6333 - carga: 10
+Rota 11 : < 1 211 1 >  - distancia: 20.0998 - carga: 10
+Rota 12 : < 1 89 1 >  - distancia: 20 - carga: 10
+Rota 13 : < 1 159 1 >  - distancia: 15.6205 - carga: 10
+Rota 14 : < 1 165 1 >  - distancia: 26 - carga: 10
+Rota 15 : < 1 68 1 >  - distancia: 23.3238 - carga: 40
+Rota 16 : < 1 198 1 >  - distancia: 33.1059 - carga: 10
+Rota 17 : < 1 74 2 1 >  - distancia: 12 - carga: 50
+Rota 18 : < 1 77 13 180 185 36 65 28 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 >  - distancia: 66.0452 - carga: 200
+Rota 19 : < 1 88 9 143 183 11 117 171 228 230 1 >  - distancia: 83.5556 - carga: 200
+Rota 20 : < 1 217 190 184 215 4 125 153 1 >  - distancia: 72.6755 - carga: 200
+Rota 21 : < 1 60 67 116 185 123 29 64 1 >  - distancia: 56.476 - carga: 200
+total - 648.903
+optimal_value: 707.79
+% acima: -8.31985%
+Nao foi possivel calcular Estatisticas.
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  217
+novoTamanho65
+listCandidatos.size()  216
+novoTamanho64
+listCandidatos.size()  215
+novoTamanho64
+listCandidatos.size()  214
+novoTamanho64
+listCandidatos.size()  213
+novoTamanho63
+listCandidatos.size()  212
+novoTamanho63
+listCandidatos.size()  211
+novoTamanho63
+listCandidatos.size()  210
+novoTamanho63
+listCandidatos.size()  209
+novoTamanho62
+listCandidatos.size()  208
+novoTamanho62
+listCandidatos.size()  207
+novoTamanho62
+listCandidatos.size()  206
+novoTamanho61
+listCandidatos.size()  205
+novoTamanho61
+listCandidatos.size()  170
+novoTamanho51
+listCandidatos.size()  203
+novoTamanho60
+listCandidatos.size()  202
+novoTamanho60
+listCandidatos.size()  201
+novoTamanho60
+listCandidatos.size()  199
+novoTamanho59
+listCandidatos.size()  198
+novoTamanho59
+listCandidatos.size()  197
+novoTamanho59
+listCandidatos.size()  167
+novoTamanho50
+listCandidatos.size()  166
+novoTamanho49
+listCandidatos.size()  123
+novoTamanho36
+listCandidatos.size()  192
+novoTamanho57
+listCandidatos.size()  191
+novoTamanho57
+listCandidatos.size()  162
+novoTamanho48
+Rota 0 : < 1 110 71 1 >  - distancia: 23.4786 - carga: 50
+Rota 1 : < 1 27 3 1 >  - distancia: 12.7097 - carga: 50
+Rota 2 : < 1 78 1 >  - distancia: 19.6977 - carga: 10
+Rota 3 : < 1 169 1 >  - distancia: 22.8035 - carga: 20
+Rota 4 : < 1 7 1 >  - distancia: 10.7703 - carga: 40
+Rota 5 : < 1 70 1 >  - distancia: 23.3238 - carga: 40
+Rota 6 : < 1 154 1 >  - distancia: 26.0768 - carga: 10
+Rota 7 : < 1 239 1 >  - distancia: 24.0832 - carga: 10
+Rota 8 : < 1 194 1 >  - distancia: 20.0998 - carga: 10
+Rota 9 : < 1 142 63 1 >  - distancia: 15.324 - carga: 50
+Rota 10 : < 1 86 1 >  - distancia: 21.6333 - carga: 10
+Rota 11 : < 1 211 1 >  - distancia: 20.0998 - carga: 10
+Rota 12 : < 1 89 1 >  - distancia: 20 - carga: 10
+Rota 13 : < 1 159 1 >  - distancia: 15.6205 - carga: 10
+Rota 14 : < 1 165 1 >  - distancia: 26 - carga: 10
+Rota 15 : < 1 68 1 >  - distancia: 23.3238 - carga: 40
+Rota 16 : < 1 198 1 >  - distancia: 33.1059 - carga: 10
+Rota 17 : < 1 74 2 1 >  - distancia: 12 - carga: 50
+Rota 18 : < 1 77 13 180 185 36 65 28 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 >  - distancia: 66.0452 - carga: 200
+Rota 19 : < 1 88 9 143 183 11 117 171 228 230 1 >  - distancia: 83.5556 - carga: 200
+Rota 20 : < 1 217 190 184 215 4 125 153 1 >  - distancia: 72.6755 - carga: 200
+Rota 21 : < 1 60 67 116 185 123 29 64 1 >  - distancia: 56.476 - carga: 200
+total - 648.903
+optimal_value: 707.79
+% acima: -8.31985%
+Nao foi possivel calcular Estatisticas.

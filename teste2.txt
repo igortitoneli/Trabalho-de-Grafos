@@ -1,0 +1,32 @@
+Iteracao  =  1
+
+percurso rota 0 : < 1 227 176 117 57 52 111 166 112 172 232 173 237 178 1 >  - distancia: 44.5804 - carga: 200
+percurso rota 1 : < 1 125 65 5 38 31 91 98 43 44 45 1 >  - distancia: 25.03 - carga: 200
+percurso rota 2 : < 1 79 122 182 235 136 194 139 199 200 141 145 86 1 >  - distancia: 37.6135 - carga: 200
+percurso rota 3 : < 1 155 184 10 70 156 130 222 1 >  - distancia: 42.6588 - carga: 200
+percurso rota 4 : < 1 2 55 14 16 3 22 27 82 28 9 1 >  - distancia: 29.2018 - carga: 200
+percurso rota 5 : < 1 107 56 67 127 167 116 226 171 231 229 170 165 105 1 >  - distancia: 44.1492 - carga: 200
+percurso rota 6 : < 1 150 95 124 64 4 23 32 83 33 92 1 >  - distancia: 22.7472 - carga: 200
+percurso rota 7 : < 1 131 71 11 109 50 49 159 108 168 1 >  - distancia: 36.2111 - carga: 200
+percurso rota 8 : < 1 230 191 225 224 164 223 190 217 216 157 162 1 >  - distancia: 62.5589 - carga: 200
+percurso rota 9 : < 1 99 48 66 126 186 219 169 110 104 1 >  - distancia: 29.5309 - carga: 200
+percurso rota 10 : < 1 68 8 85 123 63 142 87 1 >  - distancia: 29.1688 - carga: 200
+percurso rota 11 : < 1 78 13 73 180 133 193 241 1 >  - distancia: 41.1622 - carga: 200
+percurso rota 12 : < 1 74 115 62 17 18 77 137 196 197 138 198 201 204 1 >  - distancia: 57.406 - carga: 200
+percurso rota 13 : < 1 106 51 6 46 39 69 129 189 1 >  - distancia: 51.0176 - carga: 200
+percurso rota 14 : < 1 163 218 185 211 160 161 101 102 41 42 36 35 90 1 >  - distancia: 32.1743 - carga: 200
+percurso rota 15 : < 1 234 187 177 236 238 233 228 209 1 >  - distancia: 80.26 - carga: 120
+percurso rota 16 : < 1 239 240 181 121 148 207 202 147 34 29 89 94 203 152 212 210 215 214 1 >  - distancia: 88.9154 - carga: 200
+percurso rota 17 : < 1 134 20 21 80 140 128 188 206 205 146 1 >  - distancia: 42.5926 - carga: 200
+percurso rota 18 : < 1 7 47 54 183 195 144 25 135 84 24 75 15 26 1 >  - distancia: 41.1565 - carga: 200
+percurso rota 19 : < 1 119 174 60 59 114 96 37 97 221 220 151 100 158 103 40 30 143 1 >  - distancia: 60.6262 - carga: 200
+percurso rota 20 : < 1 179 120 61 175 76 19 81 88 93 153 213 154 208 149 1 >  - distancia: 58.5271 - carga: 200
+percurso rota 21 : < 1 58 53 12 113 118 72 132 192 1 >  - distancia: 38 - carga: 200
+total - 995.288
+optimal_value: 707.79
+% acima: 40.6192%
+
+
+==========================================================
+
+

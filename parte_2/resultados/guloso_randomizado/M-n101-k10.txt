@@ -1,0 +1,1558 @@
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  89
+novoTamanho26
+listCandidatos.size()  88
+novoTamanho26
+listCandidatos.size()  87
+novoTamanho26
+listCandidatos.size()  86
+novoTamanho25
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  84
+novoTamanho25
+listCandidatos.size()  83
+novoTamanho24
+listCandidatos.size()  82
+novoTamanho24
+listCandidatos.size()  81
+novoTamanho24
+listCandidatos.size()  80
+novoTamanho24
+listCandidatos.size()  79
+novoTamanho23
+listCandidatos.size()  78
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  76
+novoTamanho22
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  73
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  69
+novoTamanho20
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  67
+novoTamanho20
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  64
+novoTamanho19
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  62
+novoTamanho18
+listCandidatos.size()  61
+novoTamanho18
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  57
+novoTamanho17
+listCandidatos.size()  56
+novoTamanho16
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  54
+novoTamanho16
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  51
+novoTamanho15
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  49
+novoTamanho14
+listCandidatos.size()  48
+novoTamanho14
+listCandidatos.size()  47
+novoTamanho14
+listCandidatos.size()  46
+novoTamanho13
+listCandidatos.size()  35
+novoTamanho10
+listCandidatos.size()  44
+novoTamanho13
+listCandidatos.size()  42
+novoTamanho12
+listCandidatos.size()  32
+novoTamanho9
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  39
+novoTamanho11
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  37
+novoTamanho11
+listCandidatos.size()  36
+novoTamanho10
+listCandidatos.size()  27
+novoTamanho8
+listCandidatos.size()  34
+novoTamanho10
+listCandidatos.size()  33
+novoTamanho9
+listCandidatos.size()  32
+novoTamanho9
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  30
+novoTamanho9
+listCandidatos.size()  29
+novoTamanho8
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  27
+novoTamanho8
+listCandidatos.size()  21
+novoTamanho6
+listCandidatos.size()  25
+novoTamanho7
+listCandidatos.size()  24
+novoTamanho7
+listCandidatos.size()  23
+novoTamanho6
+listCandidatos.size()  22
+novoTamanho6
+listCandidatos.size()  21
+novoTamanho6
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  19
+novoTamanho5
+listCandidatos.size()  18
+novoTamanho5
+listCandidatos.size()  17
+novoTamanho5
+listCandidatos.size()  16
+novoTamanho4
+listCandidatos.size()  15
+novoTamanho4
+listCandidatos.size()  14
+novoTamanho4
+listCandidatos.size()  13
+novoTamanho3
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  89
+novoTamanho26
+listCandidatos.size()  88
+novoTamanho26
+listCandidatos.size()  87
+novoTamanho26
+listCandidatos.size()  86
+novoTamanho25
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  84
+novoTamanho25
+listCandidatos.size()  83
+novoTamanho24
+listCandidatos.size()  82
+novoTamanho24
+listCandidatos.size()  81
+novoTamanho24
+listCandidatos.size()  80
+novoTamanho24
+listCandidatos.size()  79
+novoTamanho23
+listCandidatos.size()  78
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  76
+novoTamanho22
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  73
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  69
+novoTamanho20
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  67
+novoTamanho20
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  64
+novoTamanho19
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  62
+novoTamanho18
+listCandidatos.size()  61
+novoTamanho18
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  57
+novoTamanho17
+listCandidatos.size()  56
+novoTamanho16
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  54
+novoTamanho16
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  51
+novoTamanho15
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  49
+novoTamanho14
+listCandidatos.size()  48
+novoTamanho14
+listCandidatos.size()  47
+novoTamanho14
+listCandidatos.size()  46
+novoTamanho13
+listCandidatos.size()  35
+novoTamanho10
+listCandidatos.size()  44
+novoTamanho13
+listCandidatos.size()  42
+novoTamanho12
+listCandidatos.size()  32
+novoTamanho9
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  39
+novoTamanho11
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  37
+novoTamanho11
+listCandidatos.size()  36
+novoTamanho10
+listCandidatos.size()  27
+novoTamanho8
+listCandidatos.size()  34
+novoTamanho10
+listCandidatos.size()  33
+novoTamanho9
+listCandidatos.size()  32
+novoTamanho9
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  30
+novoTamanho9
+listCandidatos.size()  29
+novoTamanho8
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  27
+novoTamanho8
+listCandidatos.size()  21
+novoTamanho6
+listCandidatos.size()  25
+novoTamanho7
+listCandidatos.size()  24
+novoTamanho7
+listCandidatos.size()  23
+novoTamanho6
+listCandidatos.size()  22
+novoTamanho6
+listCandidatos.size()  21
+novoTamanho6
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  19
+novoTamanho5
+listCandidatos.size()  18
+novoTamanho5
+listCandidatos.size()  17
+novoTamanho5
+listCandidatos.size()  16
+novoTamanho4
+listCandidatos.size()  15
+novoTamanho4
+listCandidatos.size()  14
+novoTamanho4
+listCandidatos.size()  13
+novoTamanho3
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  89
+novoTamanho26
+listCandidatos.size()  88
+novoTamanho26
+listCandidatos.size()  87
+novoTamanho26
+listCandidatos.size()  86
+novoTamanho25
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  84
+novoTamanho25
+listCandidatos.size()  83
+novoTamanho24
+listCandidatos.size()  82
+novoTamanho24
+listCandidatos.size()  81
+novoTamanho24
+listCandidatos.size()  80
+novoTamanho24
+listCandidatos.size()  79
+novoTamanho23
+listCandidatos.size()  78
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  76
+novoTamanho22
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  73
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  69
+novoTamanho20
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  67
+novoTamanho20
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  64
+novoTamanho19
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  62
+novoTamanho18
+listCandidatos.size()  61
+novoTamanho18
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  57
+novoTamanho17
+listCandidatos.size()  56
+novoTamanho16
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  54
+novoTamanho16
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  51
+novoTamanho15
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  49
+novoTamanho14
+listCandidatos.size()  48
+novoTamanho14
+listCandidatos.size()  47
+novoTamanho14
+listCandidatos.size()  46
+novoTamanho13
+listCandidatos.size()  35
+novoTamanho10
+listCandidatos.size()  44
+novoTamanho13
+listCandidatos.size()  42
+novoTamanho12
+listCandidatos.size()  32
+novoTamanho9
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  39
+novoTamanho11
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  37
+novoTamanho11
+listCandidatos.size()  36
+novoTamanho10
+listCandidatos.size()  27
+novoTamanho8
+listCandidatos.size()  34
+novoTamanho10
+listCandidatos.size()  33
+novoTamanho9
+listCandidatos.size()  32
+novoTamanho9
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  30
+novoTamanho9
+listCandidatos.size()  29
+novoTamanho8
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  27
+novoTamanho8
+listCandidatos.size()  21
+novoTamanho6
+listCandidatos.size()  25
+novoTamanho7
+listCandidatos.size()  24
+novoTamanho7
+listCandidatos.size()  23
+novoTamanho6
+listCandidatos.size()  22
+novoTamanho6
+listCandidatos.size()  21
+novoTamanho6
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  19
+novoTamanho5
+listCandidatos.size()  18
+novoTamanho5
+listCandidatos.size()  17
+novoTamanho5
+listCandidatos.size()  16
+novoTamanho4
+listCandidatos.size()  15
+novoTamanho4
+listCandidatos.size()  14
+novoTamanho4
+listCandidatos.size()  13
+novoTamanho3
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  89
+novoTamanho26
+listCandidatos.size()  88
+novoTamanho26
+listCandidatos.size()  87
+novoTamanho26
+listCandidatos.size()  86
+novoTamanho25
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  84
+novoTamanho25
+listCandidatos.size()  83
+novoTamanho24
+listCandidatos.size()  82
+novoTamanho24
+listCandidatos.size()  81
+novoTamanho24
+listCandidatos.size()  80
+novoTamanho24
+listCandidatos.size()  79
+novoTamanho23
+listCandidatos.size()  78
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  76
+novoTamanho22
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  73
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  69
+novoTamanho20
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  67
+novoTamanho20
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  64
+novoTamanho19
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  62
+novoTamanho18
+listCandidatos.size()  61
+novoTamanho18
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  57
+novoTamanho17
+listCandidatos.size()  56
+novoTamanho16
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  54
+novoTamanho16
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  51
+novoTamanho15
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  49
+novoTamanho14
+listCandidatos.size()  48
+novoTamanho14
+listCandidatos.size()  47
+novoTamanho14
+listCandidatos.size()  46
+novoTamanho13
+listCandidatos.size()  35
+novoTamanho10
+listCandidatos.size()  44
+novoTamanho13
+listCandidatos.size()  42
+novoTamanho12
+listCandidatos.size()  32
+novoTamanho9
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  39
+novoTamanho11
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  37
+novoTamanho11
+listCandidatos.size()  36
+novoTamanho10
+listCandidatos.size()  27
+novoTamanho8
+listCandidatos.size()  34
+novoTamanho10
+listCandidatos.size()  33
+novoTamanho9
+listCandidatos.size()  32
+novoTamanho9
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  30
+novoTamanho9
+listCandidatos.size()  29
+novoTamanho8
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  27
+novoTamanho8
+listCandidatos.size()  21
+novoTamanho6
+listCandidatos.size()  25
+novoTamanho7
+listCandidatos.size()  24
+novoTamanho7
+listCandidatos.size()  23
+novoTamanho6
+listCandidatos.size()  22
+novoTamanho6
+listCandidatos.size()  21
+novoTamanho6
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  19
+novoTamanho5
+listCandidatos.size()  18
+novoTamanho5
+listCandidatos.size()  17
+novoTamanho5
+listCandidatos.size()  16
+novoTamanho4
+listCandidatos.size()  15
+novoTamanho4
+listCandidatos.size()  14
+novoTamanho4
+listCandidatos.size()  13
+novoTamanho3
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  89
+novoTamanho26
+listCandidatos.size()  88
+novoTamanho26
+listCandidatos.size()  87
+novoTamanho26
+listCandidatos.size()  86
+novoTamanho25
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  84
+novoTamanho25
+listCandidatos.size()  83
+novoTamanho24
+listCandidatos.size()  82
+novoTamanho24
+listCandidatos.size()  81
+novoTamanho24
+listCandidatos.size()  80
+novoTamanho24
+listCandidatos.size()  79
+novoTamanho23
+listCandidatos.size()  78
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  76
+novoTamanho22
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  73
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  71
+novoTamanho21
+listCandidatos.size()  70
+novoTamanho21
+listCandidatos.size()  69
+novoTamanho20
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  67
+novoTamanho20
+listCandidatos.size()  66
+novoTamanho19
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  58
+novoTamanho17
+listCandidatos.size()  57
+novoTamanho17
+listCandidatos.size()  56
+novoTamanho16
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  48
+novoTamanho14
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  51
+novoTamanho15
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  49
+novoTamanho14
+listCandidatos.size()  47
+novoTamanho14
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  44
+novoTamanho13
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  26
+novoTamanho7
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  39
+novoTamanho11
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  37
+novoTamanho11
+listCandidatos.size()  36
+novoTamanho10
+listCandidatos.size()  35
+novoTamanho10
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  33
+novoTamanho9
+listCandidatos.size()  32
+novoTamanho9
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  30
+novoTamanho9
+listCandidatos.size()  29
+novoTamanho8
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  27
+novoTamanho8
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  24
+novoTamanho7
+listCandidatos.size()  23
+novoTamanho6
+listCandidatos.size()  22
+novoTamanho6
+listCandidatos.size()  21
+novoTamanho6
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  19
+novoTamanho5
+listCandidatos.size()  18
+novoTamanho5
+listCandidatos.size()  17
+novoTamanho5
+listCandidatos.size()  16
+novoTamanho4
+listCandidatos.size()  15
+novoTamanho4
+listCandidatos.size()  14
+novoTamanho4
+listCandidatos.size()  13
+novoTamanho3
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  89
+novoTamanho26
+listCandidatos.size()  88
+novoTamanho26
+listCandidatos.size()  87
+novoTamanho26
+listCandidatos.size()  86
+novoTamanho25
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  84
+novoTamanho25
+listCandidatos.size()  83
+novoTamanho24
+listCandidatos.size()  82
+novoTamanho24
+listCandidatos.size()  81
+novoTamanho24
+listCandidatos.size()  80
+novoTamanho24
+listCandidatos.size()  79
+novoTamanho23
+listCandidatos.size()  78
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  76
+novoTamanho22
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  73
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  71
+novoTamanho21
+listCandidatos.size()  70
+novoTamanho21
+listCandidatos.size()  69
+novoTamanho20
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  67
+novoTamanho20
+listCandidatos.size()  66
+novoTamanho19
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  58
+novoTamanho17
+listCandidatos.size()  57
+novoTamanho17
+listCandidatos.size()  56
+novoTamanho16
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  48
+novoTamanho14
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  51
+novoTamanho15
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  49
+novoTamanho14
+listCandidatos.size()  47
+novoTamanho14
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  44
+novoTamanho13
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  26
+novoTamanho7
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  39
+novoTamanho11
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  37
+novoTamanho11
+listCandidatos.size()  36
+novoTamanho10
+listCandidatos.size()  35
+novoTamanho10
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  33
+novoTamanho9
+listCandidatos.size()  32
+novoTamanho9
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  30
+novoTamanho9
+listCandidatos.size()  29
+novoTamanho8
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  27
+novoTamanho8
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  24
+novoTamanho7
+listCandidatos.size()  23
+novoTamanho6
+listCandidatos.size()  22
+novoTamanho6
+listCandidatos.size()  21
+novoTamanho6
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  19
+novoTamanho5
+listCandidatos.size()  18
+novoTamanho5
+listCandidatos.size()  17
+novoTamanho5
+listCandidatos.size()  16
+novoTamanho4
+listCandidatos.size()  15
+novoTamanho4
+listCandidatos.size()  14
+novoTamanho4
+listCandidatos.size()  13
+novoTamanho3
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  89
+novoTamanho26
+listCandidatos.size()  88
+novoTamanho26
+listCandidatos.size()  87
+novoTamanho26
+listCandidatos.size()  86
+novoTamanho25
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  84
+novoTamanho25
+listCandidatos.size()  83
+novoTamanho24
+listCandidatos.size()  82
+novoTamanho24
+listCandidatos.size()  81
+novoTamanho24
+listCandidatos.size()  80
+novoTamanho24
+listCandidatos.size()  79
+novoTamanho23
+listCandidatos.size()  78
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  76
+novoTamanho22
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  73
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  71
+novoTamanho21
+listCandidatos.size()  70
+novoTamanho21
+listCandidatos.size()  69
+novoTamanho20
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  67
+novoTamanho20
+listCandidatos.size()  66
+novoTamanho19
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  58
+novoTamanho17
+listCandidatos.size()  57
+novoTamanho17
+listCandidatos.size()  56
+novoTamanho16
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  48
+novoTamanho14
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  51
+novoTamanho15
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  49
+novoTamanho14
+listCandidatos.size()  47
+novoTamanho14
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  44
+novoTamanho13
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  26
+novoTamanho7
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  39
+novoTamanho11
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  37
+novoTamanho11
+listCandidatos.size()  36
+novoTamanho10
+listCandidatos.size()  35
+novoTamanho10
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  33
+novoTamanho9
+listCandidatos.size()  32
+novoTamanho9
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  30
+novoTamanho9
+listCandidatos.size()  29
+novoTamanho8
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  27
+novoTamanho8
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  24
+novoTamanho7
+listCandidatos.size()  23
+novoTamanho6
+listCandidatos.size()  22
+novoTamanho6
+listCandidatos.size()  21
+novoTamanho6
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  19
+novoTamanho5
+listCandidatos.size()  18
+novoTamanho5
+listCandidatos.size()  17
+novoTamanho5
+listCandidatos.size()  16
+novoTamanho4
+listCandidatos.size()  15
+novoTamanho4
+listCandidatos.size()  14
+novoTamanho4
+listCandidatos.size()  13
+novoTamanho3
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  89
+novoTamanho26
+listCandidatos.size()  88
+novoTamanho26
+listCandidatos.size()  87
+novoTamanho26
+listCandidatos.size()  86
+novoTamanho25
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  84
+novoTamanho25
+listCandidatos.size()  83
+novoTamanho24
+listCandidatos.size()  82
+novoTamanho24
+listCandidatos.size()  81
+novoTamanho24
+listCandidatos.size()  80
+novoTamanho24
+listCandidatos.size()  79
+novoTamanho23
+listCandidatos.size()  78
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  76
+novoTamanho22
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  73
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  71
+novoTamanho21
+listCandidatos.size()  70
+novoTamanho21
+listCandidatos.size()  69
+novoTamanho20
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  67
+novoTamanho20
+listCandidatos.size()  66
+novoTamanho19
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  58
+novoTamanho17
+listCandidatos.size()  57
+novoTamanho17
+listCandidatos.size()  56
+novoTamanho16
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  48
+novoTamanho14
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  51
+novoTamanho15
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  49
+novoTamanho14
+listCandidatos.size()  47
+novoTamanho14
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  44
+novoTamanho13
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  26
+novoTamanho7
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  39
+novoTamanho11
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  37
+novoTamanho11
+listCandidatos.size()  36
+novoTamanho10
+listCandidatos.size()  35
+novoTamanho10
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  33
+novoTamanho9
+listCandidatos.size()  32
+novoTamanho9
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  30
+novoTamanho9
+listCandidatos.size()  29
+novoTamanho8
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  27
+novoTamanho8
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  24
+novoTamanho7
+listCandidatos.size()  23
+novoTamanho6
+listCandidatos.size()  22
+novoTamanho6
+listCandidatos.size()  21
+novoTamanho6
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  19
+novoTamanho5
+listCandidatos.size()  18
+novoTamanho5
+listCandidatos.size()  17
+novoTamanho5
+listCandidatos.size()  16
+novoTamanho4
+listCandidatos.size()  15
+novoTamanho4
+listCandidatos.size()  14
+novoTamanho4
+listCandidatos.size()  13
+novoTamanho3
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  89
+novoTamanho26
+listCandidatos.size()  88
+novoTamanho26
+listCandidatos.size()  87
+novoTamanho26
+listCandidatos.size()  86
+novoTamanho25
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  84
+novoTamanho25
+listCandidatos.size()  83
+novoTamanho24
+listCandidatos.size()  82
+novoTamanho24
+listCandidatos.size()  81
+novoTamanho24
+listCandidatos.size()  80
+novoTamanho24
+listCandidatos.size()  79
+novoTamanho23
+listCandidatos.size()  78
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  76
+novoTamanho22
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  73
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  71
+novoTamanho21
+listCandidatos.size()  70
+novoTamanho21
+listCandidatos.size()  69
+novoTamanho20
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  67
+novoTamanho20
+listCandidatos.size()  66
+novoTamanho19
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  58
+novoTamanho17
+listCandidatos.size()  57
+novoTamanho17
+listCandidatos.size()  56
+novoTamanho16
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  48
+novoTamanho14
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  51
+novoTamanho15
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  49
+novoTamanho14
+listCandidatos.size()  47
+novoTamanho14
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  44
+novoTamanho13
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  26
+novoTamanho7
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  39
+novoTamanho11
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  37
+novoTamanho11
+listCandidatos.size()  36
+novoTamanho10
+listCandidatos.size()  35
+novoTamanho10
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  33
+novoTamanho9
+listCandidatos.size()  32
+novoTamanho9
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  30
+novoTamanho9
+listCandidatos.size()  29
+novoTamanho8
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  27
+novoTamanho8
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  24
+novoTamanho7
+listCandidatos.size()  23
+novoTamanho6
+listCandidatos.size()  22
+novoTamanho6
+listCandidatos.size()  21
+novoTamanho6
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  19
+novoTamanho5
+listCandidatos.size()  18
+novoTamanho5
+listCandidatos.size()  17
+novoTamanho5
+listCandidatos.size()  16
+novoTamanho4
+listCandidatos.size()  15
+novoTamanho4
+listCandidatos.size()  14
+novoTamanho4
+listCandidatos.size()  13
+novoTamanho3
+Demorou  0 ms para ler o arquivo de entrada.
+listCandidatos.size()  89
+novoTamanho26
+listCandidatos.size()  88
+novoTamanho26
+listCandidatos.size()  87
+novoTamanho26
+listCandidatos.size()  86
+novoTamanho25
+listCandidatos.size()  85
+novoTamanho25
+listCandidatos.size()  84
+novoTamanho25
+listCandidatos.size()  83
+novoTamanho24
+listCandidatos.size()  82
+novoTamanho24
+listCandidatos.size()  81
+novoTamanho24
+listCandidatos.size()  80
+novoTamanho24
+listCandidatos.size()  79
+novoTamanho23
+listCandidatos.size()  78
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  77
+novoTamanho23
+listCandidatos.size()  76
+novoTamanho22
+listCandidatos.size()  75
+novoTamanho22
+listCandidatos.size()  74
+novoTamanho22
+listCandidatos.size()  73
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  72
+novoTamanho21
+listCandidatos.size()  71
+novoTamanho21
+listCandidatos.size()  70
+novoTamanho21
+listCandidatos.size()  69
+novoTamanho20
+listCandidatos.size()  68
+novoTamanho20
+listCandidatos.size()  67
+novoTamanho20
+listCandidatos.size()  66
+novoTamanho19
+listCandidatos.size()  63
+novoTamanho18
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  59
+novoTamanho17
+listCandidatos.size()  58
+novoTamanho17
+listCandidatos.size()  57
+novoTamanho17
+listCandidatos.size()  56
+novoTamanho16
+listCandidatos.size()  55
+novoTamanho16
+listCandidatos.size()  48
+novoTamanho14
+listCandidatos.size()  52
+novoTamanho15
+listCandidatos.size()  51
+novoTamanho15
+listCandidatos.size()  50
+novoTamanho15
+listCandidatos.size()  49
+novoTamanho14
+listCandidatos.size()  47
+novoTamanho14
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  44
+novoTamanho13
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  26
+novoTamanho7
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  41
+novoTamanho12
+listCandidatos.size()  40
+novoTamanho12
+listCandidatos.size()  39
+novoTamanho11
+listCandidatos.size()  38
+novoTamanho11
+listCandidatos.size()  37
+novoTamanho11
+listCandidatos.size()  36
+novoTamanho10
+listCandidatos.size()  35
+novoTamanho10
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  33
+novoTamanho9
+listCandidatos.size()  32
+novoTamanho9
+listCandidatos.size()  31
+novoTamanho9
+listCandidatos.size()  30
+novoTamanho9
+listCandidatos.size()  29
+novoTamanho8
+listCandidatos.size()  28
+novoTamanho8
+listCandidatos.size()  27
+novoTamanho8
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  24
+novoTamanho7
+listCandidatos.size()  23
+novoTamanho6
+listCandidatos.size()  22
+novoTamanho6
+listCandidatos.size()  21
+novoTamanho6
+listCandidatos.size()  20
+novoTamanho6
+listCandidatos.size()  19
+novoTamanho5
+listCandidatos.size()  18
+novoTamanho5
+listCandidatos.size()  17
+novoTamanho5
+listCandidatos.size()  16
+novoTamanho4
+listCandidatos.size()  15
+novoTamanho4
+listCandidatos.size()  14
+novoTamanho4
+listCandidatos.size()  13
+novoTamanho3
