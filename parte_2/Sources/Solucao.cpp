@@ -437,7 +437,7 @@ void Solucao::Estatisticas(){
 }
 
 
-void Solucao::imprimeRotas(bool completa){
+void Solucao::imprimeRotas(bool completa = true){
     
     // if(completa)
     //     cout << endl << GREEN << "Imprimindo as rotas" << endl << endl;
@@ -454,6 +454,31 @@ void Solucao::imprimeRotas(bool completa){
         total += rotas.at(i).distancia;
         cout << ">  - distancia: " << rotas.at(i).distancia;
         cout << " - carga: " << rotas.at(i).cargaAtual << endl;
+    }
+    cout << "total - " << total << endl;
+    if (this->optimal_value > 0){
+        cout << "optimal_value: " << this->optimal_value << endl;
+        cout << "% acima: " << ((total/this->optimal_value) - 1) * 100 << "%" << endl; 
+        // Estatisticas();
+    }
+    else{
+        cout << "Nao possui optimal_value" <<  endl;
+    }
+};
+
+
+void Solucao::imprimeBest(){
+    
+    double total = 0;
+    
+    for(int i=0; i<this->caminhoes; i++){
+        cout << "Rota " << i << " : < ";  
+        for(int j=0; j<best.at(i).percurso.size(); j++){
+            cout << best.at(i).percurso[j] << " ";
+        }
+        total += best.at(i).distancia;
+        cout << ">  - distancia: " << best.at(i).distancia;
+        cout << " - carga: " << best.at(i).cargaAtual << endl;
     }
     cout << "total - " << total << endl;
     if (this->optimal_value > 0){
@@ -528,9 +553,8 @@ bool Solucao::VerificaVeracidade(){
 
     bool completa = true;
     bool list_percorridos[grafo->getOrdem()] = {false};
-    
-    for(int i=0; i<caminhoes; i++){
-        double total_rota = 0;
+
+    for(int i=0; i<caminhoes; i++){        
         for(int no : rotas[i].percurso){
             if(list_percorridos[no-1] == true && no != 1){
                 cout << "o no " << no << " se repete" << endl;
@@ -552,6 +576,21 @@ bool Solucao::VerificaVeracidade(){
     return completa;
 }
 
+unordered_map<int,rota> Solucao::verificaBest(){
+    double total_rota = 0;
+    for(int i=0; i<caminhoes; i++){
+        total_rota += rotas[i].distancia;
+    }
+    soma_iter += total_rota;
+    if(best_distancia > total_rota){
+        best_distancia = total_rota;
+        return rotas;
+    }
+    else{
+        return best;
+    }
+}
+
 
 void Solucao::initRotas(){
     for(int i=0; i<caminhoes; i++){
@@ -559,13 +598,17 @@ void Solucao::initRotas(){
         rotas[i].ultimoNo = grafo->getGalpao();
         rotas[i].percurso = {1};
         rotas[i].distancia = 0;
+    }
+}
 
+void Solucao::initBest(){
+    
+    for(int i=0; i<caminhoes; i++){
         best[i].cargaAtual = 0;
         best[i].ultimoNo = grafo->getGalpao();
         best[i].percurso = {1};
-        best[i].distancia = DBL_MAX;
+        best[i].distancia = 0;
     }
-
 }
 
 unordered_map<int,rota> Solucao::guloso(ofstream &output_file)
@@ -633,7 +676,7 @@ unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_fi
 {
     int iter = 0;
     bool completa = true;
-
+    initBest();
     while(iter < maxIter){
 
         // inicializa randomicamente
@@ -655,7 +698,6 @@ unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_fi
         while(percorridos.size() != this->grafo->getOrdem())
         {
             try{
-                // imprimeRotas(true);
                 atualizaCandidatosRandomizado(alpha);
                 i = getCandidatos();
                 atualizaRota(i, candidatos[i].no);
@@ -663,25 +705,23 @@ unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_fi
                 stop = candidatos;
             }
             catch(const ExcecaoSemCandidatos& e){
-                e.what();
                 break;
             }
         }
         backToGalpao();
         
-        completa = VerificaVeracidade();
-
-        imprimeRotas(completa); 
+        if(VerificaVeracidade()){
+            best = verificaBest();
+        }
         rotas.clear();
-        best.clear();
         candidatos.clear();
         stop.clear();
         percorridos.clear();
-        total_rotas.clear(); 
         iter++;
     }
-
-    rotas = best;
+    if(best[0].cargaAtual != 0){
+        imprimeBest();
+    }
 
     return this->rotas;
 }
@@ -727,57 +767,5 @@ double Solucao::getRaio(No* no){
 
 unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativoReativo(ofstream &output_file, float alpha, int maxIter)
 {
-    int iter = 0;
-    bool completa = true;
-    calculaFormulaRaio();
-    initRotas();
-
-    while(iter < maxIter){
-
-        // inicializa randomicamente
-        initVariables();
-
-        int i = 0;
-        while(i < this->caminhoes){
-            No* destino = this->grafo->procurarNoPeloId(gerarNumeroAleatorio(inicio,fim));
-            // cout << "raio no " << destino->getIdNo() << " = " << raio << endl;
-            // cout << verificaRaio(destino, percorridos) << endl;
-            if(noValido(destino, percorridos, i, rotas)){
-                percorridos.push_back(destino->getIdNo());
-                atualizaRota(i, destino);
-                i++;
-            }
-        }
-
-        makeCandidatosRandomizado(alpha);
-        makeStop();
-        
-        // peso / distancia
-        completa = true;
-        while(percorridos.size() != this->grafo->getOrdem())
-        {
-            try{
-                stop = candidatos;
-                i = getCandidatos();
-                percorridos.push_back(candidatos[i].no->getIdNo());
-                atualizaRota(i, candidatos[i].no);
-                atualizaCandidatos(candidatos[i].no);
-            }
-            catch(const ExcecaoSemCandidatos& e){
-                completa = false;
-                e.what();
-                break;
-            }
-        }
-        backToGalpao();
-        if(completa) calculaBest();
-        iter++;
-    }
-
-    rotas = best;
-    imprimeRotas(completa); 
-    // escreveRotas(output_file,completa,iter);
-
-    return this->rotas;
-
+    
 }

@@ -80,6 +80,8 @@ class Solucao{
         bool verificaRaio(No* destino, vector<int> percorridos);
         bool VerificaVeracidade();
         void initRotas();
+        unordered_map<int,rota> verificaBest();
+        void imprimeBest();
 
 
 
@@ -101,6 +103,7 @@ class Solucao{
         int area;
         double raio;
         double best_distancia = DBL_MAX;
+        double soma_iter = 0;
 };
 
 

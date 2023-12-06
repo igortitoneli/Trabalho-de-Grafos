@@ -1,0 +1,370 @@
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+Rota 0 : < 1 12 13 14 31 33 28 72 32 29 68 151 108 109 152 153 154 155 75 19 21 26 27 30 15 17 57 54 1 >  - distancia: 872.547 - carga: 550
+Rota 1 : < 1 116 115 114 156 236 235 195 196 197 239 160 163 162 202 203 204 166 207 206 125 85 82 46 81 41 34 73 110 74 1 >  - distancia: 1239.89 - carga: 550
+Rota 2 : < 1 184 224 223 183 179 99 103 101 59 98 176 136 175 168 129 169 167 127 86 7 89 50 18 61 105 1 >  - distancia: 1403.19 - carga: 550
+Rota 3 : < 1 65 66 64 147 71 67 63 60 139 220 216 135 180 181 219 217 178 218 137 97 138 102 142 141 221 182 106 145 69 70 150 1 >  - distancia: 1699.16 - carga: 550
+Rota 4 : < 1 20 25 23 24 100 104 107 188 144 143 140 187 185 227 226 231 192 113 111 189 229 149 186 146 225 1 >  - distancia: 1504.05 - carga: 550
+Rota 5 : < 1 120 79 51 92 47 52 49 88 87 91 8 40 37 11 9 5 2 6 10 56 58 148 228 230 190 1 >  - distancia: 1227.65 - carga: 550
+Rota 6 : < 1 96 95 55 16 36 3 44 4 159 200 199 123 84 43 39 112 191 232 233 1 >  - distancia: 1058.97 - carga: 550
+Rota 7 : < 1 212 171 131 211 132 133 172 215 174 173 213 214 134 53 90 93 22 62 240 201 122 161 42 45 118 198 238 237 234 194 193 165 1 >  - distancia: 2106.29 - carga: 480
+Rota 8 : < 1 205 164 124 83 121 76 35 38 80 78 77 119 158 157 117 48 128 126 208 130 170 209 210 94 177 222 1 >  - distancia: 1571.8 - carga: 460
+total - 12683.5
+optimal_value: 5623
+% acima: 125.565%
+Demorou  0 ms para ler o arquivo de entrada.
+Rota 0 : < 1 177 136 176 216 175 172 92 167 207 204 168 44 85 45 128 163 123 126 125 165 166 206 205 1 >  - distancia: 1487.28 - carga: 510
+Rota 1 : < 1 190 231 232 195 196 155 235 234 75 117 80 121 82 161 239 238 198 158 197 157 74 42 118 153 193 73 9 61 57 58 138 97 18 69 70 110 1 >  - distancia: 1923.33 - carga: 540
+Rota 2 : < 1 188 187 228 227 226 224 143 141 95 215 213 173 174 134 17 98 66 106 25 29 26 105 65 149 145 186 225 229 150 189 230 233 194 237 1 >  - distancia: 2076.61 - carga: 500
+Rota 3 : < 1 6 20 23 8 36 111 191 192 152 112 108 109 4 87 7 10 53 99 101 223 182 181 221 222 142 0 1 >  - distancia: 4.29497e+09 - carga: -1.03399e+09
+Rota 4 : < 1 60 100 104 148 107 63 62 56 16 13 132 211 91 90 208 209 169 127 86 122 201 162 202 1 >  - distancia: 1251.26 - carga: 490
+Rota 5 : < 1 14 19 22 59 64 24 55 135 52 171 212 131 129 47 39 37 78 41 81 236 115 113 151 154 114 1 >  - distancia: 1312.57 - carga: 550
+Rota 6 : < 1 50 12 51 88 48 11 35 71 76 40 38 34 31 72 67 68 3 2 32 120 199 1 >  - distancia: 966.973 - carga: 550
+Rota 7 : < 1 21 27 30 15 28 43 84 124 200 240 160 156 159 83 116 119 164 203 79 77 33 1 >  - distancia: 1202.25 - carga: 550
+Rota 8 : < 1 137 96 139 180 219 179 140 144 147 185 183 103 102 184 146 220 218 217 214 133 93 94 54 49 46 5 89 130 170 210 178 1 >  - distancia: 1839.02 - carga: 550
+total - 4.29498e+09
+optimal_value: 5623
+% acima: 7.63823e+07%
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+Rota 0 : < 1 3 5 16 17 52 19 99 180 220 179 178 219 176 92 171 210 211 212 173 214 215 213 217 181 102 1 >  - distancia: 1307.69 - carga: 550
+Rota 1 : < 1 199 240 239 160 163 203 237 149 34 113 234 198 62 57 54 98 10 101 222 221 182 186 225 218 177 174 41 1 >  - distancia: 2377.35 - carga: 390
+Rota 2 : < 1 135 95 55 96 132 91 93 20 22 59 104 63 23 71 75 74 73 72 159 236 196 1 >  - distancia: 1092.63 - carga: 550
+Rota 3 : < 1 188 227 226 187 148 107 60 64 21 15 58 18 14 87 127 208 170 169 129 89 50 13 42 45 2 29 61 30 33 110 150 69 109 1 >  - distancia: 1570.42 - carga: 550
+Rota 4 : < 1 36 31 76 79 80 81 32 68 35 40 38 8 48 47 86 207 206 167 166 204 205 131 90 1 >  - distancia: 982.089 - carga: 550
+Rota 5 : < 1 43 83 120 116 112 115 28 24 26 39 37 67 66 65 105 145 146 106 195 157 153 154 194 235 158 238 197 117 77 114 70 1 >  - distancia: 1457.42 - carga: 550
+Rota 6 : < 1 152 151 111 108 147 27 25 7 9 4 11 12 6 56 53 51 49 172 136 216 175 134 137 1 >  - distancia: 1124.64 - carga: 550
+Rota 7 : < 1 185 224 144 183 223 184 103 143 142 100 139 138 140 141 228 189 230 231 232 192 191 190 229 233 193 1 >  - distancia: 1323.45 - carga: 550
+Rota 8 : < 1 165 123 84 88 168 128 164 124 44 119 78 118 155 156 200 162 202 201 122 82 161 121 125 85 130 209 126 46 133 94 97 1 >  - distancia: 1765.98 - carga: 550
+total - 13001.7
+optimal_value: 5623
+% acima: 131.223%
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+Rota 0 : < 1 152 155 156 76 77 111 151 187 191 230 232 228 189 149 110 192 193 195 197 196 154 240 198 237 157 158 233 1 >  - distancia: 1752.13 - carga: 550
+Rota 1 : < 1 93 172 171 170 132 60 61 107 106 66 65 26 29 21 62 25 231 190 229 148 70 73 69 109 146 105 226 186 225 221 218 181 1 >  - distancia: 1792.96 - carga: 460
+Rota 2 : < 1 46 87 88 128 92 135 211 210 167 166 165 123 160 121 38 176 137 216 217 177 133 173 134 90 89 169 129 209 130 14 150 1 >  - distancia: 1888.76 - carga: 530
+Rota 3 : < 1 53 55 51 15 13 17 64 72 120 82 116 117 119 115 108 227 188 143 141 101 100 102 224 185 145 1 >  - distancia: 1333.01 - carga: 550
+Rota 4 : < 1 48 91 52 96 95 59 99 139 219 179 140 180 220 183 144 223 222 182 142 58 94 57 54 1 >  - distancia: 1042.01 - carga: 550
+Rota 5 : < 1 201 163 164 124 125 208 207 131 56 97 215 175 174 212 168 204 206 205 126 122 162 161 118 85 213 214 1 >  - distancia: 1860.45 - carga: 500
+Rota 6 : < 1 67 28 31 80 81 83 84 43 79 44 159 200 203 202 199 239 238 236 235 234 194 153 74 1 >  - distancia: 1015.03 - carga: 550
+Rota 7 : < 1 41 35 75 71 36 32 30 33 23 12 7 6 5 20 16 103 184 104 147 68 112 114 113 1 >  - distancia: 904.204 - carga: 550
+Rota 8 : < 1 11 39 27 19 22 24 63 4 8 40 34 37 47 50 49 45 42 78 127 86 3 2 10 9 18 136 98 138 178 1 >  - distancia: 1254.13 - carga: 550
+total - 12842.7
+optimal_value: 5623
+% acima: 128.396%
+Demorou  0 ms para ler o arquivo de entrada.
+Rota 0 : < 1 2 23 19 51 91 88 131 212 171 211 172 95 136 59 97 58 138 132 170 90 5 41 78 81 121 37 118 0 1 >  - distancia: 4.29497e+09 - carga: -1.03399e+09
+Rota 1 : < 1 48 7 92 176 215 216 217 135 56 99 137 100 141 184 191 230 190 149 109 70 69 73 110 65 224 225 222 226 1 >  - distancia: 1739.74 - carga: 540
+Rota 2 : < 1 114 112 111 71 35 75 32 27 26 36 33 34 68 108 119 116 155 154 153 113 117 203 162 206 45 85 13 1 >  - distancia: 1322.31 - carga: 550
+Rota 3 : < 1 77 4 31 39 40 43 120 83 80 44 47 46 8 12 9 15 115 159 157 158 123 122 161 1 >  - distancia: 1022.21 - carga: 550
+Rota 4 : < 1 151 148 188 187 104 143 223 180 142 140 220 181 219 221 103 145 146 186 185 183 182 179 175 174 173 1 >  - distancia: 1432.88 - carga: 550
+Rota 5 : < 1 105 67 72 28 64 20 14 16 24 11 55 60 107 147 106 144 227 228 229 63 22 30 38 1 >  - distancia: 1118.16 - carga: 550
+Rota 6 : < 1 193 192 231 232 233 195 196 152 150 189 21 29 10 57 62 139 98 94 130 126 50 17 101 18 49 6 89 169 129 133 214 213 134 177 218 178 1 >  - distancia: 2186.43 - carga: 500
+Rota 7 : < 1 86 84 3 52 53 54 87 128 168 167 127 163 124 125 165 164 207 166 208 209 210 204 205 96 93 1 >  - distancia: 1429.88 - carga: 550
+Rota 8 : < 1 200 240 239 199 160 79 76 156 235 194 234 236 197 198 238 237 201 42 25 61 102 66 74 82 202 1 >  - distancia: 1576.23 - carga: 450
+total - 4.29498e+09
+optimal_value: 5623
+% acima: 7.63823e+07%
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+Rota 0 : < 1 22 25 76 36 8 11 12 52 92 91 47 87 86 123 204 200 124 203 162 119 118 158 157 1 >  - distancia: 1062.69 - carga: 550
+Rota 1 : < 1 189 148 108 107 187 188 227 224 183 176 172 211 170 90 89 49 129 130 219 223 222 225 186 146 110 153 154 193 194 1 >  - distancia: 1834.99 - carga: 550
+Rota 2 : < 1 71 112 72 75 195 235 236 160 161 201 207 166 165 125 122 81 78 77 74 70 109 145 105 142 181 138 137 177 178 101 66 21 18 2 33 114 113 1 >  - distancia: 1748.32 - carga: 550
+Rota 3 : < 1 115 116 79 44 128 127 84 163 167 168 48 6 41 3 37 42 159 237 238 197 198 117 5 97 218 217 1 >  - distancia: 1540.74 - carga: 520
+Rota 4 : < 1 184 104 100 24 30 63 151 155 196 152 67 65 62 17 13 40 9 54 99 102 61 98 58 10 34 46 45 82 85 126 205 1 >  - distancia: 1829.4 - carga: 550
+Rota 5 : < 1 59 20 23 35 32 15 19 14 16 43 83 164 208 171 212 175 216 135 134 93 53 1 >  - distancia: 997.018 - carga: 550
+Rota 6 : < 1 173 131 132 95 136 140 103 147 111 191 232 233 234 156 192 231 230 190 150 69 149 228 229 226 1 >  - distancia: 1504.37 - carga: 520
+Rota 7 : < 1 73 4 80 39 7 51 50 96 55 94 88 120 121 199 239 240 202 206 169 209 210 1 >  - distancia: 1232.15 - carga: 450
+Rota 8 : < 1 26 64 60 139 180 179 220 221 144 68 106 28 27 29 31 38 56 57 215 214 174 213 133 143 141 185 182 1 >  - distancia: 1502.57 - carga: 550
+total - 13252.2
+optimal_value: 5623
+% acima: 135.679%
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+Rota 0 : < 1 228 187 151 231 232 152 188 227 107 109 70 69 73 30 78 200 198 197 238 157 240 239 195 233 235 237 1 >  - distancia: 1718.39 - carga: 540
+Rota 1 : < 1 83 124 163 204 203 164 128 44 123 82 167 206 165 45 38 14 89 129 50 58 137 57 93 130 169 210 166 205 170 173 214 217 177 97 54 1 >  - distancia: 2115.96 - carga: 550
+Rota 2 : < 1 172 132 136 216 215 176 175 174 135 134 133 92 99 98 101 62 59 22 5 10 26 34 74 113 153 114 118 81 121 161 122 42 41 1 >  - distancia: 1377.04 - carga: 550
+Rota 3 : < 1 33 24 68 32 3 2 4 15 52 48 47 131 212 211 208 168 207 127 126 125 171 1 >  - distancia: 1029.15 - carga: 550
+Rota 4 : < 1 139 103 105 63 60 11 12 13 16 18 112 36 108 147 143 148 104 102 61 87 49 90 94 138 178 1 >  - distancia: 1477.12 - carga: 550
+Rota 5 : < 1 220 180 219 179 140 64 65 66 67 184 183 182 221 224 225 226 186 191 229 230 189 149 146 185 106 150 193 117 234 194 154 190 145 1 >  - distancia: 1921.76 - carga: 550
+Rota 6 : < 1 6 7 9 40 80 120 119 76 115 116 79 8 20 27 25 71 100 144 142 141 223 181 222 1 >  - distancia: 1085.81 - carga: 550
+Rota 7 : < 1 51 91 55 53 19 17 56 95 96 23 21 39 37 28 29 31 75 77 72 35 192 111 110 1 >  - distancia: 934.841 - carga: 550
+Rota 8 : < 1 158 156 159 155 196 236 199 160 84 43 88 86 46 85 162 201 202 209 213 218 1 >  - distancia: 1485.64 - carga: 400
+total - 13145.7
+optimal_value: 5623
+% acima: 133.785%
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+Rota 0 : < 1 114 113 112 111 72 74 75 116 155 156 196 119 121 124 84 168 131 172 173 212 214 134 219 1 >  - distancia: 1186.06 - carga: 550
+Rota 1 : < 1 19 15 20 18 36 38 80 81 123 79 83 164 120 240 203 200 239 199 237 198 157 117 158 238 73 1 >  - distancia: 1330.31 - carga: 550
+Rota 2 : < 1 22 24 64 103 59 58 55 135 171 8 9 88 87 163 167 206 205 165 89 57 97 53 54 138 218 137 177 217 142 226 145 1 >  - distancia: 1786.71 - carga: 550
+Rota 3 : < 1 28 27 12 51 11 13 4 48 56 60 63 67 152 192 188 231 232 233 234 194 193 154 153 1 >  - distancia: 1014.08 - carga: 550
+Rota 4 : < 1 96 95 94 92 175 215 176 136 216 132 133 179 223 224 140 98 100 101 102 21 25 65 69 110 106 29 34 1 >  - distancia: 1326.62 - carga: 550
+Rota 5 : < 1 150 151 147 148 107 104 108 109 71 35 37 160 195 235 236 197 122 202 1 >  - distancia: 1111.31 - carga: 420
+Rota 6 : < 1 43 3 115 31 30 68 70 76 159 32 33 41 6 5 49 52 50 10 46 85 86 91 211 169 170 209 210 93 174 213 1 >  - distancia: 1499.94 - carga: 520
+Rota 7 : < 1 99 139 220 180 183 143 184 228 187 191 227 189 190 144 186 146 105 66 62 26 17 14 61 141 222 225 185 181 182 221 178 1 >  - distancia: 1857.09 - carga: 550
+Rota 8 : < 1 47 40 23 16 7 39 44 128 207 208 204 127 166 125 126 129 130 90 45 2 82 118 78 77 42 161 162 201 149 229 230 1 >  - distancia: 1796.31 - carga: 550
+total - 12908.4
+optimal_value: 5623
+% acima: 129.565%
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+Rota 0 : < 1 145 183 224 223 220 221 181 101 141 182 142 222 225 185 226 186 62 93 129 209 89 126 166 165 122 201 162 205 197 113 58 1 >  - distancia: 2011.77 - carga: 390
+Rota 1 : < 1 112 71 36 32 29 24 25 31 44 84 85 160 161 240 239 238 237 231 229 189 190 110 69 74 41 13 14 17 81 121 86 1 >  - distancia: 1426.29 - carga: 550
+Rota 2 : < 1 137 135 136 216 215 214 175 176 177 217 171 170 172 4 46 45 168 8 54 94 18 61 33 70 30 2 6 49 53 133 174 134 90 1 >  - distancia: 1780.44 - carga: 550
+Rota 3 : < 1 230 148 111 147 146 228 187 227 184 180 139 99 60 57 19 21 103 12 10 9 119 203 202 1 >  - distancia: 1483.16 - carga: 550
+Rota 4 : < 1 143 144 63 56 96 98 55 15 20 7 80 42 116 115 68 67 66 75 77 79 78 38 22 1 >  - distancia: 967.133 - carga: 550
+Rota 5 : < 1 125 167 124 83 82 163 200 199 158 198 195 194 192 193 151 188 232 233 234 153 154 156 117 159 157 114 26 65 34 1 >  - distancia: 1457.59 - carga: 550
+Rota 6 : < 1 235 236 155 72 73 35 28 27 23 39 37 16 104 102 64 100 140 219 179 218 178 138 97 1 >  - distancia: 1112.46 - carga: 550
+Rota 7 : < 1 211 212 132 48 95 91 92 59 51 50 123 164 207 204 208 206 87 131 169 130 173 213 210 1 >  - distancia: 1751.15 - carga: 550
+Rota 8 : < 1 128 88 127 52 11 47 40 3 5 43 76 120 118 196 191 108 107 106 105 152 150 149 109 1 >  - distancia: 1193.93 - carga: 550
+total - 13183.9
+optimal_value: 5623
+% acima: 134.464%
+Demorou  0 ms para ler o arquivo de entrada.
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+ExcecaoSemCandidatos: 
+Rota 0 : < 1 17 16 20 15 99 63 72 71 31 36 3 35 27 30 23 21 12 9 119 118 32 34 25 1 >  - distancia: 801.408 - carga: 550
+Rota 1 : < 1 149 108 187 188 228 184 185 186 226 183 68 67 66 106 152 153 115 113 114 154 194 193 234 190 229 150 189 230 233 1 >  - distancia: 1569.4 - carga: 490
+Rota 2 : < 1 125 44 7 47 46 48 95 56 104 103 144 139 51 49 171 208 209 169 129 172 210 130 89 13 74 197 237 1 >  - distancia: 1705.16 - carga: 550
+Rota 3 : < 1 57 55 11 4 79 78 76 116 43 159 156 157 158 155 195 192 147 227 224 223 182 222 221 1 >  - distancia: 1216.22 - carga: 550
+Rota 4 : < 1 93 132 131 211 170 91 88 87 168 83 52 50 10 53 18 62 105 61 98 54 134 58 102 181 145 141 225 1 >  - distancia: 1699.56 - carga: 450
+Rota 5 : < 1 180 220 219 96 97 40 80 204 203 202 120 121 45 215 213 174 133 90 14 6 2 86 85 42 161 122 201 81 77 117 82 126 206 165 214 1 >  - distancia: 2359.94 - carga: 550
+Rota 6 : < 1 70 112 151 111 107 143 142 140 60 19 22 28 26 24 39 41 38 37 59 100 101 64 65 148 146 1 >  - distancia: 994.157 - carga: 550
+Rota 7 : < 1 205 167 166 207 127 128 124 84 8 92 135 216 217 218 136 178 177 179 138 137 212 173 175 176 94 1 >  - distancia: 1450.49 - carga: 550
+Rota 8 : < 1 191 231 232 235 236 199 196 200 239 160 164 123 163 162 240 238 198 75 73 109 110 33 5 29 69 1 >  - distancia: 1431.59 - carga: 550
+total - 13227.9
+optimal_value: 5623
+% acima: 135.247%

@@ -22,9 +22,17 @@ instancias=(
 
 for instancia in "${instancias[@]}"; 
 do
-    for x in `seq 1 1 10`;
+    for alpha in `seq 0.1 0.1 0.9`;
     do
-        ./execGrupo19 $instancia teste.txt 2 0.3 1 >> ./parte_2/resultados/guloso_randomizado/$instancia.txt
+        arquivo="./parte_2/resultados/guloso_randomizado/alpha_$alpha/$instancia.txt"
+        if [ -e "$arquivo" ]; then
+            rm "$arquivo"
+        fi
+        for x in `seq 1 1 10`;
+        do
+        
+            ./execGrupo19 $instancia teste.txt 2 0.3 30 >> "$arquivo"
+        done
     done
 done
 
