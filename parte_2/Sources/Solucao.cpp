@@ -829,7 +829,7 @@ unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativoReativo(ofstream &ou
         }
 
         int indexAlpha = getAlpha();
-        pair<double,double> newSolucao = gulosoRandomizadoAdaptativo(output_file, alpha[indexAlpha], 30);
+        pair<double,double> newSolucao = gulosoRandomizadoAdaptativo(output_file, alpha[indexAlpha], 5);
         if(newSolucao.first != -1){
             atualizaMedia(newSolucao.first, indexAlpha);
             if(best_atual_dist > newSolucao.second){
