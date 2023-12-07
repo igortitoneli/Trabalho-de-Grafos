@@ -34,10 +34,11 @@ class Solucao{
         
         ~Solucao();
         unordered_map<int,rota> guloso(ofstream &output_file);
-        unordered_map<int,rota> gulosoRandomizadoAdaptativo(ofstream &output_file, float alpha, int maxIter);
-        unordered_map<int,rota> gulosoRandomizadoAdaptativoReativo(ofstream &output_file, float alpha, int maxIter);
+        pair<double,double> gulosoRandomizadoAdaptativo(ofstream &output_file, float alpha, int maxIter);
+        unordered_map<int,rota> gulosoRandomizadoAdaptativoReativo(ofstream &output_file, vector<float> alpha, int maxIter, int bloco);
         double custoMinimo(Grafo *grafo);
         void imprimeRotas(bool completa);
+        void initBest();
 
     private:
         int gerarNumeroAleatorio(int inicio, int fim);
@@ -49,13 +50,13 @@ class Solucao{
         
         
         No* findMinDistance(No* partida, vector<int> percorridos,  double capacidade);
-        bool inPercorridos(No* procurado, vector<int> percorridos);
         unordered_map<int, bool> initHash();
         unordered_map<int, No*> initHashMenorCaminho(No* galpao);
         bool checadosHash(unordered_map<No*,bool> hash);
         unordered_map<int, double> setCapacidade();
         
         
+        bool inPercorridos(No* procurado, vector<int> percorridos);
         bool noValido(No* destino , vector<int> percorridos, int i, unordered_map<int, rota> rotas);
         bool noValidoReativo(No* destino , vector<int> percorridos, int i, unordered_map<int, rota> rotas);
         void makeCandidatos();
@@ -69,10 +70,9 @@ class Solucao{
         void backToGalpao();
         pair<No*, double> ordena(unordered_map<No*, double> listCandidatos, float alpha);
         void initVariables();
-        void initBest();
         void calculaBest();
         void Estatisticas();
-        double media();
+        double calcMedia();
         double desvioPadrao(double media);
         void mape();
         double calculaFormulaRaio();
@@ -82,6 +82,10 @@ class Solucao{
         void initRotas();
         unordered_map<int,rota> verificaBest();
         void imprimeBest();
+        void atualizaProb(vector<float> alpha);
+        void initVetores(int tam);
+        int getAlpha();
+        void atualizaMedia(double newSolucao, int indexAlpha);
 
 
 
@@ -104,6 +108,9 @@ class Solucao{
         double raio;
         double best_distancia = DBL_MAX;
         double soma_iter = 0;
+        double n_iter = 0;
+        vector<vector<double>> media;
+        vector<double> prob;
 };
 
 

@@ -11,13 +11,17 @@ instancias=(
     "X-n280-k17"
     )
 
-# for instancia in "${instancias[@]}"; 
-# do
-#     for x in `seq 1 1 10`;
-#     do
-#         ./execGrupo19 $instancia teste.txt 1 >> ./parte_2/resultados/guloso/$instancia.txt
-#     done
-# done
+for instancia in "${instancias[@]}"; 
+do
+    if [ -e "$arquivo" ]; then
+        rm "$arquivo"
+    fi
+    for x in `seq 1 1 10`;
+    do
+        ./execGrupo19 $instancia teste.txt 1 >> ./parte_2/resultados/guloso/$instancia.txt
+        date >> ./parte_2/resultados/guloso/$instancia.txt
+    done
+done
 
 
 for instancia in "${instancias[@]}"; 
@@ -29,17 +33,20 @@ do
             rm "$arquivo"
         fi
         for x in `seq 1 1 10`;
-        do
-        
+        do  
+            echo inicio
+            date >> ./parte_2/resultados/guloso/$instancia.txt
             ./execGrupo19 $instancia teste.txt 2 0.3 30 >> "$arquivo"
+            date >> ./parte_2/resultados/guloso/$instancia.txt
         done
     done
 done
 
-# for instancia in "${instancias[@]}"; 
-# do
-#     for x in `seq 1 1 10`;
-#     do
-#         ./execGrupo19 $instancia teste.txt 3 0.3 1 >> ./parte_2/resultados/guloso_reativo/$instancia.txt
-#     done
-# done
+for instancia in "${instancias[@]}"; 
+do
+    if [ -e "$arquivo" ]; then
+        rm "$arquivo"
+    fi
+    ./execGrupo19 $instancia teste.txt 3 10 100 0.05 0.1 0.15 0.2 0.3 0.4 >> ./parte_2/resultados/guloso_reativo/$instancia.txt
+    date >> ./parte_2/resultados/guloso/$instancia.txt
+done

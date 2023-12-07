@@ -384,7 +384,7 @@ void Solucao::atualizaRota(int i, No* destino) {
 };
 
 
-double Solucao::media(){
+double Solucao::calcMedia(){
     double soma = 0;
     for(double rota : total_rotas){
         soma += rota;
@@ -397,7 +397,7 @@ double Solucao::media(){
         cout << "Não foi possivel calcular media." << endl;
         return 0;
     }
-
+    return 0;
 }
 
 
@@ -431,18 +431,13 @@ void Solucao::Estatisticas(){
         exit(1);
     }
 
-    double media = this->media();
+    double media = this->calcMedia();
     desvioPadrao(media);
     mape();
 }
 
 
 void Solucao::imprimeRotas(bool completa = true){
-    
-    // if(completa)
-    //     cout << endl << GREEN << "Imprimindo as rotas" << endl << endl;
-    // else
-    //     cout << endl << RED << "Imprimindo as rotas" << endl << endl;
     
     double total = 0;
     
@@ -548,7 +543,6 @@ void Solucao::escreveRotas(ofstream &output_file, bool completa, int iter){
 }
 
 
-
 bool Solucao::VerificaVeracidade(){
 
     bool completa = true;
@@ -576,12 +570,14 @@ bool Solucao::VerificaVeracidade(){
     return completa;
 }
 
+
 unordered_map<int,rota> Solucao::verificaBest(){
     double total_rota = 0;
     for(int i=0; i<caminhoes; i++){
         total_rota += rotas[i].distancia;
     }
     soma_iter += total_rota;
+    n_iter++;
     if(best_distancia > total_rota){
         best_distancia = total_rota;
         return rotas;
@@ -601,15 +597,17 @@ void Solucao::initRotas(){
     }
 }
 
+
 void Solucao::initBest(){
     
     for(int i=0; i<caminhoes; i++){
         best[i].cargaAtual = 0;
         best[i].ultimoNo = grafo->getGalpao();
         best[i].percurso = {1};
-        best[i].distancia = 0;
+        best[i].distancia = DBL_MAX;
     }
 }
+
 
 unordered_map<int,rota> Solucao::guloso(ofstream &output_file)
 {
@@ -672,7 +670,7 @@ void Solucao::calculaBest(){
 }
 
 
-unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_file, float alpha, int maxIter)
+pair<double,double> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_file, float alpha, int maxIter)
 {
     int iter = 0;
     bool completa = true;
@@ -721,21 +719,19 @@ unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_fi
     }
     if(best[0].cargaAtual != 0){
         imprimeBest();
+        pair<double,double> retorno;
+        retorno.first = soma_iter/n_iter;
+        retorno.second = best_distancia;
+        // retorna media das iter e best
+        return retorno;
     }
 
-    return this->rotas;
+    pair<double,double> retorno;
+    retorno.first = -1;
+    retorno.second = -1;
+    
+    return retorno;
 }
-
-// pegar maior x e y
-// pegar menor x e y
-// pegar maior demanda - se torna menor raio ? quanto menor 
-// pegar menor demanda - se torna raio completo
-// dividir em quadrantes por n caminhoes
-// 
-// inicializar randomicamente os nos e construir uma delimitação
-//      quadrada em torno do no de acordo com o peso dele. 
-//      peso acima da media ?  diminui o quadrado
-//      peso abaixo da media ?  aumenta o quadrado
 
 
 double Solucao::calculaFormulaRaio(){
@@ -765,7 +761,88 @@ double Solucao::getRaio(No* no){
 }
 
 
-unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativoReativo(ofstream &output_file, float alpha, int maxIter)
-{
+void Solucao::atualizaProb(vector<float> alpha){
+    vector<double> q(alpha.size());
+    for(int i=0; i<alpha.size(); i++){
+        for(double m : media[i]){
+        }
+        if(!media[i].empty()){
+            double media_i = accumulate(media[i].begin(), media[i].end(), 0.0)/ media[i].size();
+            q[i] = pow((best_distancia / media_i), 100);    
+        }
+        else{
+        }
+    }
     
+    for(int i=0; i<alpha.size(); i++){
+        if(q[i]){
+            prob[i] = q[i]/accumulate(q.begin(), q.end(), 0.0);    
+        }
+    }
+}
+
+
+void Solucao::initVetores(int tam){
+    for(int i=0; i<tam; i++){
+        prob.push_back(double(100/tam)); 
+        media.push_back({});
+    }
+}
+
+
+int Solucao::getAlpha(){
+    double amplificador = 100.0;
+    int aleatorio = gerarNumeroAleatorio(0,prob.size()*amplificador);
+    int i;
+    double cont = 0;
+    for(i=0; i<prob.size(); i++){
+        cont += prob[i]*amplificador;
+        if(aleatorio<=cont) break;
+    }
+    return i;
+}
+
+
+void Solucao::atualizaMedia(double newSolucao, int indexAlpha){
+    media.at(indexAlpha).push_back(newSolucao);
+}
+
+
+unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativoReativo(ofstream &output_file, vector<float> alpha, int maxIter, int bloco)
+{
+    initBest();
+    initVetores(alpha.size());
+
+    unordered_map<int, rota> best_atual_rota;
+    for(int i=0; i<caminhoes; i++){
+        best_atual_rota[i].cargaAtual = 0;
+        best_atual_rota[i].ultimoNo = grafo->getGalpao();
+        best_atual_rota[i].percurso = {1};
+        best_atual_rota[i].distancia = DBL_MAX;
+    }
+    double best_atual_dist = DBL_MAX;
+
+    int i=1;
+    while(i <= maxIter){
+        if(i%bloco == 0){
+            atualizaProb(alpha);
+        }
+
+        int indexAlpha = getAlpha();
+        pair<double,double> newSolucao = gulosoRandomizadoAdaptativo(output_file, alpha[indexAlpha], 30);
+        if(newSolucao.first != -1){
+            atualizaMedia(newSolucao.first, indexAlpha);
+            if(best_atual_dist > newSolucao.second){
+                best_atual_dist = newSolucao.second;
+                best_atual_rota = best;
+            }
+        }
+        else{
+            initBest();
+        };
+        i++;
+    }
+    best = best_atual_rota;
+    imprimeBest();
+    return best;
 }

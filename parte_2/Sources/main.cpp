@@ -7,10 +7,13 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
+#include <vector>
 #include "../Headers/Solucao.h"
 #include "../Headers/No.h"
 #include "../Headers/Aresta.h"
 #include "../Headers/Grafo.h"
+
+using namespace std;
 
 Solucao *leitura(string arq) {
 
@@ -35,7 +38,7 @@ int menu() {
 
 }
 
-void selecionar(int selecao, Solucao *graph, ofstream &output_file, float alpha = 0 , int maxIter = 0) {
+void selecionar(int selecao, Solucao *graph, ofstream &output_file, float alpha = 0 , int maxIter = 0, vector<float> vectorAlphas = {0}) {
 
     switch (selecao) {
             // Guloso ;
@@ -50,7 +53,7 @@ void selecionar(int selecao, Solucao *graph, ofstream &output_file, float alpha 
         }
             // Guloso Randomizado Adaptativo Reativo
         case 3: {
-            graph->gulosoRandomizadoAdaptativoReativo(output_file, alpha, maxIter);
+            graph->gulosoRandomizadoAdaptativoReativo(output_file, vectorAlphas, maxIter, int(alpha));
             break;
         }
         default: {
@@ -59,12 +62,12 @@ void selecionar(int selecao, Solucao *graph, ofstream &output_file, float alpha 
     }
 }
 
-int mainMenu(ofstream &output_file, Solucao *graph, int selecao, float alpha = 0, int maxIter = 0) {
+int mainMenu(ofstream &output_file, Solucao *graph, int selecao, float alpha = 0, int maxIter = 0, vector<float> vetorAlpha = {0}) {
     // system("clear");
     
     if (output_file.is_open()){
 
-        selecionar(selecao, graph, output_file, alpha, maxIter);
+        selecionar(selecao, graph, output_file, alpha, maxIter, vetorAlpha);
     }
     else
         cout << "Unable to open the output_file" << endl;
@@ -83,7 +86,7 @@ int main(int argc, char const *argv[])
 
     srand(static_cast<unsigned int>(seed));
 
-    if (argc < 3 || argc > 6) {
+    if (argc < 3) {
         cout
                 << "ERROR: Expecting: ./<program_name> <input_file> <output_file> <Func> <param1> <maxIter>"
                 << endl;
@@ -127,8 +130,15 @@ int main(int argc, char const *argv[])
         mainMenu(output_file, graph, atoi(argv[3]));
     }
     // Chama o guloso randomizado
-    else{
+    else if(argc == 6){
         mainMenu(output_file, graph, atoi(argv[3]), atof(argv[4]), atoi(argv[5]));
+    }
+    else{
+        vector<float> vectorAlphas;
+        for(int i=6; i<argc; i++){
+            vectorAlphas.push_back(atof(argv[i]));
+        }
+        mainMenu(output_file, graph, atoi(argv[3]), atof(argv[4]), atoi(argv[5]), vectorAlphas);
     }
 
     //Fechando arquivo de saídai
