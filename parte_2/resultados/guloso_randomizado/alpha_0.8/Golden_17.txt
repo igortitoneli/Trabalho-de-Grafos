@@ -206,3 +206,4 @@ Rota 21 : < 1 38 5 43 91 31 101 97 156 221 222 217 215 212 95 1 >  - distancia: 
 total - 1099.3
 optimal_value: 707.79
 % acima: 55.3142%
+Demorou  0 ms para ler o arquivo de entrada.
