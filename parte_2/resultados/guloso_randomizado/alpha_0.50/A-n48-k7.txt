@@ -1,265 +1,38 @@
 Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 30 47 14 34 3 42 18 1 >  - distancia: 228.581 - carga: 92
-Rota 1 : < 1 37 38 26 20 39 15 1 >  - distancia: 171.797 - carga: 99
-Rota 2 : < 1 41 46 16 28 17 48 1 >  - distancia: 181.394 - carga: 98
-Rota 3 : < 1 7 44 6 24 23 33 8 1 >  - distancia: 207.101 - carga: 82
-Rota 4 : < 1 36 19 45 2 13 32 1 >  - distancia: 128.227 - carga: 87
-Rota 5 : < 1 31 22 10 29 11 12 43 21 4 1 >  - distancia: 340.752 - carga: 100
-Rota 6 : < 1 5 9 27 40 25 35 1 >  - distancia: 239.541 - carga: 68
-total - 1497.39
-optimal_value: 1073
-% acima: 39.5521%
-
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 45 36 18 15 48 3 1 >  - distancia: 157.49 - carga: 76
-Rota 1 : < 1 31 34 28 5 10 35 25 22 30 43 1 >  - distancia: 352.501 - carga: 91
-Rota 2 : < 1 44 6 37 13 24 32 1 >  - distancia: 204.69 - carga: 96
-Rota 3 : < 1 40 16 9 12 14 47 1 >  - distancia: 255.069 - carga: 93
-Rota 4 : < 1 19 7 2 23 41 8 33 1 >  - distancia: 182.689 - carga: 87
-Rota 5 : < 1 29 46 17 11 42 1 >  - distancia: 204.534 - carga: 89
-Rota 6 : < 1 27 21 20 38 4 39 26 1 >  - distancia: 284.035 - carga: 94
-total - 1641.01
-optimal_value: 1073
-% acima: 52.9365%
-
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 32 6 13 24 2 23 33 1 >  - distancia: 165.545 - carga: 86
-Rota 1 : < 1 20 26 39 9 46 35 41 8 4 1 >  - distancia: 323.004 - carga: 93
-Rota 2 : < 1 21 16 40 27 11 29 1 >  - distancia: 269.214 - carga: 95
-Rota 3 : < 1 12 28 37 19 36 45 1 >  - distancia: 220.449 - carga: 97
-Rota 4 : < 1 38 7 44 15 1 >  - distancia: 176.569 - carga: 72
-Rota 5 : < 1 30 25 14 31 22 47 34 10 5 43 1 >  - distancia: 292.005 - carga: 100
-Rota 6 : < 1 42 18 48 17 3 1 >  - distancia: 170.521 - carga: 83
-total - 1617.31
-optimal_value: 1073
-% acima: 50.7276%
-
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 16 27 40 21 9 46 35 8 1 >  - distancia: 229.779 - carga: 99
-Rota 1 : < 1 24 36 19 37 28 39 33 1 >  - distancia: 224.104 - carga: 99
-Rota 2 : < 1 38 20 26 7 15 1 >  - distancia: 186.433 - carga: 91
-Rota 3 : < 1 47 25 14 5 12 43 1 >  - distancia: 240.372 - carga: 64
-Rota 4 : < 1 45 13 6 2 44 32 23 4 1 >  - distancia: 231.909 - carga: 96
-Rota 5 : < 1 34 31 22 30 3 29 41 42 1 >  - distancia: 287.991 - carga: 86
-Rota 6 : < 1 10 11 17 48 18 1 >  - distancia: 171.523 - carga: 91
-total - 1572.11
-optimal_value: 1073
-% acima: 46.5155%
-
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 2 13 6 7 23 32 1 >  - distancia: 173.982 - carga: 96
-Rota 1 : < 1 31 47 14 12 43 10 35 3 1 >  - distancia: 264.394 - carga: 82
-Rota 2 : < 1 29 19 45 41 36 33 24 44 15 1 >  - distancia: 272.597 - carga: 100
-Rota 3 : < 1 37 46 38 26 4 8 1 >  - distancia: 223.47 - carga: 87
-Rota 4 : < 1 28 21 9 40 27 20 39 1 >  - distancia: 233.873 - carga: 99
-Rota 5 : < 1 22 5 16 34 25 30 1 >  - distancia: 275.679 - carga: 67
-Rota 6 : < 1 42 17 11 48 18 1 >  - distancia: 145.051 - carga: 95
-total - 1589.05
-optimal_value: 1073
-% acima: 48.0937%
-
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 39 37 38 20 46 41 8 1 >  - distancia: 228.676 - carga: 99
-Rota 1 : < 1 29 11 3 47 14 10 35 22 30 1 >  - distancia: 287.167 - carga: 99
-Rota 2 : < 1 43 12 5 25 31 34 26 4 1 >  - distancia: 342.43 - carga: 88
-Rota 3 : < 1 17 48 18 42 1 >  - distancia: 123.013 - carga: 69
-Rota 4 : < 1 28 16 21 9 40 27 1 >  - distancia: 214.459 - carga: 93
-Rota 5 : < 1 44 6 13 24 45 33 32 1 >  - distancia: 179.308 - carga: 81
-Rota 6 : < 1 23 7 2 19 36 15 1 >  - distancia: 147.33 - carga: 97
+Rota 0 : < 1 24 19 36 44 13 15 1 >  - distancia: 146.381 - carga: 94
+Rota 1 : < 1 10 25 22 31 47 12 14 5 43 30 1 >  - distancia: 275.72 - carga: 94
+Rota 2 : < 1 21 9 40 28 27 16 1 >  - distancia: 250.337 - carga: 93
+Rota 3 : < 1 20 39 26 23 33 45 1 >  - distancia: 162.13 - carga: 55
+Rota 4 : < 1 37 7 6 2 32 1 >  - distancia: 157.354 - carga: 94
+Rota 5 : < 1 38 46 29 35 48 18 41 4 8 1 >  - distancia: 339.403 - carga: 98
+Rota 6 : < 1 34 11 3 17 42 1 >  - distancia: 191.055 - carga: 98
 total - 1522.38
 optimal_value: 1073
-% acima: 41.881%
-
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 15 18 42 48 17 46 35 1 >  - distancia: 171.267 - carga: 99
-Rota 1 : < 1 36 45 19 2 7 24 1 >  - distancia: 123.333 - carga: 100
-Rota 2 : < 1 31 22 5 47 30 1 >  - distancia: 216.305 - carga: 49
-Rota 3 : < 1 10 28 27 21 26 20 23 33 1 >  - distancia: 251.971 - carga: 91
-Rota 4 : < 1 11 34 3 29 41 13 1 >  - distancia: 249.277 - carga: 100
-Rota 5 : < 1 8 9 40 16 12 14 25 43 1 >  - distancia: 253.949 - carga: 89
-Rota 6 : < 1 44 32 6 37 38 39 4 1 >  - distancia: 229.237 - carga: 98
-total - 1495.34
-optimal_value: 1073
-% acima: 39.3607%
-
+% acima: 41.8807%
 
 Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 21 27 40 12 43 5 14 1 >  - distancia: 240.484 - carga: 80
-Rota 1 : < 1 17 34 3 11 22 30 1 >  - distancia: 217.79 - carga: 94
-Rota 2 : < 1 18 37 41 46 29 42 1 >  - distancia: 196.19 - carga: 88
-Rota 3 : < 1 44 6 32 26 20 23 33 8 1 >  - distancia: 225.808 - carga: 79
-Rota 4 : < 1 16 9 28 10 47 31 25 35 1 >  - distancia: 252.578 - carga: 100
-Rota 5 : < 1 36 45 13 19 38 4 1 >  - distancia: 230.094 - carga: 93
-Rota 6 : < 1 39 7 2 24 48 15 1 >  - distancia: 216.224 - carga: 92
-total - 1579.17
+Rota 0 : < 1 30 34 47 14 9 28 10 35 1 >  - distancia: 260.234 - carga: 95
+Rota 1 : < 1 45 7 6 44 32 19 1 >  - distancia: 120.897 - carga: 92
+Rota 2 : < 1 43 5 25 31 12 21 40 27 1 >  - distancia: 274.341 - carga: 89
+Rota 3 : < 1 22 11 17 48 42 1 >  - distancia: 194.423 - carga: 88
+Rota 4 : < 1 20 38 37 46 16 1 >  - distancia: 223.703 - carga: 98
+Rota 5 : < 1 29 3 18 15 36 26 39 4 1 >  - distancia: 327.258 - carga: 91
+Rota 6 : < 1 41 13 24 2 23 33 8 1 >  - distancia: 233.998 - carga: 73
+total - 1634.85
 optimal_value: 1073
-% acima: 47.173%
-
+% acima: 52.3628%
 
 Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 32 44 24 13 2 45 15 1 >  - distancia: 150.063 - carga: 87
-Rota 1 : < 1 20 37 19 18 48 1 >  - distancia: 202.798 - carga: 95
-Rota 2 : < 1 14 5 47 31 34 42 1 >  - distancia: 235.033 - carga: 82
-Rota 3 : < 1 3 11 17 41 10 43 22 30 1 >  - distancia: 281.942 - carga: 97
-Rota 4 : < 1 36 7 6 23 39 33 8 1 >  - distancia: 209.205 - carga: 78
-Rota 5 : < 1 40 16 27 9 21 46 35 1 >  - distancia: 250.483 - carga: 97
-Rota 6 : < 1 4 38 26 28 12 25 29 1 >  - distancia: 296.85 - carga: 90
-total - 1626.37
+Rota 0 : < 1 9 40 21 27 47 31 22 30 1 >  - distancia: 248.306 - carga: 98
+Rota 1 : < 1 13 44 36 42 15 1 >  - distancia: 158.471 - carga: 73
+Rota 2 : < 1 11 3 48 46 28 35 1 >  - distancia: 220.563 - carga: 90
+Rota 3 : < 1 10 5 38 26 20 39 23 33 1 >  - distancia: 253.795 - carga: 92
+Rota 4 : < 1 19 45 37 17 18 1 >  - distancia: 126.037 - carga: 94
+Rota 5 : < 1 24 2 7 6 32 1 >  - distancia: 119.501 - carga: 81
+Rota 6 : < 1 25 14 16 12 43 34 29 41 8 4 1 >  - distancia: 360.939 - carga: 98
+total - 1487.61
 optimal_value: 1073
-% acima: 51.5725%
+% acima: 38.6404%
 
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 29 11 34 3 48 42 1 >  - distancia: 198.253 - carga: 99
-Rota 1 : < 1 14 12 9 27 21 4 1 >  - distancia: 252.369 - carga: 72
-Rota 2 : < 1 17 18 15 37 19 1 >  - distancia: 152.341 - carga: 98
-Rota 3 : < 1 13 24 7 2 44 45 1 >  - distancia: 134.831 - carga: 99
-Rota 4 : < 1 23 20 39 26 38 16 25 43 1 >  - distancia: 269.532 - carga: 98
-Rota 5 : < 1 8 41 36 46 31 5 22 30 47 35 1 >  - distancia: 323.292 - carga: 92
-Rota 6 : < 1 10 28 40 6 32 33 1 >  - distancia: 276.807 - carga: 68
-total - 1607.43
-optimal_value: 1073
-% acima: 49.8067%
-
-
-Tempo total: 13.7352 segundos
-Média total para A-n48-k7: 0
-0.000
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 38 27 34 31 30 1 >  - distancia: 263.045 - carga: 67
-Rota 1 : < 1 35 28 46 16 10 9 40 1 >  - distancia: 250.185 - carga: 96
-Rota 2 : < 1 6 13 44 2 24 32 45 1 >  - distancia: 152.68 - carga: 98
-Rota 3 : < 1 36 19 18 42 15 1 >  - distancia: 108.055 - carga: 76
-Rota 4 : < 1 17 11 3 48 41 8 23 33 1 >  - distancia: 224.496 - carga: 99
-Rota 5 : < 1 29 37 26 20 39 7 1 >  - distancia: 222.452 - carga: 99
-Rota 6 : < 1 21 47 5 12 14 22 25 43 4 1 >  - distancia: 367.129 - carga: 91
-total - 1588.04
-optimal_value: 1073
-% acima: 48%
-
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 40 27 12 43 5 10 25 47 1 >  - distancia: 274.282 - carga: 93
-Rota 1 : < 1 44 19 36 24 2 32 1 >  - distancia: 157.928 - carga: 83
-Rota 2 : < 1 23 26 7 15 1 >  - distancia: 177.493 - carga: 57
-Rota 3 : < 1 33 37 41 46 48 3 29 35 8 1 >  - distancia: 254.492 - carga: 97
-Rota 4 : < 1 4 16 28 9 14 31 30 21 22 1 >  - distancia: 366.231 - carga: 99
-Rota 5 : < 1 38 20 39 6 13 45 1 >  - distancia: 179.6 - carga: 98
-Rota 6 : < 1 34 11 17 18 42 1 >  - distancia: 190.334 - carga: 99
-total - 1600.36
-optimal_value: 1073
-% acima: 49.1481%
-
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 12 9 40 28 16 27 43 30 1 >  - distancia: 291.364 - carga: 99
-Rota 1 : < 1 36 45 19 18 42 1 >  - distancia: 107.818 - carga: 72
-Rota 2 : < 1 8 2 13 6 24 44 32 1 >  - distancia: 197.937 - carga: 93
-Rota 3 : < 1 41 37 46 10 5 14 25 29 35 1 >  - distancia: 227.498 - carga: 100
-Rota 4 : < 1 3 17 11 48 15 1 >  - distancia: 164.388 - carga: 91
-Rota 5 : < 1 22 34 31 47 38 4 21 1 >  - distancia: 338.443 - carga: 98
-Rota 6 : < 1 26 20 7 23 39 33 1 >  - distancia: 206.868 - carga: 73
-total - 1534.32
-optimal_value: 1073
-% acima: 42.9931%
-
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 28 19 36 45 15 42 48 1 >  - distancia: 254.403 - carga: 99
-Rota 1 : < 1 9 16 21 27 40 1 >  - distancia: 203.878 - carga: 78
-Rota 2 : < 1 23 7 44 6 13 24 1 >  - distancia: 140.054 - carga: 99
-Rota 3 : < 1 47 31 22 25 12 43 46 18 1 >  - distancia: 245.41 - carga: 93
-Rota 4 : < 1 39 26 38 20 4 1 >  - distancia: 204.197 - carga: 68
-Rota 5 : < 1 29 34 17 3 11 30 1 >  - distancia: 254.429 - carga: 95
-Rota 6 : < 1 2 37 41 10 14 5 35 8 33 32 1 >  - distancia: 312.016 - carga: 94
-total - 1614.39
-optimal_value: 1073
-% acima: 50.4555%
-
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 2 7 24 6 26 23 1 >  - distancia: 227.135 - carga: 100
-Rota 1 : < 1 3 11 17 48 18 1 >  - distancia: 136.149 - carga: 95
-Rota 2 : < 1 34 47 31 22 14 29 42 1 >  - distancia: 240.038 - carga: 88
-Rota 3 : < 1 39 20 38 4 10 35 13 32 33 8 1 >  - distancia: 337.215 - carga: 94
-Rota 4 : < 1 5 28 9 40 21 12 43 25 1 >  - distancia: 271.495 - carga: 100
-Rota 5 : < 1 19 36 45 37 44 15 1 >  - distancia: 154.224 - carga: 92
-Rota 6 : < 1 41 46 16 27 30 1 >  - distancia: 212.249 - carga: 57
-total - 1578.51
-optimal_value: 1073
-% acima: 47.1115%
-
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 47 22 31 14 29 41 8 1 >  - distancia: 242.309 - carga: 65
-Rota 1 : < 1 43 25 12 5 46 40 21 10 35 30 1 >  - distancia: 352.675 - carga: 98
-Rota 2 : < 1 42 19 45 13 20 36 1 >  - distancia: 234.153 - carga: 95
-Rota 3 : < 1 18 15 37 38 26 1 >  - distancia: 175.532 - carga: 90
-Rota 4 : < 1 17 34 11 48 3 1 >  - distancia: 187.963 - carga: 100
-Rota 5 : < 1 28 9 16 27 4 39 23 33 1 >  - distancia: 229.58 - carga: 84
-Rota 6 : < 1 32 24 2 7 44 6 1 >  - distancia: 149.173 - carga: 94
-total - 1571.38
-optimal_value: 1073
-% acima: 46.4477%
-
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 26 37 38 20 39 4 1 >  - distancia: 244.234 - carga: 93
-Rota 1 : < 1 27 21 40 28 29 3 5 30 35 1 >  - distancia: 333.437 - carga: 96
-Rota 2 : < 1 43 47 12 25 46 41 33 1 >  - distancia: 274.548 - carga: 72
-Rota 3 : < 1 9 16 10 31 22 14 34 1 >  - distancia: 241.234 - carga: 93
-Rota 4 : < 1 8 11 17 48 42 18 1 >  - distancia: 187.367 - carga: 97
-Rota 5 : < 1 23 7 2 13 44 32 1 >  - distancia: 138.612 - carga: 87
-Rota 6 : < 1 45 36 24 6 19 15 1 >  - distancia: 123.718 - carga: 88
-total - 1543.15
-optimal_value: 1073
-% acima: 43.8164%
-
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 13 24 44 6 2 39 33 1 >  - distancia: 177.247 - carga: 100
-Rota 1 : < 1 41 37 38 4 20 32 1 >  - distancia: 194.192 - carga: 80
-Rota 2 : < 1 3 34 11 14 43 22 25 31 1 >  - distancia: 288.224 - carga: 99
-Rota 3 : < 1 10 28 16 27 21 40 12 1 >  - distancia: 244.557 - carga: 99
-Rota 4 : < 1 36 7 23 26 9 5 30 35 8 1 >  - distancia: 278.686 - carga: 95
-Rota 5 : < 1 15 19 45 42 1 >  - distancia: 114.847 - carga: 55
-Rota 6 : < 1 29 17 48 18 46 47 1 >  - distancia: 295.183 - carga: 98
-total - 1592.93
-optimal_value: 1073
-% acima: 48.4561%
-
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 6 2 44 7 23 33 8 1 >  - distancia: 183.986 - carga: 90
-Rota 1 : < 1 17 48 11 29 47 1 >  - distancia: 209.545 - carga: 93
-Rota 2 : < 1 25 9 27 12 31 34 5 43 35 1 >  - distancia: 319.786 - carga: 100
-Rota 3 : < 1 26 20 38 46 10 14 22 30 1 >  - distancia: 258.772 - carga: 100
-Rota 4 : < 1 21 40 16 28 3 42 1 >  - distancia: 251.697 - carga: 91
-Rota 5 : < 1 36 45 15 37 41 39 4 1 >  - distancia: 239.15 - carga: 78
-Rota 6 : < 1 18 19 13 24 32 1 >  - distancia: 130.082 - carga: 74
-total - 1593.02
-optimal_value: 1073
-% acima: 48.4641%
-
-
-Demorou  0 ms para ler o arquivo de entrada.
-Rota 0 : < 1 12 47 31 22 14 5 25 10 41 8 1 >  - distancia: 277.25 - carga: 99
-Rota 1 : < 1 6 19 45 24 36 44 32 1 >  - distancia: 183.088 - carga: 92
-Rota 2 : < 1 4 38 20 39 26 18 15 1 >  - distancia: 214.082 - carga: 94
-Rota 3 : < 1 43 16 27 28 40 21 9 1 >  - distancia: 259.913 - carga: 97
-Rota 4 : < 1 42 11 29 17 46 35 1 >  - distancia: 218.045 - carga: 92
-Rota 5 : < 1 3 48 34 30 1 >  - distancia: 207.761 - carga: 52
-Rota 6 : < 1 13 2 7 37 33 23 1 >  - distancia: 175.995 - carga: 100
-total - 1536.13
-optimal_value: 1073
-% acima: 43.1626%
-
-
-Tempo total: 2.59521 segundos
-Média total para A-n48-k7: 0
+Tempo total: 0.906929 segundos
+Média total para A-n48-k7: 1548.28

@@ -1,0 +1,2 @@
+Demorou  0 ms para ler o arquivo de entrada.
+

@@ -1,0 +1,41 @@
+Demorou  0 ms para ler o arquivo de entrada.
+Rota 0 : < 1 16 48 5 19 27 1 >  - distancia: 292.643 - carga: 64
+Rota 1 : < 1 15 38 34 50 17 26 10 1 >  - distancia: 134.239 - carga: 100
+Rota 2 : < 1 2 9 43 22 18 1 >  - distancia: 230.112 - carga: 86
+Rota 3 : < 1 25 37 44 39 23 24 36 7 13 1 >  - distancia: 186.714 - carga: 98
+Rota 4 : < 1 28 8 32 21 12 31 45 49 1 >  - distancia: 134.323 - carga: 100
+Rota 5 : < 1 29 33 30 47 35 3 41 1 >  - distancia: 257.686 - carga: 93
+Rota 6 : < 1 20 6 1 >  - distancia: 226.05 - carga: 95
+Rota 7 : < 1 40 46 42 11 14 4 1 >  - distancia: 140.845 - carga: 99
+total - 1602.61
+optimal_value: 1312
+% acima: 22.1502%
+
+Demorou  0 ms para ler o arquivo de entrada.
+Rota 0 : < 1 39 24 14 46 2 1 >  - distancia: 181.048 - carga: 93
+Rota 1 : < 1 41 49 28 13 34 48 27 5 19 1 >  - distancia: 216.159 - carga: 86
+Rota 2 : < 1 31 15 32 7 35 50 16 1 >  - distancia: 237.591 - carga: 92
+Rota 3 : < 1 17 37 26 21 38 10 44 1 >  - distancia: 139.654 - carga: 99
+Rota 4 : < 1 8 6 1 >  - distancia: 209.79 - carga: 94
+Rota 5 : < 1 25 12 22 43 9 18 1 >  - distancia: 238.339 - carga: 90
+Rota 6 : < 1 4 42 47 40 36 11 23 45 3 1 >  - distancia: 165.561 - carga: 98
+Rota 7 : < 1 30 33 29 20 1 >  - distancia: 242.686 - carga: 83
+total - 1630.83
+optimal_value: 1312
+% acima: 24.301%
+
+Demorou  1 ms para ler o arquivo de entrada.
+Rota 0 : < 1 19 5 6 1 >  - distancia: 275.532 - carga: 90
+Rota 1 : < 1 32 28 7 15 21 37 1 >  - distancia: 130.321 - carga: 99
+Rota 2 : < 1 45 38 13 44 48 27 25 34 49 41 3 1 >  - distancia: 186.431 - carga: 67
+Rota 3 : < 1 9 43 2 46 39 4 1 >  - distancia: 197.796 - carga: 97
+Rota 4 : < 1 14 36 47 23 24 17 1 >  - distancia: 148.346 - carga: 99
+Rota 5 : < 1 35 8 10 50 12 26 31 1 >  - distancia: 122.521 - carga: 99
+Rota 6 : < 1 18 22 40 42 11 1 >  - distancia: 208.967 - carga: 85
+Rota 7 : < 1 30 20 29 33 16 1 >  - distancia: 281.968 - carga: 99
+total - 1551.88
+optimal_value: 1312
+% acima: 18.2837%
+
+Tempo total: 1.01274 segundos
+Média total para B-n50-k8: 1595.11

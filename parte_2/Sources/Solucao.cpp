@@ -545,29 +545,29 @@ void Solucao::escreveRotas(ofstream &output_file, bool completa, int iter){
 
 bool Solucao::VerificaVeracidade(){
 
-    bool completa = true;
-    bool list_percorridos[grafo->getOrdem()] = {false};
+    int list_percorridos[grafo->getOrdem()] = {0};
 
-    for(int i=0; i<caminhoes; i++){        
-        for(int no : rotas[i].percurso){
-            if(list_percorridos[no-1] == true && no != 1){
-                cout << "o no " << no << " se repete" << endl;
-                completa = false;
-            }
-            list_percorridos[no-1] = true; 
-        }
-        if(rotas[i].cargaAtual > capacidade){
-            cout << "rotas[" << i << "].cargaAtual " << rotas[i].cargaAtual << endl; 
-            completa = false;
-        } 
-    }
-    for(bool no : list_percorridos){
-        if(no == false && no != 0) {
-            cout << "falta o no " << no+1 << endl;
-            completa = false;
+
+    for(int i=0; i<caminhoes; i++){
+        for(int j : rotas[i].percurso){
+            list_percorridos[j-1]++;
         }
     }
-    return completa;
+    for(int i=1; i<grafo->getOrdem(); i++){
+        if(list_percorridos[i] != 1){
+            return false;
+        }
+    }
+    for(int i=0; i<caminhoes; i++){
+        double total_rota = 0;
+        for(int j : rotas[i].percurso){
+            total_rota+=grafo->procurarNoPeloId(j)->getDemanda();
+        }
+        if(total_rota>capacidade){
+            return false;
+        }
+    }
+    return true;
 }
 
 
@@ -827,11 +827,12 @@ unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativoReativo(ofstream &ou
         if(i%bloco == 0){
             atualizaProb(alpha);
         }
-
         int indexAlpha = getAlpha();
         pair<double,double> newSolucao = gulosoRandomizadoAdaptativo(output_file, alpha[indexAlpha], 5);
+        // cout << newSolucao.second << endl;
         if(newSolucao.first != -1){
             atualizaMedia(newSolucao.first, indexAlpha);
+            cout << "iter " << i << " media - " << newSolucao.first << endl;
             if(best_atual_dist > newSolucao.second){
                 best_atual_dist = newSolucao.second;
                 best_atual_rota = best;

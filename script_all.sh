@@ -11,118 +11,97 @@ instancias=(
     "X-n280-k17"
     )
 
-maxIter=10
+maxIter=3
 
-for instancia in "${instancias[@]}"; do
-    arquivo="./parte_2/resultados/guloso/$instancia.txt"
 
-    if [ -e "$arquivo" ]; then
-        rm "$arquivo"
-    fi
+# for instancia in "${instancias[@]}"; do
+#     arquivo="./parte_2/resultados/guloso/$instancia.txt"
 
-    inicio=$(date '+%S.%N')
-    valores=0
-    total_resultado=0
+#     if [ -e "$arquivo" ]; then
+#         rm "$arquivo"
+#     fi
 
-    for x in $(seq 1 1 $maxIter); do
-        resultado=$(./execGrupo19 "$instancia" teste.txt 1)
-        echo "$resultado" >> "$arquivo"
+#     inicio=$(date '+%S.%N')
+#     valores=0
+#     total_resultado=0
 
-        total=$(echo "$resultado" | awk '/total -/ {sum += $3} END {printf "%.3f", sum}')
-        valores=$(awk -v valores="$valores" -v total="$total" 'BEGIN {print valores + total}')
+#     for x in $(seq 1 1 $maxIter); do
+#         resultado=$(./execGrupo19 "$instancia" teste.txt 1)
+#         echo "$resultado" >> "$arquivo"
 
-        total_resultado=$(awk -v total_resultado="$total_resultado" -v total="$total" 'BEGIN {print total_resultado + total}')
-        echo >> "$arquivo"
-    done
+#         total=$(echo "$resultado" | awk '/total -/ {sum += $3} END {printf "%.3f", sum}')
+#         valores=$(awk -v valores="$valores" -v total="$total" 'BEGIN {print valores + total}')
 
-    fim=$(date '+%S.%N')
-    tempo_total=$(awk "BEGIN {print $fim - $inicio}")
-    echo "Tempo total: $tempo_total segundos" >> "$arquivo"
+#         total_resultado=$(awk -v total_resultado="$total_resultado" -v total="$total" 'BEGIN {print total_resultado + total}')
+#         echo >> "$arquivo"
+#     done
+
+#     fim=$(date '+%S.%N')
+#     tempo_total=$(awk "BEGIN {print $fim - $inicio}")
+#     echo "Tempo total: $tempo_total segundos" >> "$arquivo"
     
-    media=$(awk -v valores="$valores" 'BEGIN {print valores / '$maxIter'}')
-    echo "Média total para $instancia: $media" >> "$arquivo"
-done
-
-alphas=(0.05 0.10 0.15 0.30 0.50)
-
-for instancia in "${instancias[@]}"; do
-        
-    if [ -e "$arquivo" ]; then
-        rm "$arquivo"
-    fi
-    for alpha in "${alphas[@]}";
-    do
-
-        inicio=$(date '+%S.%N')
-        valores=0
-        total_resultado=0
-
-        for x in $(seq 1 1 $maxIter); do
-            arquivo="./parte_2/resultados/guloso_randomizado/alpha_$alpha/$instancia.txt"
-        
-            resultado=$(./execGrupo19 $instancia teste.txt 2 $alpha 30 >> "$arquivo")
-            echo "$resultado" >> "$arquivo"
-            total=$(echo "$resultado" | awk '/total -/ {sum += $3} END {printf "%.3f", sum}')
-            valores=$(awk -v valores="$valores" -v total="$total" 'BEGIN {print valores + total}')
-
-            total_resultado=$(awk -v total_resultado="$total_resultado" -v total="$total" 'BEGIN {print total_resultado + total}')
-            echo >> "$arquivo"
-        done
-
-        fim=$(date '+%S.%N')
-        tempo_total=$(awk "BEGIN {print $fim - $inicio}")
-        echo "Tempo total: $tempo_total segundos" >> "$arquivo"
-        
-        media=$(awk -v valores="$valores" 'BEGIN {print valores / '$maxIter'}')
-        echo "Média total para $instancia: $media" >> "$arquivo"
-    done
-done
+#     media=$(awk -v valores="$valores" 'BEGIN {print valores / '$maxIter'}')
+#     echo "Média total para $instancia: $media" >> "$arquivo"
+# done
 
 
-
+# alphas=(0.05 0.10 0.15 0.30 0.50)
 
 # for instancia in "${instancias[@]}"; 
 # do
-#     valores=0
-#     total_resultado=0
-    
 #     for alpha in "${alphas[@]}";
 #     do
-#         inicio=$(date '+%S.%N')
-        
+
 #         arquivo="./parte_2/resultados/guloso_randomizado/alpha_$alpha/$instancia.txt"
-        
 #         if [ -e "$arquivo" ]; then
 #             rm "$arquivo"
 #         fi
+#         valores=0
+#         total_resultado=0
+        
+#         inicio=$(date '+%S.%N')
+        
 #         for x in `seq 1 1 $maxIter`;
 #         do  
+#             resultado=$(./execGrupo19 $instancia teste.txt 2 $alpha 30)
 #             echo "$resultado" >> "$arquivo"
+
 #             total=$(echo "$resultado" | awk '/total -/ {sum += $3} END {printf "%.3f", sum}')
 #             valores=$(awk -v valores="$valores" -v total="$total" 'BEGIN {print valores + total}')
-
 #             total_resultado=$(awk -v total_resultado="$total_resultado" -v total="$total" 'BEGIN {print total_resultado + total}')
 #             echo >> "$arquivo"
 #         done
 #         fim=$(date '+%S.%N')
 #         tempo_total=$(awk "BEGIN {print $fim - $inicio}")
 #         echo "Tempo total: $tempo_total segundos" >> "$arquivo"
-        
+
 #         media=$(awk -v valores="$valores" 'BEGIN {print valores / '$maxIter'}')
 #         echo "Média total para $instancia: $media" >> "$arquivo"
-#         echo "$total" >> "$arquivo"
 #     done
 # done
 
-# for instancia in "${instancias[@]}"; 
-# do
-#     arquivo="./parte_2/resultados/guloso_reativo/$instancia.txt"
-#     if [ -e "$arquivo" ]; then
-#         rm "$arquivo"
-#     fi
-#     inicio=$(date '+%S.%N')
-#     ./execGrupo19 $instancia teste.txt 3 250 2500 0.05 0.10 0.15 0.30 0.50 >> "$arquivo"
-#     fim=$(date '+%S.%N')
-#     tempo_total=$(awk "BEGIN {print $fim - $inicio}")
-#     echo "Tempo total: $tempo_total segundos" >> "$arquivo"
-# done    
+for instancia in "${instancias[@]}"; 
+do
+    arquivo="./parte_2/resultados/guloso_reativo/$instancia.txt"
+    if [ -e "$arquivo" ]; then
+        rm "$arquivo"
+    fi
+    echo >> "$arquivo"
+
+    inicio=$(date '+%S.%N')
+    resultado=$(./execGrupo19 $instancia teste.txt 3 250 2500 0.05 0.10 0.15 0.30 0.50)
+    fim=$(date '+%S.%N')
+
+    echo "$resultado" >> "$arquivo"
+    echo >> "$arquivo"
+    
+    total=$(echo "$resultado" | awk '/total -/ {sum += $3} END {printf "%.3f", sum}')
+    valores=$(awk -v valores="$valores" -v total="$total" 'BEGIN {print valores + total}')
+    total_resultado=$(awk -v total_resultado="$total_resultado" -v total="$total" 'BEGIN {print total_resultado + total}')
+        
+    tempo_total=$(awk "BEGIN {print $fim - $inicio}")
+    echo "Tempo total: $tempo_total segundos" >> "$arquivo"
+
+    media=$(awk -v valores="$valores" 'BEGIN {print valores / 10}')
+    echo "Média total para $instancia: $media" >> "$arquivo"
+done    

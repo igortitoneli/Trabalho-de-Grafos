@@ -1,0 +1,32 @@
+Demorou  1 ms para ler o arquivo de entrada.
+Rota 0 : < 1 21 5 34 1 >  - distancia: 150.907 - carga: 98
+Rota 1 : < 1 18 26 7 29 14 16 32 6 1 >  - distancia: 124.115 - carga: 86
+Rota 2 : < 1 9 10 15 17 28 1 >  - distancia: 173.444 - carga: 95
+Rota 3 : < 1 3 22 8 33 23 24 11 27 13 12 31 1 >  - distancia: 250.214 - carga: 98
+Rota 4 : < 1 4 30 25 19 20 2 1 >  - distancia: 153.582 - carga: 80
+total - 852.263
+optimal_value: 788
+% acima: 8.15521%
+
+Demorou  0 ms para ler o arquivo de entrada.
+Rota 0 : < 1 17 10 25 4 1 >  - distancia: 147.278 - carga: 96
+Rota 1 : < 1 8 22 3 5 9 21 27 1 >  - distancia: 151.989 - carga: 99
+Rota 2 : < 1 33 34 24 11 23 13 1 >  - distancia: 163.221 - carga: 96
+Rota 3 : < 1 16 18 26 7 29 14 32 6 1 >  - distancia: 123.239 - carga: 86
+Rota 4 : < 1 28 30 15 19 20 2 12 31 1 >  - distancia: 256.226 - carga: 80
+total - 841.953
+optimal_value: 788
+% acima: 6.84684%
+
+Demorou  0 ms para ler o arquivo de entrada.
+Rota 0 : < 1 21 8 22 5 33 23 9 1 >  - distancia: 165.136 - carga: 97
+Rota 1 : < 1 28 30 10 15 17 1 >  - distancia: 145.699 - carga: 96
+Rota 2 : < 1 13 34 24 11 27 3 1 >  - distancia: 167.559 - carga: 98
+Rota 3 : < 1 7 18 26 29 14 16 32 1 >  - distancia: 118.935 - carga: 83
+Rota 4 : < 1 6 19 20 2 25 4 12 31 1 >  - distancia: 271.412 - carga: 83
+total - 868.741
+optimal_value: 788
+% acima: 10.2463%
+
+Tempo total: 0.373378 segundos
+Média total para B-n34-k5: 854.32
