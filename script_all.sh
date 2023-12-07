@@ -1,14 +1,14 @@
 instancias=(
     "A-n34-k5" 
     "A-n48-k7" 
-    # "B-n34-k5"
-    # "B-n50-k8"
-    # "Golden_1"
-    # "Golden_17"
-    # "M-n101-k10"
-    # "M-n151-k12"
-    # "X-n101-k25"
-    # "X-n280-k17"
+    "B-n34-k5"
+    "B-n50-k8"
+    "Golden_1"
+    "Golden_17"
+    "M-n101-k10"
+    "M-n151-k12"
+    "X-n101-k25"
+    "X-n280-k17"
     )
 
 for instancia in "${instancias[@]}"; do
