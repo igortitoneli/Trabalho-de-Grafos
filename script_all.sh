@@ -34,10 +34,13 @@ do
         fi
         for x in `seq 1 1 10`;
         do  
-            echo inicio
+            inicio=$(date +%s)
             date >> ./parte_2/resultados/guloso/$instancia.txt
             ./execGrupo19 $instancia teste.txt 2 0.3 30 >> "$arquivo"
             date >> ./parte_2/resultados/guloso/$instancia.txt
+            fim=$(date +%s)
+            tempo_total=$((fim - inicio))
+            echo "Tempo total: $tempo_total segundos"
         done
     done
 done
