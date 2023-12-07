@@ -1,17 +1,1 @@
-Iteracao  =  1
-
-percurso rota 0 : < 1 28 10 29 41 13 6 44 1 >  - distancia: 243.91 - carga: 100
-percurso rota 1 : < 1 25 5 14 47 31 22 30 42 2 1 >  - distancia: 323.573 - carga: 100
-percurso rota 2 : < 1 21 40 27 9 16 26 4 1 >  - distancia: 280.282 - carga: 99
-percurso rota 3 : < 1 12 43 35 8 33 32 1 >  - distancia: 247.794 - carga: 28
-percurso rota 4 : < 1 18 15 19 45 36 7 23 1 >  - distancia: 139.422 - carga: 99
-percurso rota 5 : < 1 17 48 11 34 3 1 >  - distancia: 158.774 - carga: 100
-percurso rota 6 : < 1 46 37 38 20 39 24 1 >  - distancia: 182.699 - carga: 100
-total - 1576.45
-optimal_value: 1073
-% acima: 46.9201%
-
-
-==========================================================
-
 
