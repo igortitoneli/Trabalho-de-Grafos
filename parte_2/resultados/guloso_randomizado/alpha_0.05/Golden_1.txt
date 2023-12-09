@@ -1,2 +1,19 @@
-Demorou  0 ms para ler o arquivo de entrada.
 
+Demorou  1 ms para ler o arquivo de entrada.
+Tempo em ms: 397881
+Demorou  4 ms para ler o arquivo de entrada.
+Tempo em ms: 394527
+Demorou  2 ms para ler o arquivo de entrada.
+Tempo em ms: 396522
+Demorou  2 ms para ler o arquivo de entrada.
+Tempo em ms: 396324
+Demorou  2 ms para ler o arquivo de entrada.
+Tempo em ms: 396463
+Demorou  1 ms para ler o arquivo de entrada.
+Tempo em ms: 389429
+Demorou  1 ms para ler o arquivo de entrada.
+Tempo em ms: 397857
+Demorou  1 ms para ler o arquivo de entrada.
+Tempo em ms: 394300
+Demorou  2 ms para ler o arquivo de entrada.
+Tempo em ms: 397811

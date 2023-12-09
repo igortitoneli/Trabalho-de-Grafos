@@ -1,0 +1,16 @@
+Fecho transitivo direto do vertice 50 : 
+Fecho transitivo indireto do vertice 50 : 
+Fecho transitivo direto do vertice 2 : 
+ | 
+ V 
+ 4199157
+ | 
+ = 
+
+
+o no 12 e/ou 43 nao estao no grafo.
+
+
+
+
+o no 12 e/ou 12 nao estao no grafo.

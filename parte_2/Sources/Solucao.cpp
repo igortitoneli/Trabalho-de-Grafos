@@ -191,6 +191,16 @@ bool Solucao::inPercorridos(No* procurado, vector<int> percorridos)
 }
 
 
+long long calcularTempoDecorrido() {
+    static auto start = std::chrono::high_resolution_clock::now();
+    auto now = std::chrono::high_resolution_clock::now();
+    
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(now - start);
+    
+    return duration.count();
+}
+
+
 bool Solucao::noValido(No* destino , vector<int> percorridos, int i, unordered_map<int, rota> rotas) {  
     return (destino != NULL && 
             !inPercorridos(destino,percorridos) && 
@@ -301,16 +311,11 @@ void Solucao::atualizaCandidatos(No* alterado){
         for (const auto& no : grafo->getHashNo()) {
             // demanda / distancia entre o ultimo nó da rota e o nó do for
             heuristica = no.second->getDemanda() / this->matrizDistancias[rotas[i].ultimoNo->getIdNo()][no.first];
-            
-            // cout << "no \t" << no.first << "\t percorrido? \t" << (!inPercorridos(no.second,percorridos) ? "true" :  "false") << endl;
-            // cout << endl;
-            // cout << "no \t" << no.first << "\t heu(" << heuristica << ") > ? cand("<< candidatos[i].heuristica << ") \t" << ((heuristica > candidatos[i].heuristica) ? "true" : "false") << endl;
-            // cout << endl;
-            // cout << "no \t" << no.first << "\t carga(" << rotas[i].cargaAtual << ") + demanda(" << no.second->getDemanda() << ") <= " << this->capacidade << "\t" << ((rotas[i].cargaAtual + no.second->getDemanda() <= this->capacidade) ? "true" : "false") << endl;
-            // cout << endl;
+
             if(!inPercorridos(no.second,percorridos) &&
                 heuristica > candidatos[i].heuristica &&
-                rotas[i].cargaAtual + no.second->getDemanda() <= this->capacidade)
+                rotas[i].cargaAtual + no.second->getDemanda() <= this->capacidade && 
+                no.first != 0)
             {
                 candidatos[i].no = no.second;
                 candidatos[i].heuristica = heuristica;
@@ -559,9 +564,12 @@ bool Solucao::VerificaVeracidade(){
         }
     }
     for(int i=0; i<caminhoes; i++){
-        double total_rota = 0;
+        double total_rota = 0.0;
         for(int j : rotas[i].percurso){
-            total_rota+=grafo->procurarNoPeloId(j)->getDemanda();
+            if (j == 0){
+                return false;
+            }
+            total_rota+=double(grafo->procurarNoPeloId(j)->getDemanda());
         }
         if(total_rota>capacidade){
             return false;
@@ -611,6 +619,7 @@ void Solucao::initBest(){
 
 unordered_map<int,rota> Solucao::guloso(ofstream &output_file)
 {
+    auto tempo_inicial = chrono::high_resolution_clock::now();
     int i = 0;
     initRotas();
     while(i < this->caminhoes){
@@ -628,7 +637,6 @@ unordered_map<int,rota> Solucao::guloso(ofstream &output_file)
     while(percorridos.size() != this->grafo->getOrdem())
     {
         try{
-            // imprimeRotas(true);
             atualizaCandidatos(candidatos[i].no);
             i = getCandidatos();
             atualizaRota(i, candidatos[i].no);
@@ -645,7 +653,12 @@ unordered_map<int,rota> Solucao::guloso(ofstream &output_file)
     completa = VerificaVeracidade();
 
     imprimeRotas(completa); 
-    escreveRotas(output_file,completa,0);
+    auto tempo_final = std::chrono::high_resolution_clock::now();
+
+    auto duracao = std::chrono::duration_cast<std::chrono::milliseconds>(tempo_final - tempo_inicial);
+
+    std::cout << "Tempo em ms: " << duracao.count() << endl;
+
     return this->rotas;
 }
 
@@ -672,6 +685,8 @@ void Solucao::calculaBest(){
 
 pair<double,double> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_file, float alpha, int maxIter)
 {
+    // auto tempo_inicial = chrono::high_resolution_clock::now();
+
     int iter = 0;
     bool completa = true;
     initBest();
@@ -722,13 +737,22 @@ pair<double,double> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_file, 
         pair<double,double> retorno;
         retorno.first = soma_iter/n_iter;
         retorno.second = best_distancia;
-        // retorna media das iter e best
+        auto tempo_final = std::chrono::high_resolution_clock::now();
+
+        // auto duracao = std::chrono::duration_cast<std::chrono::milliseconds>(tempo_final - tempo_inicial);
+
+        // std::cout << "Tempo em ms: " << duracao.count() << endl;// retorna media das iter e best
         return retorno;
     }
 
     pair<double,double> retorno;
     retorno.first = -1;
     retorno.second = -1;
+    auto tempo_final = std::chrono::high_resolution_clock::now();
+
+    // auto duracao = std::chrono::duration_cast<std::chrono::milliseconds>(tempo_final - tempo_inicial);
+
+    // std::cout << "Tempo em ms: " << duracao.count() << endl;
     
     return retorno;
 }
@@ -810,8 +834,10 @@ void Solucao::atualizaMedia(double newSolucao, int indexAlpha){
 
 unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativoReativo(ofstream &output_file, vector<float> alpha, int maxIter, int bloco)
 {
+    auto tempo_inicial = chrono::high_resolution_clock::now();
     initBest();
     initVetores(alpha.size());
+    vector<double> imprimeMedia;
 
     unordered_map<int, rota> best_atual_rota;
     for(int i=0; i<caminhoes; i++){
@@ -832,7 +858,7 @@ unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativoReativo(ofstream &ou
         // cout << newSolucao.second << endl;
         if(newSolucao.first != -1){
             atualizaMedia(newSolucao.first, indexAlpha);
-            cout << "iter " << i << " media - " << newSolucao.first << endl;
+            imprimeMedia.push_back(newSolucao.first);
             if(best_atual_dist > newSolucao.second){
                 best_atual_dist = newSolucao.second;
                 best_atual_rota = best;
@@ -843,7 +869,15 @@ unordered_map<int,rota> Solucao::gulosoRandomizadoAdaptativoReativo(ofstream &ou
         };
         i++;
     }
+    auto tempo_final = std::chrono::high_resolution_clock::now();
+
+    auto duracao = std::chrono::duration_cast<std::chrono::milliseconds>(tempo_final - tempo_inicial);
+
+    std::cout << "Tempo em ms: " << duracao.count() << endl;
+    
     best = best_atual_rota;
     imprimeBest();
+
+    cout << "Media total: " << accumulate(imprimeMedia.begin(), imprimeMedia.end(), 0.0)/ imprimeMedia.size() << endl;
     return best;
 }

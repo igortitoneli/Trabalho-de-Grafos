@@ -418,6 +418,7 @@ void Grafo::fechoTransitivoDireto(ofstream &output_file, int idNo) // imprimindo
     int infinito = 99999;
     auto preencheHashMatrizInfinito = [this](unordered_map<int, unordered_map<int, int>> matriz)
     {
+        cout << "preenchendo matriz " << endl;
         auto infinito = 99999;
 
         for (No *coluna = this->getNoRaiz(); coluna != NULL; coluna = coluna->getProxNo())
@@ -433,6 +434,7 @@ void Grafo::fechoTransitivoDireto(ofstream &output_file, int idNo) // imprimindo
 
     auto preencheHash = [this](unordered_map<int, unordered_map<int, int>> matriz)
     {
+        cout << "preenchendo hash" << endl;
         for (No *no = this->getNoRaiz(); no != NULL; no = no->getProxNo())
         {
             matriz[no->getIdNo()][no->getIdNo()] = 0;
@@ -447,6 +449,7 @@ void Grafo::fechoTransitivoDireto(ofstream &output_file, int idNo) // imprimindo
 
     auto procuraMenorCaminho = [this](unordered_map<int, unordered_map<int, int>> matriz)
     {
+        cout << "procurando menor caminho" << endl;
         for (No *k = this->getNoRaiz(); k != NULL; k = k->getProxNo())
         {
             for (No *linha = this->getNoRaiz(); linha != NULL; linha = linha->getProxNo())
@@ -459,7 +462,7 @@ void Grafo::fechoTransitivoDireto(ofstream &output_file, int idNo) // imprimindo
         }
         return matriz;
     };
-
+    cout << "a" <<endl;
     unordered_map<int, unordered_map<int, int>> matriz;
     matriz = preencheHashMatrizInfinito(matriz);
     matriz = preencheHash(matriz);

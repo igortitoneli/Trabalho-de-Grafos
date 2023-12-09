@@ -8,15 +8,15 @@ Demorou  0 ms para ler o arquivo de entrada.
 
 Demorou  0 ms para ler o arquivo de entrada.
 
-Demorou  1 ms para ler o arquivo de entrada.
-
-Demorou  1 ms para ler o arquivo de entrada.
-
 Demorou  0 ms para ler o arquivo de entrada.
 
 Demorou  0 ms para ler o arquivo de entrada.
 
 Demorou  0 ms para ler o arquivo de entrada.
 
-Tempo total: 189.767 segundos
+Demorou  0 ms para ler o arquivo de entrada.
+
+Demorou  0 ms para ler o arquivo de entrada.
+
+Tempo total: 188.982 segundos
 Média total para Golden_1: 0
