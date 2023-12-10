@@ -1,0 +1,38 @@
+Instruções:
+
+---Parte 1
+Para rodar a parte 1 é necessário rodar esses dois comandos:
+
+1.Compila o codigo
+
+g++ ./parte_1/*.cpp -o execGrupo19.exe
+
+2.Executa o codigo
+
+./execGrupo19.exe parte_1/Instances/instancias_grafos_n_ponderados/grafo_1000_7.txt teste.txt 0 0 0
+
+A linha de comando acima espera os seguintes parametros: o executavel, o arquivo de entrada, o arquivo de saida, se é direcionado, se a aresta é ponderada, se o nó é ponderado. Essa linha acima é só um exemplo de entrada.
+
+---Parte 2
+Para a parte dois foi construído um script, para rodar a parte dois com o script basta executar:
+
+Para compilar o script:
+chmod +x script_all.sh
+
+Para executar:
+./script_all.sh
+
+Para executar a parte dois para uma instancia especifica:
+
+1.Compila o codigo
+
+g++ ./parte_2/Sources/*.c* -o execGrupo19.exe
+
+2.Executa o codigo
+
+
+guloso: ./execGrupo19.exe (instancia) (saida) (1) 
+
+guloso randomizado adaptativo: ./execGrupo19.exe (instancia) (saida) (2) (alpha) (maxIter)
+
+guloso randomizado adaptativo reativo: ./execGrupo19.exe (instancia) (saida) (3) (bloco) (maxIter) (vetor de alpha)
