@@ -1,8 +1,8 @@
 instancias=(
-    # "A-n34-k5" 
-    # "A-n48-k7" 
-    # "B-n34-k5"
-    # "B-n50-k8"
+    "A-n34-k5" 
+    "A-n48-k7" 
+    "B-n34-k5"
+    "B-n50-k8"
     # "Golden_1"
     # "Golden_17"
     "M-n101-k10"
