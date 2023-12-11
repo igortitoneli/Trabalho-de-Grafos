@@ -685,7 +685,7 @@ void Solucao::calculaBest(){
 
 pair<double,double> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_file, float alpha, int maxIter)
 {
-    // auto tempo_inicial = chrono::high_resolution_clock::now();
+    auto tempo_inicial = chrono::high_resolution_clock::now();
 
     int iter = 0;
     bool completa = true;
@@ -739,9 +739,9 @@ pair<double,double> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_file, 
         retorno.second = best_distancia;
         auto tempo_final = std::chrono::high_resolution_clock::now();
 
-        // auto duracao = std::chrono::duration_cast<std::chrono::milliseconds>(tempo_final - tempo_inicial);
+        auto duracao = std::chrono::duration_cast<std::chrono::milliseconds>(tempo_final - tempo_inicial);
 
-        // std::cout << "Tempo em ms: " << duracao.count() << endl;// retorna media das iter e best
+        std::cout << "Tempo em ms: " << duracao.count() << endl;// retorna media das iter e best
         return retorno;
     }
 
@@ -750,9 +750,9 @@ pair<double,double> Solucao::gulosoRandomizadoAdaptativo(ofstream &output_file, 
     retorno.second = -1;
     auto tempo_final = std::chrono::high_resolution_clock::now();
 
-    // auto duracao = std::chrono::duration_cast<std::chrono::milliseconds>(tempo_final - tempo_inicial);
+    auto duracao = std::chrono::duration_cast<std::chrono::milliseconds>(tempo_final - tempo_inicial);
 
-    // std::cout << "Tempo em ms: " << duracao.count() << endl;
+    std::cout << "Tempo em ms: " << duracao.count() << endl;
     
     return retorno;
 }

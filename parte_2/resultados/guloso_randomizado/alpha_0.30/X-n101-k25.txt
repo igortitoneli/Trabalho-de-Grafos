@@ -1,0 +1,33 @@
+
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Demorou  0 ms para ler o arquivo de entrada.
+Média total para X-n101-k25: 0
+Tempo medio para X-n101-k25: 0
